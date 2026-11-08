@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "contracts": [
+    "wait for all confirmation seeds",
+    "no partial running branch",
+    "single whole-branch event",
+    "durable dedup",
+    "historical bootstrap dedup",
+    "duplicate seed refusal",
+    "12hour cadence and direct-request exception"
+  ],
+  "real_monitor_state_modified": false,
+  "additional_ssh_calls": 0,
+  "source_sha256": "f7ebe00df88b952b354e9dbfd5465ad2c81e784399260451c35c60a611464d91"
+}

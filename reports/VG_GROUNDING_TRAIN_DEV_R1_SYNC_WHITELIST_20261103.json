@@ -1,0 +1,15 @@
+{
+  "files": [
+    "scripts/remote_launch_vg_grounding_train_dev_r1_20261103.py",
+    "scripts/remote_vg_grounding_controller_r1_20261103.py",
+    "scripts/remote_vg_grounding_generate_r1_20261103.py",
+    "scripts/remote_vg_grounding_preflight_r1_20261103.py",
+    "scripts/remote_vg_grounding_score_r1_20261103.py",
+    "scripts/remote_vg_grounding_status_r1_20261103.py",
+    "src/rsgformer/vg_grounding_train_dev_runtime_r1_20261103.py",
+    "configs/vg_grounding_train_dev_r1_20261103.json",
+    "research/VG_GROUNDING_TRAIN_DEV_R1_PREREGISTRATION_20261103.md",
+    "configs/vg_grounding_train_dev_source_manifest_r1_20261103.json"
+  ],
+  "old_sources_or_reports_not_synced": true
+}

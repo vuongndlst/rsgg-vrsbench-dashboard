@@ -1,0 +1,17 @@
+{
+  "source_url": "https://homes.cs.washington.edu/~ranjay/visualgenome/data/dataset/region_descriptions.json.zip",
+  "old_asset_preserved": true,
+  "image_archives_extracted": false,
+  "purpose": "human evaluation references only; never graph-to-text prompt input",
+  "status": "complete",
+  "updated_utc": "2026-10-10T15:46:39.098103+00:00",
+  "archive_bytes": 127377968,
+  "archive_sha256": "038382219029c9cb0d7b0308b1d45f7537cf5a47b98f493f6d0e30c8947fb15d",
+  "json_bytes": 712073541,
+  "json_sha256": "19624f10afb10bf69e30ecf48d85b1a71420c7432e8c88f1011a3c4fd60ec768",
+  "image_records": 108077,
+  "region_count": 5408689,
+  "nonempty_phrases": 5408682,
+  "invalid_geometry_records": 5654,
+  "canonical_path": "${REMOTE_HOME}/rsg-former/data/vg_caption/region_descriptions.json"
+}

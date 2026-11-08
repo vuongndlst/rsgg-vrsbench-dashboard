@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-25T09:45:00.878333+00:00",
+  "events_reported_to_direct_user_check": [
+    "fresh_VAL_V1_float32_JSON_export_failure",
+    "R1_regression_PASS_and_audited_resume",
+    "fresh_VAL_R1_completion_verified_160_blind_review_instances_ready",
+    "color_speed_benchmark_COMPLETE_safe_cache_1p69x_exact_parity",
+    "blind_agent20_quality_audit_complete_NOT_human_precision_full_TEST_closed"
+  ],
+  "historical_failures_should_not_repeat": true,
+  "active_status_report": "reports/VG_COLOR_FRESH_VAL_LAST_STATUS_R1_20261025.json",
+  "human_review_gate_passed": false,
+  "completed_archive_sha256": "cb89c04fb2f9c530d9ca5e31fd4664bfb6ebec0866c9bebc10b066cbb69b2971",
+  "terminal_phase_no_further_polling": true,
+  "speed_benchmark_archive_sha256": "64c5fba5e4294bec2c7ab9ca7cd273bb99dc156840addf950982dd3dfe19cbe8"
+}

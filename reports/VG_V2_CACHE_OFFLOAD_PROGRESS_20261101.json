@@ -1,0 +1,20 @@
+{
+  "status": "PASS_ALL981_LOCAL_ARCHIVES_RESTORED_TO_ORIGINAL_SHA256",
+  "utc": "2026-11-01T01:15:40.496483+00:00",
+  "last_successful_remote_contact_utc": "2026-11-01T01:15:38.928810+00:00",
+  "cache_manifest_sha256": "f978799bbd19047b6a74f291aa816f43052251f9b84751f633e8ddf04622abf1",
+  "source_cache_relative": "artifacts/vg_method_v2/features",
+  "local_archive_directory": "artifacts/offloaded_vg_v2_features_20261101",
+  "verified_shard_count": 981,
+  "raw_bytes": 21862848819,
+  "archive_bytes": 17656932810,
+  "archive_format": "VGBS4GZ1",
+  "server_writes": 0,
+  "server_deleted_files": 0,
+  "CPU_compression_workers": 4,
+  "remote_read_CPU_max": 4,
+  "elapsed_seconds": 2097.905999999959,
+  "precision_changed": false,
+  "TEST_accessed": false,
+  "original_absolute_deadline": 1794670321.2414355
+}

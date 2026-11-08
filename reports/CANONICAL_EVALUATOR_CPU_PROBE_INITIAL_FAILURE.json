@@ -1,0 +1,10 @@
+{
+  "status": "FAIL",
+  "utc": "2026-10-10T19:59:51.673936+00:00",
+  "scope": "synthetic CPU probe report serialization",
+  "error_type": "NameError",
+  "reason": "Exception target error shadowed/deleted earlier float error variable; reporting failed after synthetic cases",
+  "script_sha256": "2c1262d99b9e4f29042a671a1dc45f647859eabddcac2f38b3acd75c6c630fd5",
+  "live_v2_modified": false,
+  "benchmark_test_scored": false
+}

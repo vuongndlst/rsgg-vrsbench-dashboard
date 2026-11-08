@@ -1,0 +1,151 @@
+﻿class_id,name,surface_group,request_priority,production_color_enabled,TRAIN_objects,TRAIN_color_annotated,TRAIN_color_annotation_percent,rule,class_prior_can_choose_color,requires_independent_visual_validation
+1,airplane,vehicle_body,high,False,934,434,46.4668,"Measure visible body/paint; exclude independently predicted windows, windshield, tires/wheels, lights and occluders. A missing reliable body mask -> unknown.",False,True
+2,animal,animal_coat,high,False,1420,500,35.2113,"Use visible coat/feathers only; exclude tack/collar/occluder masks. Report up to two stable substantial colors, not breed-typical color.",False,True
+3,arm,person_or_skin,not_requested,False,5874,175,2.9792,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+4,bag,garment_or_accessory,high,False,4491,2072,46.1367,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+5,banana,natural_or_food_surface,secondary,False,2437,692,28.3956,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+6,basket,container_contents,secondary,False,1505,439,29.1694,Exclude contained food/objects using independently predicted child masks. Insufficient exposed container pixels -> unknown.,False,True
+7,beach,natural_or_food_surface,secondary,False,2127,441,20.7334,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+8,bear,animal_coat,high,False,1923,1105,57.4623,"Use visible coat/feathers only; exclude tack/collar/occluder masks. Report up to two stable substantial colors, not breed-typical color.",False,True
+9,bed,opaque_surface,high,False,1893,599,31.6429,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+10,bench,opaque_surface,secondary,False,3258,976,29.957,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+11,bike,vehicle_body,high,False,2935,925,31.5162,"Measure visible body/paint; exclude independently predicted windows, windshield, tires/wheels, lights and occluders. A missing reliable body mask -> unknown.",False,True
+12,bird,animal_coat,high,False,2226,865,38.8589,"Use visible coat/feathers only; exclude tack/collar/occluder masks. Report up to two stable substantial colors, not breed-typical color.",False,True
+13,board,opaque_surface,high,False,2479,941,37.9589,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+14,boat,vehicle_body,high,False,2870,880,30.662,"Measure visible body/paint; exclude independently predicted windows, windshield, tires/wheels, lights and occluders. A missing reliable body mask -> unknown.",False,True
+15,book,opaque_surface,secondary,False,2464,392,15.9091,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+16,boot,garment_or_accessory,high,False,1794,725,40.4125,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+17,bottle,transparent_or_emissive,not_requested,False,3580,722,20.1676,Apparent color may belong to contents/reflection/light. Defer unless an opaque surface-specific mask and separate validation exist.,False,True
+18,bowl,container_contents,high,False,2767,1301,47.0184,Exclude contained food/objects using independently predicted child masks. Insufficient exposed container pixels -> unknown.,False,True
+19,box,container_contents,high,False,2978,1013,34.0161,Exclude contained food/objects using independently predicted child masks. Insufficient exposed container pixels -> unknown.,False,True
+20,boy,person_or_skin,not_requested,False,4375,307,7.0171,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+21,branch,natural_or_food_surface,secondary,False,3612,352,9.7453,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+22,building,opaque_surface,secondary,False,17118,3756,21.9418,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+23,bus,vehicle_body,high,False,3064,1773,57.8655,"Measure visible body/paint; exclude independently predicted windows, windshield, tires/wheels, lights and occluders. A missing reliable body mask -> unknown.",False,True
+24,cabinet,opaque_surface,secondary,False,2243,664,29.6032,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+25,cap,garment_or_accessory,high,False,2453,1308,53.3225,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+26,car,vehicle_body,high,False,9187,3771,41.0471,"Measure visible body/paint; exclude independently predicted windows, windshield, tires/wheels, lights and occluders. A missing reliable body mask -> unknown.",False,True
+27,cat,animal_coat,high,False,2190,1393,63.6073,"Use visible coat/feathers only; exclude tack/collar/occluder masks. Report up to two stable substantial colors, not breed-typical color.",False,True
+28,chair,opaque_surface,high,False,6720,2591,38.5565,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+29,child,person_or_skin,not_requested,False,1836,122,6.6449,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+30,clock,opaque_surface,high,False,2862,1117,39.0287,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+31,coat,garment_or_accessory,high,False,2479,1460,58.8947,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+32,counter,opaque_surface,secondary,False,2326,485,20.8512,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+33,cow,animal_coat,high,False,2562,1327,51.7955,"Use visible coat/feathers only; exclude tack/collar/occluder masks. Report up to two stable substantial colors, not breed-typical color.",False,True
+34,cup,transparent_or_emissive,not_requested,False,2391,956,39.9833,Apparent color may belong to contents/reflection/light. Defer unless an opaque surface-specific mask and separate validation exist.,False,True
+35,curtain,opaque_surface,high,False,1815,896,49.3664,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+36,desk,opaque_surface,secondary,False,1375,316,22.9818,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+37,dog,animal_coat,high,False,2745,1668,60.765,"Use visible coat/feathers only; exclude tack/collar/occluder masks. Report up to two stable substantial colors, not breed-typical color.",False,True
+38,door,opaque_surface,secondary,False,7567,1830,24.184,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+39,drawer,opaque_surface,secondary,False,1352,218,16.1243,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+40,ear,person_or_skin,not_requested,False,7611,1007,13.2309,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+41,elephant,animal_coat,high,False,2920,998,34.1781,"Use visible coat/feathers only; exclude tack/collar/occluder masks. Report up to two stable substantial colors, not breed-typical color.",False,True
+42,engine,vehicle_body,secondary,False,1670,383,22.9341,"Measure visible body/paint; exclude independently predicted windows, windshield, tires/wheels, lights and occluders. A missing reliable body mask -> unknown.",False,True
+43,eye,person_or_skin,not_requested,False,3285,767,23.3486,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+44,face,person_or_skin,not_requested,False,5421,622,11.4739,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+45,fence,opaque_surface,secondary,False,7399,2081,28.1254,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+46,finger,person_or_skin,not_requested,False,1739,21,1.2076,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+47,flag,opaque_surface,high,False,1871,566,30.2512,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+48,flower,natural_or_food_surface,high,False,4453,1762,39.5688,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+49,food,natural_or_food_surface,secondary,False,3281,746,22.737,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+50,fork,opaque_surface,high,False,1490,602,40.4027,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+51,fruit,natural_or_food_surface,secondary,False,1192,251,21.057,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+52,giraffe,animal_coat,secondary,False,2903,837,28.8322,"Use visible coat/feathers only; exclude tack/collar/occluder masks. Report up to two stable substantial colors, not breed-typical color.",False,True
+53,girl,person_or_skin,not_requested,False,3752,319,8.5021,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+54,glass,transparent_or_emissive,not_requested,False,6658,650,9.7627,Apparent color may belong to contents/reflection/light. Defer unless an opaque surface-specific mask and separate validation exist.,False,True
+55,glove,garment_or_accessory,high,False,2503,1067,42.6288,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+56,guy,person_or_skin,not_requested,False,1115,58,5.2018,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+57,hair,hair,high,False,11126,4731,42.522,Hair-mask only. Blond is a future independently calibrated hair-only term; do not force the basic11 table to invent blond.,False,True
+58,hand,person_or_skin,not_requested,False,10798,612,5.6677,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+59,handle,opaque_surface,high,False,4390,1380,31.4351,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+60,hat,garment_or_accessory,high,False,5331,2762,51.8102,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+61,head,person_or_skin,not_requested,False,13055,1330,10.1877,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+62,helmet,garment_or_accessory,high,False,3855,2094,54.3191,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+63,hill,natural_or_food_surface,secondary,False,2417,404,16.7149,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+64,horse,animal_coat,high,False,3130,1662,53.099,"Use visible coat/feathers only; exclude tack/collar/occluder masks. Report up to two stable substantial colors, not breed-typical color.",False,True
+65,house,opaque_surface,secondary,False,2725,694,25.4679,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+66,jacket,garment_or_accessory,high,False,6505,4129,63.4743,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+67,jean,garment_or_accessory,high,False,3494,1881,53.8351,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+68,kid,person_or_skin,not_requested,False,1020,55,5.3922,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+69,kite,opaque_surface,high,False,1972,725,36.7647,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+70,lady,person_or_skin,not_requested,False,1308,78,5.9633,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+71,lamp,transparent_or_emissive,not_requested,False,2310,564,24.4156,Apparent color may belong to contents/reflection/light. Defer unless an opaque surface-specific mask and separate validation exist.,False,True
+72,laptop,transparent_or_emissive,not_requested,False,1854,1015,54.7465,Apparent color may belong to contents/reflection/light. Defer unless an opaque surface-specific mask and separate validation exist.,False,True
+73,leaf,natural_or_food_surface,high,False,7286,2538,34.8339,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+74,leg,person_or_skin,not_requested,False,13112,892,6.8029,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+75,letter,text_symbol,not_requested,False,3430,1453,42.3615,Do not use CLIP text/OCR response to establish surface color. Defer glyph/color field separation to a later version.,False,True
+76,light,transparent_or_emissive,not_requested,False,8188,1257,15.3517,Apparent color may belong to contents/reflection/light. Defer unless an opaque surface-specific mask and separate validation exist.,False,True
+77,logo,text_symbol,not_requested,False,2901,809,27.8869,Do not use CLIP text/OCR response to establish surface color. Defer glyph/color field separation to a later version.,False,True
+78,man,person_or_skin,not_requested,False,33535,2327,6.939,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+79,men,person_or_skin,not_requested,False,1136,45,3.9613,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+80,motorcycle,vehicle_body,high,False,2575,906,35.1845,"Measure visible body/paint; exclude independently predicted windows, windshield, tires/wheels, lights and occluders. A missing reliable body mask -> unknown.",False,True
+81,mountain,natural_or_food_surface,secondary,False,2743,384,13.9993,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+82,mouth,person_or_skin,not_requested,False,2258,127,5.6244,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+83,neck,person_or_skin,not_requested,False,2875,161,5.6,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+84,nose,person_or_skin,not_requested,False,3762,889,23.631,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+85,number,text_symbol,not_requested,False,1906,500,26.2329,Do not use CLIP text/OCR response to establish surface color. Defer glyph/color field separation to a later version.,False,True
+86,orange,natural_or_food_surface,secondary,False,1387,204,14.708,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+87,pant,garment_or_accessory,high,False,8095,5070,62.6313,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+88,paper,opaque_surface,high,False,2512,806,32.086,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+89,paw,animal_coat,secondary,False,1561,335,21.4606,"Use visible coat/feathers only; exclude tack/collar/occluder masks. Report up to two stable substantial colors, not breed-typical color.",False,True
+90,people,person_or_skin,not_requested,False,8147,141,1.7307,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+91,person,person_or_skin,not_requested,False,20966,1055,5.032,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+92,phone,opaque_surface,high,False,1545,586,37.9288,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+93,pillow,opaque_surface,high,False,3126,1488,47.6008,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+94,pizza,natural_or_food_surface,secondary,False,2012,459,22.8131,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+95,plane,vehicle_body,high,False,2644,1369,51.7776,"Measure visible body/paint; exclude independently predicted windows, windshield, tires/wheels, lights and occluders. A missing reliable body mask -> unknown.",False,True
+96,plant,natural_or_food_surface,secondary,False,3348,893,26.6726,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+97,plate,container_contents,high,False,6437,3313,51.4681,Exclude contained food/objects using independently predicted child masks. Insufficient exposed container pixels -> unknown.,False,True
+98,player,person_or_skin,not_requested,False,2406,197,8.1879,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+99,pole,opaque_surface,secondary,False,12666,2739,21.6248,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+100,post,opaque_surface,secondary,False,3597,815,22.6578,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+101,pot,container_contents,high,False,1448,518,35.7735,Exclude contained food/objects using independently predicted child masks. Insufficient exposed container pixels -> unknown.,False,True
+102,racket,opaque_surface,high,False,1591,645,40.5405,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+103,railing,opaque_surface,secondary,False,1755,510,29.0598,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+104,rock,natural_or_food_surface,secondary,False,4533,780,17.2071,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+105,roof,opaque_surface,secondary,False,3938,1159,29.4312,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+106,room,opaque_surface,secondary,False,1346,125,9.2868,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+107,screen,transparent_or_emissive,not_requested,False,1356,316,23.3038,Apparent color may belong to contents/reflection/light. Defer unless an opaque surface-specific mask and separate validation exist.,False,True
+108,seat,opaque_surface,high,False,2603,910,34.9597,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+109,sheep,animal_coat,high,False,2116,805,38.0435,"Use visible coat/feathers only; exclude tack/collar/occluder masks. Report up to two stable substantial colors, not breed-typical color.",False,True
+110,shelf,opaque_surface,secondary,False,3012,351,11.6534,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+111,shirt,garment_or_accessory,high,False,21672,14421,66.5421,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+112,shoe,garment_or_accessory,high,False,7743,3519,45.4475,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+113,short,garment_or_accessory,high,False,5018,3050,60.7812,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+114,sidewalk,opaque_surface,secondary,False,5267,605,11.4866,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+115,sign,text_symbol,not_requested,False,13679,6172,45.1203,Do not use CLIP text/OCR response to establish surface color. Defer glyph/color field separation to a later version.,False,True
+116,sink,container_contents,high,False,1707,667,39.0744,Exclude contained food/objects using independently predicted child masks. Insufficient exposed container pixels -> unknown.,False,True
+117,skateboard,opaque_surface,high,False,2374,776,32.6874,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+118,ski,opaque_surface,secondary,False,2307,461,19.9827,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+119,skier,person_or_skin,not_requested,False,1348,92,6.8249,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+120,sneaker,garment_or_accessory,high,False,1368,590,43.1287,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+121,snow,natural_or_food_surface,secondary,False,5598,1466,26.1879,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+122,sock,garment_or_accessory,high,False,1967,1021,51.9065,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+123,stand,opaque_surface,secondary,False,1543,303,19.6371,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+124,street,opaque_surface,secondary,False,6081,649,10.6726,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+125,surfboard,opaque_surface,high,False,2270,1184,52.1586,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+126,table,opaque_surface,high,False,10640,3375,31.7199,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+127,tail,animal_coat,secondary,False,5578,1298,23.27,"Use visible coat/feathers only; exclude tack/collar/occluder masks. Report up to two stable substantial colors, not breed-typical color.",False,True
+128,tie,garment_or_accessory,high,False,1623,883,54.4054,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+129,tile,opaque_surface,high,False,3318,1024,30.862,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+130,tire,opaque_surface,secondary,False,3524,1009,28.6322,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+131,toilet,opaque_surface,high,False,1288,795,61.7236,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+132,towel,opaque_surface,high,False,1725,854,49.5072,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+133,tower,opaque_surface,secondary,False,1614,360,22.3048,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+134,track,opaque_surface,secondary,False,4284,370,8.6368,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+135,train,vehicle_body,high,False,3765,2085,55.3785,"Measure visible body/paint; exclude independently predicted windows, windshield, tires/wheels, lights and occluders. A missing reliable body mask -> unknown.",False,True
+136,tree,natural_or_food_surface,secondary,False,28976,5487,18.9364,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+137,truck,vehicle_body,high,False,2650,1449,54.6792,"Measure visible body/paint; exclude independently predicted windows, windshield, tires/wheels, lights and occluders. A missing reliable body mask -> unknown.",False,True
+138,trunk,natural_or_food_surface,secondary,False,3223,516,16.0099,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+139,umbrella,garment_or_accessory,high,False,3828,1793,46.8391,"Use the garment/accessory mask, excluding skin and independent occluders. Keep stable main color separate from a smaller stripe/logo.",False,True
+140,vase,container_contents,high,False,1538,635,41.2874,Exclude contained food/objects using independently predicted child masks. Insufficient exposed container pixels -> unknown.,False,True
+141,vegetable,natural_or_food_surface,secondary,False,1074,305,28.3985,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+142,vehicle,vehicle_body,high,False,1778,598,33.6333,"Measure visible body/paint; exclude independently predicted windows, windshield, tires/wheels, lights and occluders. A missing reliable body mask -> unknown.",False,True
+143,wave,natural_or_food_surface,secondary,False,3298,822,24.9242,"Visible surface only, no canonical class-color guesses or scene-wide white-balance from object priors.",False,True
+144,wheel,opaque_surface,secondary,False,5620,1336,23.7722,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+145,window,transparent_or_emissive,not_requested,False,21705,1282,5.9065,Apparent color may belong to contents/reflection/light. Defer unless an opaque surface-specific mask and separate validation exist.,False,True
+146,windshield,transparent_or_emissive,not_requested,False,1990,41,2.0603,Apparent color may belong to contents/reflection/light. Defer unless an opaque surface-specific mask and separate validation exist.,False,True
+147,wing,vehicle_body,secondary,False,2616,414,15.8257,"Measure visible body/paint; exclude independently predicted windows, windshield, tires/wheels, lights and occluders. A missing reliable body mask -> unknown.",False,True
+148,wire,opaque_surface,secondary,False,2489,397,15.9502,"Visible target surface only, exclude independent occluders and check mask/color stability.",False,True
+149,woman,person_or_skin,not_requested,False,15372,1232,8.0146,Never attach clothing/hair color to a whole person or skin-part node. Use its separate garment/hair node; no inferred skin/race labels.,False,True
+150,zebra,animal_coat,high,False,2499,983,39.3357,"Use visible coat/feathers only; exclude tack/collar/occluder masks. Report up to two stable substantial colors, not breed-typical color.",False,True

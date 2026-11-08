@@ -1,0 +1,29 @@
+{
+  "status": "INCONCLUSIVE_RESOURCE_LIMIT",
+  "experiment": "independent CPU cache I/O probe",
+  "attempts": [
+    {
+      "version": "v1",
+      "outcome": "Preflight source-read budget assertion failed before artifact creation or shard reads.",
+      "sample_shards": 4
+    },
+    {
+      "version": "v2",
+      "outcome": "MemoryError importing torch under 4 GiB virtual address-space limit; preregistration was saved remotely, but timed shard loading did not begin.",
+      "sample_shards": 2
+    }
+  ],
+  "caps": {
+    "cpu_count": 1,
+    "alarm_seconds": 60,
+    "virtual_address_space_bytes": 4294967296,
+    "peak_rss_gate_bytes": 805306368,
+    "cache_read_budget_bytes": 167772160
+  },
+  "measured_speedup": null,
+  "gpu_used": false,
+  "live_training_modified": false,
+  "cache_modified": false,
+  "validation_or_test_accessed": false,
+  "limitation": "A virtual address-space import failure does not establish actual resident memory demand or a training bottleneck. No I/O speed conclusion is supported."
+}

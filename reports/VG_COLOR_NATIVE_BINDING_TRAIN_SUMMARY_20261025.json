@@ -1,0 +1,11 @@
+{
+  "status": "NATIVE_OBJECT_BINDING_TRAIN_PILOT_COMPLETE_NOT_VALIDATED",
+  "nodes": 200,
+  "color_candidates": 34,
+  "strict_binding_candidates": 9,
+  "loose_binding_candidates": 17,
+  "candidate_records_sha256": "007507fc07c7547854d669ebddb4d5f8b0a797bf0b2d0bb8fb3f6310d555f56b",
+  "human_reviews_completed": 0,
+  "production_accepted": false,
+  "test_accessed": false
+}

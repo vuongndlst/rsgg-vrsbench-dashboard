@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-22T15:21:58.308391+00:00",
+  "status": "BLOCKED_DISK_RESERVE",
+  "heartbeat_utc": "2026-10-22T11:20:17.870Z",
+  "successful_remote_contact": true,
+  "pinned_batch_calls_this_heartbeat": 1,
+  "candidate_queries_executed": 0,
+  "disk_free_bytes": 8297975808,
+  "required_free_bytes_strictly_greater_than": 17314086912,
+  "minimum_additional_free_bytes": 9016111105,
+  "all_pinned_source_and_original_index_checks_passed": true,
+  "component_test_terminal_not_polled_or_rerun": true,
+  "prior_cleanup_preserved": "reports/VG_V1_CACHE_CLEANUP_RESULT.json",
+  "action_required": "Disk reserve breached again after successful cleanup/resume; no additional deletion authorized. Pause pending storage restoration."
+}

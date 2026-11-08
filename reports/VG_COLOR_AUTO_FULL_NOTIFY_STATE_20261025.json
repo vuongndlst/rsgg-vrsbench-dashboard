@@ -1,0 +1,13 @@
+{
+  "phase": "vg_color_auto_full_pipeline_v1_20261025",
+  "initial_launch_communicated": true,
+  "completed_or_failure_notification_keys": [
+    "01c7ba3ab1b0328bb966c6e07e2a91285262f1208a0ed262e70bb9f6a858b9a6"
+  ],
+  "preregistration_sha256": "2f732c0e678d20f3023582a43201d6d99712c4430579fab79595e7d6e3b58339",
+  "human_precision_gate_passed": false,
+  "last_notification_utc": "2026-10-26T04:36:24.647152+00:00",
+  "last_event": "COMPLETE_COLOR_TEST_VERIFIED",
+  "last_verification_sha256": "82b5b923c95c17edb00fed89374539f39b83d2a7c9fa128a06cdf1115d22d0ac",
+  "terminal_phase_no_more_progress_polling": true
+}

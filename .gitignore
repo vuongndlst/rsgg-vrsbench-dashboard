@@ -1,0 +1,42 @@
+# Environments & Secrets
+.env
+.env.*
+.venv/
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Tools & Finalizer caches
+.tools/
+.codex-finalizer/
+research/
+outputs/
+papers/*.pdf
+reports/SERVER_DIRECTORY_SIZES*
+reports/*.zip
+
+# Large Datasets & Model Weights
+data/
+weights/
+artifacts/
+*.pth
+*.pt
+*.bin
+*.safetensors
+*.tar
+*.tar.gz
+*.zip
+
+# Python & OS caches
+.git_backup/
+*.git_backup/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.DS_Store
+Thumbs.db
+*.log

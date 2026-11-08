@@ -1,0 +1,13 @@
+{
+  "dataset": "DIOR-RSVG",
+  "task": "Visual Grounding Referring Expressions",
+  "evaluation_type": "Zero-shot Cross-Domain Transfer",
+  "num_queries_evaluated": 1623,
+  "metrics": {
+    "mIoU": 82.25783335983398,
+    "Acc@0.5": 100.0,
+    "Acc@0.6": 100.0,
+    "Acc@0.7": 99.75354282193469
+  },
+  "timestamp": "2026-11-07 17:44:11"
+}

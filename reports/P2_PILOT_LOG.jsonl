@@ -1,0 +1,36 @@
+{"event": "pilot_started", "device": "cuda", "train_images": 64, "validation_images": 32}
+{"event": "frequency_complete", "R50": 0.38768713924963927, "mR50": 0.05878267512538612}
+Downloading: "https://download.pytorch.org/models/resnet50-11ad3fa6.pth" to ${REMOTE_HOME}/rsg-former/weights/checkpoints/resnet50-11ad3fa6.pth
+{"event": "features_ready", "split": "train", "images": 8}
+{"event": "features_ready", "split": "train", "images": 16}
+{"event": "features_ready", "split": "train", "images": 24}
+{"event": "features_ready", "split": "train", "images": 32}
+{"event": "features_ready", "split": "train", "images": 40}
+{"event": "features_ready", "split": "train", "images": 48}
+{"event": "features_ready", "split": "train", "images": 56}
+{"event": "features_ready", "split": "train", "images": 64}
+{"event": "features_ready", "split": "val", "images": 8}
+{"event": "features_ready", "split": "val", "images": 16}
+{"event": "features_ready", "split": "val", "images": 24}
+{"event": "features_ready", "split": "val", "images": 32}
+{"event": "baseline_epoch", "baseline": "A0", "epoch": 1, "loss": 0.7700890863779932, "R50": 0.2214768917624521, "mR50": 0.018643921296095208}
+{"event": "baseline_epoch", "baseline": "A0", "epoch": 2, "loss": 0.33790062519256026, "R50": 0.2644503066378066, "mR50": 0.017130442021746368}
+{"event": "baseline_epoch", "baseline": "A0", "epoch": 3, "loss": 0.26594582200050354, "R50": 0.28427194512862614, "mR50": 0.031559013450317794}
+{"event": "baseline_epoch", "baseline": "A0", "epoch": 4, "loss": 0.2109265350154601, "R50": 0.29937821098920236, "mR50": 0.03260042131781262}
+{"event": "baseline_epoch", "baseline": "A0", "epoch": 5, "loss": 0.17317245012964122, "R50": 0.3344985414489725, "mR50": 0.032731090307816645}
+{"event": "baseline_epoch", "baseline": "A0", "epoch": 6, "loss": 0.15594607165257912, "R50": 0.32887841624371794, "mR50": 0.03497893794185354}
+{"event": "baseline_epoch", "baseline": "A0", "epoch": 7, "loss": 0.14007657360343728, "R50": 0.3494276586679604, "mR50": 0.0372832857679405}
+{"event": "baseline_epoch", "baseline": "A0", "epoch": 8, "loss": 0.12558206781977788, "R50": 0.31657923912773045, "mR50": 0.03525027019016789}
+{"event": "baseline_epoch", "baseline": "A0", "epoch": 9, "loss": 0.11144992274444121, "R50": 0.33164492057272227, "mR50": 0.03979260253812683}
+{"event": "baseline_epoch", "baseline": "A0", "epoch": 10, "loss": 0.09187223209028161, "R50": 0.34421932533462707, "mR50": 0.04158518676549368}
+{"event": "baseline_epoch", "baseline": "A1", "epoch": 1, "loss": 0.7077811572235078, "R50": 0.13268849206349206, "mR50": 0.014633591046634524}
+{"event": "baseline_epoch", "baseline": "A1", "epoch": 2, "loss": 0.3324070957605727, "R50": 0.2700145699606906, "mR50": 0.015345205519118563}
+{"event": "baseline_epoch", "baseline": "A1", "epoch": 3, "loss": 0.2506204650271684, "R50": 0.2722056619147136, "mR50": 0.030192394561959778}
+{"event": "baseline_epoch", "baseline": "A1", "epoch": 4, "loss": 0.2091356265009381, "R50": 0.29256889243419415, "mR50": 0.03130435506522463}
+{"event": "baseline_epoch", "baseline": "A1", "epoch": 5, "loss": 0.17633027119154576, "R50": 0.31509872431208635, "mR50": 0.031236509866944647}
+{"event": "baseline_epoch", "baseline": "A1", "epoch": 6, "loss": 0.1596424978633877, "R50": 0.3241165114818132, "mR50": 0.03679260253812684}
+{"event": "baseline_epoch", "baseline": "A1", "epoch": 7, "loss": 0.14305724899895722, "R50": 0.34835007246106386, "mR50": 0.03898222621368402}
+{"event": "baseline_epoch", "baseline": "A1", "epoch": 8, "loss": 0.14382421139453072, "R50": 0.3506207005398816, "mR50": 0.05066886608702466}
+{"event": "baseline_epoch", "baseline": "A1", "epoch": 9, "loss": 0.13885209059901626, "R50": 0.3399782539060556, "mR50": 0.050620394524486606}
+{"event": "baseline_epoch", "baseline": "A1", "epoch": 10, "loss": 0.11673864734802919, "R50": 0.3340000995173409, "mR50": 0.04920312126066602}
+{"event": "p2_pilot_complete", "wall_seconds": 193.98166876845062, "peak_vram_gib": 0.11826086044311523, "artifact_gib": 0.09631374850869179, "report": "reports/P2_PILOT_REPORT.json"}

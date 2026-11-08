@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-11T02:20:45.210231+00:00",
+  "production_source_sha256": "752b93fc302851e5e1922bf0a918842f09fca29eade1136cf2b65a4d69f0e1dd",
+  "fixture_source_sha256": "a348a7e47526da484257939b9b5e7e1cea113c385ed1847a4c81679aeb9478c5",
+  "cases": {
+    "success_resume_and_writer_lock": "PASS",
+    "crash_retains_reservation_and_recovers": "PASS",
+    "partial_failure_charge_and_two_attempt_guard": "PASS",
+    "persistent_cap_stops_before_request": "PASS",
+    "source_drift_refusal_before_network": "PASS"
+  },
+  "elapsed_seconds": 370.9460436627269,
+  "network_downloaded_bytes": 0,
+  "real_pixel_journals_modified": false,
+  "benchmark_test_scored": false,
+  "reference_captions_read": false,
+  "model_or_metric_run": false,
+  "live_v2_modified": false,
+  "full_streaming_registered": false,
+  "remaining": [
+    "Register full protected TEST streaming budget/version and continuation policy",
+    "Join validated streaming fingerprints with VG exact/perceptual audit"
+  ]
+}

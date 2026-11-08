@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "downloaded_image_sha256_checks": 6,
+  "sample_membership": "fixed test indices from sorted canonical test IDs",
+  "rendered_png_files_verified": 19,
+  "svg_files_verified": 6,
+  "display_edges_match_saved_predictions": true,
+  "new_model_inference": false,
+  "new_metric_evaluation": false,
+  "checkpoint_sha256": "29017a69d7cb6d76d68c834b5d540712775a9e0cf9cae13efd17d78a7b69292e",
+  "saved_prediction_sha256": "1ebbe42de86960144bc5ccf1b427e6bb8a1600fb62697c70e2853b986a5e37de",
+  "local_directory": "D:\\SBIR\\RSGG\\outputs\\context_1729_test_visualization_20261024",
+  "image_ids": [
+    2317169,
+    2322067,
+    2332567,
+    2334583,
+    2336357,
+    2342961
+  ],
+  "archive_files": 54,
+  "archive_bytes": 22849222,
+  "archive_path": "D:\\SBIR\\RSGG\\outputs\\context_1729_test_visualization_20261024.zip"
+}

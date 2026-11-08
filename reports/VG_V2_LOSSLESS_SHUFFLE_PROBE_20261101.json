@@ -1,0 +1,31 @@
+{
+  "status": "PASS_TWO_SHARD_BYTE_SHUFFLE4_GZIP6_ROUNDTRIP",
+  "utc": "2026-11-01T00:27:17.590968+00:00",
+  "remote_contact": false,
+  "server_changed": false,
+  "precision_changed": false,
+  "format": "VGBS4GZ1 + uint64LE original length + gzip6 four byte planes and tail",
+  "rows": [
+    {
+      "shard": "train_00000.pt",
+      "raw_bytes": 22309015,
+      "compressed_bytes": 18031490,
+      "saved_percent": 19.17397518447139,
+      "compression_seconds": 1.4446382999999998,
+      "decompression_seconds": 0.23001150000000004,
+      "original_SHA256_verified": true
+    },
+    {
+      "shard": "val_00000.pt",
+      "raw_bytes": 22308299,
+      "compressed_bytes": 18027732,
+      "saved_percent": 19.18822676708789,
+      "compression_seconds": 1.5374637,
+      "decompression_seconds": 0.24415220000000026,
+      "original_SHA256_verified": true
+    }
+  ],
+  "sample_projection_GiB": 16.455830760156836,
+  "full_cache_measured": false,
+  "legacy_reader_requires_raw_pt_restoration_or_separately_audited_adapter": true
+}

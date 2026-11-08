@@ -1,0 +1,34 @@
+{
+  "seen": [
+    "dfb79c73ecb56f6e3005bdd36e36b0de417f7b393743b7e1041420e7783e9dcd"
+  ],
+  "updated_utc": "2026-10-20T01:21:17.627264+00:00",
+  "last_event": {
+    "type": "COMPONENT_TEST_COMPLETE",
+    "checkpoint_sha256": "29017a69d7cb6d76d68c834b5d540712775a9e0cf9cae13efd17d78a7b69292e",
+    "selected_epoch": 10,
+    "seed": 1729,
+    "test": {
+      "mode": "SGDet",
+      "constraint": "GC",
+      "images": 26446,
+      "observed_images": 26446,
+      "empty_gt_images_excluded": 0,
+      "matching": "pinned native class/predicate AND inclusive float64 IoU>=0.5",
+      "absent_predicate_policy": "contributes zero in denominator50",
+      "R@20": 0.20698705708770174,
+      "mR@20": 0.11798923730360744,
+      "R@50": 0.27513692877179774,
+      "mR@50": 0.16919823015969826,
+      "R@100": 0.3228120836407376,
+      "mR@100": 0.20427976259644393
+    },
+    "comparability_limitations": [
+      "single validation-selected seed; not3seed regional-method confirmation",
+      "pretrained SGG-head adaptation and fixed-transform training differs from native full recipe",
+      "current input resize uses component rounding convention",
+      "canonical evaluation targets/postprocessor/evaluator; not a native-training reproduction",
+      "benchmark images may overlap external caption tests; not caption-clean"
+    ]
+  }
+}

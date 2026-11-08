@@ -1,0 +1,23 @@
+{
+  "status": "PLAN_COMPLETE_GT_TRAIN_VAL_ANALYSIS_COMPLETE",
+  "utc": "2026-10-24T07:49:31.364760+00:00",
+  "training_seeds_paused_by_human": [
+    2718,
+    3141
+  ],
+  "new_training_launched": false,
+  "captions_generated": false,
+  "caption_test_scored": false,
+  "plan_sha256": "8d8564314cc7aa5e2a3e4b107f9c067da601e62198566fc9d25bcd5e85e30dd3",
+  "draft_config_sha256": "bfe192b6027ecfb48eaac47943885a950d0c7023dd56f976561c74208157b5f9",
+  "gt_report_sha256": "24e96225fc01c67536c7a7d5e41a456975ee6c785f96eb688f9a7c4688029531",
+  "full_gt_source_sha256": "19624f10afb10bf69e30ecf48d85b1a71420c7432e8c88f1011a3c4fd60ec768",
+  "test_reference_semantics_analyzed_for_prompt": false,
+  "server_files_written": 0,
+  "proposed_qwen_caps_not_authorized": {
+    "allocator_gib": 32,
+    "process_gpu_gib": 36,
+    "rss_gib": 12,
+    "cpu_threads": 4
+  }
+}

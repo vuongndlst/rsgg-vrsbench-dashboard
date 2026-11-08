@@ -1,0 +1,15 @@
+[
+  "${REMOTE_HOME}/.cache/clip/ViT-B-32.pt",
+  "${REMOTE_HOME}/.cache/huggingface/hub/hub/models--lmms-lab--llava-onevision-qwen2-7b-ov",
+  "${REMOTE_HOME}/.cache/huggingface/hub/models--google--siglip-so400m-patch14-384",
+  "${REMOTE_HOME}/.cache/huggingface/hub/models--openai--clip-vit-base-patch32",
+  "${REMOTE_HOME}/coco_kb_v3/runtime/models/clip-vit-base-patch32",
+  "${REMOTE_HOME}/etechs/final_project/var/models/clip-vit-base-patch32",
+  "${REMOTE_HOME}/etechs/ouc_stkg_captioning_research_pack/artifacts/multimodal-labels-v1/models/Qwen2.5-VL-3B-Instruct",
+  "${REMOTE_HOME}/fair-project/models/hf_cache/hub/models--InstantX--SD3-Controlnet-Canny",
+  "${REMOTE_HOME}/fair-project/models/hf_cache/hub/models--lmms-lab--llava-onevision-qwen2-7b-ov",
+  "${REMOTE_HOME}/fair-project/models/hf_cache/hub/models--openai--clip-vit-base-patch32",
+  "${REMOTE_HOME}/fair-project/models/hf_cache/hub/models--stabilityai--stable-diffusion-3-medium-diffusers",
+  "${REMOTE_HOME}/fair-project/models/hf_cache/models--google--siglip-so400m-patch14-384",
+  "${REMOTE_HOME}/v2_kb_20260909/cache/huggingface/models--openai--clip-vit-large-patch14-336"
+]

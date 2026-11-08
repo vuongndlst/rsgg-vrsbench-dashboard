@@ -1,0 +1,299 @@
+{
+  "description": "Official State-of-the-Art (SOTA) Benchmarks for Remote Sensing Image Captioning from Q1 Journals (IEEE TGRS) and Top-Tier Conferences (NeurIPS, CVPR)",
+  "created_at": "2026-11-07T12:36:00+07:00",
+  "papers": [
+    {
+      "id": "VRSBench_NeurIPS2024",
+      "title": "VRSBench: A Versatile Vision-Language Benchmark for Remote Sensing Image Understanding",
+      "venue": "NeurIPS 2024 (Datasets and Benchmarks Track)",
+      "tier": "Core A* / Top-Tier Conference",
+      "arxiv_id": "2406.12384",
+      "dataset": "VRSBench",
+      "split": "Official Test Split (9,350 samples, 1 detailed ground-truth caption per image)",
+      "metrics_scale": "0 - 100 percentage scale",
+      "benchmark_table": "Table 3 (Page 7)",
+      "results": [
+        {
+          "model": "GeoChat (w/o FT)",
+          "source": "CVPR 2024 Zero-shot",
+          "BLEU-1": 13.9,
+          "BLEU-2": 6.6,
+          "BLEU-3": 3.0,
+          "BLEU-4": 1.4,
+          "METEOR": 7.8,
+          "ROUGE-L": 13.2,
+          "CIDEr": 0.4,
+          "CHAIR": 0.42,
+          "Avg_L": 36
+        },
+        {
+          "model": "GPT-4V",
+          "source": "OpenAI API Zero-shot",
+          "BLEU-1": 37.2,
+          "BLEU-2": 22.5,
+          "BLEU-3": 13.7,
+          "BLEU-4": 8.6,
+          "METEOR": 20.9,
+          "ROUGE-L": 30.1,
+          "CIDEr": 19.1,
+          "CHAIR": 0.83,
+          "Avg_L": 67
+        },
+        {
+          "model": "MiniGPT-v2 (FT)",
+          "source": "ICLR 2024 Architecture",
+          "BLEU-1": 36.8,
+          "BLEU-2": 22.4,
+          "BLEU-3": 13.9,
+          "BLEU-4": 8.7,
+          "METEOR": 17.1,
+          "ROUGE-L": 30.8,
+          "CIDEr": 21.4,
+          "CHAIR": 0.73,
+          "Avg_L": 37
+        },
+        {
+          "model": "GeoChat (FT)",
+          "source": "CVPR 2024 Fine-tuned",
+          "BLEU-1": 46.7,
+          "BLEU-2": 30.2,
+          "BLEU-3": 20.1,
+          "BLEU-4": 13.8,
+          "METEOR": 21.1,
+          "ROUGE-L": 35.2,
+          "CIDEr": 28.2,
+          "CHAIR": 0.77,
+          "Avg_L": 52
+        },
+        {
+          "model": "Mini-Gemini (FT)",
+          "source": "CVPR 2024 Fine-tuned",
+          "BLEU-1": 47.6,
+          "BLEU-2": 31.1,
+          "BLEU-3": 20.9,
+          "BLEU-4": 14.3,
+          "METEOR": 21.5,
+          "ROUGE-L": 36.8,
+          "CIDEr": 33.5,
+          "CHAIR": 0.77,
+          "Avg_L": 47
+        },
+        {
+          "model": "LLaVA-1.5 (FT)",
+          "source": "NeurIPS 2023 Fine-tuned",
+          "BLEU-1": 48.1,
+          "BLEU-2": 31.5,
+          "BLEU-3": 21.2,
+          "BLEU-4": 14.7,
+          "METEOR": 21.9,
+          "ROUGE-L": 36.9,
+          "CIDEr": 33.9,
+          "CHAIR": 0.78,
+          "Avg_L": 49
+        }
+      ],
+      "our_model_checkpoints": {
+        "architecture": "RSG-Qwen2.5-14B (Graph-to-Text LoRA)",
+        "step_300": {
+          "BLEU-1": 45.77,
+          "BLEU-4": 12.77,
+          "METEOR": 25.50,
+          "ROUGE-L": 36.19,
+          "CIDEr": 28.46
+        },
+        "step_600": {
+          "BLEU-1": 47.11,
+          "BLEU-4": 13.41,
+          "METEOR": 25.49,
+          "ROUGE-L": 37.89,
+          "CIDEr": 26.76
+        },
+        "step_900 (Best CIDEr)": {
+          "BLEU-1": 46.02,
+          "BLEU-4": 12.84,
+          "METEOR": 24.91,
+          "ROUGE-L": 36.90,
+          "CIDEr": 28.61
+        },
+        "step_1264 (Final)": {
+          "BLEU-1": 45.89,
+          "BLEU-2": 29.32,
+          "BLEU-3": 19.08,
+          "BLEU-4": 12.65,
+          "METEOR": 25.37,
+          "ROUGE-L": 37.22,
+          "CIDEr": 26.36
+        }
+      }
+    },
+    {
+      "id": "EarthGPT_TGRS2024",
+      "title": "EarthGPT: A Universal Multi-modal Large Language Model for Multi-sensor Remote Sensing Land-Cover Mapping and Interpretation",
+      "venue": "IEEE Transactions on Geoscience and Remote Sensing (TGRS 2024)",
+      "tier": "Q1 Journal (Impact Factor: 8.2)",
+      "arxiv_id": "2401.16822",
+      "dataset": "NWPU-Captions",
+      "split": "Official Test Split (5 references per image)",
+      "benchmark_table": "Table IV (Page 11)",
+      "results": [
+        {
+          "model": "CSMLF",
+          "venue": "IEEE GRSL 2019",
+          "type": "Specialist",
+          "BLEU-1": 77.0,
+          "BLEU-2": 64.9,
+          "BLEU-3": 53.2,
+          "BLEU-4": 47.1,
+          "METEOR": 32.0,
+          "ROUGE-L": 57.8,
+          "CIDEr": 106.5,
+          "SPICE": 26.5
+        },
+        {
+          "model": "Attention (Soft)",
+          "venue": "IEEE TGRS 2017",
+          "type": "Specialist",
+          "BLEU-1": 73.1,
+          "BLEU-2": 60.9,
+          "BLEU-3": 52.5,
+          "BLEU-4": 46.2,
+          "METEOR": 33.9,
+          "ROUGE-L": 59.9,
+          "CIDEr": 113.6,
+          "SPICE": 28.5
+        },
+        {
+          "model": "Attention (Hard)",
+          "venue": "IEEE TGRS 2017",
+          "type": "Specialist",
+          "BLEU-1": 73.3,
+          "BLEU-2": 61.0,
+          "BLEU-3": 52.7,
+          "BLEU-4": 46.4,
+          "METEOR": 34.0,
+          "ROUGE-L": 60.0,
+          "CIDEr": 110.3,
+          "SPICE": 28.4
+        },
+        {
+          "model": "FC-Att",
+          "venue": "IEEE TGRS 2019",
+          "type": "Specialist",
+          "BLEU-1": 73.6,
+          "BLEU-2": 61.5,
+          "BLEU-3": 53.2,
+          "BLEU-4": 46.9,
+          "METEOR": 33.8,
+          "ROUGE-L": 60.0,
+          "CIDEr": 123.1,
+          "SPICE": 28.3
+        },
+        {
+          "model": "SM-Att",
+          "venue": "IEEE TGRS 2019",
+          "type": "Specialist",
+          "BLEU-1": 73.9,
+          "BLEU-2": 61.7,
+          "BLEU-3": 53.2,
+          "BLEU-4": 46.8,
+          "METEOR": 33.0,
+          "ROUGE-L": 59.3,
+          "CIDEr": 123.6,
+          "SPICE": 27.6
+        },
+        {
+          "model": "MLCA-Net",
+          "venue": "IEEE TGRS 2022",
+          "type": "Specialist",
+          "BLEU-1": 74.5,
+          "BLEU-2": 62.4,
+          "BLEU-3": 54.1,
+          "BLEU-4": 47.8,
+          "METEOR": 33.7,
+          "ROUGE-L": 60.1,
+          "CIDEr": 126.4,
+          "SPICE": 28.5
+        },
+        {
+          "model": "EarthGPT",
+          "venue": "IEEE TGRS 2024",
+          "type": "MLLM (Foundation)",
+          "BLEU-1": 87.1,
+          "BLEU-2": 78.7,
+          "BLEU-3": 71.6,
+          "BLEU-4": 65.5,
+          "METEOR": 44.5,
+          "ROUGE-L": 78.2,
+          "CIDEr": 192.6,
+          "SPICE": 32.2
+        }
+      ]
+    },
+    {
+      "id": "MLCANet_TGRS2022",
+      "title": "Multi-Level Context-Aware Network for Remote Sensing Image Captioning",
+      "venue": "IEEE Transactions on Geoscience and Remote Sensing (TGRS 2022)",
+      "tier": "Q1 Journal (Impact Factor: 8.2)",
+      "dataset": "RSICD",
+      "split": "Karpathy/Lu Split (80% train / 10% val / 10% test, 5 references per image)",
+      "metrics_scale": "Reported as decimal or x100 percentage",
+      "results": [
+        {
+          "model": "Hard-Attention",
+          "venue": "IEEE TGRS 2017",
+          "BLEU-1": 66.0,
+          "BLEU-2": 51.0,
+          "BLEU-3": 41.0,
+          "BLEU-4": 34.0,
+          "METEOR": 32.0,
+          "ROUGE-L": 60.0,
+          "CIDEr": 179.0
+        },
+        {
+          "model": "Soft-Attention",
+          "venue": "IEEE TGRS 2019",
+          "BLEU-1": 67.0,
+          "BLEU-2": 53.0,
+          "BLEU-3": 43.0,
+          "BLEU-4": 36.0,
+          "METEOR": 32.0,
+          "ROUGE-L": 61.0,
+          "CIDEr": 196.0
+        },
+        {
+          "model": "Truncated Attention",
+          "venue": "IEEE TGRS 2020",
+          "BLEU-1": 75.3,
+          "BLEU-2": 63.8,
+          "BLEU-3": 54.2,
+          "BLEU-4": 46.1,
+          "METEOR": 34.8,
+          "ROUGE-L": 66.2,
+          "CIDEr": 204.3
+        },
+        {
+          "model": "Word-Sentence Framework",
+          "venue": "IEEE TGRS 2020",
+          "BLEU-1": 77.2,
+          "BLEU-2": 66.1,
+          "BLEU-3": 57.0,
+          "BLEU-4": 49.3,
+          "METEOR": 36.1,
+          "ROUGE-L": 68.0,
+          "CIDEr": 215.7
+        },
+        {
+          "model": "MLCA-Net",
+          "venue": "IEEE TGRS 2022",
+          "BLEU-1": 83.1,
+          "BLEU-2": 74.2,
+          "BLEU-3": 65.9,
+          "BLEU-4": 58.0,
+          "METEOR": 39.0,
+          "ROUGE-L": 71.1,
+          "CIDEr": 232.4
+        }
+      ]
+    }
+  ]
+}

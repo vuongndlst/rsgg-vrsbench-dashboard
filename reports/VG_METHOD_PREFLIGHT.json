@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-10T11:09:50Z",
+  "splits": {
+    "train": {
+      "images": 56224,
+      "objects": 658971,
+      "all_directed_pairs": 8922846,
+      "cached_pairs": 3266441,
+      "max_objects": 62,
+      "estimated_fp16_features_bytes": 16078487552,
+      "split_hash": "69e74096ac877dda690ee4e217151127f63752a79d120be3a2af7cb57fa5c2f7"
+    },
+    "val": {
+      "images": 5000,
+      "objects": 62754,
+      "all_directed_pairs": 976590,
+      "cached_pairs": 976590,
+      "max_objects": 52,
+      "estimated_fp16_features_bytes": 4257153024,
+      "split_hash": "8d83adf29e1ee9ac552c1f3d72ff4575a849444103f0ba6ec72519b9f4cc52a2"
+    }
+  },
+  "environment": {
+    "torch": "2.12.0+cu130",
+    "torchvision": "0.27.0+cu130"
+  },
+  "test_scored": false,
+  "storage_available_bytes": 73721913344,
+  "gpu_free_bytes": 28580577280,
+  "gpu_total_bytes": 47697690624,
+  "projected_feature_bytes": 20335640576
+}

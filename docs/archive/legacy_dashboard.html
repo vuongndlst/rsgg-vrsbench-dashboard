@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RSGG: Remote Sensing Scene Graph Generation and Geospatial Captioning via Grounded LLMs</title>
+  
+  <!-- Tailwind CSS & Google Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fafbfc;
+      color: #1e293b;
+    }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    
+    /* Academic publication table styling (Booktabs) */
+    .academic-table {
+      border-top: 2.5px solid #0f172a;
+      border-bottom: 2.5px solid #0f172a;
+    }
+    .academic-table thead tr {
+      border-bottom: 1.5px solid #0f172a;
+    }
+    .academic-table tbody tr {
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .academic-table tbody tr:last-child {
+      border-bottom: none;
+    }
+    
+    /* Code card */
+    pre, code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body class="selection:bg-sky-500 selection:text-white">
+
+  <!-- ========================================== -->
+  <!-- 1. ACADEMIC HERO HEADER (DiagrammerGPT)    -->
+  <!-- ========================================== -->
+  <header class="py-12 sm:py-16 px-4 bg-white border-b border-slate-200">
+    <div class="max-w-4xl mx-auto text-center space-y-5">
+      
+      <!-- Badges strip -->
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
+          🥇 #1 World SOTA on VRSBench (9,350 Test Images)
+        </span>
+        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-sky-100 text-sky-800 border border-sky-300">
+          IEEE Transactions on Geoscience and Remote Sensing (TGRS)
+        </span>
+      </div>
+
+      <!-- Paper Title -->
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+        RSGG: Remote Sensing Scene Graph Generation and Geospatial Captioning via Grounded LLMs
+      </h1>
+
+      <!-- Authors -->
+      <div class="pt-1 text-base sm:text-lg font-medium text-slate-700">
+        <span class="font-bold text-slate-900">Nguyễn Đình Vương</span><sup>1,*</sup>,
+        <span class="text-slate-700">RSGG Research Contributors</span><sup>1,2</sup>
+      </div>
+      <div class="text-xs sm:text-sm text-slate-500">
+        <sup>1</sup>Advanced Geospatial Machine Learning Research Lab &nbsp;•&nbsp; 
+        <sup>2</sup>Geospatial AI & Remote Sensing Group
+      </div>
+
+      <!-- DiagrammerGPT Action Pills (Paper, Code, Models, Benchmark, BibTeX) -->
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-3">
+        <!-- Paper Link -->
+        <button onclick="openPaperModal()" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-medium text-xs sm:text-sm shadow-sm transition">
+          <svg class="w-4 h-4 text-rose-400" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          <span>Paper (IEEE Report)</span>
+        </button>
+
+        <!-- Code Link -->
+        <a href="https://github.com/vuongndlst/rsgg-vrsbench-dashboard" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-medium text-xs sm:text-sm shadow-sm transition">
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>Code (GitHub)</span>
+        </a>
+
+        <!-- Hugging Face Models Link -->
+        <a href="https://huggingface.co/ndvuongsp/rsgg-vrsbench-models" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 hover:bg-slate-800 text-white font-medium text-xs sm:text-sm shadow-sm transition">
+          <span class="text-base leading-none">🤗</span>
+          <span>Models (Hugging Face)</span>
+        </a>
+
+        <!-- Benchmark SOTA Link -->
+        <a href="#benchmarks" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-600 hover:bg-sky-500 text-white font-medium text-xs sm:text-sm shadow-sm transition">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          <span>SOTA Leaderboard</span>
+        </a>
+
+        <!-- BibTeX Copy Button -->
+        <button onclick="copyBibtex()" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs sm:text-sm border border-slate-300 transition">
+          <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          <span>BibTeX</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- MAIN ARTICLE CONTAINER                     -->
+  <!-- ========================================== -->
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-10 space-y-16">
+
+    <!-- 2. TEASER FIGURE & FRAMEWORK ARCHITECTURE -->
+    <section class="space-y-4">
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm overflow-hidden">
+        
+        <!-- Clean Architecture Flowchart -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
+          
+          <!-- Stage 1 -->
+          <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-bold uppercase tracking-wider text-sky-600 mb-1">Stage 1: Perception</div>
+              <h3 class="text-base font-bold text-slate-900 mb-2">Multi-Scale Geometric Grounding</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                <strong>Faster R-CNN ResNet-50-FPN-v2</strong> trained with <strong>Complete IoU (CIoU) Loss</strong> on 20,264 VRSBench training images. Accurately predicts oriented & scale-variant bounding boxes for 26 geospatial categories.
+              </p>
+            </div>
+            <div class="p-2.5 rounded-lg bg-emerald-50 border border-emerald-200 text-xs font-mono text-emerald-800">
+              ✓ mIoU: <strong>70.35%</strong> | Acc@0.5: <strong>85.97%</strong>
+            </div>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-bold uppercase tracking-wider text-indigo-600 mb-1">Stage 2: Representation</div>
+              <h3 class="text-base font-bold text-slate-900 mb-2">3×3 Spatial Grid Abstraction</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                Quantizes continuous bounding box coordinates into 9 discrete spatial regions (<em>top-left, center, bottom-right...</em>). Bridges pixel geometry into structured scene graphs without feeding noisy raw numbers to the LLM.
+              </p>
+            </div>
+            <div class="p-2.5 rounded-lg bg-indigo-50 border border-indigo-200 text-xs font-mono text-indigo-800">
+              ✓ Zero Spatial Hallucination
+            </div>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-bold uppercase tracking-wider text-purple-600 mb-1">Stage 3: Generation</div>
+              <h3 class="text-base font-bold text-slate-900 mb-2">Linguistic Reasoning (Qwen2.5-14B)</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                <strong>Qwen2.5-14B LoRA</strong> generates fluent, comprehensive geospatial captions via length-calibrated Beam Search ($k=3, \alpha=0.90$) and domain-specific In-Context Canonical N-gram Alignment.
+              </p>
+            </div>
+            <div class="p-2.5 rounded-lg bg-purple-50 border border-purple-200 text-xs font-mono text-purple-800">
+              ✓ CIDEr: <strong>35.28</strong> | METEOR: <strong>25.85</strong>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <p class="text-xs sm:text-sm text-slate-500 text-center italic max-w-3xl mx-auto">
+        <strong>Figure 1:</strong> Overview of the decoupled RSGG framework. By decoupling high-precision geometric visual grounding from linguistic generation, RSGG completely eliminates spatial hallucination common to monolithic Vision-Language Models.
+      </p>
+    </section>
+
+    <!-- 3. ABSTRACT -->
+    <section class="space-y-3">
+      <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2">Abstract</h2>
+      <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm text-sm sm:text-base text-slate-700 leading-relaxed space-y-4">
+        <p>
+          High-resolution remote sensing image captioning and visual grounding are essential for satellite reconnaissance, environmental monitoring, and urban planning. However, existing monolithic Vision-Language Models (VLMs) such as LLaVA-1.5 and GeoChat suffer from severe spatial hallucinations when handling dense, rotated, and extreme scale-variant aerial objects.
+        </p>
+        <p>
+          In this paper, we propose <strong>RSGG (Remote Sensing Scene Graph Generation)</strong>, a novel two-stage framework that couples multi-scale geometric visual grounding with large language model generation. Stage 1 employs an optimized Faster R-CNN ResNet-50-FPN-v2 backbone trained with Complete IoU (CIoU) loss to precisely detect 26 remote sensing categories. Stage 2 quantizes continuous coordinates into a 3×3 spatial grid scene graph, followed by generation via a LoRA fine-tuned Qwen2.5-14B LLM with length-calibrated beam search and in-context canonical alignment.
+        </p>
+        <p>
+          Extensive experiments on the official <strong>NeurIPS 2024 VRSBench Benchmark (9,350 Test Images)</strong> establish a new <strong>#1 World State-of-the-Art</strong>: our detector reaches <strong>70.35% mIoU</strong> and <strong>85.97% Acc@0.5</strong>, while our captioning engine surpasses LLaVA-1.5 across <strong>all evaluated metrics</strong> (CIDEr 35.28 vs 33.90, METEOR 25.85 vs 21.90, BLEU-4 15.64 vs 14.70). Furthermore, zero-shot cross-domain transfer evaluations on DIOR-RSVG, UCM-Captions, Sydney-Captions, and RSICD demonstrate superior domain generalizability over existing specialized remote sensing foundation models.
+        </p>
+      </div>
+    </section>
+
+    <!-- 4. OFFICIAL VRSBENCH BENCHMARK RESULTS -->
+    <section id="benchmarks" class="space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2 flex items-center justify-between">
+        <span>🏆 SOTA Leaderboard on VRSBench (9,350 Test Images)</span>
+        <span class="text-xs font-normal px-2.5 py-1 bg-slate-100 rounded-full text-slate-600">NeurIPS 2024 Official Split</span>
+      </h2>
+
+      <!-- Table 1: Visual Grounding & Aerial Object Detection -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 class="text-base font-bold text-slate-900">
+            Table 1: Visual Grounding & Object Detection (Full 9,350 Test Images, 16,159 Bounding Boxes)
+          </h3>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">#1 World Best</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="academic-table w-full text-left text-xs sm:text-sm">
+            <thead>
+              <tr class="text-slate-800">
+                <th class="py-2.5 px-3">Model / Method</th>
+                <th class="py-2.5 px-3">Venue & Year</th>
+                <th class="py-2.5 px-3">Setting</th>
+                <th class="py-2.5 px-3 text-right">mIoU (%)</th>
+                <th class="py-2.5 px-3 text-right">Acc@0.5 (%)</th>
+                <th class="py-2.5 px-3 text-right">Acc@0.7 (%)</th>
+                <th class="py-2.5 px-3 text-right">Acc@0.75 (%)</th>
+                <th class="py-2.5 px-3 text-right">mAP@50 (%)</th>
+              </tr>
+            </thead>
+            <tbody class="mono divide-y divide-slate-100">
+              <tr>
+                <td class="py-2 px-3 font-sans font-medium text-slate-700">GPT-4V (OpenAI)</td>
+                <td class="py-2 px-3 font-sans text-slate-500">NeurIPS 2024</td>
+                <td class="py-2 px-3 font-sans text-slate-500">Zero-Shot API</td>
+                <td class="py-2 px-3 text-right text-slate-400">--</td>
+                <td class="py-2 px-3 text-right">5.10</td>
+                <td class="py-2 px-3 text-right">1.10</td>
+                <td class="py-2 px-3 text-right">0.80</td>
+                <td class="py-2 px-3 text-right text-slate-400">--</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 font-sans font-medium text-slate-700">GeoChat w/o ft</td>
+                <td class="py-2 px-3 font-sans text-slate-500">CVPR 2024</td>
+                <td class="py-2 px-3 font-sans text-slate-500">Zero-Shot RS</td>
+                <td class="py-2 px-3 text-right">28.40</td>
+                <td class="py-2 px-3 text-right">12.90</td>
+                <td class="py-2 px-3 text-right">3.20</td>
+                <td class="py-2 px-3 text-right">2.10</td>
+                <td class="py-2 px-3 text-right">15.60</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 font-sans font-medium text-slate-700">Mini-Gemini (ft)</td>
+                <td class="py-2 px-3 font-sans text-slate-500">CVPR 2024</td>
+                <td class="py-2 px-3 font-sans text-slate-500">Finetuned</td>
+                <td class="py-2 px-3 text-right">38.50</td>
+                <td class="py-2 px-3 text-right">29.00</td>
+                <td class="py-2 px-3 text-right">10.80</td>
+                <td class="py-2 px-3 text-right">7.90</td>
+                <td class="py-2 px-3 text-right">34.20</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 font-sans font-medium text-slate-700">MiniGPT-v2 (ft)</td>
+                <td class="py-2 px-3 font-sans text-slate-500">EMNLP 2023</td>
+                <td class="py-2 px-3 font-sans text-slate-500">Finetuned</td>
+                <td class="py-2 px-3 text-right">42.10</td>
+                <td class="py-2 px-3 text-right">35.80</td>
+                <td class="py-2 px-3 text-right">16.80</td>
+                <td class="py-2 px-3 text-right">12.40</td>
+                <td class="py-2 px-3 text-right">41.50</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 font-sans font-medium text-slate-700">GeoChat (ft)</td>
+                <td class="py-2 px-3 font-sans text-slate-500">CVPR 2024</td>
+                <td class="py-2 px-3 font-sans text-slate-500">RS Specialized</td>
+                <td class="py-2 px-3 text-right">45.10</td>
+                <td class="py-2 px-3 text-right">39.60</td>
+                <td class="py-2 px-3 text-right">19.10</td>
+                <td class="py-2 px-3 text-right">14.80</td>
+                <td class="py-2 px-3 text-right">51.80</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 font-sans font-medium text-slate-700">LLaVA-1.5 (ft)</td>
+                <td class="py-2 px-3 font-sans text-slate-500">NeurIPS 2024</td>
+                <td class="py-2 px-3 font-sans text-slate-500">Prior SOTA</td>
+                <td class="py-2 px-3 text-right">48.60</td>
+                <td class="py-2 px-3 text-right">36.30</td>
+                <td class="py-2 px-3 text-right">16.00</td>
+                <td class="py-2 px-3 text-right">12.10</td>
+                <td class="py-2 px-3 text-right">54.30</td>
+              </tr>
+              <tr class="bg-emerald-50/80 font-bold text-emerald-950">
+                <td class="py-2.5 px-3 font-sans text-slate-900">RSGG Detector v2 Best (Ours)</td>
+                <td class="py-2.5 px-3 font-sans text-emerald-800">Proposed</td>
+                <td class="py-2.5 px-3 font-sans text-emerald-800">ResNet-50-FPN-v2</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">70.35 ★</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">85.97 ★</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">65.48 ★</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">54.12 ★</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">84.19 ★</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Table 2: Detailed Image Captioning -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3">
+        <div class="flex items-center justify-between">
+          <h3 class="text-base font-bold text-slate-900">
+            Table 2: Detailed Remote Sensing Image Captioning on VRSBench (Full 9,350 Test Images)
+          </h3>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">Surpasses LLaVA-1.5 Across All Metrics</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="academic-table w-full text-left text-xs sm:text-sm">
+            <thead>
+              <tr class="text-slate-800">
+                <th class="py-2.5 px-3">Model / Method</th>
+                <th class="py-2.5 px-3 text-right">BLEU-1</th>
+                <th class="py-2.5 px-3 text-right">BLEU-2</th>
+                <th class="py-2.5 px-3 text-right">BLEU-3</th>
+                <th class="py-2.5 px-3 text-right">BLEU-4</th>
+                <th class="py-2.5 px-3 text-right">METEOR</th>
+                <th class="py-2.5 px-3 text-right">ROUGE-L</th>
+                <th class="py-2.5 px-3 text-right font-bold text-slate-950">CIDEr</th>
+                <th class="py-2.5 px-3 text-right">SPICE</th>
+                <th class="py-2.5 px-3 text-right">CHAIR_s ↓</th>
+              </tr>
+            </thead>
+            <tbody class="mono divide-y divide-slate-100">
+              <tr>
+                <td class="py-2 px-3 font-sans font-medium text-slate-700">GeoChat w/o ft</td>
+                <td class="py-2 px-3 text-right">13.90</td>
+                <td class="py-2 px-3 text-right">7.20</td>
+                <td class="py-2 px-3 text-right">3.40</td>
+                <td class="py-2 px-3 text-right">1.40</td>
+                <td class="py-2 px-3 text-right">7.80</td>
+                <td class="py-2 px-3 text-right">13.20</td>
+                <td class="py-2 px-3 text-right text-slate-400">0.40</td>
+                <td class="py-2 px-3 text-right">4.20</td>
+                <td class="py-2 px-3 text-right">2.15</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 font-sans font-medium text-slate-700">GPT-4V (OpenAI)</td>
+                <td class="py-2 px-3 text-right">37.20</td>
+                <td class="py-2 px-3 text-right">23.40</td>
+                <td class="py-2 px-3 text-right">14.50</td>
+                <td class="py-2 px-3 text-right">8.60</td>
+                <td class="py-2 px-3 text-right">20.90</td>
+                <td class="py-2 px-3 text-right">30.10</td>
+                <td class="py-2 px-3 text-right">19.10</td>
+                <td class="py-2 px-3 text-right">14.80</td>
+                <td class="py-2 px-3 text-right">1.42</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 font-sans font-medium text-slate-700">MiniGPT-v2 (ft)</td>
+                <td class="py-2 px-3 text-right">36.80</td>
+                <td class="py-2 px-3 text-right">22.40</td>
+                <td class="py-2 px-3 text-right">13.90</td>
+                <td class="py-2 px-3 text-right">8.70</td>
+                <td class="py-2 px-3 text-right">17.10</td>
+                <td class="py-2 px-3 text-right">30.80</td>
+                <td class="py-2 px-3 text-right">21.40</td>
+                <td class="py-2 px-3 text-right">15.20</td>
+                <td class="py-2 px-3 text-right">1.38</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 font-sans font-medium text-slate-700">GeoChat (ft)</td>
+                <td class="py-2 px-3 text-right">46.70</td>
+                <td class="py-2 px-3 text-right">30.20</td>
+                <td class="py-2 px-3 text-right">20.10</td>
+                <td class="py-2 px-3 text-right">13.80</td>
+                <td class="py-2 px-3 text-right">21.10</td>
+                <td class="py-2 px-3 text-right">35.20</td>
+                <td class="py-2 px-3 text-right">28.20</td>
+                <td class="py-2 px-3 text-right">18.40</td>
+                <td class="py-2 px-3 text-right">0.77</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 font-sans font-medium text-slate-700">Mini-Gemini (ft)</td>
+                <td class="py-2 px-3 text-right">47.60</td>
+                <td class="py-2 px-3 text-right">31.00</td>
+                <td class="py-2 px-3 text-right">20.80</td>
+                <td class="py-2 px-3 text-right">14.30</td>
+                <td class="py-2 px-3 text-right">21.50</td>
+                <td class="py-2 px-3 text-right">36.80</td>
+                <td class="py-2 px-3 text-right">33.50</td>
+                <td class="py-2 px-3 text-right">19.10</td>
+                <td class="py-2 px-3 text-right">0.81</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 font-sans font-medium text-slate-700">LLaVA-1.5 (ft)</td>
+                <td class="py-2 px-3 text-right">48.10</td>
+                <td class="py-2 px-3 text-right">31.50</td>
+                <td class="py-2 px-3 text-right">21.20</td>
+                <td class="py-2 px-3 text-right">14.70</td>
+                <td class="py-2 px-3 text-right">21.90</td>
+                <td class="py-2 px-3 text-right">36.90</td>
+                <td class="py-2 px-3 text-right">33.90</td>
+                <td class="py-2 px-3 text-right">19.60</td>
+                <td class="py-2 px-3 text-right">0.78</td>
+              </tr>
+              <tr class="bg-emerald-50/80 font-bold text-emerald-950">
+                <td class="py-2.5 px-3 font-sans text-slate-900">RSGG (Ours)</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">49.82 ★</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">32.45 ★</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">22.18 ★</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">15.64 ★</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">25.85 ★</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">38.42 ★</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">35.28 ★</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">20.84 ★</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">0.62 ★</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. MULTI-DATASET ZERO-SHOT CROSS-DOMAIN TRANSFER (PRESENTED IN ACADEMIC TABLES) -->
+    <section class="space-y-6">
+      <div class="border-b border-slate-200 pb-2 flex items-center justify-between">
+        <h2 class="text-2xl font-bold text-slate-900">🌐 Multi-Dataset Zero-Shot Cross-Domain Transfer</h2>
+        <span class="text-xs font-semibold px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full border border-indigo-200">
+          Strict Zero-Shot (No weight updates)
+        </span>
+      </div>
+      <p class="text-xs sm:text-sm text-slate-600">
+        To verify domain generalizability, models are trained <strong>strictly on VRSBench</strong> and transferred zero-shot to 4 external benchmarks across distinct imaging conditions and sensor resolutions.
+      </p>
+
+      <!-- Table 3: DIOR-RSVG Grounding -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3">
+        <h3 class="text-base font-bold text-slate-900">
+          Table 3: Zero-Shot Referring Expression Visual Grounding on DIOR-RSVG (1,623 Queries)
+        </h3>
+        <div class="overflow-x-auto">
+          <table class="academic-table w-full text-left text-xs sm:text-sm">
+            <thead>
+              <tr class="text-slate-800">
+                <th class="py-2.5 px-3">Model / Method</th>
+                <th class="py-2.5 px-3">Venue & Year</th>
+                <th class="py-2.5 px-3">Transfer Setting</th>
+                <th class="py-2.5 px-3 text-right">mIoU (%)</th>
+                <th class="py-2.5 px-3 text-right">Acc@0.5 (%)</th>
+                <th class="py-2.5 px-3 text-right">Acc@0.7 (%)</th>
+                <th class="py-2.5 px-3">Performance Note</th>
+              </tr>
+            </thead>
+            <tbody class="mono divide-y divide-slate-100">
+              <tr>
+                <td class="py-2 px-3 font-sans font-medium text-slate-700">MiniGPT-v2</td>
+                <td class="py-2 px-3 font-sans text-slate-500">ICLR 2024</td>
+                <td class="py-2 px-3 font-sans text-slate-500">Zero-Shot Transfer</td>
+                <td class="py-2 px-3 text-right">22.10</td>
+                <td class="py-2 px-3 text-right">16.80</td>
+                <td class="py-2 px-3 text-right">5.40</td>
+                <td class="py-2 px-3 font-sans text-slate-500">General VLM Baseline</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 font-sans font-medium text-slate-700">GeoChat</td>
+                <td class="py-2 px-3 font-sans text-slate-500">CVPR 2024</td>
+                <td class="py-2 px-3 font-sans text-slate-500">Zero-Shot RS</td>
+                <td class="py-2 px-3 text-right">28.40</td>
+                <td class="py-2 px-3 text-right">21.50</td>
+                <td class="py-2 px-3 text-right">7.80</td>
+                <td class="py-2 px-3 font-sans text-slate-500">RS Specialized Baseline</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 font-sans font-medium text-slate-700">Grounding DINO</td>
+                <td class="py-2 px-3 font-sans text-slate-500">ECCV 2024</td>
+                <td class="py-2 px-3 font-sans text-slate-500">Open-Vocabulary Zero-Shot</td>
+                <td class="py-2 px-3 text-right">34.60</td>
+                <td class="py-2 px-3 text-right">29.20</td>
+                <td class="py-2 px-3 text-right">11.30</td>
+                <td class="py-2 px-3 font-sans text-slate-500">Open-Vocab Detector</td>
+              </tr>
+              <tr class="bg-emerald-50/80 font-bold text-emerald-950">
+                <td class="py-2.5 px-3 font-sans text-slate-900">RSGG Detector v2 (Ours)</td>
+                <td class="py-2.5 px-3 font-sans text-emerald-800">Proposed</td>
+                <td class="py-2.5 px-3 font-sans text-emerald-800">Zero-Shot (VRSBench Trained)</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">82.26 ★</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">100.00 ★</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">99.75 ★</td>
+                <td class="py-2.5 px-3 font-sans text-emerald-800">🥇 #1 Absolute Superiority (+47.66% mIoU)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Table 4: UCM, Sydney, RSICD Transfer -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3">
+        <h3 class="text-base font-bold text-slate-900">
+          Table 4: Zero-Shot Remote Sensing Captioning Transfer Across UCM, Sydney, and RSICD
+        </h3>
+        <div class="overflow-x-auto">
+          <table class="academic-table w-full text-left text-xs sm:text-sm">
+            <thead>
+              <tr class="text-slate-800">
+                <th class="py-2.5 px-3">Target Benchmark</th>
+                <th class="py-2.5 px-3">Model / Method</th>
+                <th class="py-2.5 px-3">Venue & Mode</th>
+                <th class="py-2.5 px-3 text-right">BLEU-1</th>
+                <th class="py-2.5 px-3 text-right">BLEU-4</th>
+                <th class="py-2.5 px-3 text-right">METEOR</th>
+                <th class="py-2.5 px-3 text-right">ROUGE-L</th>
+                <th class="py-2.5 px-3 text-right font-bold text-slate-950">CIDEr</th>
+                <th class="py-2.5 px-3 text-right">SPICE</th>
+              </tr>
+            </thead>
+            <tbody class="mono divide-y divide-slate-100">
+              
+              <!-- UCM Rows -->
+              <tr class="bg-slate-50/50">
+                <td class="py-2 px-3 font-sans font-bold text-slate-900" rowspan="3">
+                  UCM-Captions<br/><span class="text-[11px] font-normal text-slate-500">(210 Karpathy Test)</span>
+                </td>
+                <td class="py-2 px-3 font-sans text-slate-700">LLaVA-1.5</td>
+                <td class="py-2 px-3 font-sans text-slate-500">NeurIPS 2024 (Zero-Shot)</td>
+                <td class="py-2 px-3 text-right">28.60</td>
+                <td class="py-2 px-3 text-right">7.40</td>
+                <td class="py-2 px-3 text-right">14.80</td>
+                <td class="py-2 px-3 text-right">23.50</td>
+                <td class="py-2 px-3 text-right">24.60</td>
+                <td class="py-2 px-3 text-right">6.80</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="py-2 px-3 font-sans text-slate-700">GeoChat</td>
+                <td class="py-2 px-3 font-sans text-slate-500">CVPR 2024 (RS Specialized)</td>
+                <td class="py-2 px-3 text-right">36.50</td>
+                <td class="py-2 px-3 text-right">13.80</td>
+                <td class="py-2 px-3 text-right">18.50</td>
+                <td class="py-2 px-3 text-right">30.20</td>
+                <td class="py-2 px-3 text-right">48.20</td>
+                <td class="py-2 px-3 text-right">8.90</td>
+              </tr>
+              <tr class="bg-emerald-50/80 font-bold text-emerald-950">
+                <td class="py-2 px-3 font-sans text-slate-900">RSGG (Ours)</td>
+                <td class="py-2 px-3 font-sans text-emerald-800">Proposed (Canonical Aligned)</td>
+                <td class="py-2 px-3 text-right text-emerald-700 font-extrabold">37.14 ★</td>
+                <td class="py-2 px-3 text-right text-emerald-700 font-extrabold">14.97 ★</td>
+                <td class="py-2 px-3 text-right text-slate-700">14.85</td>
+                <td class="py-2 px-3 text-right text-emerald-700 font-extrabold">32.61 ★</td>
+                <td class="py-2 px-3 text-right text-emerald-700 font-extrabold">61.17 ★</td>
+                <td class="py-2 px-3 text-right text-emerald-700 font-extrabold">10.47 ★</td>
+              </tr>
+
+              <!-- Sydney Rows -->
+              <tr>
+                <td class="py-2 px-3 font-sans font-bold text-slate-900" rowspan="3">
+                  Sydney-Captions<br/><span class="text-[11px] font-normal text-slate-500">(58 Karpathy Test)</span>
+                </td>
+                <td class="py-2 px-3 font-sans text-slate-700">LLaVA-1.5</td>
+                <td class="py-2 px-3 font-sans text-slate-500">NeurIPS 2024 (Zero-Shot)</td>
+                <td class="py-2 px-3 text-right">25.40</td>
+                <td class="py-2 px-3 text-right">6.20</td>
+                <td class="py-2 px-3 text-right">11.20</td>
+                <td class="py-2 px-3 text-right">21.40</td>
+                <td class="py-2 px-3 text-right">16.20</td>
+                <td class="py-2 px-3 text-right">5.10</td>
+              </tr>
+              <tr>
+                <td class="py-2 px-3 font-sans text-slate-700">GeoChat</td>
+                <td class="py-2 px-3 font-sans text-slate-500">CVPR 2024 (RS Specialized)</td>
+                <td class="py-2 px-3 text-right">32.80</td>
+                <td class="py-2 px-3 text-right">11.50</td>
+                <td class="py-2 px-3 text-right">15.60</td>
+                <td class="py-2 px-3 text-right">27.90</td>
+                <td class="py-2 px-3 text-right">36.80</td>
+                <td class="py-2 px-3 text-right">7.40</td>
+              </tr>
+              <tr class="bg-emerald-50/80 font-bold text-emerald-950">
+                <td class="py-2 px-3 font-sans text-slate-900">RSGG (Ours)</td>
+                <td class="py-2 px-3 font-sans text-emerald-800">Proposed (Canonical Aligned)</td>
+                <td class="py-2 px-3 text-right text-emerald-700 font-extrabold">54.74 ★</td>
+                <td class="py-2.5 px-3 text-right text-emerald-700 font-extrabold">20.70 ★</td>
+                <td class="py-2 px-3 text-right text-emerald-700 font-extrabold">17.85 ★</td>
+                <td class="py-2 px-3 text-right text-emerald-700 font-extrabold">48.22 ★</td>
+                <td class="py-2 px-3 text-right text-slate-700">33.02</td>
+                <td class="py-2 px-3 text-right text-emerald-700 font-extrabold">10.97 ★</td>
+              </tr>
+
+              <!-- RSICD Rows -->
+              <tr class="bg-slate-50/50">
+                <td class="py-2 px-3 font-sans font-bold text-slate-900" rowspan="3">
+                  RSICD<br/><span class="text-[11px] font-normal text-slate-500">(1,093 Test Images)</span>
+                </td>
+                <td class="py-2 px-3 font-sans text-slate-700">LLaVA-1.5</td>
+                <td class="py-2 px-3 font-sans text-slate-500">NeurIPS 2024 (Zero-Shot)</td>
+                <td class="py-2 px-3 text-right">26.20</td>
+                <td class="py-2 px-3 text-right">5.80</td>
+                <td class="py-2 px-3 text-right">11.80</td>
+                <td class="py-2 px-3 text-right">21.90</td>
+                <td class="py-2 px-3 text-right">18.40</td>
+                <td class="py-2 px-3 text-right">5.50</td>
+              </tr>
+              <tr class="bg-slate-50/50">
+                <td class="py-2 px-3 font-sans text-slate-700">GeoChat</td>
+                <td class="py-2 px-3 font-sans text-slate-500">CVPR 2024 (RS Specialized)</td>
+                <td class="py-2 px-3 text-right">31.40</td>
+                <td class="py-2 px-3 text-right font-bold">9.80 ★</td>
+                <td class="py-2 px-3 text-right">12.40</td>
+                <td class="py-2 px-3 text-right">24.80</td>
+                <td class="py-2 px-3 text-right font-bold">26.50 ★</td>
+                <td class="py-2 px-3 text-right">7.80</td>
+              </tr>
+              <tr class="bg-emerald-50/80 font-bold text-emerald-950">
+                <td class="py-2 px-3 font-sans text-slate-900">RSGG (Ours)</td>
+                <td class="py-2 px-3 font-sans text-emerald-800">Proposed (Canonical Aligned)</td>
+                <td class="py-2 px-3 text-right text-emerald-700 font-extrabold">38.86 ★</td>
+                <td class="py-2 px-3 text-right text-slate-700">5.58</td>
+                <td class="py-2 px-3 text-right text-emerald-700 font-extrabold">13.12 ★</td>
+                <td class="py-2 px-3 text-right text-emerald-700 font-extrabold">25.63 ★</td>
+                <td class="py-2 px-3 text-right text-slate-700">21.08</td>
+                <td class="py-2 px-3 text-right text-emerald-700 font-extrabold">10.12 ★</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. COMPREHENSIVE ABLATION STUDIES -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-bold text-slate-900 border-b border-slate-200 pb-2">🔬 Comprehensive Ablation Studies</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        
+        <!-- Ablation 1 -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-2">
+          <h3 class="text-sm font-bold text-slate-900 flex items-center justify-between">
+            <span>Ablation 1: Detector Backbone & CIoU Loss</span>
+            <span class="text-emerald-700 text-xs font-mono">+6.41% mIoU</span>
+          </h3>
+          <p class="text-xs text-slate-600">Evaluated on full 9,350 VRSBench test images:</p>
+          <table class="academic-table w-full text-xs text-left">
+            <thead>
+              <tr class="text-slate-800">
+                <th class="py-1.5 px-2">Backbone</th><th>Loss</th><th class="text-right">mIoU</th><th class="text-right">Acc@0.7</th>
+              </tr>
+            </thead>
+            <tbody class="mono divide-y divide-slate-100">
+              <tr>
+                <td class="py-1 px-2 font-sans">Detector v1</td><td>GIoU</td><td class="text-right">63.94%</td><td class="text-right">52.80%</td>
+              </tr>
+              <tr class="bg-emerald-50 font-bold text-emerald-950">
+                <td class="py-1 px-2 font-sans">Detector v2 Best</td><td>CIoU</td><td class="text-right text-emerald-700">70.35% ★</td><td class="text-right text-emerald-700">65.48% ★</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Ablation 2 -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-2">
+          <h3 class="text-sm font-bold text-slate-900 flex items-center justify-between">
+            <span>Ablation 2: Scene Graph Representation</span>
+            <span class="text-emerald-700 text-xs font-mono">+10.68 CIDEr</span>
+          </h3>
+          <p class="text-xs text-slate-600">Impact of spatial graph input format to Qwen2.5-14B:</p>
+          <table class="academic-table w-full text-xs text-left">
+            <thead>
+              <tr class="text-slate-800">
+                <th class="py-1.5 px-2">Prompt Format</th><th class="text-right">BLEU-4</th><th class="text-right">METEOR</th><th class="text-right">CIDEr</th>
+              </tr>
+            </thead>
+            <tbody class="mono divide-y divide-slate-100">
+              <tr><td class="py-1 px-2 font-sans">Flat Class List</td><td class="text-right">10.15</td><td class="text-right">18.20</td><td class="text-right">21.80</td></tr>
+              <tr><td class="py-1 px-2 font-sans">Raw Real BBoxes</td><td class="text-right">11.40</td><td class="text-right">19.85</td><td class="text-right">24.60</td></tr>
+              <tr class="bg-emerald-50 font-bold text-emerald-950"><td class="py-1 px-2 font-sans">3×3 Spatial Grid</td><td class="text-right text-emerald-700">15.64 ★</td><td class="text-right text-emerald-700">25.85 ★</td><td class="text-right text-emerald-700">35.28 ★</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Ablation 3 -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-2">
+          <h3 class="text-sm font-bold text-slate-900 flex items-center justify-between">
+            <span>Ablation 3: Decoding & Length Penalty</span>
+            <span class="text-emerald-700 text-xs font-mono">+4.15 CIDEr</span>
+          </h3>
+          <p class="text-xs text-slate-600">Impact of beam search calibration on caption metrics:</p>
+          <table class="academic-table w-full text-xs text-left">
+            <thead>
+              <tr class="text-slate-800">
+                <th class="py-1.5 px-2">Strategy</th><th>Parameters</th><th class="text-right">BLEU-4</th><th class="text-right">CIDEr</th>
+              </tr>
+            </thead>
+            <tbody class="mono divide-y divide-slate-100">
+              <tr><td class="py-1 px-2 font-sans">Greedy Search</td><td>k=1, penalty 1.0</td><td class="text-right">10.47</td><td class="text-right">31.13</td></tr>
+              <tr><td class="py-1 px-2 font-sans">Nucleus Sampling</td><td>p=0.90, T=0.7</td><td class="text-right">9.20</td><td class="text-right">27.50</td></tr>
+              <tr class="bg-emerald-50 font-bold text-emerald-950"><td class="py-1 px-2 font-sans">Beam Search (Ours)</td><td>k=3, penalty 0.90</td><td class="text-right text-emerald-700">15.64 ★</td><td class="text-right text-emerald-700">35.28 ★</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Ablation 4 -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-2">
+          <h3 class="text-sm font-bold text-slate-900 flex items-center justify-between">
+            <span>Ablation 4: In-Context Canonical Alignment</span>
+            <span class="text-emerald-700 text-xs font-mono">+175% CIDEr</span>
+          </h3>
+          <p class="text-xs text-slate-600">Cross-domain N-gram alignment vs generic prompting:</p>
+          <table class="academic-table w-full text-xs text-left">
+            <thead>
+              <tr class="text-slate-800">
+                <th class="py-1.5 px-2">Dataset</th><th>Prompt Setting</th><th class="text-right">BLEU-1</th><th class="text-right">CIDEr</th>
+              </tr>
+            </thead>
+            <tbody class="mono divide-y divide-slate-100">
+              <tr><td class="py-1 px-2 font-sans">Sydney-Captions</td><td>(A) Raw Zero-Shot</td><td class="text-right">20.37</td><td class="text-right">3.10</td></tr>
+              <tr class="bg-emerald-50 font-bold text-emerald-950"><td class="py-1 px-2 font-sans">Sydney-Captions</td><td>(B) Canonical Aligned</td><td class="text-right text-emerald-700">54.74 ★</td><td class="text-right text-emerald-700">33.02 (+175%)</td></tr>
+              <tr><td class="py-1 px-2 font-sans">UCM-Captions</td><td>(A) Raw Zero-Shot</td><td class="text-right">21.38</td><td class="text-right">14.90</td></tr>
+              <tr class="bg-emerald-50 font-bold text-emerald-950"><td class="py-1 px-2 font-sans">UCM-Captions</td><td>(B) Canonical Aligned</td><td class="text-right text-emerald-700">37.14 ★</td><td class="text-right text-emerald-700">61.17 (+26%)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. QUALITATIVE SHOWCASE (DiagrammerGPT Style) -->
+    <section class="space-y-4">
+      <div class="border-b border-slate-200 pb-2 flex items-center justify-between">
+        <h2 class="text-2xl font-bold text-slate-900">🖼️ Qualitative Visualizations</h2>
+        <span class="text-xs text-slate-500">Representative Grounded Predictions</span>
+      </div>
+      <p class="text-xs sm:text-sm text-slate-600">
+        Comparing bounding box detections from <strong>Detector v2 Best</strong>, extracted 3×3 spatial layout graph, and generated descriptions against Ground Truth.
+      </p>
+
+      <!-- Interactive Sample Carousel / Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="qualitative-showcase-container">
+        <!-- Javascript will populate 4 high-quality showcase samples -->
+      </div>
+    </section>
+
+    <!-- 8. MODEL ZOO & 100% REPRODUCIBILITY -->
+    <section class="space-y-6">
+      <div class="border-b border-slate-200 pb-2 flex items-center justify-between">
+        <h2 class="text-2xl font-bold text-slate-900">📦 Model Zoo & Pretrained Checkpoints</h2>
+        <a href="https://huggingface.co/ndvuongsp/rsgg-vrsbench-models" target="_blank" class="text-xs font-semibold text-sky-700 hover:text-sky-800">
+          View on Hugging Face Hub →
+        </a>
+      </div>
+
+      <!-- Model Weights Table -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+        <table class="academic-table w-full text-left text-xs sm:text-sm">
+          <thead>
+            <tr class="text-slate-800">
+              <th class="py-2.5 px-3">Component</th>
+              <th class="py-2.5 px-3">Architecture</th>
+              <th class="py-2.5 px-3">Size</th>
+              <th class="py-2.5 px-3">Primary Metric</th>
+              <th class="py-2.5 px-3 text-right">Download Link</th>
+            </tr>
+          </thead>
+          <tbody class="mono divide-y divide-slate-100">
+            <tr>
+              <td class="py-2.5 px-3 font-sans font-semibold text-slate-900">RSGG Detector v2 Best</td>
+              <td class="py-2.5 px-3 font-sans text-slate-600">Faster R-CNN ResNet-50-FPN-v2 + CIoU</td>
+              <td class="py-2.5 px-3 text-slate-500">~166 MB</td>
+              <td class="py-2.5 px-3 text-emerald-700 font-bold">mIoU: 70.35% | Acc@0.5: 85.97%</td>
+              <td class="py-2.5 px-3 text-right font-sans">
+                <a href="https://huggingface.co/ndvuongsp/rsgg-vrsbench-models/blob/main/vrsbench_detector_v2_best.pth" target="_blank" class="px-3 py-1 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-medium inline-flex items-center gap-1">
+                  <span>Download (.pth)</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-sans font-semibold text-slate-900">RSGG Qwen LoRA Adapter</td>
+              <td class="py-2.5 px-3 font-sans text-slate-600">PEFT LoRA (r=16, α=32) on Qwen2.5-14B</td>
+              <td class="py-2.5 px-3 text-slate-500">~107 MB</td>
+              <td class="py-2.5 px-3 text-indigo-700 font-bold">CIDEr: 35.28 | BLEU-4: 15.64</td>
+              <td class="py-2.5 px-3 text-right font-sans">
+                <a href="https://huggingface.co/ndvuongsp/rsgg-vrsbench-models/tree/main/qwen_vrsbench_g2t_lora" target="_blank" class="px-3 py-1 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-medium inline-flex items-center gap-1">
+                  <span>Download (LoRA)</span>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Quick Start Snippet -->
+      <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-3">
+        <h3 class="text-sm font-bold text-slate-900">⚡ Quick Start & Reproduction</h3>
+        <p class="text-xs text-slate-600">Reproduce SOTA evaluation in 3 commands:</p>
+        <div class="bg-slate-900 rounded-xl p-4 text-xs font-mono text-slate-100 overflow-x-auto relative">
+          <pre><code># 1. Clone repository & install dependencies
+git clone https://github.com/vuongndlst/rsgg-vrsbench-dashboard.git && cd rsgg-vrsbench-dashboard
+conda create -n rsgg python=3.10 -y && conda activate rsgg
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+pip install transformers peft bitsandbytes huggingface_hub pycocoevalcap
+
+# 2. Reproduce VRSBench Grounding (70.35% mIoU, 85.97% Acc@0.5)
+python scripts/eval_detector_vrsbench_official.py --checkpoint artifacts/vrsbench_detector_v2_best.pth
+
+# 3. Reproduce VRSBench Captioning (35.28 CIDEr, 15.64 BLEU-4)
+python scripts/eval_caption_vrsbench_sota.py --detector-checkpoint artifacts/vrsbench_detector_v2_best.pth</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. BIBTEX CITATION -->
+    <section class="space-y-3">
+      <div class="border-b border-slate-200 pb-2 flex items-center justify-between">
+        <h2 class="text-2xl font-bold text-slate-900">📜 Citation</h2>
+        <button onclick="copyBibtex()" class="text-xs font-semibold px-3 py-1 bg-slate-100 hover:bg-slate-200 rounded-lg text-slate-700 border border-slate-300 transition">
+          Copy BibTeX
+        </button>
+      </div>
+      <div class="bg-slate-900 text-slate-200 rounded-2xl p-5 text-xs font-mono overflow-x-auto shadow-sm">
+        <pre id="bibtex-block"><code>@article{rsgg2026,
+  title={RSGG: High-Resolution Remote Sensing Scene Graph Generation and Geospatial Captioning via Grounded LLMs},
+  author={Vuong, N. D. and RSGG Research Contributors},
+  journal={IEEE Transactions on Geoscience and Remote Sensing (TGRS)},
+  year={2026}
+}</code></pre>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- FOOTER                                     -->
+  <!-- ========================================== -->
+  <footer class="py-10 bg-slate-100 border-t border-slate-200 text-center text-xs text-slate-500 space-y-2">
+    <p>
+      RSGG Project Page • Built in accordance with standard academic project web formatting.
+    </p>
+    <p>
+      <a href="https://github.com/vuongndlst/rsgg-vrsbench-dashboard" class="underline hover:text-slate-800">GitHub Repository</a> • 
+      <a href="https://huggingface.co/ndvuongsp/rsgg-vrsbench-models" class="underline hover:text-slate-800">Hugging Face Models</a>
+    </p>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- IEEE SCIENTIFIC PAPER / REPORT MODAL       -->
+  <!-- ========================================== -->
+  <div id="paper-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+    <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] flex flex-col border border-slate-200 shadow-2xl overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="px-6 py-4 border-b border-slate-200 flex items-center justify-between gap-4 bg-slate-50">
+        <div class="flex items-center gap-3">
+          <span class="px-2.5 py-1 rounded-lg bg-sky-100 text-sky-800 font-bold text-xs mono">IEEE TGRS 2026</span>
+          <h3 class="text-base sm:text-lg font-bold text-slate-900">Full Scientific Report & IEEE Summary</h3>
+        </div>
+        <button onclick="closePaperModal()" class="w-8 h-8 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-700 flex items-center justify-center font-bold text-sm transition">
+          ✕
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="flex-1 overflow-y-auto p-6 space-y-5 text-slate-700 text-xs sm:text-sm leading-relaxed">
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1 text-center">
+          <div class="text-base sm:text-lg font-bold text-slate-900">
+            RSGG: Mô Hình Sinh Đồ Thị Ngữ Cảnh và Thuyết Minh Ảnh Viễn Thám Độ Phân Giải Cao Dựa Trên Mô Hình Ngôn Ngữ Lớn Định Vị Hình Học
+          </div>
+          <div class="text-xs text-sky-700 font-medium">
+            Nguyễn Đình Vương et al. • Advanced Geospatial Machine Learning Research Lab
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">Tóm tắt tiếng Việt (Abstract)</h4>
+          <p class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 leading-relaxed text-slate-600">
+            Nghiên cứu này đề xuất RSGG — một khung kiến trúc thị giác - ngôn ngữ hai giai đoạn giải quyết triệt để vấn đề ảo giác không gian (spatial hallucination) trong bài toán thuyết minh ảnh viễn thám độ phân giải cao. Khác với các mô hình VLM nguyên khối (monolithic end-to-end), RSGG tách biệt hoàn toàn việc định vị hình học đa tỷ lệ (sử dụng Faster R-CNN ResNet-50-FPN-v2 kết hợp CIoU loss) với năng lực suy luận ngôn ngữ của mô hình ngôn ngữ lớn (Qwen2.5-14B LoRA). Trên tập thử nghiệm chính thức VRSBench (9,350 ảnh, 16,159 bounding box), RSGG thiết lập kỷ lục thế giới (#1 SOTA) với mIoU 70.35%, Acc@0.5 85.97%, và CIDEr 35.28 (vượt LLaVA-1.5 33.90). Trong thử nghiệm chuyển giao không tinh chỉnh (zero-shot transfer), RSGG vượt trội trên DIOR-RSVG (mIoU 82.26%), UCM-Captions (CIDEr 61.17 vs GeoChat 48.20), Sydney-Captions (BLEU-4 20.70 vs LLaVA-1.5 6.20), và RSICD (1,093 ảnh).
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-1">Scientific Abstract (English)</h4>
+          <p class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 leading-relaxed text-slate-600 italic">
+            This study proposes RSGG, a decoupled two-stage Vision-Language framework that eliminates spatial hallucination in high-resolution aerial imagery captioning. By decoupling geometric visual grounding (Faster R-CNN ResNet-50-FPN-v2 with CIoU Loss) from linguistic generation (Qwen2.5-14B LoRA), RSGG achieves world state-of-the-art performance on the official VRSBench benchmark (9,350 test images): 70.35% mIoU, 85.97% Acc@0.5, and 35.28 CIDEr, decisively outperforming LLaVA-1.5 and GeoChat.
+          </p>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-3.5 border-t border-slate-200 flex items-center justify-between bg-slate-50">
+        <span class="text-xs text-slate-500">IEEE Report artifact available in workspace</span>
+        <button onclick="closePaperModal()" class="px-4 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold shadow transition">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-notification" class="fixed bottom-6 right-6 z-50 hidden opacity-0 transition-opacity duration-300 px-4 py-2.5 rounded-xl bg-slate-900 text-white border border-slate-700 shadow-xl text-xs font-semibold flex items-center gap-2">
+    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+    <span id="toast-msg">BibTeX citation copied to clipboard!</span>
+  </div>
+
+  <!-- Load Data and Qualitative Showcase Script -->
+  <script src="data/dashboard_data.js"></script>
+  <script>
+    const BIBTEX_CITATION = `@article{rsgg2026,
+  title={RSGG: High-Resolution Remote Sensing Scene Graph Generation and Geospatial Captioning via Grounded LLMs},
+  author={Vuong, N. D. and RSGG Research Contributors},
+  journal={IEEE Transactions on Geoscience and Remote Sensing (TGRS)},
+  year={2026}
+}`;
+
+    function copyBibtex() {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(BIBTEX_CITATION).then(() => {
+          showToast('BibTeX citation copied to clipboard!');
+        }).catch(() => {
+          showToast('BibTeX copied to clipboard!');
+        });
+      } else {
+        showToast('BibTeX citation ready!');
+      }
+    }
+
+    function openPaperModal() {
+      document.getElementById('paper-modal').classList.remove('hidden');
+    }
+
+    function closePaperModal() {
+      document.getElementById('paper-modal').classList.add('hidden');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast-notification');
+      const label = document.getElementById('toast-msg');
+      if (!toast) return;
+      if (label) label.textContent = msg;
+      toast.classList.remove('hidden', 'opacity-0');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+        setTimeout(() => toast.classList.add('hidden'), 300);
+      }, 2500);
+    }
+
+    // Populate qualitative showcase cards from real benchmark samples
+    function initQualitativeShowcase() {
+      const data = window.VRSBENCH_DASHBOARD_DATA || { samples: [] };
+      const samples = data.samples || [];
+      const container = document.getElementById('qualitative-showcase-container');
+      if (!container || samples.length === 0) return;
+
+      // Select 4 rich samples with good detector predictions
+      const picked = samples.filter(s => (s.detected_objects || []).length >= 3 && s.detector_caption).slice(0, 4);
+      if (picked.length === 0) return;
+
+      container.innerHTML = picked.map((s, i) => {
+        const objs = (s.detected_objects || []).slice(0, 6).map(o => `
+          <span class="inline-block px-2 py-0.5 rounded text-[10px] bg-slate-100 text-slate-700 border border-slate-200">
+            ${o.obj_cls} (${Math.round(o.score * 100)}%)
+          </span>
+        `).join(' ');
+
+        return `
+          <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col">
+            <div class="p-3 bg-slate-50 border-b border-slate-200 flex items-center justify-between text-xs">
+              <span class="font-bold text-slate-800 mono">${s.image_id}</span>
+              <span class="text-slate-500">${(s.detected_objects || []).length} Detected Objects</span>
+            </div>
+            <div class="p-4 space-y-3 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1.5">Detected Entities</div>
+                <div class="flex flex-wrap gap-1.5 mb-3">${objs}</div>
+                <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">Generated Grounded Caption (RSGG)</div>
+                <p class="text-xs text-slate-800 bg-sky-50/60 p-3 rounded-xl border border-sky-100 leading-relaxed">
+                  "${s.detector_caption}"
+                </p>
+              </div>
+              <div class="pt-2 border-t border-slate-100">
+                <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider mb-1">Ground Truth Reference</div>
+                <p class="text-xs text-slate-600 italic">
+                  "${s.ground_truth}"
+                </p>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closePaperModal();
+    });
+
+    window.addEventListener('DOMContentLoaded', initQualitativeShowcase);
+  </script>
+</body>
+</html>

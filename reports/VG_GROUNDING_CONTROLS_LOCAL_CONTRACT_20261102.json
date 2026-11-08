@@ -1,0 +1,24 @@
+{
+  "status": "PASS_NEW_GROUNDING_CORE_AND_CPU_PREPARATION_CONTRACTS_NO_GPU_LAUNCH",
+  "utc": "2026-11-02T06:19:48.868324+00:00",
+  "source_manifest_sha256": "003a47f9dd03099148425189af16db84ff2af5251cbdc999ca7e9bd6c5c3fde8",
+  "source_config_doc_files_verified": 9,
+  "parent_input_files_verified": 3,
+  "synthetic_contract": {
+    "status": "SYNTHETIC_GROUNDING_CONTRACT_PASS",
+    "invalid_selection_cases": 12,
+    "no_inverse_edge_or_reference_correction": true,
+    "empty_invalid_outputs_retained": true,
+    "reference_independent_geometry": true
+  },
+  "saved_TRAIN_graphs_and_G0_bindings_checked": 800,
+  "valid_node_choice_roundtrips": 7866,
+  "valid_directed_edge_choice_roundtrips": 958,
+  "invalid_choice_empty_denominator_preserved": true,
+  "query_references_read": false,
+  "VAL_or_TEST_data_read": false,
+  "caption_generation_or_metrics_run": false,
+  "server_sync_or_launch": false,
+  "main_GPU_experiment_fully_implemented": false,
+  "wall_seconds": 0.8280172348022461
+}

@@ -1,0 +1,10 @@
+{
+  "status": "PASS_INITIAL_SOURCE_CONFIG_AND_AUTOMATED_VAL_EVIDENCE",
+  "utc": "2026-10-25T12:47:45.725687+00:00",
+  "archive_sha256": "96ee2dc5478dfd38d8ab45cc64923ae18e08a28e72debf2f2defc9f7e605d20a",
+  "preregistration_sha256": "2f732c0e678d20f3023582a43201d6d99712c4430579fab79595e7d6e3b58339",
+  "all_local_execution_sources_match_remote_lock": true,
+  "VAL_positive_GT_subset_agreement": "41/72",
+  "human_precision_gate_passed": false,
+  "full_TEST_not_yet_observed_started": true
+}

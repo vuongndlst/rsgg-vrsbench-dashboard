@@ -1,0 +1,156 @@
+{
+  "created_utc": "2026-10-10T10:29:31Z",
+  "files": [
+    {
+      "file": "VG-SGG-dicts-with-attri.json",
+      "bytes": 18482,
+      "sha256": "1255873ae0250555f59d20f8d1e5a4bdf22b331119502c850f765173b6963ca1",
+      "status": "downloaded",
+      "source": "https://raw.githubusercontent.com/KaihuaTang/Scene-Graph-Benchmark.pytorch/ceb71fa88461c2a97a6258a80f47669d89207296/datasets/vg/VG-SGG-dicts-with-attri.json"
+    },
+    {
+      "file": "image_data.json",
+      "bytes": 21023782,
+      "sha256": "5a0b63286b6ec81bcae17df1d4a50777bfc56befb70d65a8a7e9bcab0fcd9bc4",
+      "status": "downloaded",
+      "source": "https://raw.githubusercontent.com/KaihuaTang/Scene-Graph-Benchmark.pytorch/ceb71fa88461c2a97a6258a80f47669d89207296/datasets/vg/image_data.json"
+    },
+    {
+      "file": "VG-SGG-with-attri.h5",
+      "bytes": 151158382,
+      "sha256": "ad52a01f8e6142bb7bc62d91f97dad1567f44772a23eac68d60a5b7766ffe4b1",
+      "status": "downloaded",
+      "source": "https://huggingface.co/datasets/kb-kim/LLM4SGG/resolve/73ff29cb7587ab5cf011772e863172a6fa468000/VG-SGG-with-attri.h5"
+    },
+    {
+      "file": "STAR_SGG_Annotation.zip",
+      "bytes": 63295542,
+      "sha256": "eb6f78ad3db29a4d98c5645267f2885113f12208a12d753f3324369cdd626f9c",
+      "status": "downloaded",
+      "source": "https://huggingface.co/datasets/Zhuzi24/STAR/resolve/7b746149c67c0c0ba36c0309f7344452dcdd2b9c/STAR_SGG_Annotation.zip"
+    }
+  ],
+  "environment": "project_overlay_with_locked_shared_torch",
+  "images_extracted": false,
+  "vg_hdf5_source": {
+    "publisher": "LLM4SGG authors; mirror of VG150 metadata",
+    "revision": "73ff29cb7587ab5cf011772e863172a6fa468000",
+    "original_toolkit_equivalence": "requires schema/split/content validation, not inferred from filename"
+  },
+  "star": {
+    "revision": "7b746149c67c0c0ba36c0309f7344452dcdd2b9c",
+    "card": {
+      "license": "apache-2.0",
+      "size_categories": [
+        "100K<n<1M"
+      ],
+      "task_categories": [
+        "text-classification",
+        "token-classification",
+        "table-question-answering",
+        "question-answering",
+        "zero-shot-classification",
+        "translation",
+        "feature-extraction",
+        "text-generation",
+        "text2text-generation"
+      ]
+    },
+    "files": [
+      {
+        "name": ".gitattributes",
+        "bytes": 2701,
+        "sha256": null
+      },
+      {
+        "name": "README.md",
+        "bytes": 1423,
+        "sha256": null
+      },
+      {
+        "name": "STAR.7z.001",
+        "bytes": 24159191040,
+        "sha256": "0b674affbb5552673c6380956208cec7072ef9e66401d682182d1d0849aa7b6b"
+      },
+      {
+        "name": "STAR.7z.002",
+        "bytes": 24159191040,
+        "sha256": "050ec058457e265aa7683c98335e054798f67fd62689c9cb4b71f2ac09b2edef"
+      },
+      {
+        "name": "STAR.7z.003",
+        "bytes": 24159191040,
+        "sha256": "3897455850ce09800823ede4d8d88acbc61c747482c411c191b0661fd7277813"
+      },
+      {
+        "name": "STAR.7z.004",
+        "bytes": 24159191040,
+        "sha256": "8b739c806cc037686b950b160a97fb4298705c71fc9dd6f6c75db9b3af407c77"
+      },
+      {
+        "name": "STAR.7z.005",
+        "bytes": 24099189194,
+        "sha256": "555bf4b31ed587363035d45d1f1bae1f35b56deee34fe1c740ee0220a0093de1"
+      },
+      {
+        "name": "STAR_OBJ_TEST_ANO.zip",
+        "bytes": 5595523174,
+        "sha256": "9c0beaaf59639a7054bffc4422277c1a9da150d1bc28267c69e8895191d7fd44"
+      },
+      {
+        "name": "STAR_SGG_Annotation.zip",
+        "bytes": 63295542,
+        "sha256": "eb6f78ad3db29a4d98c5645267f2885113f12208a12d753f3324369cdd626f9c"
+      }
+    ],
+    "image_download": "deferred_capacity_insufficient; P0 feasibility audit only",
+    "annotation_members": [
+      {
+        "name": "attributes.json",
+        "bytes": 67901512,
+        "crc32": "a647e3e2"
+      },
+      {
+        "name": "object.json",
+        "bytes": 143838219,
+        "crc32": "07ffa2fe"
+      },
+      {
+        "name": "relationship.json",
+        "bytes": 51730115,
+        "crc32": "9736f25f"
+      },
+      {
+        "name": "STAR-SGG-dicts-with-attri.json",
+        "bytes": 8058,
+        "crc32": "dddc1d43"
+      },
+      {
+        "name": "STAR-SGG-with-attri.h5",
+        "bytes": 49779828,
+        "crc32": "6bf1cdca"
+      },
+      {
+        "name": "STAR_attributes_v1.json",
+        "bytes": 79405639,
+        "crc32": "c281d3e0"
+      },
+      {
+        "name": "STAR_image_data_v1.json",
+        "bytes": 107602,
+        "crc32": "85342686"
+      },
+      {
+        "name": "STAR_objects_v1.json",
+        "bytes": 164960439,
+        "crc32": "f4ab701b"
+      },
+      {
+        "name": "STAR_relationships_v1.json",
+        "bytes": 311223102,
+        "crc32": "f7b2f04d"
+      }
+    ],
+    "annotation_uncompressed_bytes": 868954514
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "status": "PAUSED_BY_HUMAN_CAPTION_DIAGNOSTIC_PRIORITY",
+  "variant": "context",
+  "new_seeds": [
+    2718,
+    3141
+  ],
+  "epochs_per_seed": 13,
+  "fresh_original_initialization": true,
+  "reuse_seed1729_completed_evidence_only": true,
+  "test_access_forbidden": true,
+  "original_owned_STOP_preserved": true,
+  "new_runner_ast": "PASS",
+  "runner_sha256": "b7f3fd1a8a7acf1dfb51b5ce3e578b6c72a4ef7de317b41e17728d6403081005",
+  "resource_preflight": {
+    "disk_free_bytes": 5245599744,
+    "minimum_disk_free_bytes": 17179869184,
+    "new_phase_reserve_bytes": 2147483648,
+    "disk_admitted": false,
+    "gpus": [
+      {
+        "index": "0",
+        "name": "NVIDIA A40",
+        "total_mib": "46068",
+        "free_mib": "39742",
+        "utilization_percent": "0"
+      }
+    ],
+    "gpu_admitted": true,
+    "ram_available_bytes": 44829290496,
+    "cpu_available": 1,
+    "aggregate_accounted_artifact_bytes": 25078243029,
+    "aggregate_limit_bytes": 42949672960,
+    "artifact_admitted": true,
+    "authorized_deadline_unix": 1794670321.2414355,
+    "remaining_seconds": 1843480.509577036,
+    "completed_epoch_count": 55,
+    "max_completed_epoch_seconds": 15840.63346171379,
+    "training_only_required_seconds_2seeds_13epochs_margin25pct": 514820.5875056982,
+    "time_admitted": true
+  },
+  "remote_files_written": 0,
+  "original_training_run_ast_equal": true,
+  "protected_assets_deleted": false,
+  "source_policy": "No test dataset path or automatic test phase in new runner",
+  "decision_report": "research/VG_CONTEXT_SEED_REPLICATION_20261024.md",
+  "human_request": "24Oct: plan caption evaluation first; pause additional training seeds",
+  "remote_launched": false
+}

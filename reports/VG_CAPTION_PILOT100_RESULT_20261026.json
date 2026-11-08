@@ -1,0 +1,216 @@
+{
+  "status": "PILOT100_ALL12_CONFIG_CORPUS_METRICS_COMPLETE",
+  "utc": "2026-10-26T06:56:35.940707+00:00",
+  "images": 100,
+  "provided_regions": 100,
+  "outputs": 1200,
+  "scores_display_x100": {
+    "P1_N-Z": {
+      "BLEU_1": 9.474950200128275,
+      "BLEU_2": 2.122728508564005,
+      "BLEU_3": 1.1971988207351079e-05,
+      "BLEU_4": 3.280951334595512e-08,
+      "CIDEr": 29.65077626049363,
+      "ROUGE_L": 12.20760611682859,
+      "METEOR": 5.457469079652236
+    },
+    "P1_N-S": {
+      "BLEU_1": 7.67102156107448,
+      "BLEU_2": 1.3406408539388157,
+      "BLEU_3": 8.482343095073229e-06,
+      "BLEU_4": 2.4084219000871477e-08,
+      "CIDEr": 28.14161571857393,
+      "ROUGE_L": 10.206319150589637,
+      "METEOR": 5.212699726415466
+    },
+    "P1_N-D": {
+      "BLEU_1": 6.851196070343854,
+      "BLEU_2": 1.2322020111158758,
+      "BLEU_3": 8.10264257868103e-06,
+      "BLEU_4": 2.442337729514208e-08,
+      "CIDEr": 30.365210570805722,
+      "ROUGE_L": 10.9089733900002,
+      "METEOR": 5.408221749695484
+    },
+    "P1_C-Z": {
+      "BLEU_1": 9.496770027484903,
+      "BLEU_2": 2.12624691115989,
+      "BLEU_3": 1.1978045182356587e-05,
+      "BLEU_4": 3.2760073999867586e-08,
+      "CIDEr": 29.466499464569957,
+      "ROUGE_L": 12.179067304043201,
+      "METEOR": 5.455217831129784
+    },
+    "P1_C-S": {
+      "BLEU_1": 7.73225642245869,
+      "BLEU_2": 1.348461288232249,
+      "BLEU_3": 8.506969388160236e-06,
+      "BLEU_4": 2.4039596484558898e-08,
+      "CIDEr": 27.758296414708305,
+      "ROUGE_L": 10.135263331001529,
+      "METEOR": 5.209141593821998
+    },
+    "P1_C-D": {
+      "BLEU_1": 6.878821560292844,
+      "BLEU_2": 1.2359552106760017,
+      "BLEU_3": 8.115261107565073e-06,
+      "BLEU_4": 2.4391125444760722e-08,
+      "CIDEr": 30.180933774882053,
+      "ROUGE_L": 10.880434577214812,
+      "METEOR": 5.405966998645169
+    },
+    "P2_N-Z": {
+      "BLEU_1": 14.822134387322485,
+      "BLEU_2": 4.175859811046683,
+      "BLEU_3": 1.7178205457507866e-05,
+      "BLEU_4": 3.726013357192924e-08,
+      "CIDEr": 25.87088236665489,
+      "ROUGE_L": 12.456525798315948,
+      "METEOR": 6.1953348209633035
+    },
+    "P2_N-S": {
+      "BLEU_1": 10.457332312114348,
+      "BLEU_2": 1.6089739203882822,
+      "BLEU_3": 9.36585465498186e-06,
+      "BLEU_4": 2.432659957536082e-08,
+      "CIDEr": 26.210534276871368,
+      "ROUGE_L": 10.599956451890485,
+      "METEOR": 5.329749922728035
+    },
+    "P2_N-D": {
+      "BLEU_1": 8.740509931152257,
+      "BLEU_2": 1.4634820164585542,
+      "BLEU_3": 8.897468444871568e-06,
+      "BLEU_4": 2.389521528776217e-08,
+      "CIDEr": 26.54084031025282,
+      "ROUGE_L": 9.824611033342563,
+      "METEOR": 5.18889028582726
+    },
+    "P2_C-Z": {
+      "BLEU_1": 14.792899408254847,
+      "BLEU_2": 4.166840288620226,
+      "BLEU_3": 1.713687141575372e-05,
+      "BLEU_4": 3.715760141850784e-08,
+      "CIDEr": 25.617609398031476,
+      "ROUGE_L": 12.43724299225672,
+      "METEOR": 6.192837329389007
+    },
+    "P2_C-S": {
+      "BLEU_1": 10.484467468729452,
+      "BLEU_2": 1.6113558690566552,
+      "BLEU_3": 9.36726901966622e-06,
+      "BLEU_4": 2.4286984972390656e-08,
+      "CIDEr": 25.827214973005745,
+      "ROUGE_L": 10.528900632302376,
+      "METEOR": 5.326219242206666
+    },
+    "P2_C-D": {
+      "BLEU_1": 8.75267603706798,
+      "BLEU_2": 1.464828877531592,
+      "BLEU_3": 8.900295760170345e-06,
+      "BLEU_4": 2.3882887130420968e-08,
+      "CIDEr": 26.356563514329146,
+      "ROUGE_L": 9.796072220557175,
+      "METEOR": 5.18679401577382
+    }
+  },
+  "diagnostics": {
+    "P1_N-Z": {
+      "empty_predictions": 19,
+      "no_evidence_units": 19,
+      "hit_output_cap": 0,
+      "lexical_color_mentions_without_query_support_flags": 2
+    },
+    "P1_N-S": {
+      "empty_predictions": 19,
+      "no_evidence_units": 19,
+      "hit_output_cap": 0,
+      "lexical_color_mentions_without_query_support_flags": 0
+    },
+    "P1_N-D": {
+      "empty_predictions": 19,
+      "no_evidence_units": 19,
+      "hit_output_cap": 0,
+      "lexical_color_mentions_without_query_support_flags": 0
+    },
+    "P1_C-Z": {
+      "empty_predictions": 19,
+      "no_evidence_units": 19,
+      "hit_output_cap": 0,
+      "lexical_color_mentions_without_query_support_flags": 2
+    },
+    "P1_C-S": {
+      "empty_predictions": 19,
+      "no_evidence_units": 19,
+      "hit_output_cap": 0,
+      "lexical_color_mentions_without_query_support_flags": 0
+    },
+    "P1_C-D": {
+      "empty_predictions": 19,
+      "no_evidence_units": 19,
+      "hit_output_cap": 0,
+      "lexical_color_mentions_without_query_support_flags": 0
+    },
+    "P2_N-Z": {
+      "empty_predictions": 19,
+      "no_evidence_units": 19,
+      "hit_output_cap": 0,
+      "lexical_color_mentions_without_query_support_flags": 0
+    },
+    "P2_N-S": {
+      "empty_predictions": 19,
+      "no_evidence_units": 19,
+      "hit_output_cap": 0,
+      "lexical_color_mentions_without_query_support_flags": 0
+    },
+    "P2_N-D": {
+      "empty_predictions": 19,
+      "no_evidence_units": 19,
+      "hit_output_cap": 0,
+      "lexical_color_mentions_without_query_support_flags": 0
+    },
+    "P2_C-Z": {
+      "empty_predictions": 19,
+      "no_evidence_units": 19,
+      "hit_output_cap": 0,
+      "lexical_color_mentions_without_query_support_flags": 0
+    },
+    "P2_C-S": {
+      "empty_predictions": 19,
+      "no_evidence_units": 19,
+      "hit_output_cap": 0,
+      "lexical_color_mentions_without_query_support_flags": 0
+    },
+    "P2_C-D": {
+      "empty_predictions": 19,
+      "no_evidence_units": 19,
+      "hit_output_cap": 0,
+      "lexical_color_mentions_without_query_support_flags": 0
+    }
+  },
+  "SPICE_status": "NOT_RUN_INITIAL_PILOT",
+  "automatic_selection_or_TEST_launch": false,
+  "human_color_precision_gate_passed": false,
+  "limitations": [
+    "VAL pilot100images,one provided region per image,one original human phrase",
+    "predicted SG and candidate colors may be incorrect or missing",
+    "curated TRAIN fact-template demonstrations are not new human labels",
+    "not official5k VG benchmark or automatic dense captioning",
+    "no image-global human GT fabricated",
+    "not caption-clean weights or SOTA claim"
+  ],
+  "metrics_file_sha256": {
+    "P1_N-Z.json": "6f75f9be104e6d8f1ced09d54ce1b1c9eac0b73f3ef3d8f3c72ca327012f860a",
+    "P1_N-S.json": "570112536b1ee5a40633b888a27aeba2905f8b605be50204de662839ec9583e7",
+    "P1_N-D.json": "40b59a3df87c9cef463e27d005c9a2c2ba17828774339fabd92ccea4c8f93322",
+    "P1_C-Z.json": "4faf4733e3cf175f1db33c2614e309e77153eed686f50593a340c418df6d1b96",
+    "P1_C-S.json": "cb3a2990beb27819ec7b147832a7de943c1cdb669beca34444c67fe60f24283a",
+    "P1_C-D.json": "5cb6ef05472101bd9b9c0cfaab38697e07b19090a371ae8ec5a5ef2e45d5eed4",
+    "P2_N-Z.json": "677ea125905549d3880939048a071b79b19ec17114603febd37fb5a856fb3c2f",
+    "P2_N-S.json": "a224628df5d2a5cffef87731ad222bd68394b6aa353251db14a07fa7c6d45ffc",
+    "P2_N-D.json": "4c62bf1ac62f6b197b04519a9f30a04ff4292bb4da631a4bd9ad8101f8791e7c",
+    "P2_C-Z.json": "b6c226d96084580e1b718e75bb648611305f51a091f4e6923580b89423f53dfc",
+    "P2_C-S.json": "6f940f95c33489fc5728d4bb67fa30e217d9fa62f8280406d4aeaa00ea9bbf8b",
+    "P2_C-D.json": "d3573b144b1133fe76ea1220f661cb20954cb1615338b4464b809da6a7a86cf9"
+  }
+}

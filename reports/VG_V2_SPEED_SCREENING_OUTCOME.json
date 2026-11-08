@@ -1,0 +1,47 @@
+{
+  "utc": "2026-10-14T03:52:23.511948+00:00",
+  "experiment_id": "vg_method_v2_speed_m2_v1",
+  "preregistration_sha256": "d5866565e34555143af0f2f42c240841eaa8e1f2b0152c05c4ef60121561377c",
+  "stage_status": "confirmation_resource_admission_blocked",
+  "all_four_screening_arms_complete": true,
+  "candidate": "feedback",
+  "candidate_passes_screening_gate": true,
+  "candidate_comparisons": {
+    "native": {
+      "R50_gain_pp": 0.0030681507859786628,
+      "mR50_gain_pp": 0.1876262809406809
+    },
+    "context": {
+      "R50_gain_pp": -0.22586093015154463,
+      "mR50_gain_pp": 0.5913127733318868
+    },
+    "oneway": {
+      "R50_gain_pp": -0.06871240815267687,
+      "mR50_gain_pp": 0.13894196121258529
+    }
+  },
+  "confirmation_completed": false,
+  "test_scored": false,
+  "resource_admission": {
+    "remaining_seconds": 579678.984801054,
+    "required_seconds": 2312603.5427999496,
+    "planned_epochs": 156,
+    "epoch_bound_seconds": 13765.497278571129,
+    "admitted": false,
+    "scientific_gate_unchanged": true
+  },
+  "required_confirmation_and_test_allowance_hours": 642.389872999986,
+  "remaining_original_budget_hours_at_admission": 161.021940222515,
+  "additional_wall_budget_needed_hours_at_admission": 481.367932777471,
+  "evidence_report_lf_sha256": {
+    "artifacts\\vg_method_v2_speed_m2_v1\\screening_native_1729\\report.json": "ed04224d75a60f8ad53a40a409ee3fc67dbba1046cac859323974c22ad7f4112",
+    "artifacts\\vg_method_v2_speed_m2_v1\\screening_context_1729\\report.json": "87f3726f63974ffdda846b14f683a1c9be94e8961bad46ac5fc940772910f582",
+    "artifacts\\vg_method_v2_speed_m2_v1\\screening_oneway_1729\\report.json": "e51b67c5b0ecf71de087d6dd6f692945b972ece9d487ebf4d403e9aa4afcdd4b",
+    "artifacts\\vg_method_v2_speed_m2_v1\\screening_feedback_1729\\report.json": "598be9e9b097050cd016f71e66d2d2654294b54f94e4c785ba428fa13060caa8"
+  },
+  "checkpoint_sha_provenance": "Remote completed reports include checkpoint SHA; full weights were not downloaded or independently rehashed locally.",
+  "conclusion": "Feedback is the selected single-seed screening candidate with a small validation mR gain. Confirmation resource admission failed; no superiority/SOTA claim or test evaluation. Caption-clean release, fresh training and caption controls remain pending.",
+  "program_complete": false,
+  "cap_extended": false,
+  "new_job_launched": false
+}

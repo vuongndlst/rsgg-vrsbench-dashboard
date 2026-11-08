@@ -1,0 +1,28 @@
+{
+  "status": "PREREGISTERED_BEFORE_EXECUTION",
+  "phase": "vg_grounding_diagnostic_v1_20261101",
+  "utc": "2026-11-01T09:01:39.598266+00:00",
+  "input_sha256": {
+    "outputs/vg_focus_repair_failure_20261030/parent/prepare/train_units.jsonl.gz": "63bb5b347218bfb65965ddc29f4138f5bc112ed6cb233274e4d363df925ea4f9",
+    "outputs/vg_focus_repair_failure_20261030/parent/prepare/train_graphs.jsonl.gz": "22c377483eed3c701f44cbb2693830fc9eb6666e6c2d3cf32fb2c3a54d9abc48",
+    "outputs/vg_focus_repair_failure_20261030/parent/train_generation/query_units_by_policy.json": "e5966f5a08d090d92a73dd4c050c067b1a8e4c7c35674ccb5a660d2c1498fa48",
+    "outputs/vg_focus_repair_failure_20261030/parent/train_generation/generation_commit.jsonl": "21529cefa0c7f0a5276005528cdbe940f0632a7f5578b19bc456f9f88abae394",
+    "outputs/vg_focus_repair_failure_20261030/parent/train_metrics/original_human_references.json": "43dfafa8e5853f6b755578a28a6e67ed5e385df614fed4df34826ba1b08f1340",
+    "outputs/vg_focus_repair_failure_20261030/parent/train_metrics/L0.json": "62becc54c648df4811a6a7dea4620fff3ca6f5cce2bfe1721b13feaf455da27f",
+    "outputs/vg_focus_repair_failure_20261030/parent/train_metrics/L1.json": "f0386d29a7df4ecda6580e149484f02565f27393c51d7ab5a9c585c966adcd16",
+    "outputs/vg_focus_repair_failure_20261030/parent/train_metrics/L2.json": "44a7e0a1ade8d86a038d04ab0139b5797390302cfadaed71e2f744493d44133a",
+    "outputs/vg_focus_repair_failure_20261030/parent/selection.json": "f399e748de4a08b9ed94703db3ce6ba5f8bea13313f564df7a7682dac7fbff55",
+    "configs/vg_object_color_rules_v3_20261025.json": "926ca4f13b8d0c0bc93210d3b15d61e674ae51c9d7f422b98c1cabb43a1a90bd",
+    "data/vg150/split_ids.json": "778bd00e3638c24bc9d72f8149a753926e20f3872d0f16a13348c3dbc869e568"
+  },
+  "source_config_sha256": {
+    "scripts/vg_grounding_diagnostic_v1_20261101.py": "c18bed85eceb1c28ce7a0cfb9a8bcc3cd0425244960cf5b7b1c355a8743000a8",
+    "scripts/remote_vg_grounding_fresh_membership_v1_20261101.py": "4f908eae36f72f5f849d797bb79c5b6d001eead28d907538ff19007ae4438e2f",
+    "configs/vg_grounding_diagnostic_v1_20261101.json": "d7de4f0fe01efbfe0b80a7f11ba934bd48a64beb9d11cd40a1664d037c08b2dd",
+    "research/VG_GROUNDING_DIAGNOSTIC_PREREGISTRATION_20261101.md": "71c768e7fd8a4ec57d0e7abdb13c09c2247dc5172a27da0ebcb03011aaa2bec4"
+  },
+  "synthetic_contract_cases_passed": 9,
+  "remote_payload_normalized_UTF8_sha256": "e34a6b07fad9b186746edad774ef8515c8a9589375e9b5d8b1d4e25619f92322",
+  "future_check_not_opened": true,
+  "scientific_policy_selection_allowed": false
+}

@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-11T02:21:09.158224+00:00",
+  "pid": 1090355,
+  "reason": "synthetic fixture total120s alarm overwritten by each production batch100s alarm; disk commit latency made total cap ineffective",
+  "fixture_source_sha256": "a348a7e47526da484257939b9b5e7e1cea113c385ed1847a4c81679aeb9478c5",
+  "production_source_sha256": "752b93fc302851e5e1922bf0a918842f09fca29eade1136cf2b65a4d69f0e1dd",
+  "live_v2_modified": false,
+  "real_pixel_journals_modified": false,
+  "network_downloaded_bytes": 0,
+  "signal_sent": null,
+  "already_exited": true,
+  "observed_v1_ledger_status": "PASS",
+  "observed_v1_total_seconds": 370.9460436627269,
+  "total_wall_gate": "FAILED",
+  "correct_process_had_already_exited_before_stop": true,
+  "repair_fixture_version": "v2",
+  "repair_status": "PASS17.275s external child timeout"
+}

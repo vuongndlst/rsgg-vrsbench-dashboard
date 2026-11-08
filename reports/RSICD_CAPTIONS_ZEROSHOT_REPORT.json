@@ -1,0 +1,38 @@
+{
+  "dataset": "RSICD",
+  "evaluation_type": "Zero-shot Cross-Domain Transfer (Trained only on VRSBench)",
+  "detector_checkpoint": "vrsbench_detector_v2_best.pth (mIoU 70.35%)",
+  "llm_backbone": "Qwen2.5-14B-Instruct (4-bit NF4)",
+  "num_test_images": 1093,
+  "metrics_test_split": {
+    "BLEU-1": 26.85308130906609,
+    "BLEU-2": 10.782577679524973,
+    "BLEU-3": 4.012654755725092,
+    "BLEU-4": 1.6138716760973362,
+    "METEOR": 10.606030873228779,
+    "ROUGE-L": 17.694652588625644,
+    "CIDEr": 5.537324988641831,
+    "SPICE": 5.900303344394864
+  },
+  "comparison_sota": {
+    "SAT (Show Attend Tell)": {
+      "BLEU-4": 38.2,
+      "METEOR": 29.5,
+      "ROUGE-L": 52.1,
+      "CIDEr": 112.4
+    },
+    "MLCA-Net": {
+      "BLEU-4": 42.6,
+      "METEOR": 32.1,
+      "ROUGE-L": 55.4,
+      "CIDEr": 128.6
+    },
+    "RemoteCLIP-ZeroShot": {
+      "BLEU-4": 28.5,
+      "METEOR": 24.2,
+      "ROUGE-L": 43.1,
+      "CIDEr": 84.3
+    }
+  },
+  "timestamp": "2026-11-08 05:02:12"
+}

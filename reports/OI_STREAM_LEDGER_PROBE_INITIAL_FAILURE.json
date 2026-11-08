@@ -1,0 +1,10 @@
+{
+  "status": "FAILED_FIXTURE_SETUP",
+  "recorded_utc": "2026-10-11T01:14:05.551536+00:00",
+  "fixture_source_sha256": "fb51ffdd338bf216ce412606107bdbaf350d9e4ce79aa651d78c5156e6173f3d",
+  "observed_error": "FileNotFoundError: artificial success_resume/artifacts parent absent at production folder.mkdir(exist_ok=True)",
+  "production_source_modified": false,
+  "real_pixel_journals_modified": false,
+  "network_downloaded_bytes": 0,
+  "repair": "new fixture v2 adds artificial artifacts parent; v1 source and preregistration retained"
+}

@@ -1,0 +1,204 @@
+{
+  "utc": "2026-10-24T22:27:07.110107+00:00",
+  "inventory_source": "reports/SERVER_MODEL_INVENTORY_20261025.json",
+  "scope": "accessible real filesystem entries; permission-denied and pruned dependencies excluded; directory symlinks not traversed",
+  "known_HF_model_families_with_weights": [
+    {
+      "model": "Qwen/Qwen2.5-14B-Instruct",
+      "role": "text LLM;8/8shards",
+      "observed_weight_gib_min": 27.511393651366234,
+      "locations": [
+        {
+          "path": "${REMOTE_HOME}/shared-assets/models/huggingface/hub/models--Qwen--Qwen2.5-14B-Instruct/snapshots/cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8",
+          "weight_gib": 27.511393651366234,
+          "weight_files": 8
+        }
+      ],
+      "load_tested": false
+    },
+    {
+      "model": "Qwen2.5-VL-7B-Instruct",
+      "role": "vision-language;5/5shards",
+      "observed_weight_gib_min": 15.445439666509628,
+      "locations": [
+        {
+          "path": "${REMOTE_HOME}/etechs/ouc_stkg_captioning_research_pack/artifacts/multimodal-labels-v1/models/Qwen2.5-VL-7B-Instruct",
+          "weight_gib": 15.445439666509628,
+          "weight_files": 5
+        }
+      ],
+      "load_tested": false
+    },
+    {
+      "model": "openai/clip-vit-base-patch32",
+      "role": "image-text encoder",
+      "observed_weight_gib_min": 0.5636802604421973,
+      "locations": [
+        {
+          "path": "${REMOTE_HOME}/shared-assets/models/clip-vit-base-patch32",
+          "weight_gib": 0.5636802604421973,
+          "weight_files": 1
+        }
+      ],
+      "load_tested": false
+    },
+    {
+      "model": "GroundingDINO-Tiny",
+      "role": "open-vocabulary detector; local directory name/model config",
+      "observed_weight_gib_min": 0.6420156881213188,
+      "locations": [
+        {
+          "path": "${REMOTE_HOME}/etechs/msvd-tkg-captioning/models/grounding-dino-tiny",
+          "weight_gib": 0.6420156881213188,
+          "weight_files": 1
+        }
+      ],
+      "load_tested": false
+    },
+    {
+      "model": "google/owlv2-base-patch16-ensemble",
+      "role": "open-vocabulary detector",
+      "observed_weight_gib_min": 0.5773443952202797,
+      "locations": [
+        {
+          "path": "${REMOTE_HOME}/.cache/huggingface/hub/models--google--owlv2-base-patch16-ensemble/snapshots/cfd3195ba4ea9592eec887ded089f4c08eff231d",
+          "weight_gib": 0.5773443952202797,
+          "weight_files": 1
+        }
+      ],
+      "load_tested": false
+    },
+    {
+      "model": "nvidia/segformer-b2-finetuned-ade-512-512",
+      "role": "semantic segmentation;two revisions/formats observed",
+      "observed_weight_gib_min": 0.10235168039798737,
+      "locations": [
+        {
+          "path": "${REMOTE_HOME}/.cache/huggingface/hub/models--nvidia--segformer-b2-finetuned-ade-512-512/snapshots/de01bae28967510f9ddd496c60a969357195400c",
+          "weight_gib": 0.10244632605463266,
+          "weight_files": 1
+        },
+        {
+          "path": "${REMOTE_HOME}/.cache/huggingface/hub/models--nvidia--segformer-b2-finetuned-ade-512-512/snapshots/4585665b1bf59b90b831d5145d3e25d6e0743d03",
+          "weight_gib": 0.10235168039798737,
+          "weight_files": 1
+        }
+      ],
+      "load_tested": false
+    },
+    {
+      "model": "MCG-NJU/videomae-base-finetuned-kinetics",
+      "role": "video encoder/classification;other HF snapshot also present",
+      "observed_weight_gib_min": 0.3223881274461746,
+      "locations": [
+        {
+          "path": "${REMOTE_HOME}/etechs/msvd-tkg-captioning/models/videomae-kinetics",
+          "weight_gib": 0.3223881274461746,
+          "weight_files": 1
+        }
+      ],
+      "load_tested": false
+    },
+    {
+      "model": "microsoft/git-base-vatex",
+      "role": "video captioning",
+      "observed_weight_gib_min": 0.658021368086338,
+      "locations": [
+        {
+          "path": "${REMOTE_HOME}/etechs/ouc_stkg_captioning_research_pack/artifacts/sav-tkg/sav140-supervised-p1-isolated-v2/git-baseline-20261022-v1/model_cache/models--microsoft--git-base-vatex/snapshots/623363cef8744c57438ce8d62b30bef1fbbec111",
+          "weight_gib": 0.658021368086338,
+          "weight_files": 1
+        }
+      ],
+      "load_tested": false
+    },
+    {
+      "model": "GIT-large",
+      "role": "captioning;split local folder variants below",
+      "observed_weight_gib_min": 1.468664132989943,
+      "locations": [
+        {
+          "path": "${REMOTE_HOME}/models/git-large",
+          "weight_gib": 1.468664132989943,
+          "weight_files": 1
+        }
+      ],
+      "load_tested": false
+    },
+    {
+      "model": "GIT-large-COCO",
+      "role": "image captioning",
+      "observed_weight_gib_min": 1.4685670845210552,
+      "locations": [
+        {
+          "path": "${REMOTE_HOME}/models/git-large-coco",
+          "weight_gib": 1.4685670845210552,
+          "weight_files": 1
+        }
+      ],
+      "load_tested": false
+    },
+    {
+      "model": "vinai/phobert-base-v2",
+      "role": "Vietnamese language encoder;project safetensors copy also present",
+      "observed_weight_gib_min": 0.503214399330318,
+      "locations": [
+        {
+          "path": "${REMOTE_HOME}/.cache/huggingface/hub/models--vinai--phobert-base-v2/snapshots/86cd7fd4c148980922ac11a2cf5e257f2ba639e1",
+          "weight_gib": 0.503214399330318,
+          "weight_files": 1
+        }
+      ],
+      "load_tested": false
+    },
+    {
+      "model": "timm/vit_small_patch14_dinov2.lvd142m",
+      "role": "visual encoder;weights found, not full runtime validation",
+      "observed_weight_gib_min": 0.08218037895858288,
+      "locations": [
+        {
+          "path": "${REMOTE_HOME}/etechs/thesis/var/huggingface/hub/models--timm--vit_small_patch14_dinov2.lvd142m/snapshots/4610ca143709d58a633b6397a74412c2c3842454",
+          "weight_gib": 0.08218037895858288,
+          "weight_files": 1
+        }
+      ],
+      "load_tested": false
+    }
+  ],
+  "metadata_only_not_complete_download": [
+    "Qwen2.5-7B-Instruct:0/4indexedshards found in observed cache/metadata directories",
+    "BERT-base-uncased configs in SwinBERT source folders;no matching weights in those folders"
+  ],
+  "potential_duplicate": {
+    "model": "Qwen2.5-14B-Instruct",
+    "locations": [
+      "${REMOTE_HOME}/shared-assets/models/huggingface/hub/models--Qwen--Qwen2.5-14B-Instruct/snapshots/cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8",
+      "${REMOTE_HOME}/etechs/msvd-tkg-captioning/models/qwen2.5-14b"
+    ],
+    "both_have_all8_shards": true,
+    "distinct_inode_sets": true,
+    "same_weight_content_sha_verified": false,
+    "potential_consolidation_gib": 27.511478424072266,
+    "action": "NO_ADDITIONAL_DELETION; verify weight hashes, dependencies and active use before any consolidation"
+  },
+  "fair_deletion": {
+    "utc": "2026-10-24T22:25:08.791761+00:00",
+    "authorization": "Human explicit request2026-10-25: delete fair-project on server",
+    "target": "${REMOTE_HOME}/fair-project",
+    "files_outside_target_deleted": false,
+    "processes_killed": false,
+    "disk_free_before_bytes": 8582631424,
+    "deletion_started": true,
+    "own_processes_using_target": [],
+    "nested_mounts": [],
+    "target_allocated_bytes_before": 7276134400,
+    "resolved_absolute_target_verified": true,
+    "status": "AUTHORIZED_FAIR_PROJECT_DELETED",
+    "target_exists_after": false,
+    "disk_free_after_bytes": 15858757632,
+    "observed_free_gain_bytes": 7276126208,
+    "wall_seconds": 4.49137144908309
+  },
+  "model_weights_loaded": false,
+  "models_deleted_beyond_fair": false
+}

@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "train_images": 64,
+  "validation_scored": false,
+  "test_scored": false,
+  "feature_seconds": 20.3645646199584,
+  "feature_seconds_per_image": 0.31819632218685,
+  "variants": {
+    "pair": {
+      "seconds_per_batch16": 0.07171256467700005,
+      "loss_first": 0.944912850856781,
+      "loss_last": 0.719226598739624,
+      "checkpoint_reload_exact": true,
+      "parameters": 2139351
+    },
+    "fixed": {
+      "seconds_per_batch16": 0.05153452573964993,
+      "loss_first": 0.8100487589836121,
+      "loss_last": 0.7260540127754211,
+      "checkpoint_reload_exact": true,
+      "parameters": 2139351
+    },
+    "one_way": {
+      "seconds_per_batch16": 0.04929544869810343,
+      "loss_first": 0.8100487589836121,
+      "loss_last": 0.7260289788246155,
+      "checkpoint_reload_exact": true,
+      "parameters": 2139351
+    },
+    "feature_membership": {
+      "seconds_per_batch16": 0.056307466235011816,
+      "loss_first": 0.8118411898612976,
+      "loss_last": 0.708707332611084,
+      "checkpoint_reload_exact": true,
+      "parameters": 2139351
+    },
+    "geometry_feedback": {
+      "seconds_per_batch16": 0.05833240908881029,
+      "loss_first": 0.8117717504501343,
+      "loss_last": 0.7072816491127014,
+      "checkpoint_reload_exact": true,
+      "parameters": 2139351
+    },
+    "gnn": {
+      "seconds_per_batch16": 0.05287995763743917,
+      "loss_first": 0.8533036708831787,
+      "loss_last": 0.7293331027030945,
+      "checkpoint_reload_exact": true,
+      "parameters": 2139351
+    }
+  },
+  "source_checksums": {
+    "regions.py": "9c0812dd87ad5faa78509cbda28d3e4f891efff80a55dd2bd94e8668475038f3",
+    "evaluation.py": "5b3b9508493603c5aeb0748fc748eded5bb5e4e47aa54715f326dc2b61a1f3d0",
+    "__init__.py": "1558665f31823ae3500829f39901bd3fec8dd2d0d738ecf716cfcce9acb58de9",
+    "geometry.py": "32f35ec030812af8ac8ebd2e3b036709af0b2a50a782d58044c77ac4b6a73455",
+    "baselines.py": "f43630b154d5700fb3816081d1dd6c465583f2ee7ca08aeadf1de0fb35ef10a6",
+    "data.py": "1bfffb6bd0aab95e77389469c1ee20b3b3bf1828030df7e332f46177575b8a80",
+    "frontend.py": "ae9810493394b90b6bbd4bfdf3d920b3ed0c26a36953ef4fd4871a2d5c4e7a27",
+    "vg_experiment.py": "73857081aea1662b4b3daea408c9687cc42e8101878cb10fffaf10744d6e1589"
+  },
+  "peak_torch_allocated_bytes": 187536896,
+  "projected_cache_wall_hours": 5.411458785991029
+}

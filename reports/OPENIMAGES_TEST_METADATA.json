@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "scope": "Open Images TEST only; no train/validation",
+  "mode": "metadata_human_reference_lock_no_pixels_no_performance_scoring",
+  "reference_policy": "evaluation-only; do not use caption text for prompts, calibration, selection, or training",
+  "assets": {
+    "test-images-with-rotation.csv": {
+      "url": "https://storage.googleapis.com/openimages/2018_04/test/test-images-with-rotation.csv",
+      "bytes": 45227339,
+      "sha256": "de55c6b8cbda32a79f4a20f28572d54e9c49d527a4006725675764074a51a36d",
+      "relative_path": "annotations/test-images-with-rotation.csv"
+    },
+    "oidv6-test-annotations-vrd.csv": {
+      "url": "https://storage.googleapis.com/openimages/v6/oidv6-test-annotations-vrd.csv",
+      "bytes": 9308608,
+      "sha256": "418a1e22a6da1fd2fdcffb53cb92fdc796cc41d7ca0c3311cfd298f1639c9ef6",
+      "relative_path": "annotations/oidv6-test-annotations-vrd.csv"
+    },
+    "open_images_test_captions.jsonl": {
+      "url": "https://storage.googleapis.com/localized-narratives/annotations/open_images_test_captions.jsonl",
+      "bytes": 31058347,
+      "sha256": "382d1c59be20cddf336444166b69cd2e66dc16b57478de51744584d4c92370b1",
+      "relative_path": "evaluation_only/open_images_test_captions.jsonl"
+    }
+  },
+  "status": "complete",
+  "updated_utc": "2026-10-10T16:22:53.718238+00:00",
+  "current_asset": "open_images_test_captions.jsonl",
+  "test_images": 125436,
+  "caption_images": 125436,
+  "human_captions": 126020,
+  "caption_dataset_ids": {
+    "open_image": 126020
+  },
+  "vrd_images": 20803,
+  "vrd_rows": 82746,
+  "vrd_non_attribute_images": 5322,
+  "vrd_non_attribute_rows": 14403,
+  "vrd_relation_counts": {
+    "wears": 4668,
+    "is": 68343,
+    "contain": 1618,
+    "at": 2095,
+    "holds": 1587,
+    "on": 985,
+    "ride": 1071,
+    "read": 15,
+    "plays": 460,
+    "kick": 54,
+    "hits": 66,
+    "surf": 86,
+    "interacts_with": 339,
+    "drink": 19,
+    "throw": 49,
+    "hang": 835,
+    "inside_of": 281,
+    "catch": 25,
+    "ski": 7,
+    "under": 10,
+    "skateboard": 119,
+    "eat": 14
+  },
+  "captions_missing_for_test_images": 0,
+  "metadata_columns": [
+    "ImageID",
+    "Subset",
+    "OriginalURL",
+    "OriginalLandingURL",
+    "License",
+    "AuthorProfileURL",
+    "Author",
+    "Title",
+    "OriginalSize",
+    "OriginalMD5",
+    "Thumbnail300KURL",
+    "Rotation"
+  ],
+  "flickr_identity_coverage": 125436,
+  "vg_known_oi_test_identity_overlap": 152,
+  "identity_manifest_sha256": "6eb586b40bd68245e20205d896a5ae49700b72d61783b0e5ddc80a50e2242c87",
+  "reference_sha256": "e7b549a24b718edc1389ed6946fde80a237a3200b7e27d8bcca96468c7190be2",
+  "overlap_manifest_sha256": "3469840facdbb1c7b63e071b84a77bc2b214a9a0a4d1050d7027fabb98855d8a",
+  "images_downloaded_by_this_task": 0,
+  "full_test_pixels_ready": false,
+  "full_clean_release_certified": false,
+  "test_scored": false
+}

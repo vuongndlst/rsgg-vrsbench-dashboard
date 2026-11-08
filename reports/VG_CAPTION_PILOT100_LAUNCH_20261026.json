@@ -1,0 +1,1 @@
+{"status": "LAUNCHED", "utc": "2026-10-26T06:38:24.322147+00:00", "controller_pid": 1465475, "preregistration_sha256": "3715c7489698cae4bdc99f41116f4214ceb5e0fa0b4e772fd57d9123efe06c15", "admission": {"disk_free_bytes": 44059164672, "aggregate_artifacts_bytes": 26187223129, "GPU_free_bytes": 41672507392, "host_RAM_available_bytes": 43781365760}, "TEST_access_allowed": false}

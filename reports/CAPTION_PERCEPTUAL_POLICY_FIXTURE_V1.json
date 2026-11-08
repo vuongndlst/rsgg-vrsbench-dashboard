@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "synthetic_exhaustive_16bit_masks": 2517,
+  "synthetic_full_63bit_fourflip_cases": 200,
+  "source_hashes": {
+    "src/rsgformer/caption_phash_candidates_v1.py": "827ac8e5a8ce4b0c8921b606b7feadf33c9df5f721f39f2a5f659f8b532f6688",
+    "configs/caption_perceptual_exclusion_v1.json": "f3efd67929926cbad2c76715d0ae768fa750dead3af41c81033d4951f0e9195b",
+    "scripts/check_caption_perceptual_policy_v1.py": "eb330eb0e4056546a4c0f8ab9f34418b782daf72d141d8529ef025e434ca82fd"
+  },
+  "protected_dataset_contract": "canonical journal names, not display names",
+  "no_network_or_pixel_access": true,
+  "test_scored": false,
+  "candidate_journal_launched": false,
+  "final_manifest_generated": false,
+  "clean_release_certified": false
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS_LOCAL_RAW_AUDIT_SOURCE_AND900UNIT_EVIDENCE",
+  "utc": "2026-10-27T08:16:34.622524+00:00",
+  "archive_sha256": "4493c52e4377fad9ed52e4f5594e77b79f6bf1c4e589e264f1efdfab5c3c038f",
+  "TRAIN_regions": 800,
+  "observed_VAL_regions": 100,
+  "legacy_focus_reproduced": 900,
+  "policy_changed": false,
+  "TEST_read": false,
+  "new_reference_text_read": false
+}

@@ -1,0 +1,31 @@
+{
+  "announced_checkpoints": [
+    "screening_pair_1729:9a91d7c1c3ec35c63fede9fd7777f0de0a8d1884bec0e10ff05d24c4fab38e0e",
+    "screening_fixed_1729:e39155047ed6667f5a4cb5ecca8d5921cf08b54156b52587e419caeb20a8fb01",
+    "screening_one_way_1729:97443547be34335b33a338e9df6b1bba7d36f44c99fc4176309b860108b937ce",
+    "screening_feature_membership_1729:2dc5e18a1f68e1437cc314e19e00da1f647cc41f40c5e81d98903b789f97545f",
+    "screening_geometry_feedback_1729:d3cf7d65d190e31a9a7f2ed4141d59646c4406414789081905e7160a53c77456",
+    "screening_gnn_1729:b3eb7361b8cf0a5b92d8719e13bdec90be83024451ca0b7e0e34e0a53fc4dc04"
+  ],
+  "announced_terminal": [
+    "screening_failed_to_establish_benefit"
+  ],
+  "active_anomalies": [],
+  "last_check_unix": 1791643547.155841,
+  "last_progress_utc": "2026-10-10T14:41:30Z",
+  "last_process_active": false,
+  "last_eta": {
+    "measured_epoch_seconds": 182.3,
+    "method": "recent full-data epoch medians; train-only architecture timing ratios for unmeasured variants; shared-GPU ETA is provisional",
+    "upcoming_checkpoints": [],
+    "screening_finish_Asia_Saigon": "10/10 21:45",
+    "confirmation_finish_Asia_Saigon": "11/10 22:01",
+    "confirmation_conditional_on_gate": true,
+    "locked_test_extra_hours_estimate": [
+      1,
+      3
+    ],
+    "uncertainty": "allow approximately +/-25% remaining wall time; this is not a resource reservation"
+  },
+  "finished": true
+}

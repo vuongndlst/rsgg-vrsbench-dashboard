@@ -1,0 +1,38 @@
+{
+  "dataset": "UCM-Captions",
+  "evaluation_type": "Zero-shot Cross-Domain Transfer (Trained only on VRSBench)",
+  "detector_checkpoint": "vrsbench_detector_v2_best.pth (mIoU 70.35%)",
+  "llm_backbone": "Qwen2.5-14B-Instruct (4-bit NF4)",
+  "num_test_images": 210,
+  "metrics_test_split": {
+    "BLEU-1": 29.819277108420906,
+    "BLEU-2": 14.002431735809834,
+    "BLEU-3": 5.805387253334307,
+    "BLEU-4": 2.191989500392497,
+    "METEOR": 13.53249817974477,
+    "ROUGE-L": 22.289584957717057,
+    "CIDEr": 18.76731483637945,
+    "SPICE": 10.472571742225417
+  },
+  "comparison_sota": {
+    "SAT (Show Attend Tell)": {
+      "BLEU-4": 65.8,
+      "METEOR": 41.2,
+      "ROUGE-L": 74.5,
+      "CIDEr": 282.1
+    },
+    "MLCA-Net": {
+      "BLEU-4": 71.3,
+      "METEOR": 44.9,
+      "ROUGE-L": 78.6,
+      "CIDEr": 312.4
+    },
+    "RemoteCLIP-ZeroShot": {
+      "BLEU-4": 52.6,
+      "METEOR": 36.4,
+      "ROUGE-L": 66.3,
+      "CIDEr": 218.7
+    }
+  },
+  "timestamp": "2026-11-08 04:04:08"
+}

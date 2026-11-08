@@ -1,0 +1,10 @@
+{
+  "benchmark_evidence_sha256": "bec2a2cfbfd39e5edf52c7bfc7806385e061d1f4a5777a22e95b52b32b7ef4e3",
+  "controller_evidence_sha256": "84d6e490df568ac2a346611c5647cdfd7dad283c386fb77dedd346e12ca4863c",
+  "adoption_preregistration_sha256": "d5866565e34555143af0f2f42c240841eaa8e1f2b0152c05c4ef60121561377c",
+  "announced": [
+    "benchmark_complete:bec2a2cfbfd39e5edf52c7bfc7806385e061d1f4a5777a22e95b52b32b7ef4e3",
+    "adoption_launched:d5866565e34555143af0f2f42c240841eaa8e1f2b0152c05c4ef60121561377c"
+  ],
+  "last_event_utc": "2026-10-11T11:41:50.112867+00:00"
+}

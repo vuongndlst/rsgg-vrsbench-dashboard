@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-10T15:42:27.670566+00:00",
+  "mode": "metadata_only_no_image_decode_no_model_no_performance_scoring",
+  "source_metadata": {
+    "coco_karpathy": {
+      "metadata_sha256": "2fd999220673258012acfb411a4e7e66af7d488050b2519b0badcc49b7600b8d",
+      "split_counts": {
+        "test": 5000,
+        "restval": 30504,
+        "val": 5000,
+        "train": 82783
+      },
+      "test_image_coverage": 5000,
+      "expected_test_images": 5000
+    },
+    "flickr30k_karpathy": {
+      "metadata_sha256": "db779ee2c5df40c25ff0eebeca464f6124b620cc4a9398650aea71fd1b53d4af",
+      "split_counts": {
+        "train": 29000,
+        "test": 1000,
+        "val": 1014
+      },
+      "test_image_coverage": 34,
+      "expected_test_images": 1000
+    }
+  },
+  "vg_image_metadata_sha256": "5a0b63286b6ec81bcae17df1d4a50777bfc56befb70d65a8a7e9bcab0fcd9bc4",
+  "v2_split_hashes": {
+    "train": "e6d5c31f10baa92fedc23200cce81f7d7751b9f68387105bc07287976774ad26",
+    "val": "8d83adf29e1ee9ac552c1f3d72ff4575a849444103f0ba6ec72519b9f4cc52a2",
+    "test": "cbd2214c7021bcc76b0a932340b56367647586a4d860c750f834bc87fcab2bd3"
+  },
+  "identity_overlap": {
+    "train": {
+      "images": 57723,
+      "coco_test": 1187,
+      "coco_val": 1217,
+      "flickr_test": 2,
+      "flickr_val": 1
+    },
+    "val": {
+      "images": 5000,
+      "coco_test": 19,
+      "coco_val": 31,
+      "flickr_test": 0,
+      "flickr_val": 0
+    },
+    "test": {
+      "images": 26446,
+      "coco_test": 534,
+      "coco_val": 543,
+      "flickr_test": 1,
+      "flickr_val": 0
+    }
+  },
+  "matched_records": 3535,
+  "vg_train_val_known_external_val_test_exclusions": 2457,
+  "flickr_identity_field_rows": 85409,
+  "vg_region_references": {
+    "bytes": 13049856,
+    "sha256": "f6fcc35abbfd99f9e1bba0d5895662751f610477b9a427c0819114e539effa74",
+    "parse_error": {
+      "error": "JSONDecodeError",
+      "message": "Unterminated string starting at",
+      "position": 13049828,
+      "status": "INVALID_JSON_DO_NOT_USE_AS_HUMAN_REFERENCES"
+    },
+    "image_records": 0,
+    "regions": 0,
+    "nonempty_phrases": 0,
+    "fields": [],
+    "split_image_coverage": {
+      "train": 0,
+      "val": 0,
+      "test": 0
+    },
+    "scope": "human region phrases require matched crop evaluation; not global image references"
+  },
+  "provisional_clean_split_counts": {
+    "train": 55316,
+    "val": 4950
+  },
+  "status": "PROVISIONAL_METADATA_EXCLUSIONS_NOT_CAPTION_CLEAN_RELEASE",
+  "remaining_checks": [
+    "COCO/Flickr/OI exact and perceptual image duplicate audit including VG images with absent identity fields",
+    "Open Images test identity/duplicate manifest and human reference release lock",
+    "canonical RelTR annotation/vocabulary/split parity",
+    "audited fresh backbone initialization and fresh detector/SG training",
+    "development images and complete Flickr test coverage"
+  ],
+  "disk_available_bytes": 88433127424,
+  "identity_manifest_sha256": "7e73a2209ae9270dccbdf165e7f40b41db106ae73487bc5be534f5f575758418"
+}

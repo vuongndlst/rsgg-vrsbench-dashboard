@@ -1,0 +1,201 @@
+{
+  "created_utc": "2026-10-10T16:03:11.480434+00:00",
+  "mode": "full_annotation_metadata_only_no_images_no_performance_scoring",
+  "archive_sha256": "56856b4386220f40d6b1b522a2ae199a8b4188765fd9ebb5321c1d0f4f2d7fbc",
+  "active_release_modified": false,
+  "member_sha256": {
+    "rel.json": "ab5d435745d5683b4f672311a2ec8618d9126909d291b663deaf406c6497d32f",
+    "train.json": "a40fdfdc3894d16349f2e9955e2cbaa199d511c36e25ba46dd6ad8a60043b440",
+    "val.json": "943487fad15ab61de9a1ac57c3727cd24b7c2443b1f8bd8c3a1fe96d8b56a3dd",
+    "test.json": "e786550a74a2336c07139c23e6d952cdeac14bf3d04feddf2b210cdba1853238"
+  },
+  "splits": {
+    "train": {
+      "canonical_images": 57723,
+      "adapter_images": 57723,
+      "canonical_ordered_ids_sha256": "e6d5c31f10baa92fedc23200cce81f7d7751b9f68387105bc07287976774ad26",
+      "adapter_ordered_ids_sha256": "e6d5c31f10baa92fedc23200cce81f7d7751b9f68387105bc07287976774ad26",
+      "ordered_ids_equal": true,
+      "id_sets_equal": true,
+      "canonical_only_count": 0,
+      "adapter_only_count": 0,
+      "canonical_only_sample": [],
+      "adapter_only_sample": [],
+      "object_vocabulary_mismatches": [],
+      "object_count_mismatch_images": 0,
+      "ordered_object_labels_mismatch_images": 0,
+      "dimension_mismatch_images": 0,
+      "ordered_raw_boxes_mismatch_images": 57723,
+      "ordered_adapter_clipped_boxes_mismatch_images": 57723,
+      "ordered_native_coco_clipped_boxes_mismatch_images": 57723,
+      "relation_multiset_mismatch_images": 27727,
+      "unique_relation_set_mismatch_images": 0,
+      "integer_inclusive_xywh_metadata_mismatch_images": 0,
+      "adapter_relations": 405860,
+      "adapter_unique_relations": 315642,
+      "canonical_annotation_objects": 670591,
+      "canonical_relations": 315642,
+      "max_raw_box_abs_error": 1.0,
+      "examples": [
+        {
+          "image_id": 498334,
+          "differences": [
+            "raw_boxes"
+          ]
+        },
+        {
+          "image_id": 498335,
+          "differences": [
+            "raw_boxes"
+          ]
+        },
+        {
+          "image_id": 498336,
+          "differences": [
+            "raw_boxes",
+            "relations"
+          ]
+        },
+        {
+          "image_id": 498337,
+          "differences": [
+            "raw_boxes",
+            "relations"
+          ]
+        },
+        {
+          "image_id": 498338,
+          "differences": [
+            "raw_boxes"
+          ]
+        }
+      ]
+    },
+    "val": {
+      "canonical_images": 5000,
+      "adapter_images": 5000,
+      "canonical_ordered_ids_sha256": "8d83adf29e1ee9ac552c1f3d72ff4575a849444103f0ba6ec72519b9f4cc52a2",
+      "adapter_ordered_ids_sha256": "8d83adf29e1ee9ac552c1f3d72ff4575a849444103f0ba6ec72519b9f4cc52a2",
+      "ordered_ids_equal": true,
+      "id_sets_equal": true,
+      "canonical_only_count": 0,
+      "adapter_only_count": 0,
+      "canonical_only_sample": [],
+      "adapter_only_sample": [],
+      "object_vocabulary_mismatches": [],
+      "object_count_mismatch_images": 0,
+      "ordered_object_labels_mismatch_images": 0,
+      "dimension_mismatch_images": 0,
+      "ordered_raw_boxes_mismatch_images": 5000,
+      "ordered_adapter_clipped_boxes_mismatch_images": 5000,
+      "ordered_native_coco_clipped_boxes_mismatch_images": 5000,
+      "relation_multiset_mismatch_images": 1787,
+      "unique_relation_set_mismatch_images": 0,
+      "integer_inclusive_xywh_metadata_mismatch_images": 0,
+      "adapter_relations": 33203,
+      "adapter_unique_relations": 26721,
+      "canonical_annotation_objects": 62754,
+      "canonical_relations": 26721,
+      "max_raw_box_abs_error": 1.0,
+      "examples": [
+        {
+          "image_id": 1,
+          "differences": [
+            "raw_boxes",
+            "relations"
+          ]
+        },
+        {
+          "image_id": 2,
+          "differences": [
+            "raw_boxes"
+          ]
+        },
+        {
+          "image_id": 3,
+          "differences": [
+            "raw_boxes",
+            "relations"
+          ]
+        },
+        {
+          "image_id": 4,
+          "differences": [
+            "raw_boxes"
+          ]
+        },
+        {
+          "image_id": 5,
+          "differences": [
+            "raw_boxes",
+            "relations"
+          ]
+        }
+      ]
+    },
+    "test": {
+      "canonical_images": 26446,
+      "adapter_images": 26446,
+      "canonical_ordered_ids_sha256": "cbd2214c7021bcc76b0a932340b56367647586a4d860c750f834bc87fcab2bd3",
+      "adapter_ordered_ids_sha256": "cbd2214c7021bcc76b0a932340b56367647586a4d860c750f834bc87fcab2bd3",
+      "ordered_ids_equal": true,
+      "id_sets_equal": true,
+      "canonical_only_count": 0,
+      "adapter_only_count": 0,
+      "canonical_only_sample": [],
+      "adapter_only_sample": [],
+      "object_vocabulary_mismatches": [],
+      "object_count_mismatch_images": 0,
+      "ordered_object_labels_mismatch_images": 0,
+      "dimension_mismatch_images": 0,
+      "ordered_raw_boxes_mismatch_images": 26446,
+      "ordered_adapter_clipped_boxes_mismatch_images": 26446,
+      "ordered_native_coco_clipped_boxes_mismatch_images": 26446,
+      "relation_multiset_mismatch_images": 10223,
+      "unique_relation_set_mismatch_images": 0,
+      "integer_inclusive_xywh_metadata_mismatch_images": 0,
+      "adapter_relations": 183642,
+      "adapter_unique_relations": 152226,
+      "canonical_annotation_objects": 325570,
+      "canonical_relations": 152226,
+      "max_raw_box_abs_error": 1.0,
+      "examples": [
+        {
+          "image_id": 2343729,
+          "differences": [
+            "raw_boxes"
+          ]
+        },
+        {
+          "image_id": 2343728,
+          "differences": [
+            "raw_boxes"
+          ]
+        },
+        {
+          "image_id": 2343727,
+          "differences": [
+            "raw_boxes"
+          ]
+        },
+        {
+          "image_id": 2343726,
+          "differences": [
+            "raw_boxes"
+          ]
+        },
+        {
+          "image_id": 2343725,
+          "differences": [
+            "raw_boxes",
+            "relations"
+          ]
+        }
+      ]
+    }
+  },
+  "predicate_vocabulary_mismatches": [],
+  "strict_release_parity": false,
+  "status": "metadata_audit_complete",
+  "published_protocol_claim": "requires native evaluator and recipe parity in addition to these metadata checks"
+}

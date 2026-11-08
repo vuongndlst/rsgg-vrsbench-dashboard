@@ -1,0 +1,26 @@
+{
+  "status": "PASS_PILOT100_ARCHIVE_SOURCE_INPUT_GENERATION_AND12_CORPUS_COMPLETION",
+  "archive_sha256": "a486705f42b9130085a800b1413df2d78406f0a32a797bfae1132281789220ce",
+  "preregistration_sha256": "3715c7489698cae4bdc99f41116f4214ceb5e0fa0b4e772fd57d9123efe06c15",
+  "metrics_completion_sha256": "cad8af4dc21032edbea7f79a69b1ae8d947506a6f11da4a6ffb666c739b07c66",
+  "images": 100,
+  "provided_regions": 100,
+  "unique_outputs": 1200,
+  "configurations": 12,
+  "units_per_corpus": 100,
+  "empty_units_per_corpus": 19,
+  "queries_with_candidate_color_after_bounding": 1,
+  "paired_color_changed_outputs": {
+    "P1_Z": 1,
+    "P1_S": 1,
+    "P1_D": 1,
+    "P2_Z": 1,
+    "P2_S": 1,
+    "P2_D": 1
+  },
+  "max_input_tokens": 485,
+  "all_retrieved_ids_paired": true,
+  "human_color_precision_gate_passed": false,
+  "TEST_accessed": false,
+  "local_output_directory": "D:\\SBIR\\RSGG\\outputs\\vg_caption_pilot100_20261026"
+}

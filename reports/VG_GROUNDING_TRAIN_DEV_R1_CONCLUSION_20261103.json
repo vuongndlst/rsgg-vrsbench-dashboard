@@ -1,0 +1,122 @@
+{
+  "status": "COMPLETE_VERIFIED_DEV_SELECTED_G0_NO_AUTOMATIC_ADOPTION",
+  "completion_utc": "2026-11-02T22:58:26.760344+00:00",
+  "verification": "reports/VG_GROUNDING_TRAIN_DEV_R1_COMPLETION_VERIFICATION_20261103.json",
+  "archive_sha256": "767c7e0c0f26c67aba6c8fe9b6c8d01c44754ca92af236a90d41c023227aa157",
+  "preregistration_sha256": "394243d86641a9a32fa5818fa3a30a224f65e4682bc4637ed1d08fa37ed6b7b7",
+  "source_manifest_sha256": "8d39e5dda29b19f54a8e06a3ce5c1adf2cff215c80528988d0f4ae860ff5b7a4",
+  "TRAIN_units_per_arm": 800,
+  "dev_images": 64,
+  "dev_regions_per_arm": 256,
+  "TRAIN_generation_records": 2400,
+  "dev_generation_records": 768,
+  "new_model_calls": 1312,
+  "G0_TRAIN_reuse": 800,
+  "scores_display_x100": {
+    "train": {
+      "G0": {
+        "BLEU_1": 12.572253672967303,
+        "BLEU_2": 4.239199711333383,
+        "BLEU_3": 1.5357370326896538,
+        "BLEU_4": 0.00013282856761039525,
+        "CIDEr": 36.26084278168499,
+        "ROUGE_L": 14.340892917899945,
+        "METEOR": 6.507735496770064
+      },
+      "G1": {
+        "BLEU_1": 3.8010774158785967,
+        "BLEU_2": 1.552160506880714,
+        "BLEU_3": 0.6059384499733693,
+        "BLEU_4": 9.922730477631862e-05,
+        "CIDEr": 40.01483866731476,
+        "ROUGE_L": 12.623901365630005,
+        "METEOR": 5.637382270126916
+      },
+      "G2": {
+        "BLEU_1": 3.616695349925468,
+        "BLEU_2": 1.5115237815874512,
+        "BLEU_3": 0.5951719260698869,
+        "BLEU_4": 9.906208484651348e-05,
+        "CIDEr": 37.690854041237245,
+        "ROUGE_L": 12.060141563689458,
+        "METEOR": 5.398721943238016
+      }
+    },
+    "dev": {
+      "G0": {
+        "BLEU_1": 14.146639676402698,
+        "BLEU_2": 5.439814061439913,
+        "BLEU_3": 2.056546691325653,
+        "BLEU_4": 0.00021453126133314638,
+        "CIDEr": 48.74891241035147,
+        "ROUGE_L": 17.454733194846895,
+        "METEOR": 8.02597745892511
+      },
+      "G1": {
+        "BLEU_1": 4.081949634544965,
+        "BLEU_2": 1.014342482346726,
+        "BLEU_3": 4.934009290458634e-06,
+        "BLEU_4": 1.7563316569802043e-08,
+        "CIDEr": 45.76206749679387,
+        "ROUGE_L": 15.562217756324795,
+        "METEOR": 7.070247055552093
+      },
+      "G2": {
+        "BLEU_1": 3.913312066794085,
+        "BLEU_2": 0.991456629216413,
+        "BLEU_3": 4.852556510898639e-06,
+        "BLEU_4": 1.7281005027853804e-08,
+        "CIDEr": 45.00491709216112,
+        "ROUGE_L": 15.243576641110046,
+        "METEOR": 6.859807443728094
+      }
+    }
+  },
+  "dev_delta_vs_G0": {
+    "G1": {
+      "METEOR": -0.9557304033730176,
+      "CIDEr": -2.9868449135576043,
+      "ROUGE_L": -1.8925154385221
+    },
+    "G2": {
+      "METEOR": -1.1661700151970162,
+      "CIDEr": -3.7439953181903505,
+      "ROUGE_L": -2.211156553736849
+    }
+  },
+  "selected_arm_from_dev": "G0",
+  "selection_rule": "complete-corpus fresh-dev METEOR; exact ties G0/G1/G2",
+  "G2_selection_stats": {
+    "train": {
+      "G2_outputs_identical_to_G1": 668,
+      "G2_selected_existing_edge": 267,
+      "G2_selected_existing_node": 533,
+      "G2_selected_first_edge": 267,
+      "G2_invalid_selection_abstentions": 0,
+      "units": 800
+    },
+    "dev": {
+      "G2_outputs_identical_to_G1": 222,
+      "G2_selected_existing_edge": 80,
+      "G2_selected_existing_node": 176,
+      "G2_selected_first_edge": 80,
+      "G2_invalid_selection_abstentions": 0,
+      "units": 256
+    }
+  },
+  "zero_empty_predictions_all_six_corpora": true,
+  "zero_invalid_G2_selections_TRAIN_and_dev": true,
+  "SPICE": "NOT_RUN",
+  "BLEU4_near_zero": true,
+  "human_factuality_accuracy_established": false,
+  "policy_adopted": false,
+  "check_or_TEST_opened": false,
+  "statistical_significance_tested": false,
+  "fresh_check_requires_separate_immutable_gate": true,
+  "notes": [
+    "This is a fresh-dev selection result, not heldout or TEST evidence and not comparable directly with old R1check scores.",
+    "G1/G2literal rendering ensures only supplied graph facts by construction, not visual truth or target correctness.",
+    "G2is not better on dev reference-overlap metrics; this does not establish lower human factuality.",
+    "G1TRAIN CIDEr exceeds G0 but TRAIN metrics do not select the dev winner."
+  ]
+}

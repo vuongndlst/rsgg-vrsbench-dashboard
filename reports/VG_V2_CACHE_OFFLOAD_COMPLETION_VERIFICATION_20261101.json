@@ -1,0 +1,20 @@
+{
+  "status": "PASS_ALL981_LOSSLESS_LOCAL_BACKUP_EXACT_RETIREMENT_AND_MANIFEST_PROTECTION",
+  "utc": "2026-11-01T06:16:11.266107+00:00",
+  "cache_manifest_sha256": "f978799bbd19047b6a74f291aa816f43052251f9b84751f633e8ddf04622abf1",
+  "backup_receipt_sha256": "246919e26c837d701acc72198388b212fe51100b71192a3a271baa081d80a538",
+  "local_archive_directory": "artifacts/offloaded_vg_v2_features_20261101",
+  "verified_shards": 981,
+  "deleted_server_shards": 981,
+  "raw_bytes": 21862848819,
+  "archive_bytes": 17656932810,
+  "protected_file_signatures_unchanged": 6680,
+  "free_after_bytes": 23221661696,
+  "reclaimed_bytes": 21864370176,
+  "original_receipt_normalization_failure_noop": true,
+  "repair_record": "reports/VG_V2_CACHE_OFFLOAD_RECEIPT_REPAIR_20261101.json",
+  "R1_launched": true,
+  "R1_preregistration_sha256": "789d621626a330004bf566924afe4b977fc0dc375567e2f9c5cc10897f2af5b6",
+  "TEST_accessed": false,
+  "seed_resume": false
+}

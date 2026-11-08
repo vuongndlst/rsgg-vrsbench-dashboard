@@ -1,0 +1,12 @@
+{
+  "requested_utc": "2026-11-05T00:11:38.535000+00:00",
+  "last_successful_remote_snapshot_utc": "2026-11-03T18:25:00.672569+00:00",
+  "elapsed_seconds": 107197.862431,
+  "minimum_interval_seconds": 43200,
+  "allow_remote_check": true,
+  "direct_user_request": false,
+  "decision": "ALLOW_DUE_CHECK",
+  "automation_id": "theo-d-i-checkpoint-vg",
+  "additional_monitor_calls": 0,
+  "additional_ssh_calls": 0
+}

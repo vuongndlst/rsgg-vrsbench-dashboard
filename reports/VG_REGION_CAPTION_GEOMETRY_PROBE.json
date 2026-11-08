@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-11T04:45:41.929539+00:00",
+  "status": "PASS",
+  "source_sha256": "bb39b56219e2a0ed92fd95ac71e0e8294cdddf3a70a2a7a5f47056b48d810e2a",
+  "protocol_sha256": "62569e6e710f37104f72c57d8cdb7339aa3cc0385746cbba6c90cd1373705131",
+  "cases": [
+    "full image half-open boundary",
+    "fractional enclosing crop",
+    "duplicate geometry retains region IDs",
+    "invalid geometry and reference counts conserved",
+    "reference text absent from model input",
+    "order independence",
+    "duplicate ID fatal even ineligible",
+    "wrong parent fatal",
+    "boolean identity fatal"
+  ],
+  "invented_annotation_rows": 10,
+  "real_reference_text_read": false,
+  "image_pixels_read_or_written": false,
+  "network_bytes": 0,
+  "model_or_metric_run": false,
+  "benchmark_test_scored": false,
+  "live_v2_modified": false,
+  "real_schema_and_geometry_audit_complete": false,
+  "caption_evaluation_admitted": false
+}

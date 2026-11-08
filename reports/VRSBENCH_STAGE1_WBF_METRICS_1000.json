@@ -1,0 +1,142 @@
+{
+  "task": "Stage 1: 5-View Multi-Scale TTA + Weighted Box Fusion (WBF) on 1,000 VRSBench Test Images",
+  "elapsed_seconds": 546.57,
+  "threshold_sweep": {
+    "0.08": {
+      "localization_agnostic": {
+        "mIoU": 71.49,
+        "Acc@0.5": 89.13,
+        "Acc@0.7": 64.88,
+        "Acc@0.75": 52.18
+      },
+      "class_matched": {
+        "mIoU": 70.72,
+        "Acc@0.5": 88.31,
+        "Acc@0.7": 63.56,
+        "Acc@0.75": 51.46
+      }
+    },
+    "0.1": {
+      "localization_agnostic": {
+        "mIoU": 71.02,
+        "Acc@0.5": 88.44,
+        "Acc@0.7": 64.56,
+        "Acc@0.75": 51.91
+      },
+      "class_matched": {
+        "mIoU": 70.24,
+        "Acc@0.5": 87.63,
+        "Acc@0.7": 63.28,
+        "Acc@0.75": 51.23
+      }
+    },
+    "0.14": {
+      "localization_agnostic": {
+        "mIoU": 70.5,
+        "Acc@0.5": 87.72,
+        "Acc@0.7": 63.97,
+        "Acc@0.75": 51.59
+      },
+      "class_matched": {
+        "mIoU": 69.62,
+        "Acc@0.5": 86.85,
+        "Acc@0.7": 62.74,
+        "Acc@0.75": 50.82
+      }
+    },
+    "0.18": {
+      "localization_agnostic": {
+        "mIoU": 70.12,
+        "Acc@0.5": 87.17,
+        "Acc@0.7": 63.42,
+        "Acc@0.75": 51.18
+      },
+      "class_matched": {
+        "mIoU": 69.25,
+        "Acc@0.5": 86.26,
+        "Acc@0.7": 62.47,
+        "Acc@0.75": 50.59
+      }
+    }
+  },
+  "ap_metrics": {
+    "macro_mAP@50_26_classes": 67.4,
+    "weighted_mAP@50": 61.19,
+    "micro_mAP@50": 61.68,
+    "macro_mAP@70": 47.5,
+    "per_class_ap50": {
+      "airplane": {
+        "ap_all_point": 72.51,
+        "recall": 94.7,
+        "gt_count": 151,
+        "tp": 143
+      },
+      "baseball-diamond": {
+        "ap_all_point": 81.0,
+        "recall": 85.37,
+        "gt_count": 41,
+        "tp": 35
+      },
+      "basketball-court": {
+        "ap_all_point": 79.28,
+        "recall": 91.67,
+        "gt_count": 36,
+        "tp": 33
+      },
+      "ground-track-field": {
+        "ap_all_point": 100.0,
+        "recall": 100.0,
+        "gt_count": 4,
+        "tp": 4
+      },
+      "harbor": {
+        "ap_all_point": 55.62,
+        "recall": 87.03,
+        "gt_count": 640,
+        "tp": 557
+      },
+      "helicopter": {
+        "ap_all_point": 0.0,
+        "recall": 0.0,
+        "gt_count": 4,
+        "tp": 0
+      },
+      "roundabout": {
+        "ap_all_point": 100.0,
+        "recall": 100.0,
+        "gt_count": 10,
+        "tp": 10
+      },
+      "ship": {
+        "ap_all_point": 60.25,
+        "recall": 85.61,
+        "gt_count": 396,
+        "tp": 339
+      },
+      "soccer-ball-field": {
+        "ap_all_point": 54.78,
+        "recall": 78.57,
+        "gt_count": 14,
+        "tp": 11
+      },
+      "swimming-pool": {
+        "ap_all_point": 75.29,
+        "recall": 87.8,
+        "gt_count": 82,
+        "tp": 72
+      },
+      "tennis-court": {
+        "ap_all_point": 80.21,
+        "recall": 95.1,
+        "gt_count": 286,
+        "tp": 272
+      },
+      "vehicle": {
+        "ap_all_point": 49.89,
+        "recall": 87.08,
+        "gt_count": 534,
+        "tp": 465
+      }
+    }
+  }
+}

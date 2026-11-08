@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-10T19:28:42.974785+00:00",
+  "reader_sha256": "0bf8d41c541109e11c89e3e7dbaf47b38234a87a995baf2e5f2f2e0b16d307f6",
+  "identity_manifest_sha256": "6eb586b40bd68245e20205d896a5ae49700b72d61783b0e5ddc80a50e2242c87",
+  "locked_test_id_count": 125436,
+  "existing_pilot_images_decoded": 128,
+  "exif_orientation_counts": {
+    "None": 128
+  },
+  "pilot_metadata_rotation_counts": {
+    "0.0": 108,
+    "": 18,
+    "270.0": 2
+  },
+  "negative_contracts": {
+    "non_test_identity": "identity_not_in_locked_test_manifest",
+    "missing_pixel_network_disabled": "network_disabled_missing_test_image",
+    "byte_cap": "single_image_byte_cap_exceeded",
+    "pixel_fingerprint": "known_test_pixel_hash_mismatch"
+  },
+  "network_downloaded_bytes": 0,
+  "disk_pixel_bytes_written": 0,
+  "model_inference": false,
+  "test_scored": false,
+  "prompt_tuned": false,
+  "full_pixel_coverage_audited": false,
+  "network_branch_tested": false,
+  "remaining": [
+    "Versioned method/prompt/decoder/orientation/evaluator locks before test inference",
+    "Bounded network branch and full-ID completeness/retry/output journal integration",
+    "Missing/corrupt images must block final complete-set scoring rather than silently shrink denominator"
+  ]
+}

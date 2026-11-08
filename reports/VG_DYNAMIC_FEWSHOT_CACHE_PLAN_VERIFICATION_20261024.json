@@ -1,0 +1,39 @@
+{
+  "status": "UPDATED_PLAN_SIX_CAPTION_ARMS_AND_LOCAL_CACHE_SPEC_VERIFIED",
+  "utc": "2026-10-24T08:18:35.140367+00:00",
+  "source_hashes": {
+    "research/VG_COLOR_ENRICHED_SG_CAPTION_PLAN_20261024.md": "b9858400732d5024c732f893f5cc690b362d60a1c254e5b9aa8af9d9ab212e93",
+    "research/VG_DYNAMIC_FEWSHOT_CACHE_AMENDMENT_20261024.md": "04a1fd06162f18de28d7dd7cabc5d2b780d41c718e5d774f98675aecd94631d0",
+    "configs/vg_color_enrichment_v1_draft.json": "7184a6ee4c4ed10eba2c13849931df74dd904b7e0fc00fc696072f18379384ef",
+    "reports/VG_CAPTION_PUBLISHED_PROTOCOL_REGISTRY_20261024.json": "e823f3b41193d655e1ab4175494648c55634737de58828cf62208709db7ad300",
+    "reports/VG150_COLOR_PRIORITY_20261024.csv": "500090af9f147d268609f1c4a0b45ca6a394cd0904339d1e015a38b5dad1e1d8",
+    "reports/VG150_COLOR_PRIORITY_20261024.md": "4539588ce5b6715c60356524acf70cd69ff75620520405ac3637928457819fba",
+    "reports/VG_COLOR_AUDIT_SUMMARY_20261024.json": "9d2fbd1af8de958ef401c91fe3873affbba0dddfa2cb847ea277cad1576e4c3e",
+    "reports/FAIR_STORAGE_INVENTORY_20261024.json": "6351966189ab7da3a7e95ec388349900b1af95405d51d810a8d8264dc992e527",
+    "scripts/remote_fair_storage_inventory_20261024.py": "01b2d2fb6c295de79a86ff65a68b9d889289fdad6ae7a61653527a9b36cca7bf"
+  },
+  "static_and_dynamic_fewshot_present": true,
+  "matched_example_count": 2,
+  "maximum_example_tokens": 256,
+  "caption_arms": [
+    "N-Z_no_color_zero_shot",
+    "N-S_no_color_static_2shot",
+    "N-D_no_color_dynamic_2shot",
+    "C-Z_color_zero_shot",
+    "C-S_color_static_2shot",
+    "C-D_color_dynamic_2shot"
+  ],
+  "real_image_color_cache_built": false,
+  "caption_generated": false,
+  "caption_test_scored": false,
+  "fair_deleted": false,
+  "fair_allocated_gib": 6.77642822265625,
+  "server_free_gib": 4.881900787353516,
+  "hypothetical_server_free_after_fair_upper_bound_gib": 11.658329010009766,
+  "remaining_reserve_shortfall_gib": 4.341670989990234,
+  "local_cache_spec_prepared": true,
+  "resource_caps_changed": false,
+  "additional_seeds_remain_paused": true,
+  "absolute_current_sota_certified": false,
+  "new_2026_exact_table_verification_pending": true
+}

@@ -1,0 +1,32 @@
+{
+  "status": "FROZEN_BEFORE_NATIVE_PREFLIGHT_OR_GENERATION",
+  "utc": "2026-11-02T22:35:10.318683+00:00",
+  "source_sha256": {
+    "scripts/remote_vg_focus_repair_controller_v1_20261028.py": "5662a760e32ba615c27a37f103f6965b1781616d683065bcb683d1c2a605b493",
+    "src/rsgformer/vg_region_focus_repair_v1.py": "02fd0dd3c1cdafbe92cc78abc4c7ae6f722d932d32da6f8147ca3b4b35a54ee9",
+    "src/rsgformer/vg_caption_candidate_prompt_v2.py": "069255afd7488c5e9cb6b2e21561614f5413977b5c64583fbc14539bb5b8e60d",
+    "src/rsgformer/vg_caption_graph_v1.py": "625a7ce696b8b6609de923227bb9184b82d2a5fc96969fd49bdcf7b9891c658e",
+    "src/rsgformer/qwen_streaming_v1.py": "a6806b7d5eb0142842af39d9b5ac5995a0cdbe0556619a49cd245d48ddfb8a20",
+    "src/rsgformer/caption_metrics.py": "1d511787bc935ac65015f2015c64104859ce7691b75f3084361f77ca37c43288",
+    "src/rsgformer/caption_metrics_v2.py": "a7aad2184fd65591099874c7169f24d69b7abf0fd8142d8b38c2fa1d4dc71ea2",
+    "src/rsgformer/caption_metric_runtime.py": "cfc40111a5e8d28f5b0a18a3c3ac38aee746422545384c8394b67eb8ab03d8b6",
+    "src/rsgformer/vg_color_execution_common_v1.py": "75b9c5e3e53242958bcb4d470cabaf2a8ffa09ada5d4126331ff1afaeb1ad35b",
+    "src/rsgformer/numpy_json_adapter_v1.py": "780f0f0ec0c564a0838ef2a59e424db970fe7b6a32dab43fa1df22d41ac5011b",
+    "configs/qwen_runtime.json": "a3e4fe99474a9606581bb27bf6270182120fa904e8dfd53b42e54658c12ee65d",
+    "scripts/remote_launch_vg_grounding_train_dev_v1_20261103.py": "0d5048000c759071049fc3533eb39444d47fa80cb96211596e19cb536e65e847",
+    "scripts/remote_vg_grounding_controller_v1_20261103.py": "4a015856c24739646aa46ae84ed7146c7303e215d0ce4bc19a77164fcaf02472",
+    "scripts/remote_vg_grounding_generate_v1_20261103.py": "df7421cd3584c62da044ed26c82f9b986a21a5040ff9c0f274fb3ef63a439d01",
+    "scripts/remote_vg_grounding_preflight_v1_20261103.py": "1d549518c760b906a398b920455bf62ecd7f79875202dc2881910a0e61bed6af",
+    "scripts/remote_vg_grounding_score_v1_20261103.py": "026d8a204abe36155e1d0e5c49e1aeb6e44d1be6900144a80286a8b6318f7338",
+    "scripts/remote_vg_grounding_status_v1_20261103.py": "46708709ca0dafb71f1ad2e583674ec89662a7817d9c030d296cab1bb4958190",
+    "src/rsgformer/vg_grounding_train_dev_runtime_v1_20261103.py": "0628b421e4e1d0c4641c5cb4aaafbe5e7bc5528ef2ec23c8107636457ac2bc3f",
+    "src/rsgformer/vg_grounding_controls_v1_20261102.py": "be86e2d61045cc378ee40b82b1c0ef8bead6b99ae6449b742bd4f604bf16f8f6",
+    "configs/vg_grounding_train_dev_v1_20261103.json": "3ff348d593de59b42ac4a61b09f49665eea45cc579a2e692d7ebcec1e96ad6f0",
+    "research/VG_GROUNDING_TRAIN_DEV_PREREGISTRATION_20261103.md": "e96a31818ee340f21d82842f64693f57b926ccc9690d8e3b15af1939f4a9dc27",
+    "reports/CAPTION_JAVA_PREPARATION.json": "3bd0727e0d27b2a1706b5e6fa20dc7b4b2e1ee1827729eb238f9cd144f46ffe4",
+    "reports/CAPTION_RUNTIME_PREFLIGHT.json": "5b174339f980e40dbea30d13cd22e5959a842960b8d7e2e6542dbe83899e7468"
+  },
+  "preparation_manifest_sha256": "003a47f9dd03099148425189af16db84ff2af5251cbdc999ca7e9bd6c5c3fde8",
+  "local_contract_sha256": "895516900f5128129ea947498f300e7252bba7b5894e11bfca9c25b774c9f109",
+  "main_or_check_launch_performed": false
+}

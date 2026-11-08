@@ -1,0 +1,36 @@
+{
+  "replacements": [
+    {
+      "path": "scripts/remote_qwen_metadata_lock.py",
+      "before_sha256": "e5c2c5d7b5f046bd53bb31e5b58482bc3f6c17c8aa0687cef362834376e064f1",
+      "old_text": "folder=home/'shared-assets/models/huggingface/hub/models--Qwen--Qwen2.5-14B-Instruct/snapshots'/revision",
+      "new_text": "folder=home/'etechs/msvd-tkg-captioning/models/qwen2.5-14b'"
+    },
+    {
+      "path": "scripts/remote_qwen_quantization_preflight.py",
+      "before_sha256": "24a971cc116a090fb3d1de0381881c95ed62ac4eeb1d35ae2f8af735acf93860",
+      "old_text": "model = Path.home() / 'shared-assets/models/Qwen2.5-14B-Instruct'",
+      "new_text": "model = Path.home() / 'etechs/msvd-tkg-captioning/models/qwen2.5-14b'"
+    },
+    {
+      "path": "scripts/remote_caption_runtime_preflight.py",
+      "before_sha256": "cb3c876cb2aceadc7801da0d7a741258bc194907383416ce05cfc541324d6779",
+      "old_text": "model_path = Path.home() / 'shared-assets/models/Qwen2.5-14B-Instruct'",
+      "new_text": "model_path = Path.home() / 'etechs/msvd-tkg-captioning/models/qwen2.5-14b'"
+    },
+    {
+      "path": "scripts/remote_share_karpathy_assets.py",
+      "before_sha256": "38523a343bf0bee37f8bf7ddc41cca9939ff0f0426692cd8b312c9e5de7d236d",
+      "old_text": "qwen=shared/'models/huggingface/hub/models--Qwen--Qwen2.5-14B-Instruct/snapshots/cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8'",
+      "new_text": "qwen=home/'etechs/msvd-tkg-captioning/models/qwen2.5-14b'"
+    },
+    {
+      "path": "scripts/remote_shared_qwen_alias.py",
+      "before_sha256": "224a0734e4d1e3e38c3a035227bcc7fa3d794dcc18b1a123156ec34919cbbb79",
+      "old_text": "\"\"\"Add a short local-files-only Qwen path, without duplicating model weights.\"\"\"\nfrom pathlib import Path\nimport json\nhome=Path.home();shared=home/'shared-assets'\ntarget=shared/'models/huggingface/hub/models--Qwen--Qwen2.5-14B-Instruct/snapshots/cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8'\nlink=shared/'models/Qwen2.5-14B-Instruct'\nassert target.is_dir() and link.parent.resolve().is_relative_to(home.resolve())\nif not link.exists():link.symlink_to(target,target_is_directory=True)\nassert link.is_symlink() and link.resolve()==target\nregistry=json.loads((shared/'ASSET_REGISTRY.json').read_text());registry['qwen14b']['load_path']='${REMOTE_HOME}/shared-assets/models/Qwen2.5-14B-Instruct'\nfor p in [shared/'ASSET_REGISTRY.json',home/'rsg-former/reports/SHARED_ASSET_REGISTRY.json']:p.write_text(json.dumps(registry,indent=2))\nprint(json.dumps({'short_load_path':registry['qwen14b']['load_path'],'symlink_verified':True,'weight_copy_created':False}))\n",
+      "new_text": "\"\"\"Legacy entrypoint: register the canonical existing Qwen directory; no shared weight alias.\"\"\"\nfrom pathlib import Path\nimport json\nhome=Path.home();shared=home/'shared-assets'\ntarget=home/'etechs/msvd-tkg-captioning/models/qwen2.5-14b'\nassert target.resolve()==target and target.is_dir()\nregistry=json.loads((shared/'ASSET_REGISTRY.json').read_text())\nfor key in ['path','load_path']:registry['qwen14b'][key]='${REMOTE_HOME}/etechs/msvd-tkg-captioning/models/qwen2.5-14b'\nfor p in [shared/'ASSET_REGISTRY.json',home/'rsg-former/reports/SHARED_ASSET_REGISTRY.json']:\n    p.write_text(json.dumps(registry,indent=2))\nprint(json.dumps({'short_load_path':registry['qwen14b']['load_path'],'weight_copy_created':False,'shared_qwen_alias_created':False}))\n"
+    }
+  ],
+  "new_path": "${REMOTE_HOME}/etechs/msvd-tkg-captioning/models/qwen2.5-14b",
+  "runtime_config": "configs/qwen_runtime.json"
+}

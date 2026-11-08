@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-19T12:35:03.648740+00:00",
+  "snapshot_utc": "2026-10-19T12:34:54.709907+00:00",
+  "notify": false,
+  "events": [],
+  "additional_ssh_calls": 0,
+  "policy": "Whole screening branch, or all registered confirmation seeds; historical completed runs remain deduplicated"
+}

@@ -1,0 +1,26 @@
+{
+  "protocol_id": "vg_region_caption_geometry_v1",
+  "status": "geometry_preparation_only_evaluation_not_admitted",
+  "source_region_json_sha256": "19624f10afb10bf69e30ecf48d85b1a71420c7432e8c88f1011a3c4fd60ec768",
+  "task": "Caption conditional on provided human region crop; separate from learned region detection",
+  "image_coordinates": "raw decoded VG RGB, no EXIF transpose; dimensions must agree with audited pixel metadata",
+  "region_coordinates": "continuous xywh, x2=x+width,y2=y+height; fully inside [0,W]x[0,H]",
+  "eligibility": "positive finite width/height, finite nonnegative x/y, fully contained original box, nonempty original human phrase",
+  "pixel_crop": "half-open xyxy: floor(left/top),ceil(right/bottom); no clipping, resizing or score-based crop selection",
+  "identity": "positive integer image_id and region_id; region image_id must equal parent; duplicate region IDs are fatal including ineligible rows",
+  "evaluation_unit": "vg:image_id:region:region_id; one unchanged nonempty human phrase as reference; no image-level reference pooling or implicit paraphrases",
+  "duplicate_geometry": "different region IDs retain separate annotated units; no unregistered merging or choosing references",
+  "invalid_rows": "enumerate reason and keep total counts; eligibility applied before predictions, never drop a valid unit due to missing prediction",
+  "input_boundary": "model input has only provided crop geometry and identity; reference text is separate evaluation-only mapping",
+  "metric_units": "native corpus pycocoevalcap over complete locked eligible unit set; paired bootstrap by parent image, retaining every selected region of each sampled image",
+  "claims": "provided-crop results do not demonstrate automatic region localization; learned region matching/coverage/no-match penalties require a separate protocol",
+  "evaluation_admission_remaining": [
+    "Full source schema and geometry eligibility audit with audited image dimensions",
+    "Final clean training release and fresh audited detector/SG training",
+    "Explicit development/test memberships and workload resource admission before generation",
+    "Matched graph-to-text controls and independent dev prompt lock",
+    "Separate learned-region localization and caption matching protocol"
+  ],
+  "test_scores_used_for_rules": false,
+  "live_v2_modified": false
+}

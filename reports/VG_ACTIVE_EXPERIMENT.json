@@ -1,0 +1,13 @@
+{
+  "experiment_id": "vg_method_v2_speed_m2_v1",
+  "execution_revision": "vg_method_v2_time_extension_v1",
+  "artifact_root": "artifacts/vg_method_v2_speed_m2_v1",
+  "pipeline_pid_path": "artifacts/vg_method_v2_speed_m2_v1/time_extension_v1/pipeline.pid",
+  "pipeline_token": "remote_vg_v2_time_extension_v1.py",
+  "progress_report": "VG_V2_TIME_EXT_PROGRESS.json",
+  "result_report": "VG_V2_TIME_EXT_RESULT.json",
+  "config_path": "configs/vg_method_v2_time_extension_v1.json",
+  "original_experiment_preserved": true,
+  "preregistration_sha256": "7e7a41ca5a0943e75534c80a18ada65138ad6657f6424f30ce605a7e71b3371e",
+  "scientific_preregistration_sha256": "d5866565e34555143af0f2f42c240841eaa8e1f2b0152c05c4ef60121561377c"
+}

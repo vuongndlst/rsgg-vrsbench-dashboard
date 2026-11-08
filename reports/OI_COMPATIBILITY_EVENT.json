@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-11T03:20:07.436573+00:00",
+  "notify": true,
+  "event": {
+    "type": "anomaly",
+    "condition": "oi_test_pixel_sources_exhausted_registered_attempts",
+    "stage": "openimages_full_test_pixel_identity_audit",
+    "missing_ids_at_first_notification": 2,
+    "diagnosis": "official .jpg objects are MPO,2frames,primary3648x2736/4000x3000; original JPEG-only/1024 assumption too strict",
+    "separate_reader_v2_actual_pilot": "PASS2of2/17.49s/9265785bytes",
+    "old_reader_or_journal_changed": false,
+    "vg_job_modified": false,
+    "supplemental_fingerprints_joined": false,
+    "test_scored": false,
+    "next": "Complete separately versioned supplemental union for all failed sources, preserve every denominator ID and old phase caps/outcome"
+  },
+  "immutable_supplemental_evidence_sha_verified": true,
+  "real_training_state_modified": false
+}

@@ -1,0 +1,32 @@
+{
+  "status": "PRESERVED_NOOP_FAILURE_RECEIPT_TEXT_NORMALIZATION",
+  "original_failure": {
+    "status": "FAILED_NO_AUTOMATIC_RETRY",
+    "stage": "FAILED_NO_AUTOMATIC_RETRY",
+    "utc": "2026-11-01T01:16:11.501980+00:00",
+    "pid": 26224,
+    "elapsed_seconds": 1843.125,
+    "history": [
+      {
+        "action": "run",
+        "path": "scripts/remote_vg_v2_verified_cache_retirement_20261101.py",
+        "returncode": 1,
+        "utc": "2026-11-01T01:16:11.501980+00:00"
+      }
+    ],
+    "TEST_access_allowed": false,
+    "error_type": "AssertionError",
+    "reason": "('command_failed', 'run', 'scripts/remote_vg_v2_verified_cache_retirement_20261101.py', 'Traceback (most recent call last):\\n  File \"<stdin>\", line 8, in <module>\\nAssertionError\\n\\n')"
+  },
+  "failed_script_sha256": "b3f8115d04385c8d3d39eebb237fc9598a490368e5eac37cf880590b4bd431ef",
+  "receipt_raw_sha256": "246919e26c837d701acc72198388b212fe51100b71192a3a271baa081d80a538",
+  "receipt_normalized_text_sha256": "34f71ecf14103cf734e801ca2c18665588499fe7c5b45938070b0b42dec3a8a8",
+  "failure_line": 8,
+  "first_remote_filesystem_write_line": 60,
+  "failure_preceded_all_remote_filesystem_mutations": true,
+  "scope_of_repair": "Read receipt bytes and preserve CRLF before embedding; whitelist/consumers/inode/protection guards unchanged",
+  "scientific_source_modified": false,
+  "test_accessed": false,
+  "repair_source_sha256": "741275c0b96a435c35c6289eadf260202adf992e78fa6858763a8f4fd42d0b1f",
+  "compiled_embedded_CRLF_receipt_SHA_contract": "PASS"
+}

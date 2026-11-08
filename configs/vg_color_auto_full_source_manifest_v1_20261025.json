@@ -1,0 +1,22 @@
+{
+  "source_sha256": {
+    "scripts/remote_vg_color_fast_val_replay_v1_20261025.py": "088c6835717d61c5d9290f292d68a4ae949122427f1c731d77fb0b1154370a30",
+    "scripts/remote_vg_color_full_test_auto_v1_20261025.py": "75fa992b89a262e2e617b5113614eb671c8517b03d33e96ae36fc2ee293f6c67",
+    "scripts/remote_vg_color_auto_test_diagnostic_v1_20261025.py": "5ba83946be7af7cdd8d699e45b687fab4c3279cad435775eac14ee4eabf81217",
+    "scripts/remote_vg_color_auto_full_controller_v1_20261025.py": "883c3d4922913ae82291541240d9b26e7d355e44fa09d917465842739e3f4a3c",
+    "scripts/remote_launch_vg_color_auto_full_v1_20261025.py": "0c2de13eb82061fbab528372f0fc98e3f1736deff07f4234c4c802a2bf9a7950",
+    "src/rsgformer/vg_color_execution_common_v1.py": "75b9c5e3e53242958bcb4d470cabaf2a8ffa09ada5d4126331ff1afaeb1ad35b",
+    "src/rsgformer/vg_color_full_test_policy_v1.py": "8ca4e3d2ae7ad544ba98d6d890690cae2f8e90b3a12ab023d292e62def43cca9",
+    "src/rsgformer/vg_color_fast_engine_v1.py": "340bb34b60f1a402000212b444f77633ae119914140826ce4a9c60a224018a4d",
+    "src/rsgformer/vg_color_attribute_diagnostic_v1.py": "e275c3e8dc6cc4ec9d37dafad2b65b90c763e5cc792c58e32199cfc31c381ee3",
+    "src/rsgformer/vg_object_color_rules_v3.py": "72db894123aef8a07eda7d73187d045a6cde972867a95f317881034baa0170a7",
+    "src/rsgformer/vg_object_color_v2.py": "94f2e30d04edddcb3507c9554a12893a1caf1fbb1b287b85e1ac59de89026a36",
+    "src/rsgformer/vg_color_binding_native_v1.py": "5e137a92446ee5249094147ebddd6835956cc136fc8cbb2d82af209441651485",
+    "src/rsgformer/sam_binary_mask_adapter_v1.py": "5ba59b294e4d1fe2b20ca439133680fefd19a11f27bf87f17484ebb70a957d0a",
+    "src/rsgformer/numpy_json_adapter_v1.py": "780f0f0ec0c564a0838ef2a59e424db970fe7b6a32dab43fa1df22d41ac5011b",
+    "src/rsgformer/vg_caption_graph_v1.py": "625a7ce696b8b6609de923227bb9184b82d2a5fc96969fd49bdcf7b9891c658e",
+    "configs/vg_object_color_rules_v3_20261025.json": "926ca4f13b8d0c0bc93210d3b15d61e674ae51c9d7f422b98c1cabb43a1a90bd",
+    "configs/vg_color_object_binding_native_v1_20261025.json": "6a74459741f41484a4efbb091145b3f8c82fd96bf9f2c6a9c354b61032c9990a",
+    "configs/vg_color_automated_full_test_v1_20261025.json": "431a3214efc1933ec5aa6976c24024eb405a1c217565eef017a37a1c5145ad24"
+  }
+}

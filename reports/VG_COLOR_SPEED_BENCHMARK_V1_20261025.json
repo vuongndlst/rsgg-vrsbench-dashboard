@@ -1,0 +1,154 @@
+{
+  "status": "FINITE_TRAIN_COLOR_SPEED_BENCHMARK_COMPLETE",
+  "utc": "2026-10-25T09:58:12.429252+00:00",
+  "images": 32,
+  "nodes_per_trial": 60,
+  "trials": [
+    {
+      "repeat": 0,
+      "mode": "baseline",
+      "nodes": 60,
+      "images": 32,
+      "seconds": 33.598244335502386,
+      "nodes_per_second": 1.7858075975892458,
+      "component_seconds": {
+        "SAM_image": 0.8948526345193386,
+        "SAM_prompts": 1.8249164409935474,
+        "pixel_rules_and_GrabCut": 15.275454996153712,
+        "CLIP": 0.714247677475214
+      },
+      "counters": {
+        "image_encodes": 32
+      }
+    },
+    {
+      "repeat": 0,
+      "mode": "safe_cache",
+      "nodes": 60,
+      "images": 32,
+      "seconds": 19.691996483132243,
+      "nodes_per_second": 3.0469231523271274,
+      "component_seconds": {
+        "SAM_image": 0.6511521209031343,
+        "SAM_prompts": 1.3393273428082466,
+        "pixel_rules_and_GrabCut": 14.73456166498363,
+        "CLIP": 0.6545012164860964
+      },
+      "counters": {
+        "image_encodes": 25,
+        "early_out": 18,
+        "child_cache_hits": 4
+      }
+    },
+    {
+      "repeat": 0,
+      "mode": "shared_clip",
+      "nodes": 60,
+      "images": 32,
+      "seconds": 19.57135714031756,
+      "nodes_per_second": 3.065704619757731,
+      "component_seconds": {
+        "SAM_image": 0.8254361860454082,
+        "SAM_prompts": 1.302139574661851,
+        "pixel_rules_and_GrabCut": 14.774625049903989,
+        "CLIP": 0.2960144355893135
+      },
+      "counters": {
+        "image_encodes": 25,
+        "early_out": 18,
+        "child_cache_hits": 4
+      }
+    },
+    {
+      "repeat": 1,
+      "mode": "shared_clip",
+      "nodes": 60,
+      "images": 32,
+      "seconds": 19.455017160624266,
+      "nodes_per_second": 3.084037372191901,
+      "component_seconds": {
+        "SAM_image": 0.6911855265498161,
+        "SAM_prompts": 1.3067954070866108,
+        "pixel_rules_and_GrabCut": 14.819745864719152,
+        "CLIP": 0.3008923064917326
+      },
+      "counters": {
+        "image_encodes": 25,
+        "early_out": 18,
+        "child_cache_hits": 4
+      }
+    },
+    {
+      "repeat": 1,
+      "mode": "safe_cache",
+      "nodes": 60,
+      "images": 32,
+      "seconds": 19.570560226216912,
+      "nodes_per_second": 3.0658294553889887,
+      "component_seconds": {
+        "SAM_image": 0.6625836491584778,
+        "SAM_prompts": 1.3051471393555403,
+        "pixel_rules_and_GrabCut": 14.732652695849538,
+        "CLIP": 0.56238211132586
+      },
+      "counters": {
+        "image_encodes": 25,
+        "early_out": 18,
+        "child_cache_hits": 4
+      }
+    },
+    {
+      "repeat": 1,
+      "mode": "baseline",
+      "nodes": 60,
+      "images": 32,
+      "seconds": 33.041563211008906,
+      "nodes_per_second": 1.8158947146910103,
+      "component_seconds": {
+        "SAM_image": 0.8322247080504894,
+        "SAM_prompts": 1.8473331108689308,
+        "pixel_rules_and_GrabCut": 15.107047516852617,
+        "CLIP": 0.6114862188696861
+      },
+      "counters": {
+        "image_encodes": 32
+      }
+    }
+  ],
+  "parity": {
+    "safe_cache": {
+      "parity_pass": true,
+      "differences": [],
+      "difference_cases": 0,
+      "maximum_numeric_difference": 0,
+      "paired_measured_speedups": [
+        1.706187809056433,
+        1.6883299624068047
+      ],
+      "minimum_speedup": 1.6883299624068047,
+      "adoption_ready_engineering_only": true
+    },
+    "shared_clip": {
+      "parity_pass": true,
+      "differences": [],
+      "difference_cases": 0,
+      "maximum_numeric_difference": 1.6391277313232422e-07,
+      "paired_measured_speedups": [
+        1.7167048812516448,
+        1.698356929639875
+      ],
+      "minimum_speedup": 1.698356929639875,
+      "adoption_ready_engineering_only": true
+    }
+  },
+  "historical_TRAIN_reference_reproduced": true,
+  "historical_mismatches": [],
+  "peak_allocator_bytes": 1160802816,
+  "peak_RSS_bytes": 2318442496,
+  "wall_seconds": 164.5576560907066,
+  "TEST_accessed": false,
+  "VAL_check_reopened": false,
+  "human_quality_gate_passed": false,
+  "full_TEST_launch_allowed": false,
+  "interpretation": "Engineering parity measures consistency, not real visual accuracy;160heldout review instances still need independent human labels"
+}

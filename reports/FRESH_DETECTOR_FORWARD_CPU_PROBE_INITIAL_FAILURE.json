@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-10T20:48:38.420111+00:00",
+  "script_sha256": "b9bcc95d18b67e7127e59aaac63644fbce6bdbc4c8e2f500d0849e8c61f67d89",
+  "failure_type": "AssertionError",
+  "failure_line": 62,
+  "finite_nonzero_group_counts_before_reclassification": {
+    "backbone": 42,
+    "transformer": 260,
+    "class_head": 0,
+    "box_head": 0
+  },
+  "cause_to_check": "nested transformer.decoder.class_embed/bbox_embed names classified by transformer prefix first",
+  "cuda_used": false,
+  "benchmark_test_scored": false,
+  "optimizer_step_executed": false
+}

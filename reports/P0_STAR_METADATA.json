@@ -1,0 +1,174 @@
+{
+  "status": "metadata_verified_images_pending_capacity",
+  "files": [
+    {
+      "name": "STAR-SGG-with-attri.h5",
+      "bytes": 49779828,
+      "sha256": "1b939dc0fc08c2331d7fdfcbf008bd43d4c0cafdbb173beeb484fe1ab0bad4d8"
+    },
+    {
+      "name": "STAR-SGG-dicts-with-attri.json",
+      "bytes": 8058,
+      "sha256": "4d450e3b1fd1f8ecf468d65c4715acbb294e949e73d4fd6a1c67119d79f32c22"
+    },
+    {
+      "name": "STAR_image_data_v1.json",
+      "bytes": 107602,
+      "sha256": "2780dfd4ed334453d3d0c3d32a8282a6f677152a82724844505b62da9b207c24"
+    }
+  ],
+  "hdf5_schema": {
+    "active_object_mask": {
+      "shape": [
+        219120,
+        1
+      ],
+      "dtype": "bool"
+    },
+    "attributes": {
+      "shape": [
+        219120,
+        10
+      ],
+      "dtype": "int32"
+    },
+    "boxes_1000": {
+      "shape": [
+        219120,
+        4
+      ],
+      "dtype": "int32"
+    },
+    "boxes_2000": {
+      "shape": [
+        219120,
+        4
+      ],
+      "dtype": "int32"
+    },
+    "img_to_first_box": {
+      "shape": [
+        1273
+      ],
+      "dtype": "int32"
+    },
+    "img_to_first_rel": {
+      "shape": [
+        1273
+      ],
+      "dtype": "int32"
+    },
+    "img_to_first_seg": {
+      "shape": [
+        1273
+      ],
+      "dtype": "int32"
+    },
+    "img_to_last_box": {
+      "shape": [
+        1273
+      ],
+      "dtype": "int32"
+    },
+    "img_to_last_rel": {
+      "shape": [
+        1273
+      ],
+      "dtype": "int32"
+    },
+    "img_to_last_seg": {
+      "shape": [
+        1273
+      ],
+      "dtype": "int32"
+    },
+    "labels": {
+      "shape": [
+        219120,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "predicates": {
+      "shape": [
+        401366,
+        1
+      ],
+      "dtype": "int32"
+    },
+    "relationships": {
+      "shape": [
+        401366,
+        2
+      ],
+      "dtype": "int32"
+    },
+    "segmentation_1000": {
+      "shape": [
+        219120,
+        1,
+        8
+      ],
+      "dtype": "float64"
+    },
+    "segmentation_2000": {
+      "shape": [
+        219120,
+        1,
+        8
+      ],
+      "dtype": "float64"
+    },
+    "split": {
+      "shape": [
+        1273
+      ],
+      "dtype": "int32"
+    }
+  },
+  "split_distribution": {
+    "0": 700,
+    "2": 573
+  },
+  "label_range": [
+    1,
+    48
+  ],
+  "predicate_range": [
+    1,
+    58
+  ],
+  "dict_keys": [
+    "object_count",
+    "idx_to_label",
+    "label_to_idx",
+    "predicate_count",
+    "idx_to_predicate",
+    "predicate_to_idx",
+    "attribute_count",
+    "idx_to_attribute",
+    "attribute_to_idx"
+  ],
+  "object_class_count": 48,
+  "predicate_class_count": 58,
+  "image_metadata_count": 1273,
+  "image_metadata_schema": [
+    "image_id",
+    "height",
+    "width"
+  ],
+  "image_dimension_ranges": {
+    "width": [
+      630,
+      27860
+    ],
+    "height": [
+      512,
+      31096
+    ]
+  },
+  "geometry_warning": "inspect author OBB/HBB adapter before P6; boxes_1024 shape and coordinate semantics must not be inferred from VG loader",
+  "author_release_revision": "7b746149c67c0c0ba36c0309f7344452dcdd2b9c",
+  "declared_license": "apache-2.0",
+  "image_archive_bytes": 120735953354
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS_RUNTIME_REPORT_RAW_HASH_DIFFERENCE_IS_TEXT_TRANSPORT_ONLY",
+  "results": {
+    "CAPTION_JAVA_PREPARATION.json": {
+      "raw_remote_sha256": "0072b7a66e139d09305933546e18f2558635a2824d19e9ae620aa9ab48dc29d6",
+      "local_text_copy_sha256": "3bd0727e0d27b2a1706b5e6fa20dc7b4b2e1ee1827729eb238f9cd144f46ffe4",
+      "canonical_JSON_equal": true,
+      "canonical_JSON_after_path_alias_equal": true,
+      "remote_bytes": 1506,
+      "local_bytes": 1438
+    },
+    "CAPTION_RUNTIME_PREFLIGHT.json": {
+      "raw_remote_sha256": "13ab19df40471e9df7f24461584c9e81691261dad3b2ab21f947c44f155fb4ed",
+      "local_text_copy_sha256": "5b174339f980e40dbea30d13cd22e5959a842960b8d7e2e6542dbe83899e7468",
+      "canonical_JSON_equal": true,
+      "canonical_JSON_after_path_alias_equal": true,
+      "remote_bytes": 7890,
+      "local_bytes": 6428
+    }
+  },
+  "no_science_or_metric_runtime_change": true,
+  "no_model_or_preflight_execution": true,
+  "old_frozen_manifest_preserved": true
+}

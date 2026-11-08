@@ -1,0 +1,183 @@
+{
+  "task": "Full 9,350-Image VRSBench Detection & Grounding Evaluation (v2, artifacts/vrsbench_detector_v2_best.pth, mode=single)",
+  "mode": "single",
+  "checkpoint": "artifacts/vrsbench_detector_v2_best.pth",
+  "total_images": 9350,
+  "total_gt_boxes": 16159,
+  "localization_agnostic": {
+    "mIoU": 66.27,
+    "Acc@0.5": 81.79,
+    "Acc@0.7": 55.23,
+    "Acc@0.75": 45.42
+  },
+  "class_matched": {
+    "mIoU": 64.44,
+    "Acc@0.5": 79.88,
+    "Acc@0.7": 53.73,
+    "Acc@0.75": 44.14
+  },
+  "ap_metrics": {
+    "macro_mAP@50_all_26_classes": 39.66,
+    "weighted_mAP@50": 53.55,
+    "micro_mAP@50": 52.97,
+    "num_active_classes": 26,
+    "per_class_ap50": {
+      "airplane": {
+        "ap_all_point": 62.68,
+        "recall": 84.12,
+        "gt_count": 1461,
+        "tp": 1229
+      },
+      "airport": {
+        "ap_all_point": 4.17,
+        "recall": 30.26,
+        "gt_count": 195,
+        "tp": 59
+      },
+      "baseball-diamond": {
+        "ap_all_point": 80.2,
+        "recall": 88.9,
+        "gt_count": 712,
+        "tp": 633
+      },
+      "basketball-court": {
+        "ap_all_point": 69.47,
+        "recall": 84.06,
+        "gt_count": 345,
+        "tp": 290
+      },
+      "bridge": {
+        "ap_all_point": 36.06,
+        "recall": 65.6,
+        "gt_count": 846,
+        "tp": 555
+      },
+      "chimney": {
+        "ap_all_point": 60.61,
+        "recall": 75.29,
+        "gt_count": 170,
+        "tp": 128
+      },
+      "container-crane": {
+        "ap_all_point": 0.0,
+        "recall": 0.0,
+        "gt_count": 12,
+        "tp": 0
+      },
+      "dam": {
+        "ap_all_point": 3.07,
+        "recall": 17.81,
+        "gt_count": 146,
+        "tp": 26
+      },
+      "expressway-service-area": {
+        "ap_all_point": 24.78,
+        "recall": 46.15,
+        "gt_count": 234,
+        "tp": 108
+      },
+      "expressway-toll-station": {
+        "ap_all_point": 33.62,
+        "recall": 53.53,
+        "gt_count": 170,
+        "tp": 91
+      },
+      "golffield": {
+        "ap_all_point": 15.91,
+        "recall": 40.5,
+        "gt_count": 121,
+        "tp": 49
+      },
+      "ground-track-field": {
+        "ap_all_point": 64.93,
+        "recall": 88.34,
+        "gt_count": 446,
+        "tp": 394
+      },
+      "harbor": {
+        "ap_all_point": 45.32,
+        "recall": 80.46,
+        "gt_count": 1090,
+        "tp": 877
+      },
+      "helicopter": {
+        "ap_all_point": 17.32,
+        "recall": 30.36,
+        "gt_count": 56,
+        "tp": 17
+      },
+      "helipad": {
+        "ap_all_point": 0.0,
+        "recall": 0.0,
+        "gt_count": 1,
+        "tp": 0
+      },
+      "overpass": {
+        "ap_all_point": 40.6,
+        "recall": 59.9,
+        "gt_count": 419,
+        "tp": 251
+      },
+      "roundabout": {
+        "ap_all_point": 50.62,
+        "recall": 76.92,
+        "gt_count": 195,
+        "tp": 150
+      },
+      "ship": {
+        "ap_all_point": 54.97,
+        "recall": 82.45,
+        "gt_count": 1687,
+        "tp": 1391
+      },
+      "soccer-ball-field": {
+        "ap_all_point": 20.06,
+        "recall": 70.95,
+        "gt_count": 148,
+        "tp": 105
+      },
+      "stadium": {
+        "ap_all_point": 48.32,
+        "recall": 83.47,
+        "gt_count": 248,
+        "tp": 207
+      },
+      "storage-tank": {
+        "ap_all_point": 70.67,
+        "recall": 90.73,
+        "gt_count": 766,
+        "tp": 695
+      },
+      "swimming-pool": {
+        "ap_all_point": 26.1,
+        "recall": 76.95,
+        "gt_count": 269,
+        "tp": 207
+      },
+      "tennis-court": {
+        "ap_all_point": 77.77,
+        "recall": 94.96,
+        "gt_count": 1132,
+        "tp": 1075
+      },
+      "trainstation": {
+        "ap_all_point": 16.08,
+        "recall": 57.87,
+        "gt_count": 216,
+        "tp": 125
+      },
+      "vehicle": {
+        "ap_all_point": 53.19,
+        "recall": 84.84,
+        "gt_count": 4545,
+        "tp": 3856
+      },
+      "windmill": {
+        "ap_all_point": 54.64,
+        "recall": 72.21,
+        "gt_count": 529,
+        "tp": 382
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "UI_ONLY_R1_VIEWBOX_MARGIN_REPAIR_NO_SCIENTIFIC_DATA_CHANGE",
+  "utc": "2026-11-03T18:29:58.114520+00:00",
+  "reason": "First fixed-order nonempty-edge screenshot revealed large curved arrows could clip above SVGviewport. Add55units topmargin only. Preserve original HTML/template/screenshots/prereg; do not refetch images or rerun generation.",
+  "original_index_sha256": "3b230b618edeea6179473d20f6d143a35914e92d7182213608023b5482e0fa9c",
+  "r1_index_sha256": "293b4065675fffaf2e70016db3a3b1bb47468d830d6175e7ce77d62c5c708965",
+  "r1_template_sha256": "26e784942312b9d4267383c13ef38aa2da30a50d7816ae4964566fbdade69ab3",
+  "inverse_patch_exactly_restores_original": true,
+  "DATA_payload_unchanged": true,
+  "original_JPEGs_unchanged": true,
+  "no_remote_contact_or_inference": true,
+  "entrypoint": "outputs/vg_grounding_dev_review20_v1_20261104/index_r1.html"
+}

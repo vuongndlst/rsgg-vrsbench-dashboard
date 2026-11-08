@@ -1,0 +1,1570 @@
+{
+  "status": "COCO_FULL5000_EVALUATION_COMPLETE",
+  "utc": "2026-11-06T16:59:47Z",
+  "variant": "native",
+  "prompt_strategy": "calibrated",
+  "batch_size": 8,
+  "total_images": 5000,
+  "wall_seconds": 1116.409128189087,
+  "metrics": {
+    "Bleu_1": 50.49905025038767,
+    "Bleu_2": 31.253267612567832,
+    "Bleu_3": 17.54261061967721,
+    "Bleu_4": 9.704615170740126,
+    "METEOR": 18.27136486727437,
+    "ROUGE_L": 38.127108896245026,
+    "CIDEr": 39.13626503537158
+  },
+  "qualitative_samples": [
+    {
+      "image_id": 391895,
+      "file_name": "COCO_val2014_000000391895.jpg",
+      "generated_caption": "A man is riding a motorcycle with a helmet on.",
+      "triplets": [
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "helmet",
+          "score": 3.0316010452224873e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "motorcycle",
+          "score": 2.8770064091077074e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "shirt",
+          "score": 2.0645235053962097e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "short",
+          "score": 1.598240305611398e-05
+        },
+        {
+          "subject": "tire",
+          "predicate": "on back of",
+          "object": "motorcycle",
+          "score": 1.5459723726962693e-05
+        },
+        {
+          "subject": "helmet",
+          "predicate": "on",
+          "object": "man",
+          "score": 1.2382200111460406e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 1.2086118658771738e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "has",
+          "object": "head",
+          "score": 1.1840105798910372e-05
+        }
+      ],
+      "ground_truth": [
+        "A man with a red helmet on a small moped on a dirt road.",
+        "Man riding a motor bike on a dirt road on the countryside.",
+        "A man riding on the back of a motorcycle.",
+        "A dirt path with a young person on a motor bike rests to the foreground of a verdant area with a bridge and a background of cloud-wreathed mountains.",
+        "A man in a red shirt and a red hat is on a motorcycle on a hill side."
+      ]
+    },
+    {
+      "image_id": 60623,
+      "file_name": "COCO_val2014_000000060623.jpg",
+      "generated_caption": "A girl holds a fork over a bowl of food on the table.",
+      "triplets": [
+        {
+          "subject": "hand",
+          "predicate": "holding",
+          "object": "fork",
+          "score": 1.6541622244403698e-05
+        },
+        {
+          "subject": "bowl",
+          "predicate": "above",
+          "object": "table",
+          "score": 1.526768937765155e-05
+        },
+        {
+          "subject": "food",
+          "predicate": "in",
+          "object": "bowl",
+          "score": 1.0673991710064001e-05
+        },
+        {
+          "subject": "fork",
+          "predicate": "in",
+          "object": "hand",
+          "score": 9.261665582016576e-06
+        },
+        {
+          "subject": "glass",
+          "predicate": "on",
+          "object": "table",
+          "score": 8.492336746712681e-06
+        },
+        {
+          "subject": "fork",
+          "predicate": "above",
+          "object": "table",
+          "score": 8.220231393352151e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "of",
+          "object": "food",
+          "score": 8.204793630284257e-06
+        },
+        {
+          "subject": "girl",
+          "predicate": "has",
+          "object": "eye",
+          "score": 8.127607543428894e-06
+        }
+      ],
+      "ground_truth": [
+        "A young girl inhales with the intent of blowing out a candle.",
+        "A young girl is preparing to blow out her candle.",
+        "A kid is to blow out the single candle in a bowl of birthday goodness.",
+        "Girl blowing out the candle on an ice-cream",
+        "A little girl is getting ready to blow out a candle on a small dessert."
+      ]
+    },
+    {
+      "image_id": 483108,
+      "file_name": "COCO_val2014_000000483108.jpg",
+      "generated_caption": "A man is riding a bike past a train window and street sign.",
+      "triplets": [
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 2.9284468837431632e-05
+        },
+        {
+          "subject": "person",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 1.817391239455901e-05
+        },
+        {
+          "subject": "window",
+          "predicate": "on",
+          "object": "train",
+          "score": 1.209203401231207e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "jacket",
+          "score": 1.1510148397064768e-05
+        },
+        {
+          "subject": "sign",
+          "predicate": "on",
+          "object": "pole",
+          "score": 1.085985786630772e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "pant",
+          "score": 1.0286685210303403e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "has",
+          "object": "hair",
+          "score": 7.27652923160349e-06
+        },
+        {
+          "subject": "head",
+          "predicate": "of",
+          "object": "man",
+          "score": 6.190985914145131e-06
+        }
+      ],
+      "ground_truth": [
+        "A man on a bicycle riding next to a train",
+        "A person is riding a bicycle but there is a train in the background.",
+        "a red and white train and a man riding a bicycle",
+        "a guy that is riding his bike next to a train",
+        "A man riding a bike past a train traveling along tracks."
+      ]
+    },
+    {
+      "image_id": 384213,
+      "file_name": "COCO_val2014_000000384213.jpg",
+      "generated_caption": "Towels are placed on the counter, sink, and cabinet near a curtained window.",
+      "triplets": [
+        {
+          "subject": "towel",
+          "predicate": "on",
+          "object": "counter",
+          "score": 1.3752025552093983e-05
+        },
+        {
+          "subject": "towel",
+          "predicate": "on",
+          "object": "sink",
+          "score": 6.963373834878439e-06
+        },
+        {
+          "subject": "towel",
+          "predicate": "on",
+          "object": "cabinet",
+          "score": 6.84728956912295e-06
+        },
+        {
+          "subject": "curtain",
+          "predicate": "over",
+          "object": "window",
+          "score": 6.363862212310778e-06
+        },
+        {
+          "subject": "bottle",
+          "predicate": "on",
+          "object": "counter",
+          "score": 6.096707693359349e-06
+        },
+        {
+          "subject": "towel",
+          "predicate": "near",
+          "object": "sink",
+          "score": 4.841578174819006e-06
+        },
+        {
+          "subject": "curtain",
+          "predicate": "covering",
+          "object": "window",
+          "score": 4.726387487608008e-06
+        },
+        {
+          "subject": "curtain",
+          "predicate": "on",
+          "object": "window",
+          "score": 4.622721007763175e-06
+        }
+      ],
+      "ground_truth": [
+        "A kitchen is shown with a variety of items on the counters.",
+        "A kitchen has the windows open and plaid curtains.",
+        "A kitchen with two windows and two metal sinks.",
+        "An older kitchen with cluttered counter tops but empty sink.",
+        "Glasses and bottles are placed near a kitchen sink."
+      ]
+    },
+    {
+      "image_id": 386164,
+      "file_name": "COCO_val2014_000000386164.jpg",
+      "generated_caption": "A table holds a bowl with fruit in a cluttered setting.",
+      "triplets": [
+        {
+          "subject": "chair",
+          "predicate": "at",
+          "object": "table",
+          "score": 7.5823541010322515e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "above",
+          "object": "table",
+          "score": 6.395148375304416e-06
+        },
+        {
+          "subject": "table",
+          "predicate": "made of",
+          "object": "chair",
+          "score": 4.2971878428943455e-06
+        },
+        {
+          "subject": "table",
+          "predicate": "made of",
+          "object": "table",
+          "score": 4.148845619056374e-06
+        },
+        {
+          "subject": "table",
+          "predicate": "at",
+          "object": "table",
+          "score": 2.2913670818525134e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "on",
+          "object": "table",
+          "score": 2.1838752672920236e-06
+        },
+        {
+          "subject": "fruit",
+          "predicate": "on",
+          "object": "table",
+          "score": 2.005747774092015e-06
+        },
+        {
+          "subject": "board",
+          "predicate": "lying on",
+          "object": "table",
+          "score": 1.9615667952166405e-06
+        }
+      ],
+      "ground_truth": [
+        "A wooden ball on top of a wooden stick.",
+        "The table is full of wooden spoons and utensils.",
+        "A wood table holding an assortment of wood cooking utensils.",
+        "A selection of wooden kitchen tools on a counter.",
+        "Wooden spoons are lined up on a table"
+      ]
+    },
+    {
+      "image_id": 223648,
+      "file_name": "COCO_val2014_000000223648.jpg",
+      "generated_caption": "A fork lies on a table with a chair positioned underneath it.",
+      "triplets": [
+        {
+          "subject": "chair",
+          "predicate": "at",
+          "object": "table",
+          "score": 1.555022936372552e-05
+        },
+        {
+          "subject": "fork",
+          "predicate": "on",
+          "object": "table",
+          "score": 1.139469623012701e-05
+        },
+        {
+          "subject": "fork",
+          "predicate": "laying on",
+          "object": "table",
+          "score": 1.1154110325151123e-05
+        },
+        {
+          "subject": "leg",
+          "predicate": "of",
+          "object": "chair",
+          "score": 1.0712147741287481e-05
+        },
+        {
+          "subject": "chair",
+          "predicate": "near",
+          "object": "table",
+          "score": 7.066231319186045e-06
+        },
+        {
+          "subject": "leg",
+          "predicate": "of",
+          "object": "table",
+          "score": 6.6712646002997644e-06
+        },
+        {
+          "subject": "chair",
+          "predicate": "under",
+          "object": "table",
+          "score": 5.735214926971821e-06
+        },
+        {
+          "subject": "fork",
+          "predicate": "lying on",
+          "object": "table",
+          "score": 5.697287633665837e-06
+        }
+      ],
+      "ground_truth": [
+        "Multiple wooden spoons are shown on a table top.",
+        "A table surrounded by chairs and filled with cooking utensils.",
+        "Wooden spoons laid out across a kitchen table.",
+        "Wooden spoons and forks are all over a table.",
+        "A table and chairs with wooden kitchen tools on top."
+      ]
+    },
+    {
+      "image_id": 403385,
+      "file_name": "COCO_val2014_000000403385.jpg",
+      "generated_caption": "A toilet with a seat is near a sink in a bathroom.",
+      "triplets": [
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "seat",
+          "score": 1.60657218657434e-05
+        },
+        {
+          "subject": "seat",
+          "predicate": "of",
+          "object": "toilet",
+          "score": 1.3774514627584722e-05
+        },
+        {
+          "subject": "paper",
+          "predicate": "for",
+          "object": "toilet",
+          "score": 5.937891273788409e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "of",
+          "object": "toilet",
+          "score": 5.6174008022935595e-06
+        },
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "bowl",
+          "score": 5.097589564684313e-06
+        },
+        {
+          "subject": "sink",
+          "predicate": "near",
+          "object": "toilet",
+          "score": 4.077866833540611e-06
+        },
+        {
+          "subject": "pole",
+          "predicate": "over",
+          "object": "sink",
+          "score": 3.6170158637105487e-06
+        },
+        {
+          "subject": "seat",
+          "predicate": "has",
+          "object": "seat",
+          "score": 2.8764318358298624e-06
+        }
+      ],
+      "ground_truth": [
+        "A bathroom that has a broken wall in the shower.",
+        "A bathroom looks clean but is missing tile at the shower stall.",
+        "A view of a bathroom that needs to be fixed up.",
+        "a shower toilet and sink in a basement bathroom",
+        "A very big whit rest room with a shabby looking shower."
+      ]
+    },
+    {
+      "image_id": 294832,
+      "file_name": "COCO_val2014_000000294832.jpg",
+      "generated_caption": "A bathroom features a toilet with a seat and a sink under a light.",
+      "triplets": [
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "seat",
+          "score": 1.8247348634758964e-05
+        },
+        {
+          "subject": "cabinet",
+          "predicate": "above",
+          "object": "toilet",
+          "score": 8.370826435566414e-06
+        },
+        {
+          "subject": "cabinet",
+          "predicate": "above",
+          "object": "sink",
+          "score": 7.639225259481464e-06
+        },
+        {
+          "subject": "seat",
+          "predicate": "of",
+          "object": "toilet",
+          "score": 6.254459549381863e-06
+        },
+        {
+          "subject": "sink",
+          "predicate": "and",
+          "object": "toilet",
+          "score": 5.044117642682977e-06
+        },
+        {
+          "subject": "sink",
+          "predicate": "with",
+          "object": "seat",
+          "score": 3.7263314425217686e-06
+        },
+        {
+          "subject": "light",
+          "predicate": "over",
+          "object": "toilet",
+          "score": 3.362508778081974e-06
+        },
+        {
+          "subject": "light",
+          "predicate": "above",
+          "object": "toilet",
+          "score": 3.329153059894452e-06
+        }
+      ],
+      "ground_truth": [
+        "A bathroom with an enclosed shower next to a sink and a toilet.",
+        "A clean, spacious bathroom with a large shower stall.",
+        "There are a toilet, a sink, and a shower stall in a large bathroom.",
+        "A bathroom featuring a walk in shower, mirror, sink and toilet.",
+        "Bathroom with a shower, sink, and toilet in it."
+      ]
+    },
+    {
+      "image_id": 462565,
+      "file_name": "COCO_val2014_000000462565.jpg",
+      "generated_caption": "A woman is riding a bike with a helmet on.",
+      "triplets": [
+        {
+          "subject": "woman",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 2.258795029774774e-05
+        },
+        {
+          "subject": "person",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 1.7346801541862078e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 1.0270075108564924e-05
+        },
+        {
+          "subject": "woman",
+          "predicate": "wearing",
+          "object": "helmet",
+          "score": 9.653210327087436e-06
+        },
+        {
+          "subject": "person",
+          "predicate": "wearing",
+          "object": "helmet",
+          "score": 7.213598564703716e-06
+        },
+        {
+          "subject": "car",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 6.512650088552618e-06
+        },
+        {
+          "subject": "tire",
+          "predicate": "on back of",
+          "object": "bike",
+          "score": 6.450792170653585e-06
+        },
+        {
+          "subject": "woman",
+          "predicate": "wearing",
+          "object": "shirt",
+          "score": 5.7262777772848494e-06
+        }
+      ],
+      "ground_truth": [
+        "people on bicycles ride down a busy street",
+        "A group of people are riding bikes down the street in a bike lane",
+        "bike riders passing Burger King in city street",
+        "A group of bicyclists are riding in the bike lane.",
+        "Bicyclists on a city street, most not using the bike lane"
+      ]
+    },
+    {
+      "image_id": 436141,
+      "file_name": "COCO_val2014_000000436141.jpg",
+      "generated_caption": "A toilet with a seat is placed near a sink and cabinets.",
+      "triplets": [
+        {
+          "subject": "door",
+          "predicate": "under",
+          "object": "sink",
+          "score": 8.624557267467026e-06
+        },
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "seat",
+          "score": 8.459249329462182e-06
+        },
+        {
+          "subject": "cabinet",
+          "predicate": "under",
+          "object": "sink",
+          "score": 5.464183686854085e-06
+        },
+        {
+          "subject": "paper",
+          "predicate": "under",
+          "object": "sink",
+          "score": 4.059543698531343e-06
+        },
+        {
+          "subject": "seat",
+          "predicate": "mounted on",
+          "object": "toilet",
+          "score": 3.895595455105649e-06
+        },
+        {
+          "subject": "paper",
+          "predicate": "hanging from",
+          "object": "cabinet",
+          "score": 3.643128820840502e-06
+        },
+        {
+          "subject": "toilet",
+          "predicate": "near",
+          "object": "sink",
+          "score": 3.6414719488675473e-06
+        },
+        {
+          "subject": "cabinet",
+          "predicate": "above",
+          "object": "sink",
+          "score": 3.355095032020472e-06
+        }
+      ],
+      "ground_truth": [
+        "The bathroom is clean and ready to be used.",
+        "a small bathroom with a sink and a toilet.",
+        "A toilet, sink and mirror in the bathroom",
+        "Doorway view into bathroom with a sink and toilet.",
+        "A white toilet sitting next to a sink."
+      ]
+    },
+    {
+      "image_id": 192440,
+      "file_name": "COCO_val2014_000000192440.jpg",
+      "generated_caption": "A bathroom shelf holds bags and baskets near the toilet and window.",
+      "triplets": [
+        {
+          "subject": "bag",
+          "predicate": "on",
+          "object": "shelf",
+          "score": 8.171776244125795e-06
+        },
+        {
+          "subject": "basket",
+          "predicate": "in",
+          "object": "shelf",
+          "score": 7.724092029093299e-06
+        },
+        {
+          "subject": "bag",
+          "predicate": "above",
+          "object": "shelf",
+          "score": 6.4168266362685245e-06
+        },
+        {
+          "subject": "seat",
+          "predicate": "mounted on",
+          "object": "toilet",
+          "score": 5.811453775095288e-06
+        },
+        {
+          "subject": "shelf",
+          "predicate": "above",
+          "object": "sink",
+          "score": 4.704762886831304e-06
+        },
+        {
+          "subject": "basket",
+          "predicate": "sitting on",
+          "object": "shelf",
+          "score": 4.219081802148139e-06
+        },
+        {
+          "subject": "window",
+          "predicate": "over",
+          "object": "toilet",
+          "score": 4.173362412984716e-06
+        },
+        {
+          "subject": "towel",
+          "predicate": "on",
+          "object": "shelf",
+          "score": 4.145855655224295e-06
+        }
+      ],
+      "ground_truth": [
+        "A clean bathroom is seen in this image.",
+        "A bathroom with a white toilet and large shelf full of stuff.",
+        "some shelves filled with a bunch of different items in the bathroom",
+        "A shelving unit is between a toilet and a bathroom sink.",
+        "A shelf with hygiene products in a bathroom."
+      ]
+    },
+    {
+      "image_id": 1146,
+      "file_name": "COCO_val2014_000000001146.jpg",
+      "generated_caption": "A man is standing formally dressed with glasses and a tie.",
+      "triplets": [
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "glass",
+          "score": 5.1425293349893764e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "tie",
+          "score": 4.8541802243562415e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "shirt",
+          "score": 3.1523271900368854e-05
+        },
+        {
+          "subject": "shirt",
+          "predicate": "and",
+          "object": "tie",
+          "score": 3.109693352598697e-05
+        },
+        {
+          "subject": "tie",
+          "predicate": "on",
+          "object": "man",
+          "score": 2.7515274268807843e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "has",
+          "object": "ear",
+          "score": 2.1622863641823642e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "has",
+          "object": "hair",
+          "score": 2.1281834051478654e-05
+        },
+        {
+          "subject": "ear",
+          "predicate": "of",
+          "object": "man",
+          "score": 2.0873128960374743e-05
+        }
+      ],
+      "ground_truth": [
+        "A young man wearing black attire and a flowered tie is standing and smiling.",
+        "A man with glasses and his eyes closed dressed in a black shirt and a necktie.",
+        "A man in a green tie with his eyes closed.",
+        "Smiling man wearing black shirt and pale green tie.",
+        "A person that is dressed up very nicely."
+      ]
+    },
+    {
+      "image_id": 559665,
+      "file_name": "COCO_val2014_000000559665.jpg",
+      "generated_caption": "A man is riding a motorcycle while wearing a helmet.",
+      "triplets": [
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "motorcycle",
+          "score": 2.899949686252512e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "shirt",
+          "score": 2.5416853532078676e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "pant",
+          "score": 1.6791333109722473e-05
+        },
+        {
+          "subject": "person",
+          "predicate": "riding",
+          "object": "motorcycle",
+          "score": 1.0298965207766742e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "helmet",
+          "score": 1.0208820640400518e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "hair",
+          "score": 9.24152755032992e-06
+        },
+        {
+          "subject": "man",
+          "predicate": "sitting on",
+          "object": "motorcycle",
+          "score": 8.507195161655545e-06
+        },
+        {
+          "subject": "people",
+          "predicate": "riding",
+          "object": "motorcycle",
+          "score": 8.245797289418988e-06
+        }
+      ],
+      "ground_truth": [
+        "Black and white photograph of two men on motorcycles.",
+        "Two people riding a motorcycle with hats and backpack down a street.",
+        "Two men are at an intersection on motorcycles.",
+        "The man are driving side by side on their motorcycles.",
+        "Two men on motorcycles at a stop light"
+      ]
+    },
+    {
+      "image_id": 394240,
+      "file_name": "COCO_val2014_000000394240.jpg",
+      "generated_caption": "A woman walks by a building with a motorcycle parked on the sidewalk.",
+      "triplets": [
+        {
+          "subject": "door",
+          "predicate": "to",
+          "object": "building",
+          "score": 1.7339192709187046e-05
+        },
+        {
+          "subject": "woman",
+          "predicate": "wearing",
+          "object": "shirt",
+          "score": 8.974586307886057e-06
+        },
+        {
+          "subject": "woman",
+          "predicate": "wearing",
+          "object": "pant",
+          "score": 6.640677383984439e-06
+        },
+        {
+          "subject": "window",
+          "predicate": "on",
+          "object": "building",
+          "score": 6.242788913368713e-06
+        },
+        {
+          "subject": "woman",
+          "predicate": "walking on",
+          "object": "sidewalk",
+          "score": 6.035889782651793e-06
+        },
+        {
+          "subject": "motorcycle",
+          "predicate": "parked on",
+          "object": "sidewalk",
+          "score": 5.495782716025133e-06
+        },
+        {
+          "subject": "building",
+          "predicate": "has",
+          "object": "door",
+          "score": 5.475302259583259e-06
+        },
+        {
+          "subject": "motorcycle",
+          "predicate": "parked on",
+          "object": "street",
+          "score": 5.314391728461487e-06
+        }
+      ],
+      "ground_truth": [
+        "A row of motorcycles parked in front of a building.",
+        "A bunch of motorcycles parked on the side of the road",
+        "a back ally neighborhood with motor bikes in a row",
+        "A number of motorbikes parked on an alley",
+        "a bunch of motorcycles parked along the side of the street"
+      ]
+    },
+    {
+      "image_id": 491497,
+      "file_name": "COCO_val2014_000000491497.jpg",
+      "generated_caption": "A man wearing a helmet stands in a room with a bed and table.",
+      "triplets": [
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "helmet",
+          "score": 1.0343734174966812e-05
+        },
+        {
+          "subject": "pillow",
+          "predicate": "on",
+          "object": "bed",
+          "score": 9.21822265809169e-06
+        },
+        {
+          "subject": "drawer",
+          "predicate": "on",
+          "object": "table",
+          "score": 5.775249064754462e-06
+        },
+        {
+          "subject": "bed",
+          "predicate": "in",
+          "object": "room",
+          "score": 5.396329470386263e-06
+        },
+        {
+          "subject": "book",
+          "predicate": "on",
+          "object": "shelf",
+          "score": 4.53126222055289e-06
+        },
+        {
+          "subject": "book",
+          "predicate": "above",
+          "object": "shelf",
+          "score": 4.361733317637118e-06
+        },
+        {
+          "subject": "table",
+          "predicate": "near",
+          "object": "bed",
+          "score": 4.180504220130388e-06
+        },
+        {
+          "subject": "bed",
+          "predicate": "has",
+          "object": "pillow",
+          "score": 3.7133495425223373e-06
+        }
+      ],
+      "ground_truth": [
+        "A fluffy white chair that faces away fro a television.",
+        "A pillow covered reading chair in the corner of the living room",
+        "The living room is empty with the television on.",
+        "White ornate seat in nicely decorated room with television.",
+        "A white chair, books and shelves and a tv on in this room."
+      ]
+    },
+    {
+      "image_id": 184791,
+      "file_name": "COCO_val2014_000000184791.jpg",
+      "generated_caption": "A bird is eating an orange placed on a table with other oranges nearby.",
+      "triplets": [
+        {
+          "subject": "orange",
+          "predicate": "in",
+          "object": "vase",
+          "score": 6.937657417438459e-06
+        },
+        {
+          "subject": "orange",
+          "predicate": "above",
+          "object": "board",
+          "score": 6.7384735302766785e-06
+        },
+        {
+          "subject": "orange",
+          "predicate": "on",
+          "object": "board",
+          "score": 6.071963071008213e-06
+        },
+        {
+          "subject": "orange",
+          "predicate": "on",
+          "object": "table",
+          "score": 5.219024387770332e-06
+        },
+        {
+          "subject": "orange",
+          "predicate": "in",
+          "object": "bowl",
+          "score": 3.766345798794646e-06
+        },
+        {
+          "subject": "bird",
+          "predicate": "eating",
+          "object": "orange",
+          "score": 2.814583922372549e-06
+        },
+        {
+          "subject": "vase",
+          "predicate": "above",
+          "object": "table",
+          "score": 2.767860905805719e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "on",
+          "object": "table",
+          "score": 2.750877229118487e-06
+        }
+      ],
+      "ground_truth": [
+        "A painting of a table with fruit on top of it.",
+        "Painting of oranges, a bowl, candle, and a pitcher",
+        "a painting of fruit and a candle with a vase",
+        "A painting of a candlestick holder with a candle, several pieces of fruit and a vase, with a gold frame around the painting.",
+        "A painting that has a gold frame on it."
+      ]
+    },
+    {
+      "image_id": 579664,
+      "file_name": "COCO_val2014_000000579664.jpg",
+      "generated_caption": "A banana lies on a table next to a fruit box.",
+      "triplets": [
+        {
+          "subject": "banana",
+          "predicate": "laying on",
+          "object": "table",
+          "score": 4.048352366226027e-06
+        },
+        {
+          "subject": "banana",
+          "predicate": "lying on",
+          "object": "table",
+          "score": 3.34693481818249e-06
+        },
+        {
+          "subject": "table",
+          "predicate": "made of",
+          "object": "table",
+          "score": 3.086201559199253e-06
+        },
+        {
+          "subject": "banana",
+          "predicate": "on",
+          "object": "table",
+          "score": 2.8677125101239653e-06
+        },
+        {
+          "subject": "banana",
+          "predicate": "over",
+          "object": "table",
+          "score": 2.848820940926089e-06
+        },
+        {
+          "subject": "fruit",
+          "predicate": "on",
+          "object": "table",
+          "score": 2.3928539576445473e-06
+        },
+        {
+          "subject": "box",
+          "predicate": "for",
+          "object": "banana",
+          "score": 2.24895143219328e-06
+        },
+        {
+          "subject": "table",
+          "predicate": "holding",
+          "object": "banana",
+          "score": 2.1010653199482476e-06
+        }
+      ],
+      "ground_truth": [
+        "Vegetables are displayed in a wooden barrel outdoors.",
+        "A bunch of bananas are sitting on the stand.",
+        "The cart has bananas or plantains piled on it.",
+        "a box of green bananas and a box of ripe bananas",
+        "A large number of green and yellow bananas in wooden containers."
+      ]
+    },
+    {
+      "image_id": 550529,
+      "file_name": "COCO_val2014_000000550529.jpg",
+      "generated_caption": "A motorcycle with a seat on its engine is parked on a shelf attached to a bike's back.",
+      "triplets": [
+        {
+          "subject": "seat",
+          "predicate": "on",
+          "object": "bike",
+          "score": 1.4087282579566818e-05
+        },
+        {
+          "subject": "wheel",
+          "predicate": "of",
+          "object": "bike",
+          "score": 1.0706400644266978e-05
+        },
+        {
+          "subject": "bike",
+          "predicate": "has",
+          "object": "wheel",
+          "score": 6.6764391704055015e-06
+        },
+        {
+          "subject": "wheel",
+          "predicate": "on",
+          "object": "bike",
+          "score": 6.627251877944218e-06
+        },
+        {
+          "subject": "seat",
+          "predicate": "on",
+          "object": "motorcycle",
+          "score": 5.058645456301747e-06
+        },
+        {
+          "subject": "engine",
+          "predicate": "of",
+          "object": "bike",
+          "score": 5.009771484765224e-06
+        },
+        {
+          "subject": "seat",
+          "predicate": "on",
+          "object": "shelf",
+          "score": 4.364772394183092e-06
+        },
+        {
+          "subject": "shelf",
+          "predicate": "on back of",
+          "object": "bike",
+          "score": 4.291503955755616e-06
+        }
+      ],
+      "ground_truth": [
+        "A motorbike sitting in front of a wine display case",
+        "A motor bike and some wine in a room.",
+        "A dirt bike sitting on a counter by some wine bottles.",
+        "a motorcycle standing in front a winery",
+        "A bike sits among bottles of wine on a shelf."
+      ]
+    },
+    {
+      "image_id": 348881,
+      "file_name": "COCO_val2014_000000348881.jpg",
+      "generated_caption": "A man carries a bag while seated near a plane window.",
+      "triplets": [
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "jacket",
+          "score": 1.6136835256475024e-05
+        },
+        {
+          "subject": "person",
+          "predicate": "wearing",
+          "object": "jacket",
+          "score": 9.195286111207679e-06
+        },
+        {
+          "subject": "window",
+          "predicate": "on",
+          "object": "plane",
+          "score": 5.890987722523278e-06
+        },
+        {
+          "subject": "man",
+          "predicate": "carrying",
+          "object": "bag",
+          "score": 4.544370312942192e-06
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "pant",
+          "score": 4.497500412981026e-06
+        },
+        {
+          "subject": "nose",
+          "predicate": "of",
+          "object": "plane",
+          "score": 3.8962834878475405e-06
+        },
+        {
+          "subject": "man",
+          "predicate": "carrying",
+          "object": "jacket",
+          "score": 3.8111204503366025e-06
+        },
+        {
+          "subject": "bag",
+          "predicate": "wearing",
+          "object": "jacket",
+          "score": 2.9129973881936166e-06
+        }
+      ],
+      "ground_truth": [
+        "A large jetliner sitting on top of an airport runway.",
+        "Airline employees by an aircraft parked at the gate",
+        "The plane is parked at the gate at the airport terminal.",
+        "View from gate of jet connected to jet way for passengers to board or deplane",
+        "A large white airplane and a person on a lot."
+      ]
+    },
+    {
+      "image_id": 560623,
+      "file_name": "COCO_val2014_000000560623.jpg",
+      "generated_caption": "A plane with wings and tail is in front of a truck.",
+      "triplets": [
+        {
+          "subject": "tail",
+          "predicate": "of",
+          "object": "plane",
+          "score": 9.302745638706256e-06
+        },
+        {
+          "subject": "plane",
+          "predicate": "has",
+          "object": "tail",
+          "score": 6.01921601628419e-06
+        },
+        {
+          "subject": "tail",
+          "predicate": "mounted on",
+          "object": "plane",
+          "score": 3.754215185836074e-06
+        },
+        {
+          "subject": "wing",
+          "predicate": "of",
+          "object": "plane",
+          "score": 2.8651152206293773e-06
+        },
+        {
+          "subject": "truck",
+          "predicate": "in front of",
+          "object": "plane",
+          "score": 2.20415449803113e-06
+        },
+        {
+          "subject": "tail",
+          "predicate": "of",
+          "object": "airplane",
+          "score": 2.2021695258445106e-06
+        },
+        {
+          "subject": "wing",
+          "predicate": "mounted on",
+          "object": "plane",
+          "score": 2.0579720967361936e-06
+        },
+        {
+          "subject": "plane",
+          "predicate": "has",
+          "object": "wing",
+          "score": 1.6643916751490906e-06
+        }
+      ],
+      "ground_truth": [
+        "An airport filled with planes sitting on tarmacs.",
+        "The view of runway from behind the windows of airport.",
+        "a truck driving towards some planes parked on the runway",
+        "Planes on a wet tarmac unloading at arrival gates.",
+        "Window view from the inside of airplanes, baggage carrier and tarmac."
+      ]
+    },
+    {
+      "image_id": 561100,
+      "file_name": "COCO_val2014_000000561100.jpg",
+      "generated_caption": "A plane with wheels is parked, its logo and windows visible.",
+      "triplets": [
+        {
+          "subject": "wheel",
+          "predicate": "on",
+          "object": "plane",
+          "score": 2.0613329979823902e-05
+        },
+        {
+          "subject": "wheel",
+          "predicate": "under",
+          "object": "plane",
+          "score": 1.7455886336392723e-05
+        },
+        {
+          "subject": "plane",
+          "predicate": "has",
+          "object": "wheel",
+          "score": 1.2253785826032981e-05
+        },
+        {
+          "subject": "wing",
+          "predicate": "of",
+          "object": "plane",
+          "score": 1.2024045645375736e-05
+        },
+        {
+          "subject": "nose",
+          "predicate": "of",
+          "object": "plane",
+          "score": 1.0991973795171361e-05
+        },
+        {
+          "subject": "number",
+          "predicate": "painted on",
+          "object": "plane",
+          "score": 1.0414929420221597e-05
+        },
+        {
+          "subject": "window",
+          "predicate": "on",
+          "object": "plane",
+          "score": 9.873004273686092e-06
+        },
+        {
+          "subject": "logo",
+          "predicate": "painted on",
+          "object": "plane",
+          "score": 9.04633998288773e-06
+        }
+      ],
+      "ground_truth": [
+        "A small blue plane sitting on top of a field.",
+        "an E2 airplane painted blue with black and white stripes",
+        "An old warplane is on display in a field.",
+        "a blue small plane standing at the airstrip",
+        "Model airplane with an American insignia and stripes on wings."
+      ]
+    },
+    {
+      "image_id": 354533,
+      "file_name": "COCO_val2014_000000354533.jpg",
+      "generated_caption": "A bike is leaning against a fence with its wheels visible.",
+      "triplets": [
+        {
+          "subject": "fence",
+          "predicate": "behind",
+          "object": "bike",
+          "score": 1.4919669411028735e-05
+        },
+        {
+          "subject": "light",
+          "predicate": "on back of",
+          "object": "bike",
+          "score": 1.397328196617309e-05
+        },
+        {
+          "subject": "engine",
+          "predicate": "of",
+          "object": "bike",
+          "score": 1.3418629350780975e-05
+        },
+        {
+          "subject": "wheel",
+          "predicate": "mounted on",
+          "object": "bike",
+          "score": 1.1559882295841817e-05
+        },
+        {
+          "subject": "wheel",
+          "predicate": "of",
+          "object": "bike",
+          "score": 1.016159603750566e-05
+        },
+        {
+          "subject": "wheel",
+          "predicate": "on back of",
+          "object": "bike",
+          "score": 9.213784323947039e-06
+        },
+        {
+          "subject": "bike",
+          "predicate": "has",
+          "object": "wheel",
+          "score": 8.196078852051869e-06
+        },
+        {
+          "subject": "bike",
+          "predicate": "against",
+          "object": "fence",
+          "score": 5.843718099640682e-06
+        }
+      ],
+      "ground_truth": [
+        "A motorcycle sits parked across from a herd of livestock.",
+        "A motorbike, people and sheep in the background",
+        "A motorcycle parked on top of a sandy beach.",
+        "A motorcycle in the foreground parked in a dirt parking lot",
+        "A multicolored motorcycle rests outside of a sheep farm."
+      ]
+    },
+    {
+      "image_id": 334321,
+      "file_name": "COCO_val2014_000000334321.jpg",
+      "generated_caption": "A man is sitting on a bench holding a dog beside him.",
+      "triplets": [
+        {
+          "subject": "man",
+          "predicate": "sitting on",
+          "object": "bench",
+          "score": 2.923107604146935e-05
+        },
+        {
+          "subject": "dog",
+          "predicate": "sitting on",
+          "object": "bench",
+          "score": 2.8773823942174204e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "holding",
+          "object": "dog",
+          "score": 2.1763504264527e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "shirt",
+          "score": 1.9646146029117517e-05
+        },
+        {
+          "subject": "person",
+          "predicate": "sitting on",
+          "object": "bench",
+          "score": 1.5857742255320773e-05
+        },
+        {
+          "subject": "ear",
+          "predicate": "of",
+          "object": "dog",
+          "score": 1.3328663044376299e-05
+        },
+        {
+          "subject": "dog",
+          "predicate": "near",
+          "object": "man",
+          "score": 1.110443554352969e-05
+        },
+        {
+          "subject": "person",
+          "predicate": "holding",
+          "object": "dog",
+          "score": 1.0805148122017272e-05
+        }
+      ],
+      "ground_truth": [
+        "A large white dog is sitting on a bench beside an elderly man.",
+        "A large white dog sits on a bench with people next to a path.",
+        "A large dog sits just his bottom on a park bench.",
+        "A dog sitting on a bench next to an old man.",
+        "A couple of people sitting on a bench next to a dog."
+      ]
+    },
+    {
+      "image_id": 368117,
+      "file_name": "COCO_val2014_000000368117.jpg",
+      "generated_caption": "A light is mounted on a pole illuminating the area.",
+      "triplets": [
+        {
+          "subject": "light",
+          "predicate": "mounted on",
+          "object": "pole",
+          "score": 2.9492020985344425e-06
+        },
+        {
+          "subject": "light",
+          "predicate": "on",
+          "object": "pole",
+          "score": 2.798821924443473e-06
+        },
+        {
+          "subject": "light",
+          "predicate": "attached to",
+          "object": "pole",
+          "score": 2.0152267552475678e-06
+        },
+        {
+          "subject": "light",
+          "predicate": "on",
+          "object": "light",
+          "score": 1.7255863440368557e-06
+        },
+        {
+          "subject": "pole",
+          "predicate": "for",
+          "object": "light",
+          "score": 1.7050441556420992e-06
+        },
+        {
+          "subject": "light",
+          "predicate": "mounted on",
+          "object": "light",
+          "score": 1.633186229810235e-06
+        },
+        {
+          "subject": "light",
+          "predicate": "hanging from",
+          "object": "pole",
+          "score": 1.3800607803204912e-06
+        },
+        {
+          "subject": "pole",
+          "predicate": "holding",
+          "object": "light",
+          "score": 1.20481251997262e-06
+        }
+      ],
+      "ground_truth": [
+        "A couple of traffic lights sitting under a cloudy sky.",
+        "a street light has the red lights glowing",
+        "The traffic lights are clearly visible for all of us to see.",
+        "a pole with a stop lights attached to it",
+        "two sets of street lights attached to a pole"
+      ]
+    },
+    {
+      "image_id": 165547,
+      "file_name": "COCO_val2014_000000165547.jpg",
+      "generated_caption": "A table is set with various items including a book and a vase with a flower.",
+      "triplets": [
+        {
+          "subject": "book",
+          "predicate": "on",
+          "object": "table",
+          "score": 3.479771476122551e-05
+        },
+        {
+          "subject": "chair",
+          "predicate": "at",
+          "object": "table",
+          "score": 3.0089300707913935e-05
+        },
+        {
+          "subject": "flower",
+          "predicate": "in",
+          "object": "vase",
+          "score": 2.915229015343357e-05
+        },
+        {
+          "subject": "vase",
+          "predicate": "on",
+          "object": "table",
+          "score": 2.4944547476479784e-05
+        },
+        {
+          "subject": "flower",
+          "predicate": "on",
+          "object": "table",
+          "score": 2.150308500858955e-05
+        },
+        {
+          "subject": "bottle",
+          "predicate": "on",
+          "object": "table",
+          "score": 1.99067362700589e-05
+        },
+        {
+          "subject": "vase",
+          "predicate": "with",
+          "object": "flower",
+          "score": 1.4631636076956056e-05
+        },
+        {
+          "subject": "table",
+          "predicate": "with",
+          "object": "chair",
+          "score": 8.651085408928338e-06
+        }
+      ],
+      "ground_truth": [
+        "An eating area with a table and a few chairs.",
+        "Table situated in corner of room with a vase for a center piece",
+        "A wooden table sitting below a bunch of windows.",
+        "A dining room table next to windows overlooking woods",
+        "A wooden dining table is surrounded by windows."
+      ]
+    }
+  ]
+}

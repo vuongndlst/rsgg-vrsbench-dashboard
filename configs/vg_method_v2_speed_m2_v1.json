@@ -1,0 +1,99 @@
+{
+  "experiment_id": "vg_method_v2_speed_m2_v1",
+  "upstream_commit": "d316a0b2057e549764eb8dd8a0bcce8b1136d98a",
+  "task": "VG150 SGDet, predicted objects; cached frozen VG-trained native detector; controlled relation-head adaptation",
+  "not_claimed": [
+    "native full training recipe reproduction",
+    "caption-clean weights",
+    "SOTA before matched evidence",
+    "new detector trained from scratch in this run"
+  ],
+  "test_policy": "No test access until preregistered confirmation gate; no test rerun/tuning",
+  "cache": {
+    "splits": [
+      "val",
+      "train"
+    ],
+    "shard_images": 64,
+    "resize_short": 800,
+    "resize_max": 1333,
+    "train_augmentation": "fixed evaluation transform; same for all arms",
+    "dtype_policy": "FP16 only if probe max logit error <0.02, otherwise FP32"
+  },
+  "screening": {
+    "variants": [
+      "native",
+      "context",
+      "oneway",
+      "feedback"
+    ],
+    "seed": 1729,
+    "epochs": 6,
+    "gate_gain_mR50": 0.001,
+    "max_R50_drop": 0.01
+  },
+  "confirmation": {
+    "seeds": [
+      1729,
+      2718,
+      3141
+    ],
+    "epochs": 13,
+    "min_gain_mR50": 0.01,
+    "max_R50_drop": 0.01,
+    "bootstrap_replicates": 1000,
+    "bootstrap_seed": 4455,
+    "resource_admission": "Before confirmation, measured maximum screening epoch duration times planned epochs plus test allowance, with25% margin, must fit original absolute remaining budget; otherwise preserve screening and block admission without relaxing scientific gate"
+  },
+  "optimizer": {
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "effective_batch": 16,
+    "microbatch": 2,
+    "gradient_clip": 0.1,
+    "drop_factor": 0.1,
+    "drop_epoch_from_end": 2
+  },
+  "selection": {
+    "primary": "mR@50",
+    "guardrail": "R@50 >= frozen native validation R@50 - 0.01",
+    "tie": "earliest epoch",
+    "fallback": "best mR@50 with guardrail failure explicitly reported"
+  },
+  "regional": {
+    "tokens": 8,
+    "hidden": 256,
+    "rounds": 2,
+    "geometry_learning": false,
+    "output_zero_init": true
+  },
+  "resource": {
+    "cuda_allocator_gib": 6,
+    "cpu_threads": 4,
+    "minimum_free_disk_gib": 16,
+    "artifact_limit_gib": 40,
+    "wall_hours": 240,
+    "preparation_wait_minutes": 90,
+    "checkpoint_per_completed_run": 1,
+    "own_gpu_nvml_gib": 8,
+    "peak_rss_gib": 4,
+    "minimum_gpu_free_gib": 9
+  },
+  "adjustment_policy": "No core/config changes inside a locked run. Technical failures may be repaired with new source lock and explicit audit. Scientific changes become a new preregistered experiment; tests remain unopened.",
+  "caption_stage": "Required follow-on: audit external test overlap, train fresh caption-clean detector/SGG, fixed Qwen14B and matched prompt budgets; never use benchmark weights as contamination-free caption model without proof",
+  "satellite_stage": "Only after natural-image evidence; independent domain training",
+  "parent_experiment": "vg_method_v2",
+  "benchmark_evidence_sha256": "bec2a2cfbfd39e5edf52c7bfc7806385e061d1f4a5777a22e95b52b32b7ef4e3",
+  "original_wall_deadline_unix": 1792510321.2414355,
+  "batching": {
+    "case": "packed_fp32_m2",
+    "pinned_cpu": true,
+    "non_blocking": true,
+    "criterion": "unchanged per-image normalization; sum losses / effective_batch16",
+    "tail": "same as original: final incomplete effective batch still divided by16",
+    "dropout": "different RNG trajectory from micro1; all four arms freshly initialized, no old native reuse",
+    "validation": "original singleton FP32 evaluator, same predictions/IoU/GC metrics",
+    "order": "original seeded shard and intra-shard shuffle; contiguous microgroups across shards",
+    "search": "one adopted configuration; no further batch/precision search inside this run"
+  }
+}

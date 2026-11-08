@@ -1,0 +1,49 @@
+{
+  "utc": "2026-11-01T00:20:58.831741+00:00",
+  "read_only": true,
+  "server_writes": 0,
+  "files_deleted": 0,
+  "cache_manifest_sha256": "f978799bbd19047b6a74f291aa816f43052251f9b84751f633e8ddf04622abf1",
+  "cache_status": "complete",
+  "candidate_count": 981,
+  "candidate_allocated_bytes": 21864714240,
+  "all_files_have_single_link": true,
+  "unexpected_entries": [],
+  "own_process_blockers": [],
+  "own_process_permission_errors": 3,
+  "other_accounts_inspected": false,
+  "disk_free_bytes": 1532436480,
+  "projected_free_after_shards_bytes": 23397150720,
+  "requires_byte_exact_local_backup_before_any_server_removal": true,
+  "paused_SGG_seeds_require_restoring_exact_cache_before_resume": true,
+  "current_focus_R1_does_not_reference_feature_cache": true,
+  "manifest_payload_hashes_recomputed": false,
+  "candidate_GiB": 20.363101959228516,
+  "projected_free_GiB": 21.790294647216797,
+  "split_counts": {
+    "val": 79,
+    "train": 902
+  },
+  "local_D_free_GiB": 67.90744400024414,
+  "proposal_status": "AUTHORIZED_BY_HUMAN_20261101_BACKUP_THEN_VERIFIED_SERVER_SHARD_REMOVAL",
+  "proposed_local_archive": "D:/SBIR/RSGG/artifacts/offloaded_vg_v2_features_20261101/",
+  "keep_on_server": [
+    "feature manifest.json",
+    "all checkpoints",
+    "source/config/preregistration",
+    "logs/outcomes",
+    "Context SGDet TEST predictions",
+    "SG/color/caption caches",
+    "canonical Qwen14B/SAM2/CLIP",
+    "VG source images and annotations"
+  ],
+  "actions_after_approval": [
+    "Copy981manifest-listed feature shards and manifest to local without server writes",
+    "Stream SHA256-verify every local shard against original manifest; preserve exact source paths and raw manifest",
+    "Recheck target inode/size/mtime/hardlinks and active consumers before removal",
+    "Remove only the981verified server .pt shards; preserve manifest and all scientific evidence",
+    "Record measured free space, exact deleted paths and local restoration instructions",
+    "Remeasure resource admission; launch registered R1check-only continuation if admitted"
+  ],
+  "authorization": "User directly approved saving cache locally and continuing server work after concrete981-shard backup/SHA/removal proposal"
+}

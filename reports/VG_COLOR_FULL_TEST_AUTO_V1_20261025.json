@@ -1,0 +1,29 @@
+{
+  "status": "FULL_COLOR_TEST_CACHE_COMPLETE_UNVERIFIED_CANDIDATES",
+  "utc": "2026-10-25T22:19:14.470769+00:00",
+  "counts": {
+    "images_with_requested_nodes": 24386,
+    "requested_nodes": 88345,
+    "node_not_requested": 3240609,
+    "node_unknown": 83131,
+    "images": 26446,
+    "node_candidate_not_human_validated": 5214,
+    "images_without_requested_nodes": 2060
+  },
+  "expected_images": 26446,
+  "one_pass": true,
+  "TEST_prediction_sha256": "1ebbe42de86960144bc5ccf1b427e6bb8a1600fb62697c70e2853b986a5e37de",
+  "output_sha256": {
+    "candidate_records.jsonl.gz": "bdde196bad661e31bd342f641e6747c9c0f03381d61af49ca845af502cb9ce47",
+    "full_sg_color_candidates.jsonl.gz": "327c17032f84ba570c971b516867c30c875744caee4e9bd7f65bd3359106d802",
+    "image_commits.jsonl": "41968afdb41b061466545e29564aa5ee19b39abb1c5cec4418c4e07d617e9223"
+  },
+  "human_labels": 0,
+  "human_precision_gate_passed": false,
+  "elapsed_seconds_after_load": 33292.03669239953,
+  "peak_RSS_bytes": 2387320832,
+  "peak_allocator_bytes": 1160458752,
+  "GT_accessed_by_extractor": false,
+  "new_SGDet_inference_or_scoring": false,
+  "caption_generated": false
+}

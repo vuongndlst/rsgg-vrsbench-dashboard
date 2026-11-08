@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "golden_tests": 11,
+  "official_metric_parity_cases": 32,
+  "official_metric_parity_unique_images": 16,
+  "prediction_sources": [
+    "random",
+    "trained_A1"
+  ],
+  "metric_parity_tolerance": 1e-12,
+  "loader_parity_image_ids": [
+    1,
+    2,
+    3,
+    3316,
+    498333
+  ],
+  "train_split_indices_match_official": true,
+  "checkpoint_reload_exact": true,
+  "reference_commit": "ceb71fa88461c2a97a6258a80f47669d89207296",
+  "metric_values": {
+    "20": {
+      "gc_R": 0.2029249934691745,
+      "ngc_R": 0.15164658437826542,
+      "gc_mR": 0.014720571095571093,
+      "ngc_mR": 0.011625333000332997
+    },
+    "50": {
+      "gc_R": 0.24220056165099269,
+      "ngc_R": 0.2445443116509927,
+      "gc_mR": 0.026653212528212525,
+      "ngc_mR": 0.03203364162292733
+    },
+    "100": {
+      "gc_R": 0.2570443116509927,
+      "ngc_R": 0.2927573145245559,
+      "gc_mR": 0.028207023796309513,
+      "ngc_mR": 0.03757535916464488
+    }
+  },
+  "intentional_deltas": [
+    "empty prediction counts zero instead of upstream silent skip",
+    "stable ordering for ties; parity scores have no score ties at cutoff"
+  ],
+  "python_executable": "${REMOTE_HOME}/rsg-former/.venv/bin/python"
+}

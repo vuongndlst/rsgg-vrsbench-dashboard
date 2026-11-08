@@ -1,0 +1,1 @@
+{"status": "PASS", "tests": ["confidence_layer_batch_axis", "per_image_normalization", "gradient_sum_effective_batch16", "nan_inf_rejection", "ordered_fp32_collation"], "gpu_used": false, "real_dataset_accessed": false, "module_sha256": "249fc7d832560401a83377095d5fd42d085e9850b7793a31dcc4a2d899115068"}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "syntax": "PASS",
+  "validation_precedes_single_test_open": "PASS",
+  "duplicate_phase_and_test_refusal": "PASS",
+  "selection_control_pool_size": 2,
+  "selected_checkpoint": "artifacts/vg_method_v2_speed_m2_v1/confirmation_context_1729/best.pt",
+  "selected_checkpoint_sha256": "29017a69d7cb6d76d68c834b5d540712775a9e0cf9cae13efd17d78a7b69292e",
+  "source_hashes": {
+    "scripts/remote_vg_component_control_test_v1.py": "3d4abfdfc7d6c2da22dca839ac6875b540914594b90b5d8f3e6295142b44f37f",
+    "scripts/remote_launch_vg_component_control_test_v1.py": "8b8d4a31272d0a0440b839d6363c9e70316dc31bd157d8438b62191a069ea5c2",
+    "scripts/remote_vg_component_control_status.py": "6397ececd56acc18c1877b6cbdf11f7af19cbc6863559cb2bb9851ca96dab3c7"
+  },
+  "test_scored": false,
+  "old_running_source_modified": false,
+  "full_detector_smoke_before_test": "PASS",
+  "human_frozen_checkpoint_assertion": "PASS"
+}

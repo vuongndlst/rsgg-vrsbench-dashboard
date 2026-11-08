@@ -1,0 +1,35 @@
+{
+  "status": "PROVISIONAL_TRAIN_PRIOR_PREPARED",
+  "utc": "2026-10-10T19:38:36.711962+00:00",
+  "elapsed_seconds": 6.115302948281169,
+  "canonical_train_images": 57723,
+  "canonical_unique_relations": 315642,
+  "author_prior_exactly_equals_zero_based_counts": true,
+  "author_prior_exactly_equals_one_based_counts": false,
+  "model_logits_class_indexing": "zero-based 0..149",
+  "draft_prior_object_indexing": "zero-based 0..149; unused padding index150",
+  "draft_prior_predicate_indexing": "zero-based 0..49; no background channel",
+  "draft_shape": [
+    151,
+    151,
+    50
+  ],
+  "draft_dtype": "int64",
+  "provisional_train_images": 55235,
+  "provisional_train_relations": 301905,
+  "provisional_train_ids_sha256": "6b53b60a4ef3dd766e55fa834b37cc2d72c8ef73aa16b908b869c19fbf7058ee",
+  "provisional_exclusion_manifest_sha256": "9f23205cb05ac6689253e069ecc37b0f496cd313c88d99a5619332f5ca999485",
+  "draft_prior_path": "artifacts/caption_readiness/provisional_clean_train_prior_zero_based.pt",
+  "draft_prior_sha256": "281677e9165d659137895035566d902e2225872800587fb2521becaa9d296e1d",
+  "draft_prior_bytes": 9122419,
+  "used_in_any_model": false,
+  "clean_release_certified": false,
+  "cuda_used": false,
+  "training_started": false,
+  "test_scored": false,
+  "remaining": [
+    "Finalize image overlap/exclusion release and regenerate prior",
+    "Register explicit prior indexing/normalization protocol before fresh SGG",
+    "Do not alter prior or checkpoint buffers in live v2"
+  ]
+}

@@ -1,0 +1,7 @@
+{"event": "storage_verified", "free_gib": 69.14, "project_root": "${REMOTE_HOME}/rsg-former"}
+{"event": "project_environment_ready", "python_alias": "${REMOTE_HOME}/rsg-former/.venv/bin/python", "isolation": "project_overlay_inherits_locked_system_torch; no shared packages modified"}
+{"event": "download_complete", "file": "VG-SGG-dicts-with-attri.json", "bytes": 18482}
+{"event": "download_complete", "file": "image_data.json", "bytes": 21023782}
+{"event": "download_complete", "file": "VG-SGG-with-attri.h5", "bytes": 151158382}
+{"event": "download_complete", "file": "STAR_SGG_Annotation.zip", "bytes": 63295542}
+{"event": "p0_preparation_complete", "files": 4, "report": "reports/P0_PREPARATION.json"}

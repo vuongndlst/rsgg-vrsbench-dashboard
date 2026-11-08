@@ -1,0 +1,28 @@
+{
+  "status": "PLAN_AND_ALL150_TABLES_VERIFIED_NO_INFERENCE_OR_TEST",
+  "utc": "2026-10-24T08:08:05.492273+00:00",
+  "source_hashes": {
+    "scripts/remote_vg_color_attribute_audit_v2_20261024.py": "b7e3bcf09a6eb6450be7cca0df0bed863e099bc481a13f7b19779021736b3446",
+    "scripts/summarize_vg_color_audit_20261024.py": "eacfbe4cf0006037af9aeb16d9d634e248cbc5bb0a6ecc07901a1844e77c4378",
+    "reports/VG150_OBJECT_COLOR_TRAIN_VAL_AUDIT_V2_20261024.json": "c0bd64276df7da013c45f1f2d9e3f5e0bc325e02a2077ce912041e1260a39c04",
+    "reports/VG150_COLOR_PRIORITY_20261024.csv": "500090af9f147d268609f1c4a0b45ca6a394cd0904339d1e015a38b5dad1e1d8",
+    "reports/VG150_COLOR_PRIORITY_20261024.md": "4539588ce5b6715c60356524acf70cd69ff75620520405ac3637928457819fba",
+    "reports/VG_COLOR_AUDIT_SUMMARY_20261024.json": "9d2fbd1af8de958ef401c91fe3873affbba0dddfa2cb847ea277cad1576e4c3e",
+    "research/VG_COLOR_ENRICHED_SG_CAPTION_PLAN_20261024.md": "b9858400732d5024c732f893f5cc690b362d60a1c254e5b9aa8af9d9ab212e93",
+    "configs/vg_color_enrichment_v1_draft.json": "b3cbbf74a400d2b7649a6bb46dce4137ea7ba996a430a6064b62cd6ca3ed5bda"
+  },
+  "all_150_classes_verified": true,
+  "table_totals_reconciled": true,
+  "palette_all21_attribute_names_and19_normalized_labels_verified": true,
+  "train_val_only": true,
+  "read_only_remote_audit_utc": "2026-10-24T08:01:16.064127+00:00",
+  "remote_server_files_written": 0,
+  "model_loaded": false,
+  "color_extraction_run": false,
+  "caption_generated": false,
+  "caption_test_scored": false,
+  "training_seeds_remain_paused": true,
+  "resource_caps_increased": false,
+  "automation_resumed": false,
+  "source_palette_audit_v1_preserved": true
+}

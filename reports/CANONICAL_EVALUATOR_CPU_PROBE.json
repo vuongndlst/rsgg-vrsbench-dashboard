@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-10T19:59:58.298898+00:00",
+  "scope": "synthetic matching, class/predicate endpoints, empty misses and float64 IoU arithmetic",
+  "scalar_pinned_cython_formula_max_abs_error": 0.0,
+  "synthetic_cases": {
+    "perfect": {
+      "R@50": 1.0,
+      "mR@50": 0.04
+    },
+    "wrong_object_class": {
+      "R@50": 0.0,
+      "mR@50": 0.0
+    },
+    "wrong_predicate": {
+      "R@50": 0.0,
+      "mR@50": 0.0
+    },
+    "wrong_box": {
+      "R@50": 0.0,
+      "mR@50": 0.0
+    },
+    "empty_predictions": {
+      "R@50": 0.0,
+      "mR@50": 0.0
+    }
+  },
+  "source_hashes": {
+    "src/rsgformer/vg_canonical_evaluation.py": "da5ee0272739f335461375597f93726d0deb48e4e70d1c0bca544aad1e618cba",
+    "vendor/salience_sgg/evaluation/vg_sgg_evaluator.py": "b95d7695ed5014f8e87033cc0e20f18565360c56a028ad09310ebcb45b1ca595",
+    "vendor/salience_sgg/lib/fpn/box_intersections_cpu/bbox.pyx": "197a309391dd3014ac71502a1d45d50892b07bd635c074f9b0c2c66bd7038233"
+  },
+  "compiled_bbox_extension_executed": false,
+  "cuda_used": false,
+  "model_initialized": false,
+  "benchmark_validation_scored": false,
+  "benchmark_test_scored": false,
+  "live_v2_modified": false,
+  "remaining": [
+    "Native postprocessor/ranking/NMS parity",
+    "Canonical release and clean-training preregistration",
+    "Real model validation after training; synthetic R/mR are not benchmark evidence"
+  ]
+}

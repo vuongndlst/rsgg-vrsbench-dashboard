@@ -1,0 +1,1214 @@
+{
+  "status": "COCO_PILOT100_5ARM_ABLATION_COMPLETE",
+  "utc": "2026-11-06T15:15:06Z",
+  "wall_seconds": 621.5921542644501,
+  "metrics": {
+    "C0_objects": {
+      "Bleu_1": 36.778332145376496,
+      "Bleu_2": 19.22912201890281,
+      "Bleu_3": 8.358640137354783,
+      "Bleu_4": 4.033669804039392,
+      "METEOR": 13.649541241091894,
+      "ROUGE_L": 30.996942337638284,
+      "CIDEr": 16.667956661203544
+    },
+    "C1_native_zero": {
+      "Bleu_1": 48.18456883506189,
+      "Bleu_2": 30.505235853698874,
+      "Bleu_3": 18.308912354090186,
+      "Bleu_4": 11.2843130625799,
+      "METEOR": 19.019983459238734,
+      "ROUGE_L": 38.23095393273269,
+      "CIDEr": 45.31052216699381
+    },
+    "C1_native_few": {
+      "Bleu_1": 48.394675019539235,
+      "Bleu_2": 30.685153394875524,
+      "Bleu_3": 18.463943540642028,
+      "Bleu_4": 11.376614540333554,
+      "METEOR": 18.32103243935312,
+      "ROUGE_L": 38.08138073343924,
+      "CIDEr": 45.64910426945779
+    },
+    "C2_rsg_zero": {
+      "Bleu_1": 47.80303030299409,
+      "Bleu_2": 28.82144355411697,
+      "Bleu_3": 16.074364824689916,
+      "Bleu_4": 9.1214220915347,
+      "METEOR": 18.660606803429854,
+      "ROUGE_L": 37.12669073890515,
+      "CIDEr": 42.913524729596624
+    },
+    "C2_rsg_few": {
+      "Bleu_1": 48.77081681201525,
+      "Bleu_2": 29.982703595247568,
+      "Bleu_3": 16.498103463405574,
+      "Bleu_4": 9.14992396160765,
+      "METEOR": 18.315461804915127,
+      "ROUGE_L": 36.29794995409008,
+      "CIDEr": 43.7186102590398
+    }
+  },
+  "samples": [
+    {
+      "image_id": 391895,
+      "file_name": "COCO_val2014_000000391895.jpg",
+      "C1_triplets": [
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "helmet",
+          "score": 3.0316010452224873e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "motorcycle",
+          "score": 2.8770064091077074e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "shirt",
+          "score": 2.0645235053962097e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "short",
+          "score": 1.598240305611398e-05
+        },
+        {
+          "subject": "tire",
+          "predicate": "on back of",
+          "object": "motorcycle",
+          "score": 1.5459723726962693e-05
+        },
+        {
+          "subject": "helmet",
+          "predicate": "on",
+          "object": "man",
+          "score": 1.2382200111460406e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 1.2086118658771738e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "has",
+          "object": "head",
+          "score": 1.1840105798910372e-05
+        }
+      ],
+      "C2_triplets": [
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "helmet",
+          "score": 2.891338590416126e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "motorcycle",
+          "score": 2.5910550903063267e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "shirt",
+          "score": 1.4612355698773172e-05
+        },
+        {
+          "subject": "tire",
+          "predicate": "of",
+          "object": "motorcycle",
+          "score": 1.343167696177261e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 1.267072821065085e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "short",
+          "score": 1.1719516805897001e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "has",
+          "object": "head",
+          "score": 1.1490895303722937e-05
+        },
+        {
+          "subject": "person",
+          "predicate": "riding",
+          "object": "motorcycle",
+          "score": 1.0173972441407386e-05
+        }
+      ],
+      "caption_C0": "A person is sitting on a bench near a bicycle and a car.",
+      "caption_C1_zero": "A man is riding a motorcycle while wearing a helmet and a short shirt.",
+      "caption_C1_few": "A man is riding a motorcycle while wearing a helmet and a shirt.",
+      "caption_C2_zero": "A man is riding a motorcycle while wearing a helmet and a shirt.",
+      "caption_C2_few": "A man is riding a motorcycle on a sunny day, wearing a helmet and a shirt.",
+      "references": [
+        "A man with a red helmet on a small moped on a dirt road.",
+        "Man riding a motor bike on a dirt road on the countryside.",
+        "A man riding on the back of a motorcycle.",
+        "A dirt path with a young person on a motor bike rests to the foreground of a verdant area with a bridge and a background of cloud-wreathed mountains.",
+        "A man in a red shirt and a red hat is on a motorcycle on a hill side."
+      ]
+    },
+    {
+      "image_id": 60623,
+      "file_name": "COCO_val2014_000000060623.jpg",
+      "C1_triplets": [
+        {
+          "subject": "hand",
+          "predicate": "holding",
+          "object": "fork",
+          "score": 1.6541622244403698e-05
+        },
+        {
+          "subject": "bowl",
+          "predicate": "above",
+          "object": "table",
+          "score": 1.526768937765155e-05
+        },
+        {
+          "subject": "food",
+          "predicate": "in",
+          "object": "bowl",
+          "score": 1.0673991710064001e-05
+        },
+        {
+          "subject": "fork",
+          "predicate": "in",
+          "object": "hand",
+          "score": 9.261665582016576e-06
+        },
+        {
+          "subject": "glass",
+          "predicate": "on",
+          "object": "table",
+          "score": 8.492336746712681e-06
+        },
+        {
+          "subject": "fork",
+          "predicate": "above",
+          "object": "table",
+          "score": 8.220231393352151e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "of",
+          "object": "food",
+          "score": 8.204793630284257e-06
+        },
+        {
+          "subject": "girl",
+          "predicate": "has",
+          "object": "eye",
+          "score": 8.127607543428894e-06
+        }
+      ],
+      "C2_triplets": [
+        {
+          "subject": "food",
+          "predicate": "in",
+          "object": "bowl",
+          "score": 1.3468732504406944e-05
+        },
+        {
+          "subject": "bowl",
+          "predicate": "on",
+          "object": "table",
+          "score": 1.0917896361206658e-05
+        },
+        {
+          "subject": "hand",
+          "predicate": "holding",
+          "object": "fork",
+          "score": 1.0285706594004296e-05
+        },
+        {
+          "subject": "glass",
+          "predicate": "on",
+          "object": "table",
+          "score": 9.354274880024604e-06
+        },
+        {
+          "subject": "fork",
+          "predicate": "in",
+          "object": "hand",
+          "score": 8.88919021235779e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "with",
+          "object": "food",
+          "score": 8.765227903495543e-06
+        },
+        {
+          "subject": "person",
+          "predicate": "holding",
+          "object": "fork",
+          "score": 7.752839337626938e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "above",
+          "object": "table",
+          "score": 7.039133834041422e-06
+        }
+      ],
+      "caption_C0": "A person is sitting at a table with a bottle and bowl in front of them.",
+      "caption_C1_zero": "A girl is holding a fork with food near a bowl on the table.",
+      "caption_C1_few": "A girl holds a fork over a bowl of food on the table.",
+      "caption_C2_zero": "A person is eating from a bowl of food with a fork on the table.",
+      "caption_C2_few": "A person is eating from a bowl of food on a table with a glass nearby.",
+      "references": [
+        "A young girl inhales with the intent of blowing out a candle.",
+        "A young girl is preparing to blow out her candle.",
+        "A kid is to blow out the single candle in a bowl of birthday goodness.",
+        "Girl blowing out the candle on an ice-cream",
+        "A little girl is getting ready to blow out a candle on a small dessert."
+      ]
+    },
+    {
+      "image_id": 483108,
+      "file_name": "COCO_val2014_000000483108.jpg",
+      "C1_triplets": [
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 2.9284468837431632e-05
+        },
+        {
+          "subject": "person",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 1.817391239455901e-05
+        },
+        {
+          "subject": "window",
+          "predicate": "on",
+          "object": "train",
+          "score": 1.209203401231207e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "jacket",
+          "score": 1.1510148397064768e-05
+        },
+        {
+          "subject": "sign",
+          "predicate": "on",
+          "object": "pole",
+          "score": 1.085985786630772e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "pant",
+          "score": 1.0286685210303403e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "has",
+          "object": "hair",
+          "score": 7.27652923160349e-06
+        },
+        {
+          "subject": "head",
+          "predicate": "of",
+          "object": "man",
+          "score": 6.190985914145131e-06
+        }
+      ],
+      "C2_triplets": [
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 3.063435360672884e-05
+        },
+        {
+          "subject": "person",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 1.568689549458213e-05
+        },
+        {
+          "subject": "sign",
+          "predicate": "attached to",
+          "object": "pole",
+          "score": 1.522239745099796e-05
+        },
+        {
+          "subject": "window",
+          "predicate": "on",
+          "object": "train",
+          "score": 9.741644134919625e-06
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "pant",
+          "score": 7.481577540602302e-06
+        },
+        {
+          "subject": "pole",
+          "predicate": "holding",
+          "object": "sign",
+          "score": 6.790316092519788e-06
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "jacket",
+          "score": 6.306143859546864e-06
+        },
+        {
+          "subject": "sign",
+          "predicate": "attached to",
+          "object": "post",
+          "score": 5.749094270868227e-06
+        }
+      ],
+      "caption_C0": "A person with a bag walks past a building towards a bicycle.",
+      "caption_C1_zero": "A man is riding a bike past a train with windows visible.",
+      "caption_C1_few": "A man in a jacket rides a bike past a train window.",
+      "caption_C2_zero": "A man is riding a bike near a train with a signpost nearby.",
+      "caption_C2_few": "A man in a jacket rides a bike past a train window and a street sign.",
+      "references": [
+        "A man on a bicycle riding next to a train",
+        "A person is riding a bicycle but there is a train in the background.",
+        "a red and white train and a man riding a bicycle",
+        "a guy that is riding his bike next to a train",
+        "A man riding a bike past a train traveling along tracks."
+      ]
+    },
+    {
+      "image_id": 384213,
+      "file_name": "COCO_val2014_000000384213.jpg",
+      "C1_triplets": [
+        {
+          "subject": "towel",
+          "predicate": "on",
+          "object": "counter",
+          "score": 1.3752025552093983e-05
+        },
+        {
+          "subject": "towel",
+          "predicate": "on",
+          "object": "sink",
+          "score": 6.963373834878439e-06
+        },
+        {
+          "subject": "towel",
+          "predicate": "on",
+          "object": "cabinet",
+          "score": 6.84728956912295e-06
+        },
+        {
+          "subject": "curtain",
+          "predicate": "over",
+          "object": "window",
+          "score": 6.363862212310778e-06
+        },
+        {
+          "subject": "bottle",
+          "predicate": "on",
+          "object": "counter",
+          "score": 6.096707693359349e-06
+        },
+        {
+          "subject": "towel",
+          "predicate": "near",
+          "object": "sink",
+          "score": 4.841578174819006e-06
+        },
+        {
+          "subject": "curtain",
+          "predicate": "covering",
+          "object": "window",
+          "score": 4.726387487608008e-06
+        },
+        {
+          "subject": "curtain",
+          "predicate": "on",
+          "object": "window",
+          "score": 4.622721007763175e-06
+        }
+      ],
+      "C2_triplets": [
+        {
+          "subject": "towel",
+          "predicate": "on",
+          "object": "counter",
+          "score": 9.730133569973987e-06
+        },
+        {
+          "subject": "towel",
+          "predicate": "laying on",
+          "object": "sink",
+          "score": 8.135461939673405e-06
+        },
+        {
+          "subject": "curtain",
+          "predicate": "over",
+          "object": "window",
+          "score": 7.195336820586817e-06
+        },
+        {
+          "subject": "curtain",
+          "predicate": "hanging from",
+          "object": "window",
+          "score": 5.569102086155908e-06
+        },
+        {
+          "subject": "curtain",
+          "predicate": "covering",
+          "object": "window",
+          "score": 5.224400410952512e-06
+        },
+        {
+          "subject": "bottle",
+          "predicate": "on",
+          "object": "counter",
+          "score": 5.129337750986451e-06
+        },
+        {
+          "subject": "towel",
+          "predicate": "on",
+          "object": "sink",
+          "score": 3.7472336771315895e-06
+        },
+        {
+          "subject": "towel",
+          "predicate": "above",
+          "object": "sink",
+          "score": 3.4208915167255327e-06
+        }
+      ],
+      "caption_C0": "A cabinet filled with various items including a basket and bottles stands against a wall.",
+      "caption_C1_zero": "A bathroom with towels hanging on various surfaces and a curtain covering the window.",
+      "caption_C1_few": "Towels are neatly arranged on the bathroom counter and sink near the window covered by curtains.",
+      "caption_C2_zero": "A bathroom scene with a towel on the counter and sink, and curtains over the window.",
+      "caption_C2_few": "Towels and a bottle sit on the counter next to the bathroom sink and curtain-covered window.",
+      "references": [
+        "A kitchen is shown with a variety of items on the counters.",
+        "A kitchen has the windows open and plaid curtains.",
+        "A kitchen with two windows and two metal sinks.",
+        "An older kitchen with cluttered counter tops but empty sink.",
+        "Glasses and bottles are placed near a kitchen sink."
+      ]
+    },
+    {
+      "image_id": 386164,
+      "file_name": "COCO_val2014_000000386164.jpg",
+      "C1_triplets": [
+        {
+          "subject": "chair",
+          "predicate": "at",
+          "object": "table",
+          "score": 7.5823541010322515e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "above",
+          "object": "table",
+          "score": 6.395148375304416e-06
+        },
+        {
+          "subject": "table",
+          "predicate": "made of",
+          "object": "chair",
+          "score": 4.2971878428943455e-06
+        },
+        {
+          "subject": "table",
+          "predicate": "made of",
+          "object": "table",
+          "score": 4.148845619056374e-06
+        },
+        {
+          "subject": "table",
+          "predicate": "at",
+          "object": "table",
+          "score": 2.2913670818525134e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "on",
+          "object": "table",
+          "score": 2.1838752672920236e-06
+        },
+        {
+          "subject": "fruit",
+          "predicate": "on",
+          "object": "table",
+          "score": 2.005747774092015e-06
+        },
+        {
+          "subject": "board",
+          "predicate": "lying on",
+          "object": "table",
+          "score": 1.9615667952166405e-06
+        }
+      ],
+      "C2_triplets": [
+        {
+          "subject": "chair",
+          "predicate": "at",
+          "object": "table",
+          "score": 4.373924639367033e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "on",
+          "object": "table",
+          "score": 3.3196713502547937e-06
+        },
+        {
+          "subject": "fruit",
+          "predicate": "on",
+          "object": "table",
+          "score": 2.6636118946044007e-06
+        },
+        {
+          "subject": "table",
+          "predicate": "made of",
+          "object": "table",
+          "score": 2.5322835881524952e-06
+        },
+        {
+          "subject": "table",
+          "predicate": "made of",
+          "object": "chair",
+          "score": 2.3413781491399277e-06
+        },
+        {
+          "subject": "fruit",
+          "predicate": "under",
+          "object": "table",
+          "score": 1.4000391956869862e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "above",
+          "object": "table",
+          "score": 1.3432506875687977e-06
+        },
+        {
+          "subject": "board",
+          "predicate": "on",
+          "object": "table",
+          "score": 1.0538493597778142e-06
+        }
+      ],
+      "caption_C0": "A person is eating food at a table set with a bowl and fruits.",
+      "caption_C1_zero": "A table with a bowl of fruit is set up, partially constructed from chairs.",
+      "caption_C1_few": "A table set with a bowl of fruit and boards lying atop it.",
+      "caption_C2_zero": "A table with a mix of objects including a bowl, fruit, and an unusual construction of boards and chairs.",
+      "caption_C2_few": "A table set with a bowl and fruit, likely for a meal.",
+      "references": [
+        "A wooden ball on top of a wooden stick.",
+        "The table is full of wooden spoons and utensils.",
+        "A wood table holding an assortment of wood cooking utensils.",
+        "A selection of wooden kitchen tools on a counter.",
+        "Wooden spoons are lined up on a table"
+      ]
+    },
+    {
+      "image_id": 223648,
+      "file_name": "COCO_val2014_000000223648.jpg",
+      "C1_triplets": [
+        {
+          "subject": "chair",
+          "predicate": "at",
+          "object": "table",
+          "score": 1.555022936372552e-05
+        },
+        {
+          "subject": "fork",
+          "predicate": "on",
+          "object": "table",
+          "score": 1.139469623012701e-05
+        },
+        {
+          "subject": "fork",
+          "predicate": "laying on",
+          "object": "table",
+          "score": 1.1154110325151123e-05
+        },
+        {
+          "subject": "leg",
+          "predicate": "of",
+          "object": "chair",
+          "score": 1.0712147741287481e-05
+        },
+        {
+          "subject": "chair",
+          "predicate": "near",
+          "object": "table",
+          "score": 7.066231319186045e-06
+        },
+        {
+          "subject": "leg",
+          "predicate": "of",
+          "object": "table",
+          "score": 6.6712646002997644e-06
+        },
+        {
+          "subject": "chair",
+          "predicate": "under",
+          "object": "table",
+          "score": 5.735214926971821e-06
+        },
+        {
+          "subject": "fork",
+          "predicate": "lying on",
+          "object": "table",
+          "score": 5.697287633665837e-06
+        }
+      ],
+      "C2_triplets": [
+        {
+          "subject": "chair",
+          "predicate": "at",
+          "object": "table",
+          "score": 1.2555188732221723e-05
+        },
+        {
+          "subject": "book",
+          "predicate": "on",
+          "object": "shelf",
+          "score": 9.284445695811883e-06
+        },
+        {
+          "subject": "fork",
+          "predicate": "on",
+          "object": "table",
+          "score": 6.282081358222058e-06
+        },
+        {
+          "subject": "fork",
+          "predicate": "sitting on",
+          "object": "table",
+          "score": 5.787864211015403e-06
+        },
+        {
+          "subject": "leg",
+          "predicate": "of",
+          "object": "chair",
+          "score": 4.535395419225097e-06
+        },
+        {
+          "subject": "chair",
+          "predicate": "in front of",
+          "object": "table",
+          "score": 4.141742010688176e-06
+        },
+        {
+          "subject": "leg",
+          "predicate": "of",
+          "object": "table",
+          "score": 3.989742253907025e-06
+        },
+        {
+          "subject": "chair",
+          "predicate": "has",
+          "object": "leg",
+          "score": 3.770863258978352e-06
+        }
+      ],
+      "caption_C0": "A bird perches on a branch near a window with a bus visible outside.",
+      "caption_C1_zero": "A chair is positioned under a table with a fork lying on it.",
+      "caption_C1_few": "A fork lies on the table next to a chair.",
+      "caption_C2_zero": "A chair with a fork on the table in front of it, while a bookshelf is nearby.",
+      "caption_C2_few": "A chair is placed in front of a table with a fork on it and a bookshelf nearby.",
+      "references": [
+        "Multiple wooden spoons are shown on a table top.",
+        "A table surrounded by chairs and filled with cooking utensils.",
+        "Wooden spoons laid out across a kitchen table.",
+        "Wooden spoons and forks are all over a table.",
+        "A table and chairs with wooden kitchen tools on top."
+      ]
+    },
+    {
+      "image_id": 403385,
+      "file_name": "COCO_val2014_000000403385.jpg",
+      "C1_triplets": [
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "seat",
+          "score": 1.60657218657434e-05
+        },
+        {
+          "subject": "seat",
+          "predicate": "of",
+          "object": "toilet",
+          "score": 1.3774514627584722e-05
+        },
+        {
+          "subject": "paper",
+          "predicate": "for",
+          "object": "toilet",
+          "score": 5.937891273788409e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "of",
+          "object": "toilet",
+          "score": 5.6174008022935595e-06
+        },
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "bowl",
+          "score": 5.097589564684313e-06
+        },
+        {
+          "subject": "sink",
+          "predicate": "near",
+          "object": "toilet",
+          "score": 4.077866833540611e-06
+        },
+        {
+          "subject": "pole",
+          "predicate": "over",
+          "object": "sink",
+          "score": 3.6170158637105487e-06
+        },
+        {
+          "subject": "seat",
+          "predicate": "has",
+          "object": "seat",
+          "score": 2.8764318358298624e-06
+        }
+      ],
+      "C2_triplets": [
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "seat",
+          "score": 2.117447365890257e-05
+        },
+        {
+          "subject": "seat",
+          "predicate": "of",
+          "object": "toilet",
+          "score": 1.4079487300477922e-05
+        },
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "bowl",
+          "score": 7.654079126950819e-06
+        },
+        {
+          "subject": "pole",
+          "predicate": "over",
+          "object": "sink",
+          "score": 6.572778147528879e-06
+        },
+        {
+          "subject": "sink",
+          "predicate": "near",
+          "object": "toilet",
+          "score": 4.8969441195367835e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "of",
+          "object": "toilet",
+          "score": 3.878396910295123e-06
+        },
+        {
+          "subject": "towel",
+          "predicate": "above",
+          "object": "sink",
+          "score": 3.470558795015677e-06
+        },
+        {
+          "subject": "paper",
+          "predicate": "for",
+          "object": "toilet",
+          "score": 3.318268454677309e-06
+        }
+      ],
+      "caption_C0": "A dog is sitting in a room with a person's face partially visible.",
+      "caption_C1_zero": "A toilet with a seat is near a sink equipped with a paper dispenser.",
+      "caption_C1_few": "A toilet with its seat down is next to a sink in a bathroom.",
+      "caption_C2_zero": "A bathroom featuring a toilet with a seat, sink, and towel.",
+      "caption_C2_few": "A bathroom featuring a toilet with its seat up, sink, and towel.",
+      "references": [
+        "A bathroom that has a broken wall in the shower.",
+        "A bathroom looks clean but is missing tile at the shower stall.",
+        "A view of a bathroom that needs to be fixed up.",
+        "a shower toilet and sink in a basement bathroom",
+        "A very big whit rest room with a shabby looking shower."
+      ]
+    },
+    {
+      "image_id": 294832,
+      "file_name": "COCO_val2014_000000294832.jpg",
+      "C1_triplets": [
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "seat",
+          "score": 1.8247348634758964e-05
+        },
+        {
+          "subject": "cabinet",
+          "predicate": "above",
+          "object": "toilet",
+          "score": 8.370826435566414e-06
+        },
+        {
+          "subject": "cabinet",
+          "predicate": "above",
+          "object": "sink",
+          "score": 7.639225259481464e-06
+        },
+        {
+          "subject": "seat",
+          "predicate": "of",
+          "object": "toilet",
+          "score": 6.254459549381863e-06
+        },
+        {
+          "subject": "sink",
+          "predicate": "and",
+          "object": "toilet",
+          "score": 5.044117642682977e-06
+        },
+        {
+          "subject": "sink",
+          "predicate": "with",
+          "object": "seat",
+          "score": 3.7263314425217686e-06
+        },
+        {
+          "subject": "light",
+          "predicate": "over",
+          "object": "toilet",
+          "score": 3.362508778081974e-06
+        },
+        {
+          "subject": "light",
+          "predicate": "above",
+          "object": "toilet",
+          "score": 3.329153059894452e-06
+        }
+      ],
+      "C2_triplets": [
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "seat",
+          "score": 3.145975642837584e-05
+        },
+        {
+          "subject": "cabinet",
+          "predicate": "above",
+          "object": "sink",
+          "score": 8.020107088668738e-06
+        },
+        {
+          "subject": "seat",
+          "predicate": "attached to",
+          "object": "toilet",
+          "score": 7.292854206752963e-06
+        },
+        {
+          "subject": "sink",
+          "predicate": "near",
+          "object": "toilet",
+          "score": 6.782364380342187e-06
+        },
+        {
+          "subject": "cabinet",
+          "predicate": "above",
+          "object": "toilet",
+          "score": 6.2342037381313276e-06
+        },
+        {
+          "subject": "sink",
+          "predicate": "with",
+          "object": "seat",
+          "score": 4.609216830431251e-06
+        },
+        {
+          "subject": "seat",
+          "predicate": "mounted on",
+          "object": "toilet",
+          "score": 4.4596076804737095e-06
+        },
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "bowl",
+          "score": 3.997581643488957e-06
+        }
+      ],
+      "caption_C0": "A cabinet with a bowl and glass on top is near a curtain-covered door.",
+      "caption_C1_zero": "A bathroom featuring a toilet with a seat, an overhead light, and an above-mounted cabinet near a sink.",
+      "caption_C1_few": "A bathroom featuring a toilet with a seat and a sink under a lit fixture.",
+      "caption_C2_zero": "A toilet with a seat is shown, positioned near a sink and beneath a cabinet.",
+      "caption_C2_few": "A toilet with a seat is positioned next to a sink and cabinets.",
+      "references": [
+        "A bathroom with an enclosed shower next to a sink and a toilet.",
+        "A clean, spacious bathroom with a large shower stall.",
+        "There are a toilet, a sink, and a shower stall in a large bathroom.",
+        "A bathroom featuring a walk in shower, mirror, sink and toilet.",
+        "Bathroom with a shower, sink, and toilet in it."
+      ]
+    },
+    {
+      "image_id": 462565,
+      "file_name": "COCO_val2014_000000462565.jpg",
+      "C1_triplets": [
+        {
+          "subject": "woman",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 2.258795029774774e-05
+        },
+        {
+          "subject": "person",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 1.7346801541862078e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 1.0270075108564924e-05
+        },
+        {
+          "subject": "woman",
+          "predicate": "wearing",
+          "object": "helmet",
+          "score": 9.653210327087436e-06
+        },
+        {
+          "subject": "person",
+          "predicate": "wearing",
+          "object": "helmet",
+          "score": 7.213598564703716e-06
+        },
+        {
+          "subject": "car",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 6.512650088552618e-06
+        },
+        {
+          "subject": "tire",
+          "predicate": "on back of",
+          "object": "bike",
+          "score": 6.450792170653585e-06
+        },
+        {
+          "subject": "woman",
+          "predicate": "wearing",
+          "object": "shirt",
+          "score": 5.7262777772848494e-06
+        }
+      ],
+      "C2_triplets": [
+        {
+          "subject": "woman",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 1.6698899344191886e-05
+        },
+        {
+          "subject": "person",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 1.352644721919205e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 9.181208042718936e-06
+        },
+        {
+          "subject": "woman",
+          "predicate": "wearing",
+          "object": "helmet",
+          "score": 8.854991392581724e-06
+        },
+        {
+          "subject": "sign",
+          "predicate": "on",
+          "object": "pole",
+          "score": 7.020068551355507e-06
+        },
+        {
+          "subject": "person",
+          "predicate": "wearing",
+          "object": "helmet",
+          "score": 6.650242539762985e-06
+        },
+        {
+          "subject": "woman",
+          "predicate": "wearing",
+          "object": "short",
+          "score": 4.476887625060044e-06
+        },
+        {
+          "subject": "tire",
+          "predicate": "of",
+          "object": "bike",
+          "score": 4.439193617145065e-06
+        }
+      ],
+      "caption_C0": "A person is standing by a bike near a building with their hand on the bike's handle.",
+      "caption_C1_zero": "A woman is biking while wearing a helmet, with a car nearby.",
+      "caption_C1_few": "A woman wears a helmet while riding a bike on a road.",
+      "caption_C2_zero": "A woman is riding a bike while wearing a helmet on a street with a signpost.",
+      "caption_C2_few": "A man and a woman ride bikes together on a street, both wearing helmets.",
+      "references": [
+        "people on bicycles ride down a busy street",
+        "A group of people are riding bikes down the street in a bike lane",
+        "bike riders passing Burger King in city street",
+        "A group of bicyclists are riding in the bike lane.",
+        "Bicyclists on a city street, most not using the bike lane"
+      ]
+    },
+    {
+      "image_id": 436141,
+      "file_name": "COCO_val2014_000000436141.jpg",
+      "C1_triplets": [
+        {
+          "subject": "door",
+          "predicate": "under",
+          "object": "sink",
+          "score": 8.624557267467026e-06
+        },
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "seat",
+          "score": 8.459249329462182e-06
+        },
+        {
+          "subject": "cabinet",
+          "predicate": "under",
+          "object": "sink",
+          "score": 5.464183686854085e-06
+        },
+        {
+          "subject": "paper",
+          "predicate": "under",
+          "object": "sink",
+          "score": 4.059543698531343e-06
+        },
+        {
+          "subject": "seat",
+          "predicate": "mounted on",
+          "object": "toilet",
+          "score": 3.895595455105649e-06
+        },
+        {
+          "subject": "paper",
+          "predicate": "hanging from",
+          "object": "cabinet",
+          "score": 3.643128820840502e-06
+        },
+        {
+          "subject": "toilet",
+          "predicate": "near",
+          "object": "sink",
+          "score": 3.6414719488675473e-06
+        },
+        {
+          "subject": "cabinet",
+          "predicate": "above",
+          "object": "sink",
+          "score": 3.355095032020472e-06
+        }
+      ],
+      "C2_triplets": [
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "seat",
+          "score": 9.54163715505274e-06
+        },
+        {
+          "subject": "door",
+          "predicate": "under",
+          "object": "sink",
+          "score": 9.237462109012995e-06
+        },
+        {
+          "subject": "cabinet",
+          "predicate": "under",
+          "object": "sink",
+          "score": 4.782073119713459e-06
+        },
+        {
+          "subject": "seat",
+          "predicate": "mounted on",
+          "object": "toilet",
+          "score": 3.4149807106587104e-06
+        },
+        {
+          "subject": "cabinet",
+          "predicate": "above",
+          "object": "sink",
+          "score": 3.3611465823923936e-06
+        },
+        {
+          "subject": "paper",
+          "predicate": "under",
+          "object": "sink",
+          "score": 3.3589728900551563e-06
+        },
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "bowl",
+          "score": 3.2886323424463626e-06
+        },
+        {
+          "subject": "toilet",
+          "predicate": "near",
+          "object": "sink",
+          "score": 3.2707864647818496e-06
+        }
+      ],
+      "caption_C0": "A cat perches on a windowsill as a bird flies by outside.",
+      "caption_C1_zero": "A bathroom scene with a toilet, sink, and cabinets, and some paper products.",
+      "caption_C1_few": "A bathroom with a toilet and sink, and cabinets underneath the sink.",
+      "caption_C2_zero": "A bathroom featuring a toilet with a seat and a sink with cabinets above and below.",
+      "caption_C2_few": "A bathroom featuring a toilet with a seat and a sink nearby.",
+      "references": [
+        "The bathroom is clean and ready to be used.",
+        "a small bathroom with a sink and a toilet.",
+        "A toilet, sink and mirror in the bathroom",
+        "Doorway view into bathroom with a sink and toilet.",
+        "A white toilet sitting next to a sink."
+      ]
+    }
+  ]
+}

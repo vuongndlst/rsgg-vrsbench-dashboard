@@ -1,0 +1,22 @@
+{
+  "status": "FROZEN_PREPARATION_SOURCE_CONFIG_AND_PARENT_HASHES_BEFORE_EXECUTION",
+  "utc": "2026-11-02T06:19:47.728304+00:00",
+  "sha256": {
+    "src/rsgformer/vg_grounding_controls_v1_20261102.py": "be86e2d61045cc378ee40b82b1c0ef8bead6b99ae6449b742bd4f604bf16f8f6",
+    "scripts/remote_vg_grounding_dev_prepare_v1_20261102.py": "d0a7489c461bb4ddf347e07f56d4173eb7e7374141870434a50cc36a2e7b3571",
+    "scripts/check_vg_grounding_controls_contract_v1_20261102.py": "6b849cfe7e1411517d04367eff4b892f90a6bd5507a774b852317542f8d51509",
+    "configs/vg_grounding_controls_v1_20261102.json": "db4eb28785231c9a90925dd95706b9880603eb6ed74af6f63ac06724212aa0f9",
+    "research/VG_GROUNDING_CONTROLS_PREPARATION_PREREGISTRATION_20261102.md": "2e169455725218ffd1ac6fb647d39a0d669d96912ce347ec5ecbed7aca755248",
+    "src/rsgformer/vg_region_focus_repair_v1.py": "02fd0dd3c1cdafbe92cc78abc4c7ae6f722d932d32da6f8147ca3b4b35a54ee9",
+    "src/rsgformer/vg_caption_graph_v1.py": "625a7ce696b8b6609de923227bb9184b82d2a5fc96969fd49bdcf7b9891c658e",
+    "src/rsgformer/vg_caption_candidate_prompt_v2.py": "069255afd7488c5e9cb6b2e21561614f5413977b5c64583fbc14539bb5b8e60d",
+    "configs/qwen_runtime.json": "a3e4fe99474a9606581bb27bf6270182120fa904e8dfd53b42e54658c12ee65d"
+  },
+  "local_parent_input_sha256": {
+    "outputs/vg_focus_repair_failure_20261030/parent/train_generation/query_units_by_policy.json": "e5966f5a08d090d92a73dd4c050c067b1a8e4c7c35674ccb5a660d2c1498fa48",
+    "outputs/vg_focus_repair_failure_20261030/parent/train_generation/generation_commit.jsonl": "21529cefa0c7f0a5276005528cdbe940f0632a7f5578b19bc456f9f88abae394",
+    "configs/vg_grounding_fresh_val_reservation_v2_20261101.json": "619ac35d3c62767f54a47f4ac01fbe0a8106bf085010102def0b1d3b7ec9962f"
+  },
+  "main_Qwen_experiment_implemented_or_launched": false,
+  "no_check_or_TEST_gate_opened": true
+}

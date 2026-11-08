@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-11T02:25:45.941030+00:00",
+  "status": "PASS",
+  "cases": [
+    "OI activity cannot hide VG exit",
+    "incomplete phase stays anomaly",
+    "terminal event durable dedup",
+    "complete index is not clean/test score"
+  ],
+  "monitor_sha256": "e78bf6a6c84c0b1a7eee36b2de509d26e0eb8739a85cfc23a7de1db25095714a",
+  "ssh_calls": 0,
+  "real_monitor_state_modified": false,
+  "real_jobs_modified": false
+}

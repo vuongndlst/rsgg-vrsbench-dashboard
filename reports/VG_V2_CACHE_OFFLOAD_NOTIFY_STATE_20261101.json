@@ -1,0 +1,10 @@
+{
+  "event_keys": [
+    "COMPLETE_981_OFFLOAD:246919e26c837d701acc72198388b212fe51100b71192a3a271baa081d80a538",
+    "RECEIPT_CRLF_NOOP_FAILURE_REPAIRED_20261101"
+  ],
+  "last_notified_utc": "2026-11-01T06:16:11.266107+00:00",
+  "last_event": "COMPLETE_981_OFFLOAD:246919e26c837d701acc72198388b212fe51100b71192a3a271baa081d80a538",
+  "cleanup_complete": true,
+  "R1_initial_launch_verified": true
+}

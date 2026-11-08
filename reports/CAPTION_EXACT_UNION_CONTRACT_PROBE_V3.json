@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-11T03:45:22.211966+00:00",
+  "status": "PASS",
+  "source_sha256": "283dc9ad51ba79b1d0e51b11623f311d5c00f48d93e54a7290633785337bad10",
+  "cases": [
+    "three-source identity dedup",
+    "empty source",
+    "supplemental conflict refusal",
+    "pinned actual evidence provenance",
+    "tamper refusal",
+    "method conflict refusal",
+    "heldout direction"
+  ],
+  "journal_modified": false,
+  "benchmark_test_scored": false,
+  "image_pixels_read_or_written": false,
+  "network_downloaded_bytes": 0
+}

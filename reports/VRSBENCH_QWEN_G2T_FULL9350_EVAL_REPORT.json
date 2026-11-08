@@ -1,0 +1,14 @@
+{
+  "task": "VRSBench Full 9,350-Sample Official Test Split Evaluation",
+  "adapter": "qwen_vrsbench_g2t_full_step900",
+  "num_samples": 9350,
+  "metrics": {
+    "BLEU-1": 41.94,
+    "BLEU-2": 25.45,
+    "BLEU-3": 16.13,
+    "BLEU-4": 10.47,
+    "METEOR": 20.59,
+    "ROUGE-L": 31.65,
+    "CIDEr": 31.13
+  }
+}

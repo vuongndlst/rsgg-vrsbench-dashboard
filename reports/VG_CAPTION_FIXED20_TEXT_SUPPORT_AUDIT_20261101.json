@@ -1,0 +1,1005 @@
+{
+  "status": "FIXED20_ASSISTANT_TEXT_SUPPORT_AUDIT_COMPLETE_NOT_HUMAN_OR_VISUAL_ACCURACY",
+  "utc": "2026-11-01T08:49:50.712158+00:00",
+  "input_packet_sha256": "152af3bc536531374ebfaf86f28734136db37683d5e2e3500fb14736ba6abb5f",
+  "sample_was_fixed_before_check": true,
+  "sample_units": 20,
+  "paired_outputs_reviewed": 40,
+  "source_images_viewed": 0,
+  "human_labels_created": 0,
+  "review_is_unblinded": true,
+  "summary": {
+    "L0": {
+      "reviewed_outputs": 20,
+      "empty_outputs": 6,
+      "outputs_with_input_support_concern": 4,
+      "unverified_physical_count_outputs": 1,
+      "flag_instances": {
+        "relation_not_explicit_in_graph": 3,
+        "physical_object_count_unverified": 1,
+        "state_not_supplied": 1,
+        "material_not_supplied": 1
+      }
+    },
+    "L2": {
+      "reviewed_outputs": 20,
+      "empty_outputs": 0,
+      "outputs_with_input_support_concern": 6,
+      "unverified_physical_count_outputs": 0,
+      "flag_instances": {
+        "relation_not_explicit_in_graph": 3,
+        "relation_direction_reversed_relative_to_graph": 1,
+        "state_not_supplied": 2,
+        "material_not_supplied": 1
+      }
+    }
+  },
+  "reference_target_gap_units": 8,
+  "reference_target_gap_interpretation": "Text-only missing/coarse reference target in predicted graph; not visually established detector misclassification",
+  "labels_are_assistant_observations_not_accuracy_labels": true,
+  "no_precision_or_accuracy_estimate": true,
+  "reference_in_generator": false,
+  "generation_or_metric_rerun": false,
+  "scientific_policy_changed_or_adopted": false,
+  "TEST_accessed": false,
+  "rows": [
+    {
+      "unit_id": "vg:195:region:4938542",
+      "registered_sample_index": 1,
+      "policy": "L0",
+      "caption": "",
+      "reference_for_evaluation_only": [
+        "plate on the table"
+      ],
+      "graph_sha256": "57501e5c6808b3e14852a4ea21dc7873abf9409032a06f9b740c973e83f62cf7",
+      "caption_empty": true,
+      "graph_labels": [],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "L0empty. L2plate is supported by its one node; table/on context from reference is absent from query SG.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:195:region:4938542",
+      "registered_sample_index": 1,
+      "policy": "L2",
+      "caption": "a plate",
+      "reference_for_evaluation_only": [
+        "plate on the table"
+      ],
+      "graph_sha256": "d1c9fb5c40b34b67b8fa696d36c0de7a44f387247106c6bbd61854b2642680a1",
+      "caption_empty": false,
+      "graph_labels": [
+        "plate"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "L0empty. L2plate is supported by its one node; table/on context from reference is absent from query SG.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:1176:region:4987623",
+      "registered_sample_index": 2,
+      "policy": "L0",
+      "caption": "door with handle",
+      "reference_for_evaluation_only": [
+        "large white refrigerator inside an open cupboard"
+      ],
+      "graph_sha256": "42a9c653427132d2a47a605bd1ceaba7408fdd223955f49c84047fbd7813c44a",
+      "caption_empty": false,
+      "graph_labels": [
+        "cabinet",
+        "door",
+        "drawer",
+        "handle",
+        "tile"
+      ],
+      "explicit_edge_count": 4,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "Door-with-handle is supported by door-has-handle edges, but refrigerator, white/large/open and inside containment of reference are not represented. No visual wrong-class truth asserted.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:1176:region:4987623",
+      "registered_sample_index": 2,
+      "policy": "L2",
+      "caption": "door with handle",
+      "reference_for_evaluation_only": [
+        "large white refrigerator inside an open cupboard"
+      ],
+      "graph_sha256": "621eff1e7819fb8dc40e892ba33dc7e8ae1d796a9e5877b678854f9a12fd1a17",
+      "caption_empty": false,
+      "graph_labels": [
+        "cabinet",
+        "door",
+        "drawer",
+        "handle",
+        "tile"
+      ],
+      "explicit_edge_count": 4,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "Door-with-handle is supported by door-has-handle edges, but refrigerator, white/large/open and inside containment of reference are not represented. No visual wrong-class truth asserted.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:2811:region:5577302",
+      "registered_sample_index": 3,
+      "policy": "L0",
+      "caption": "",
+      "reference_for_evaluation_only": [
+        "white line on the road"
+      ],
+      "graph_sha256": "57501e5c6808b3e14852a4ea21dc7873abf9409032a06f9b740c973e83f62cf7",
+      "caption_empty": true,
+      "graph_labels": [],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "L2street is graph-supported but coarser than reference white line; road/street noun does not recover the missing localized line.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:2811:region:5577302",
+      "registered_sample_index": 3,
+      "policy": "L2",
+      "caption": "a street",
+      "reference_for_evaluation_only": [
+        "white line on the road"
+      ],
+      "graph_sha256": "357b368080abfa0fbb41dddb9b444ca44d4145c2660628a939eec256cd9e9a8b",
+      "caption_empty": false,
+      "graph_labels": [
+        "street"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "L2street is graph-supported but coarser than reference white line; road/street noun does not recover the missing localized line.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:1526:region:5005128",
+      "registered_sample_index": 4,
+      "policy": "L0",
+      "caption": "chair with handle",
+      "reference_for_evaluation_only": [
+        "brown chair near desk"
+      ],
+      "graph_sha256": "c05b7e8429e127055c7c9530b945ba7d6b7efa66fcc476f47038fd9a27c69496",
+      "caption_empty": false,
+      "graph_labels": [
+        "chair",
+        "handle",
+        "seat",
+        "wheel",
+        "wire"
+      ],
+      "explicit_edge_count": 4,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Both outputs use provided chair-with-handle relation; L2mounted-on agrees with handle-mounted-on-chair. Brown/desk-near context is not available; those omissions do not prove visual error.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:1526:region:5005128",
+      "registered_sample_index": 4,
+      "policy": "L2",
+      "caption": "chair with handle mounted on it",
+      "reference_for_evaluation_only": [
+        "brown chair near desk"
+      ],
+      "graph_sha256": "fc6df4fb170f25d450cf6584cd8de8147bd79845e722de442f2dc01c269283c6",
+      "caption_empty": false,
+      "graph_labels": [
+        "chair",
+        "handle",
+        "seat",
+        "wheel",
+        "wire"
+      ],
+      "explicit_edge_count": 4,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Both outputs use provided chair-with-handle relation; L2mounted-on agrees with handle-mounted-on-chair. Brown/desk-near context is not available; those omissions do not prove visual error.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:1491:region:5003362",
+      "registered_sample_index": 5,
+      "policy": "L0",
+      "caption": "a window",
+      "reference_for_evaluation_only": [
+        "white window on green house"
+      ],
+      "graph_sha256": "13e26ee385c57500296de4e4d739a9264fdbac6004ca7ef746651b126d32966a",
+      "caption_empty": false,
+      "graph_labels": [
+        "window"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Window noun is supported. White/green and house relation from reference cannot be recovered from a one-node/no-attribute graph.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:1491:region:5003362",
+      "registered_sample_index": 5,
+      "policy": "L2",
+      "caption": "a window",
+      "reference_for_evaluation_only": [
+        "white window on green house"
+      ],
+      "graph_sha256": "13e26ee385c57500296de4e4d739a9264fdbac6004ca7ef746651b126d32966a",
+      "caption_empty": false,
+      "graph_labels": [
+        "window"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Window noun is supported. White/green and house relation from reference cannot be recovered from a one-node/no-attribute graph.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:150437:region:5939806",
+      "registered_sample_index": 6,
+      "policy": "L0",
+      "caption": "glass on counter",
+      "reference_for_evaluation_only": [
+        "A podium in a restaurant"
+      ],
+      "graph_sha256": "ed7dca091854ec80e368883fdbe6cbf20f2a20bf9cecd08e72f676d19fdbdf75",
+      "caption_empty": false,
+      "graph_labels": [
+        "cabinet",
+        "chair",
+        "counter",
+        "fork",
+        "glass",
+        "hand",
+        "light",
+        "pole"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [
+        "relation_not_explicit_in_graph"
+      ],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "Glass and counter nodes exist but SG has no edges; both outputs add glass-on-counter. Reference podium is not in graph. Spatial plausibility is not explicit SG support.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:150437:region:5939806",
+      "registered_sample_index": 6,
+      "policy": "L2",
+      "caption": "counter with a glass on it",
+      "reference_for_evaluation_only": [
+        "A podium in a restaurant"
+      ],
+      "graph_sha256": "83e7914565873670c4c1721c25ca8511d8b11300be74e7b06e456511f0580dad",
+      "caption_empty": false,
+      "graph_labels": [
+        "cabinet",
+        "chair",
+        "counter",
+        "fork",
+        "glass",
+        "hand",
+        "light",
+        "pole"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [
+        "relation_not_explicit_in_graph"
+      ],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "Glass and counter nodes exist but SG has no edges; both outputs add glass-on-counter. Reference podium is not in graph. Spatial plausibility is not explicit SG support.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:285930:region:5953360",
+      "registered_sample_index": 7,
+      "policy": "L0",
+      "caption": "fork has two handles",
+      "reference_for_evaluation_only": [
+        "Stainless steel fork and spoon"
+      ],
+      "graph_sha256": "8d5c1579c1a1f2a52c903c3463c91f86809913855575a0c80dc258333e7af983",
+      "caption_empty": false,
+      "graph_labels": [
+        "fork",
+        "handle",
+        "light",
+        "paper",
+        "plate"
+      ],
+      "explicit_edge_count": 4,
+      "assistant_support_flags": [
+        "physical_object_count_unverified"
+      ],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Fork-has-handle is supplied. L0two handles cannot certify two distinct physical handles from multiple predicted handle IDs; this is count uncertainty, not a visually proven false count. Reference spoon/material are not represented.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:285930:region:5953360",
+      "registered_sample_index": 7,
+      "policy": "L2",
+      "caption": "fork has handle",
+      "reference_for_evaluation_only": [
+        "Stainless steel fork and spoon"
+      ],
+      "graph_sha256": "b3ae5846b69edbac0bc304e7a4c63a5adf169652828b1c1a6c167ee23967bb49",
+      "caption_empty": false,
+      "graph_labels": [
+        "fork",
+        "handle",
+        "light",
+        "paper",
+        "plate"
+      ],
+      "explicit_edge_count": 4,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Fork-has-handle is supplied. L0two handles cannot certify two distinct physical handles from multiple predicted handle IDs; this is count uncertainty, not a visually proven false count. Reference spoon/material are not represented.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:4033:region:5614345",
+      "registered_sample_index": 8,
+      "policy": "L0",
+      "caption": "woman wearing shirt",
+      "reference_for_evaluation_only": [
+        "a woman with curly red hair"
+      ],
+      "graph_sha256": "813926ac5744be64d864e991869d8cf9846abefa6e158cc924891ed501970fb8",
+      "caption_empty": false,
+      "graph_labels": [
+        "arm",
+        "bottle",
+        "cup",
+        "face",
+        "finger",
+        "glass",
+        "hair",
+        "hand",
+        "head",
+        "lady",
+        "pant",
+        "pot",
+        "shelf",
+        "shirt",
+        "woman"
+      ],
+      "explicit_edge_count": 1,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Woman-wearing-shirt directly follows the edge. It omits the curly/red hair focus; hair class exists but attributes are absent.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:4033:region:5614345",
+      "registered_sample_index": 8,
+      "policy": "L2",
+      "caption": "woman wearing shirt",
+      "reference_for_evaluation_only": [
+        "a woman with curly red hair"
+      ],
+      "graph_sha256": "813926ac5744be64d864e991869d8cf9846abefa6e158cc924891ed501970fb8",
+      "caption_empty": false,
+      "graph_labels": [
+        "arm",
+        "bottle",
+        "cup",
+        "face",
+        "finger",
+        "glass",
+        "hair",
+        "hand",
+        "head",
+        "lady",
+        "pant",
+        "pot",
+        "shelf",
+        "shirt",
+        "woman"
+      ],
+      "explicit_edge_count": 1,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Woman-wearing-shirt directly follows the edge. It omits the curly/red hair focus; hair class exists but attributes are absent.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:875:region:4972541",
+      "registered_sample_index": 9,
+      "policy": "L0",
+      "caption": "a light",
+      "reference_for_evaluation_only": [
+        "A green traffic light."
+      ],
+      "graph_sha256": "0db692e9b5104ca8eb4286b405ab9969b7ea1cf4b971133196bc46d4aeecb852",
+      "caption_empty": false,
+      "graph_labels": [
+        "light"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Light noun is supported but coarse; traffic-light subclass and green state/color from reference are not encoded.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:875:region:4972541",
+      "registered_sample_index": 9,
+      "policy": "L2",
+      "caption": "a light",
+      "reference_for_evaluation_only": [
+        "A green traffic light."
+      ],
+      "graph_sha256": "0db692e9b5104ca8eb4286b405ab9969b7ea1cf4b971133196bc46d4aeecb852",
+      "caption_empty": false,
+      "graph_labels": [
+        "light"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Light noun is supported but coarse; traffic-light subclass and green state/color from reference are not encoded.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:150433:region:25110",
+      "registered_sample_index": 10,
+      "policy": "L0",
+      "caption": "ski near vehicle",
+      "reference_for_evaluation_only": [
+        "Skis in crook of skiers right elbow."
+      ],
+      "graph_sha256": "1ef30b9ea73a7a76210763e0d14c0393207180aba07abd50ab4574ffb8a071e9",
+      "caption_empty": false,
+      "graph_labels": [
+        "ski",
+        "vehicle"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [
+        "relation_not_explicit_in_graph"
+      ],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Ski and vehicle nodes have no edge; near is not explicit in SG. Skier/elbow/right/crook details are absent, so reference focus is incomplete.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:150433:region:25110",
+      "registered_sample_index": 10,
+      "policy": "L2",
+      "caption": "ski near vehicle",
+      "reference_for_evaluation_only": [
+        "Skis in crook of skiers right elbow."
+      ],
+      "graph_sha256": "1ef30b9ea73a7a76210763e0d14c0393207180aba07abd50ab4574ffb8a071e9",
+      "caption_empty": false,
+      "graph_labels": [
+        "ski",
+        "vehicle"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [
+        "relation_not_explicit_in_graph"
+      ],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Ski and vehicle nodes have no edge; near is not explicit in SG. Skier/elbow/right/crook details are absent, so reference focus is incomplete.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:975:region:5528416",
+      "registered_sample_index": 11,
+      "policy": "L0",
+      "caption": "leaf on flower",
+      "reference_for_evaluation_only": [
+        "a bunch of grass with orange flowers"
+      ],
+      "graph_sha256": "b3e9e8f02ec65f9e013532ecd4d889ef3060b41a846e70dfc131373f58bc1fcf",
+      "caption_empty": false,
+      "graph_labels": [
+        "flower",
+        "leaf",
+        "plant",
+        "tile",
+        "tree"
+      ],
+      "explicit_edge_count": 2,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "L0leaf-on-flower matches an edge. L2flowers-on-leaf reverses it; SG has leaf-on-flower and flower-on-flower, no flower-on-leaf. Reference grass/color context is missing; image truth was not inspected.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:975:region:5528416",
+      "registered_sample_index": 11,
+      "policy": "L2",
+      "caption": "flowers on a leaf",
+      "reference_for_evaluation_only": [
+        "a bunch of grass with orange flowers"
+      ],
+      "graph_sha256": "cfba3b611e25aa029b2a6d2b1fb49f1000b1721fee402b654581328ebc3effad",
+      "caption_empty": false,
+      "graph_labels": [
+        "flower",
+        "leaf",
+        "plant",
+        "tile",
+        "tree"
+      ],
+      "explicit_edge_count": 2,
+      "assistant_support_flags": [
+        "relation_direction_reversed_relative_to_graph"
+      ],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "L0leaf-on-flower matches an edge. L2flowers-on-leaf reverses it; SG has leaf-on-flower and flower-on-flower, no flower-on-leaf. Reference grass/color context is missing; image truth was not inspected.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:1604:region:5008998",
+      "registered_sample_index": 12,
+      "policy": "L0",
+      "caption": "",
+      "reference_for_evaluation_only": [
+        "window in front of building"
+      ],
+      "graph_sha256": "57501e5c6808b3e14852a4ea21dc7873abf9409032a06f9b740c973e83f62cf7",
+      "caption_empty": true,
+      "graph_labels": [],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "L0empty. L2window noun supported; building/in-front-of relation absent from single-node SG.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:1604:region:5008998",
+      "registered_sample_index": 12,
+      "policy": "L2",
+      "caption": "a window",
+      "reference_for_evaluation_only": [
+        "window in front of building"
+      ],
+      "graph_sha256": "2b9832881abe4d6bb6f6ae8cf920b597be033ec3528e4ff2575f75c3d5b38d6b",
+      "caption_empty": false,
+      "graph_labels": [
+        "window"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "L0empty. L2window noun supported; building/in-front-of relation absent from single-node SG.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:1526:region:5005098",
+      "registered_sample_index": 13,
+      "policy": "L0",
+      "caption": "book on desk",
+      "reference_for_evaluation_only": [
+        "Light blue painted walls."
+      ],
+      "graph_sha256": "fbee2c668e5db68b3c279b131ea4401d9e0868bad2ae4d065a58f085e5d032be",
+      "caption_empty": false,
+      "graph_labels": [
+        "arm",
+        "book",
+        "desk",
+        "drawer",
+        "laptop",
+        "light",
+        "paper",
+        "pole",
+        "room",
+        "screen",
+        "table",
+        "tower",
+        "wire"
+      ],
+      "explicit_edge_count": 1,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "Both book-on-desk captions are explicitly SG-supported, but reference main subject walls is absent. Changing L2anchor to screen did not change the emitted book-on-desk caption.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:1526:region:5005098",
+      "registered_sample_index": 13,
+      "policy": "L2",
+      "caption": "book on desk",
+      "reference_for_evaluation_only": [
+        "Light blue painted walls."
+      ],
+      "graph_sha256": "eaef7fbd787e4040dc3244a3c6dae85748e07f5579063b440376efdad70e2f7d",
+      "caption_empty": false,
+      "graph_labels": [
+        "arm",
+        "book",
+        "desk",
+        "laptop",
+        "light",
+        "paper",
+        "pole",
+        "room",
+        "screen",
+        "table",
+        "tower",
+        "wire"
+      ],
+      "explicit_edge_count": 1,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "Both book-on-desk captions are explicitly SG-supported, but reference main subject walls is absent. Changing L2anchor to screen did not change the emitted book-on-desk caption.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:1842:region:5020899",
+      "registered_sample_index": 14,
+      "policy": "L0",
+      "caption": "",
+      "reference_for_evaluation_only": [
+        "a long electrical power line"
+      ],
+      "graph_sha256": "57501e5c6808b3e14852a4ea21dc7873abf9409032a06f9b740c973e83f62cf7",
+      "caption_empty": true,
+      "graph_labels": [],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "L0empty. L2roof is graph-supported but power-line reference target is absent; geometry overlap is not semantic reference focus.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:1842:region:5020899",
+      "registered_sample_index": 14,
+      "policy": "L2",
+      "caption": "a roof",
+      "reference_for_evaluation_only": [
+        "a long electrical power line"
+      ],
+      "graph_sha256": "d6be469bb3fd043edded08db0379963ddf644e9d6025c3264cb007e7c464694c",
+      "caption_empty": false,
+      "graph_labels": [
+        "roof"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "L0empty. L2roof is graph-supported but power-line reference target is absent; geometry overlap is not semantic reference focus.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:61564:region:5933901",
+      "registered_sample_index": 15,
+      "policy": "L0",
+      "caption": "cap on head",
+      "reference_for_evaluation_only": [
+        "Backwards cap on man's head"
+      ],
+      "graph_sha256": "d3f85938384fd01f24980fcb372c47ef3f88731d8358cf06a48302a2060ec419",
+      "caption_empty": false,
+      "graph_labels": [
+        "cap",
+        "head"
+      ],
+      "explicit_edge_count": 1,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Cap-on-head directly matches edge. Backwards orientation and man identity are omitted and not supplied as attributes.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:61564:region:5933901",
+      "registered_sample_index": 15,
+      "policy": "L2",
+      "caption": "cap on head",
+      "reference_for_evaluation_only": [
+        "Backwards cap on man's head"
+      ],
+      "graph_sha256": "d3f85938384fd01f24980fcb372c47ef3f88731d8358cf06a48302a2060ec419",
+      "caption_empty": false,
+      "graph_labels": [
+        "cap",
+        "head"
+      ],
+      "explicit_edge_count": 1,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Cap-on-head directly matches edge. Backwards orientation and man identity are omitted and not supplied as attributes.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:4087:region:5615769",
+      "registered_sample_index": 16,
+      "policy": "L0",
+      "caption": "closed wooden drawer",
+      "reference_for_evaluation_only": [
+        " short bookcase on a headboard"
+      ],
+      "graph_sha256": "cee91060a0988387cc604356314da17b62e26f164bf8f232bc0f3c4d22508691",
+      "caption_empty": false,
+      "graph_labels": [
+        "drawer"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [
+        "state_not_supplied",
+        "material_not_supplied"
+      ],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "Graph contains drawer only. Closed and wooden are not in graph. Reference bookcase/headboard targets are absent. These additions are unsupported by input, not visually proven false.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:4087:region:5615769",
+      "registered_sample_index": 16,
+      "policy": "L2",
+      "caption": "closed wooden drawer",
+      "reference_for_evaluation_only": [
+        " short bookcase on a headboard"
+      ],
+      "graph_sha256": "cee91060a0988387cc604356314da17b62e26f164bf8f232bc0f3c4d22508691",
+      "caption_empty": false,
+      "graph_labels": [
+        "drawer"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [
+        "state_not_supplied",
+        "material_not_supplied"
+      ],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "Graph contains drawer only. Closed and wooden are not in graph. Reference bookcase/headboard targets are absent. These additions are unsupported by input, not visually proven false.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:975:region:5528419",
+      "registered_sample_index": 17,
+      "policy": "L0",
+      "caption": "",
+      "reference_for_evaluation_only": [
+        "a dark spot in the street in front of building"
+      ],
+      "graph_sha256": "57501e5c6808b3e14852a4ea21dc7873abf9409032a06f9b740c973e83f62cf7",
+      "caption_empty": true,
+      "graph_labels": [],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "L0empty. L2street supported at coarse noun level, but localized dark spot and building relation from reference are absent.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:975:region:5528419",
+      "registered_sample_index": 17,
+      "policy": "L2",
+      "caption": "a street",
+      "reference_for_evaluation_only": [
+        "a dark spot in the street in front of building"
+      ],
+      "graph_sha256": "6bec98ff1a0046e5a1f321fbf4a3f86f4751e3d9d7057357fce15809bc415a24",
+      "caption_empty": false,
+      "graph_labels": [
+        "street"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "L0empty. L2street supported at coarse noun level, but localized dark spot and building relation from reference are absent.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:2864:region:5072017",
+      "registered_sample_index": 18,
+      "policy": "L0",
+      "caption": "a flower",
+      "reference_for_evaluation_only": [
+        "dark purple flowers in a planter"
+      ],
+      "graph_sha256": "91f974dae396071ee131c38c96c25593ad085ca03f4490807f5f63464cf906ac",
+      "caption_empty": false,
+      "graph_labels": [
+        "flower"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Flower noun supported; dark/purple/planter information absent. No query color was supplied in this no-color diagnostic.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:2864:region:5072017",
+      "registered_sample_index": 18,
+      "policy": "L2",
+      "caption": "a flower",
+      "reference_for_evaluation_only": [
+        "dark purple flowers in a planter"
+      ],
+      "graph_sha256": "91f974dae396071ee131c38c96c25593ad085ca03f4490807f5f63464cf906ac",
+      "caption_empty": false,
+      "graph_labels": [
+        "flower"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Flower noun supported; dark/purple/planter information absent. No query color was supplied in this no-color diagnostic.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:1760:region:5016805",
+      "registered_sample_index": 19,
+      "policy": "L0",
+      "caption": "",
+      "reference_for_evaluation_only": [
+        "Handle of a car door"
+      ],
+      "graph_sha256": "57501e5c6808b3e14852a4ea21dc7873abf9409032a06f9b740c973e83f62cf7",
+      "caption_empty": true,
+      "graph_labels": [],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "L0empty. L2door noun supported, closed state is not supplied. Reference handle and car context are missing.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:1760:region:5016805",
+      "registered_sample_index": 19,
+      "policy": "L2",
+      "caption": "closed door",
+      "reference_for_evaluation_only": [
+        "Handle of a car door"
+      ],
+      "graph_sha256": "e4afb19c861e755c3433bd1c5a3ac0a0a8d8a630481baf6915456521f8052de0",
+      "caption_empty": false,
+      "graph_labels": [
+        "door"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [
+        "state_not_supplied"
+      ],
+      "reference_target_gap_observed_in_text": true,
+      "assistant_note": "L0empty. L2door noun supported, closed state is not supplied. Reference handle and car context are missing.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:3308:region:5094219",
+      "registered_sample_index": 20,
+      "policy": "L0",
+      "caption": "car on street",
+      "reference_for_evaluation_only": [
+        "car color is white"
+      ],
+      "graph_sha256": "be9cd22ae235c75ff9117ffeae1b9977df62d76020bd2e38e8df2789852c05fe",
+      "caption_empty": false,
+      "graph_labels": [
+        "car",
+        "street",
+        "vehicle"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [
+        "relation_not_explicit_in_graph"
+      ],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Car and street nodes exist without edges; both captions add on. White color from reference is not input. No visual correctness conclusion.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    },
+    {
+      "unit_id": "vg:3308:region:5094219",
+      "registered_sample_index": 20,
+      "policy": "L2",
+      "caption": "car on street",
+      "reference_for_evaluation_only": [
+        "car color is white"
+      ],
+      "graph_sha256": "be9cd22ae235c75ff9117ffeae1b9977df62d76020bd2e38e8df2789852c05fe",
+      "caption_empty": false,
+      "graph_labels": [
+        "car",
+        "street",
+        "vehicle"
+      ],
+      "explicit_edge_count": 0,
+      "assistant_support_flags": [
+        "relation_not_explicit_in_graph"
+      ],
+      "reference_target_gap_observed_in_text": false,
+      "assistant_note": "Car and street nodes exist without edges; both captions add on. White color from reference is not input. No visual correctness conclusion.",
+      "reviewer": "assistant_unblinded_qualitative_text_audit",
+      "human_label": false,
+      "visual_truth_verified": false
+    }
+  ],
+  "conclusion": "L2removes emptiness but does not guarantee region target or faithful relation/attribute wording; explicit color/count flags do not cover state/material or relation direction. Frozen output and selection remain unchanged."
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "source_readme": "https://github.com/yrcong/RelTR/blob/main/data/README.md",
+  "public_file_id": "1aGwEu392DiECGdvwaYr-LgqGLmWhn8yD",
+  "mode": "annotation_archive_only_no_extraction_no_scoring",
+  "active_v2_release_modified": false,
+  "test_performance_scored": false,
+  "time_limit_seconds": 600,
+  "archive_limit_bytes": 536870912,
+  "status": "download_complete_parity_pending",
+  "updated_utc": "2026-10-10T15:59:06.094558+00:00",
+  "archive_bytes": 19556925,
+  "archive_sha256": "56856b4386220f40d6b1b522a2ae199a8b4188765fd9ebb5321c1d0f4f2d7fbc",
+  "members": [
+    {
+      "name": "vg/rel.json",
+      "bytes": 7292739,
+      "compressed_bytes": 1402562,
+      "crc32": "d24b268e"
+    },
+    {
+      "name": "vg/test.json",
+      "bytes": 45790974,
+      "compressed_bytes": 5566675,
+      "crc32": "4f141532"
+    },
+    {
+      "name": "vg/train.json",
+      "bytes": 94329286,
+      "compressed_bytes": 11495033,
+      "crc32": "b00aa127"
+    },
+    {
+      "name": "vg/val.json",
+      "bytes": 8671758,
+      "compressed_bytes": 1092153,
+      "crc32": "72710235"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-10T20:42:06.499626+00:00",
+  "probe_script_sha256": "d27647d0f5805d9b6f05f157448c536e950d575a59f6120d4a2157880eee06db",
+  "failure_type": "JSONDecodeError",
+  "failure_line": 144,
+  "scope": "parent parsing child stdout after child exit0; original logs retained in private scratch",
+  "benchmark_test_scored": false
+}

@@ -1,0 +1,11 @@
+{
+  "phase": "vg_caption_pilot100_v1_20261026",
+  "preregistration_sha256": "3715c7489698cae4bdc99f41116f4214ceb5e0fa0b4e772fd57d9123efe06c15",
+  "initial_launch_communicated": true,
+  "completion_or_failure_event_keys": [
+    "2796d232703c0a44765166c14b401fe263e2e6d43347e88273c33bbe7b730130"
+  ],
+  "last_event": "PILOT100_COMPLETE_VERIFIED_ALL12_CONFIGS",
+  "last_notified_utc": "2026-10-26T13:51:33.662460+00:00",
+  "terminal_no_progress_polling": true
+}

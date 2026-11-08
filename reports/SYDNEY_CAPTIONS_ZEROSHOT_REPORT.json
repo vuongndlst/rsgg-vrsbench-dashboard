@@ -1,0 +1,49 @@
+{
+  "dataset": "Sydney-Captions",
+  "evaluation_type": "Zero-shot Cross-Domain Transfer (Trained only on VRSBench)",
+  "detector_checkpoint": "vrsbench_detector_v2_best.pth (mIoU 70.35%)",
+  "llm_backbone": "Qwen2.5-14B-Instruct (4-bit NF4)",
+  "num_test_images": 58,
+  "num_full_images": 613,
+  "metrics_test_split": {
+    "BLEU-1": 28.15076560656284,
+    "BLEU-2": 13.07005702101777,
+    "BLEU-3": 3.5988216836890596,
+    "BLEU-4": 0.00028826658500268445,
+    "METEOR": 13.479131925661564,
+    "ROUGE-L": 20.768253751395694,
+    "CIDEr": 8.538968088917839,
+    "SPICE": 10.966181837607422
+  },
+  "metrics_full_dataset": {
+    "BLEU-1": 28.16384515212168,
+    "BLEU-2": 13.89444913284532,
+    "BLEU-3": 5.146972317936428,
+    "BLEU-4": 1.1985229809525073,
+    "METEOR": 13.39277492650551,
+    "ROUGE-L": 20.77702897364923,
+    "CIDEr": 7.07394551344342,
+    "SPICE": 10.80808268496303
+  },
+  "comparison_sota": {
+    "SAT (Show Attend Tell)": {
+      "BLEU-4": 52.8,
+      "METEOR": 37.1,
+      "ROUGE-L": 66.8,
+      "CIDEr": 196.4
+    },
+    "MLCA-Net": {
+      "BLEU-4": 56.4,
+      "METEOR": 39.8,
+      "ROUGE-L": 70.1,
+      "CIDEr": 221.5
+    },
+    "RemoteCLIP-ZeroShot": {
+      "BLEU-4": 42.1,
+      "METEOR": 31.5,
+      "ROUGE-L": 58.2,
+      "CIDEr": 145.8
+    }
+  },
+  "timestamp": "2026-11-08 04:23:18"
+}

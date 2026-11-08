@@ -1,0 +1,84 @@
+{
+  "status": "VRSBENCH_QWEN_G2T_LORA_COMPLETE",
+  "utc": "2026-11-07T02:12:20Z",
+  "wall_seconds": 1213.982881784439,
+  "metrics": {
+    "CIDEr": 25.461725863343272,
+    "Bleu_4": 13.057941915991556,
+    "Bleu_1": 46.964571835491014,
+    "METEOR": 25.029695904114014,
+    "ROUGE_L": 37.03102302070697
+  },
+  "samples": [
+    {
+      "question_id": 0,
+      "image_id": "P0003_0002.png",
+      "graph": "vehicle (The large yellow vehicle situated closest to the green area); vehicle (The large vehicle located at the bottom-left corner of the image); vehicle (The small dark-colored vehicle located at the top-right corner of the image); vehicle (The small dark-colored vehicle positioned at the bottom-right corner of the image)",
+      "generated": "This high-resolution image sourced from GoogleEarth shows a section of a parking lot with various vehicles parked. There is one large yellow vehicle near the center of the image, surrounded by smaller vehicles of different colors. The parking lot has a grid-like pattern with marked spaces for vehicles.",
+      "ground_truth": "The aerial image from GoogleEarth features a group of large yellow buses lined up on the left side, and two small vehicles, one on the top-right and another large vehicle on the bottom-right side of the image. The buses are parked in a lot adjacent to a green area and a road running roughly north-south."
+    },
+    {
+      "question_id": 1,
+      "image_id": "P0003_0004.png",
+      "graph": "vehicle (The large vehicle is situated towards the middle-left side of the image); vehicle (One small vehicle is positioned at the top of the image); vehicle (Another small vehicle is at the very bottom of the image)",
+      "generated": "This high-resolution image sourced from GoogleEarth shows a section of a road with vehicles parked on both sides. There are three visible vehicles: one large vehicle located towards the middle-left part of the image, another small vehicle at the top of the frame, and a third small vehicle at the bottom of the image. The surrounding area includes buildings and trees.",
+      "ground_truth": "The image from GoogleEarth captures a section of a road with three vehicles visible. One large vehicle is positioned towards the middle-left side of the frame, two small vehicles are located at the top of the frame and the other at the bottom, with the road curving around the landscape."
+    },
+    {
+      "question_id": 2,
+      "image_id": "P0007_0001.png",
+      "graph": "vehicle (The small vehicle located towards the top of the image)",
+      "generated": "This high-resolution image sourced from GoogleEarth shows a section of a road with vehicles parked on both sides. There is one small vehicle positioned at the top of the frame. The surrounding area includes buildings with various roof colors and textures.",
+      "ground_truth": "The high-resolution image from GoogleEarth shows a parking area with vehicles and asphalt surfaces. A small vehicle is positioned towards the top of this aerial view."
+    },
+    {
+      "question_id": 3,
+      "image_id": "P0007_0004.png",
+      "graph": "vehicle (The large vehicle is at the left edge of the road)",
+      "generated": "This high-resolution image sourced from GoogleEarth shows a section of a road with vehicles parked on both sides. There are two large vehicles visible; one is located towards the left side of the frame while another is positioned near the center. The surrounding area includes buildings with various roof colors and textures.",
+      "ground_truth": "The aerial image, sourced from GoogleEarth with high resolution, shows a parking lot with large vehicles arranged neatly in rows. Most of the large vehicles are white, and they are predominantly parked in a north-south alignment. There is a large vehicle at the left edge of the road."
+    },
+    {
+      "question_id": 4,
+      "image_id": "P0007_0005.png",
+      "graph": "vehicle (The large vehicle located on the right side); vehicle (The large vehicle located on the bottom-right corner); vehicle (The middle-left bottom side large vehicle in the image); vehicle (The small vehicle located near the top-right corner of the image)",
+      "generated": "This high-resolution image sourced from GoogleEarth shows a section of a road with vehicles parked along its sides. There is one large vehicle positioned at the bottom-right corner of the frame, another large vehicle situated towards the middle-bottom left part of the image, and two smaller vehicles visible near the top-right corner. The surrounding area includes buildings and trees.",
+      "ground_truth": "A high-resolution Google Earth image capturing a gray parking lot with large vehicles and a small vehicle. The large vehicles are aligned in parallel rows. A small vehicle is positioned near the top-right corner."
+    },
+    {
+      "question_id": 5,
+      "image_id": "P0007_0006.png",
+      "graph": "vehicle (The large vehicle is located at the right edge extending beyond the image frame); vehicle (The large vehicle at the top-right corner of the image); vehicle (The large vehicle positioned at the bottom part of the image); vehicle (The small vehicle is towards the middle-left side of the image)",
+      "generated": "This high-resolution image sourced from GoogleEarth shows a section of a road with vehicles parked on both sides. There are four visible large vehicles and one small vehicle. The large vehicles are distributed across different parts of the image, while the small vehicle is situated near the center-left area.",
+      "ground_truth": "The high-resolution image captured via GoogleEarth shows a collection of vehicles in a parking area. There are five large vehicles positioned in the top and middle on the right. Small vehicle is towards the middle-left of the image."
+    },
+    {
+      "question_id": 6,
+      "image_id": "P0007_0009.png",
+      "graph": "vehicle (The large vehicle located at the far right top of the image); vehicle (The large vehicle located second from the right in the top row)",
+      "generated": "This high-resolution image sourced from GoogleEarth shows a section of a parking lot with several vehicles parked. There is one large vehicle positioned towards the bottom-right corner of the frame, while another large vehicle is situated near the center-left part of the image. The surrounding area includes various small vehicles scattered throughout the lot.",
+      "ground_truth": "The high-resolution aerial image from GoogleEarth shows a parking lot with large vehicles aligned in rows at the top of the image. The green area below the vehicles is a vegetation."
+    },
+    {
+      "question_id": 7,
+      "image_id": "P0019_0000.png",
+      "graph": "vehicle (The vehicle is parked on a driveway, located near the bottom-middle of the image)",
+      "generated": "This high-resolution image sourced from GoogleEarth shows a residential area with houses surrounded by trees and greenery. There is one visible vehicle parked on a driveway at the bottom-middle part of the image. The houses have varying roof colors and some have chimneys.",
+      "ground_truth": "The image from GoogleEarth presents a high-resolution view of a residential area with a driveway leading to a house surrounded by lush greenery. A small vehicle is parked near the bottom-middle part of the image, closely aligned with the house."
+    },
+    {
+      "question_id": 8,
+      "image_id": "P0019_0001.png",
+      "graph": "vehicle (The large vehicle is parked on a driveway to the left of the house)",
+      "generated": "This high-resolution image sourced from GoogleEarth shows a residential area with houses surrounded by trees and greenery. There is one visible large vehicle located on a driveway to the left side of the frame. The houses have varying roof colors and some have driveways or garages attached.",
+      "ground_truth": "The high-resolution image from GoogleEarth shows a large house with a complex roof structure, surrounded by a well-manicured lawn with landscaping features. There is a large vehicle parked on the left side."
+    },
+    {
+      "question_id": 9,
+      "image_id": "P0019_0002.png",
+      "graph": "small harbor (The harbor located near the top right corner of the image extending into the water); small harbor (The harbor at the bottom edge of the image, projecting from the shore into the water)",
+      "generated": "This high-resolution image sourced from GoogleEarth shows a coastal area with two harbors visible along the shoreline. The first harbor is positioned towards the top-right part of the image, while the second one is situated closer to the bottom edge. Both harbors extend into the water, providing docking facilities for boats or ships. Surrounding these structures, there's a mix of vegetation and",
+      "ground_truth": "The high-resolution image from Google Earth features a body of water with three small harbors. One harbor is located near the top right corner. Another is situated along the bottom edge. The third harbor is positioned between the other two, encompassing boat slips and a pier."
+    }
+  ]
+}

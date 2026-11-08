@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "interpreter": "${REMOTE_HOME}/rsg-former/.venv/bin/python",
+  "download_checksums_verified": 4,
+  "checkpoint_checksums_verified": 2,
+  "reference_parity_cases": 32,
+  "config_matches_preregistration": true,
+  "source_files": [
+    {
+      "file": "src/rsgformer/evaluation.py",
+      "sha256": "5b3b9508493603c5aeb0748fc748eded5bb5e4e47aa54715f326dc2b61a1f3d0"
+    },
+    {
+      "file": "src/rsgformer/__init__.py",
+      "sha256": "1558665f31823ae3500829f39901bd3fec8dd2d0d738ecf716cfcce9acb58de9"
+    },
+    {
+      "file": "src/rsgformer/geometry.py",
+      "sha256": "32f35ec030812af8ac8ebd2e3b036709af0b2a50a782d58044c77ac4b6a73455"
+    },
+    {
+      "file": "src/rsgformer/baselines.py",
+      "sha256": "f43630b154d5700fb3816081d1dd6c465583f2ee7ca08aeadf1de0fb35ef10a6"
+    },
+    {
+      "file": "src/rsgformer/data.py",
+      "sha256": "1bfffb6bd0aab95e77389469c1ee20b3b3bf1828030df7e332f46177575b8a80"
+    },
+    {
+      "file": "src/rsgformer/frontend.py",
+      "sha256": "710e4bbe14dc2f9021a32ab51b946ff1c706ee445da09f7c40c50583e355d224"
+    },
+    {
+      "file": "tests/test_protocol.py",
+      "sha256": "66279fb29ea0c94110e9ee7dbd6edba4b09b7f4cd164f12d7c1eb9225c473ae8"
+    },
+    {
+      "file": "configs/p2_pilot.json",
+      "sha256": "800a565f0e13ac86d04cae4d4269536249e861afe5a38b45d6af3a08b146a0d7"
+    },
+    {
+      "file": "scripts/ssh_project.py",
+      "sha256": "65caa0466939ceed39784a5ad2301ada47f3af2f8385cfe8004cd1f3ccba3094"
+    },
+    {
+      "file": "scripts/remote_test_p2.py",
+      "sha256": "1279f8cf9ee26bcd97bd0e44962d5dba65b174649b57ac2332f023ad7c3ee840"
+    },
+    {
+      "file": "scripts/remote_finalize_check.py",
+      "sha256": "510f1cbf507b8ff76f73e971dafab6d53a2c9359ea08ad1837e7a3db8829e829"
+    },
+    {
+      "file": "scripts/verify_execution.py",
+      "sha256": "6fc5ad092118a12d1226b7355c74d62d80f4728b707bbc00e68ce778f3d89584"
+    },
+    {
+      "file": "scripts/remote_audit_release.py",
+      "sha256": "4d86a73208c52593e02764d269e3767267efb2a9b9ae8f0bb2bc45f7f9af0770"
+    },
+    {
+      "file": "scripts/remote_star_metadata.py",
+      "sha256": "c885ed0325709b06177a06cd6a9abe6ab9ebbb6aca1fafd4acb294de21ae9f3c"
+    },
+    {
+      "file": "scripts/remote_storage_audit.py",
+      "sha256": "559e96b76aadbbb2dc5c02b7c4aa73255ac30f08dd78479b092d07d4712dd897"
+    },
+    {
+      "file": "scripts/remote_environment_fix.py",
+      "sha256": "918be3cc9b3175c0e90aa11ed1c2008ec03a84964b6db7b14f851ccce83cacbc"
+    },
+    {
+      "file": "scripts/remote_prepare_p0.py",
+      "sha256": "5741da5b88419d19fc770ff5027a5db66242ed834c56cac55bf17978a6bce4ca"
+    },
+    {
+      "file": "scripts/remote_p2_pilot.py",
+      "sha256": "c1890d9e7ff6477a1737d1ef4aaa8e1de35a7dee62ebbf06057793de9d687860"
+    },
+    {
+      "file": "scripts/remote_progress.py",
+      "sha256": "90e7a2105ed9a993735ae585ce7114b115c2c49965de7f41684b0ba16fb3c110"
+    },
+    {
+      "file": "scripts/finalize_execution.py",
+      "sha256": "5d4523a887daa62260734cd66b31cb93e438cb0c4e418f0158d511ba5d62e611"
+    }
+  ],
+  "image_ZIPs_still_present": true,
+  "current_artifact_bytes": 103416100,
+  "project_directory_write_access": true
+}

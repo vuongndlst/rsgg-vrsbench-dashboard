@@ -1,0 +1,10 @@
+{
+  "status": "PASS_LOCAL_PRELAUNCH_CONTRACT_RAW_SHA_AND_ALL_SOURCES",
+  "utc": "2026-10-27T22:49:48.321269+00:00",
+  "archive_sha256": "8413c1d52555b36c01ebf05ea241043ee0cc9913f186020b0613e795007b7209",
+  "source_manifest_sha256": "a9f896802b25b92ba8da0e659d8d388fc403b6465e78294db68f3f8ceb7d1a38",
+  "exact_legacy_views": 1056,
+  "structural_cases": 3168,
+  "experiment_launched": false,
+  "TEST_accessed": false
+}

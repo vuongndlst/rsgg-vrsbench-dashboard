@@ -1,0 +1,633 @@
+{
+  "status": "PROMPT_OPTIMIZATION_ABLATION_COMPLETE",
+  "utc": "2026-11-06T16:38:14Z",
+  "wall_seconds": 217.87437200546265,
+  "metrics": {
+    "P0_baseline_few": {
+      "Bleu_1": 48.42022116899809,
+      "Bleu_2": 30.770285986674278,
+      "Bleu_3": 18.561487862975465,
+      "Bleu_4": 11.454038661431257,
+      "METEOR": 18.40868527418759,
+      "ROUGE_L": 37.90964423803383,
+      "CIDEr": 45.524185146849035
+    },
+    "P1_filtered_triplets": {
+      "Bleu_1": 49.596774193508395,
+      "Bleu_2": 30.93752947553056,
+      "Bleu_3": 17.869395870357163,
+      "Bleu_4": 10.870071435598044,
+      "METEOR": 17.81814168607019,
+      "ROUGE_L": 37.79198840618722,
+      "CIDEr": 44.61799987512895
+    },
+    "P2_participle_syntax": {
+      "Bleu_1": 47.682639434369456,
+      "Bleu_2": 29.836865397582457,
+      "Bleu_3": 17.445987115102785,
+      "Bleu_4": 10.584623375831486,
+      "METEOR": 18.47952415570235,
+      "ROUGE_L": 37.36504042017483,
+      "CIDEr": 45.31116762215633
+    },
+    "P3_hierarchical_prompt": {
+      "Bleu_1": 45.38714991759029,
+      "Bleu_2": 27.305454231380367,
+      "Bleu_3": 15.330358537927804,
+      "Bleu_4": 8.769008677488621,
+      "METEOR": 16.718908618493387,
+      "ROUGE_L": 34.93334812945354,
+      "CIDEr": 35.359044419398764
+    },
+    "P4_diverse_k4": {
+      "Bleu_1": 47.62269938646655,
+      "Bleu_2": 29.964476144669973,
+      "Bleu_3": 17.597043304313146,
+      "Bleu_4": 11.102885387646026,
+      "METEOR": 18.29030509471845,
+      "ROUGE_L": 36.542707369269735,
+      "CIDEr": 40.99741405705196
+    },
+    "P5_combined_optimal": {
+      "Bleu_1": 46.82352941172798,
+      "Bleu_2": 28.99708672948238,
+      "Bleu_3": 16.164589377197085,
+      "Bleu_4": 9.524907219252592,
+      "METEOR": 17.32311189827022,
+      "ROUGE_L": 35.93354206882516,
+      "CIDEr": 36.73568824130819
+    }
+  },
+  "samples": [
+    {
+      "image_id": 391895,
+      "file_name": "COCO_val2014_000000391895.jpg",
+      "triplets_raw": [
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "helmet",
+          "score": 3.0316010452224873e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "motorcycle",
+          "score": 2.8770064091077074e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "shirt",
+          "score": 2.0645235053962097e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "short",
+          "score": 1.598240305611398e-05
+        },
+        {
+          "subject": "tire",
+          "predicate": "on back of",
+          "object": "motorcycle",
+          "score": 1.5459723726962693e-05
+        },
+        {
+          "subject": "helmet",
+          "predicate": "on",
+          "object": "man",
+          "score": 1.2382200111460406e-05
+        }
+      ],
+      "captions": {
+        "P0_baseline_few": "A man is riding a motorcycle while wearing a helmet and a shirt.",
+        "P1_filtered_triplets": "A man is riding a motorcycle while wearing a helmet and a shirt.",
+        "P2_participle_syntax": "A man is riding a motorcycle while wearing a helmet and a shirt.",
+        "P3_hierarchical_prompt": "A man in a helmet rides a motorcycle while another in a shirt bikes nearby.",
+        "P4_diverse_k4": "A man is riding a motorcycle while wearing a helmet and a shirt.",
+        "P5_combined_optimal": "A man is riding a motorcycle while wearing a helmet and a casual shirt."
+      },
+      "references": [
+        "A man with a red helmet on a small moped on a dirt road.",
+        "Man riding a motor bike on a dirt road on the countryside.",
+        "A man riding on the back of a motorcycle.",
+        "A dirt path with a young person on a motor bike rests to the foreground of a verdant area with a bridge and a background of cloud-wreathed mountains.",
+        "A man in a red shirt and a red hat is on a motorcycle on a hill side."
+      ]
+    },
+    {
+      "image_id": 60623,
+      "file_name": "COCO_val2014_000000060623.jpg",
+      "triplets_raw": [
+        {
+          "subject": "hand",
+          "predicate": "holding",
+          "object": "fork",
+          "score": 1.6541622244403698e-05
+        },
+        {
+          "subject": "bowl",
+          "predicate": "above",
+          "object": "table",
+          "score": 1.526768937765155e-05
+        },
+        {
+          "subject": "food",
+          "predicate": "in",
+          "object": "bowl",
+          "score": 1.0673991710064001e-05
+        },
+        {
+          "subject": "fork",
+          "predicate": "in",
+          "object": "hand",
+          "score": 9.261665582016576e-06
+        },
+        {
+          "subject": "glass",
+          "predicate": "on",
+          "object": "table",
+          "score": 8.492336746712681e-06
+        },
+        {
+          "subject": "fork",
+          "predicate": "above",
+          "object": "table",
+          "score": 8.220231393352151e-06
+        }
+      ],
+      "captions": {
+        "P0_baseline_few": "A girl holds a fork over a bowl of food on the table.",
+        "P1_filtered_triplets": "A hand holds a fork over a bowl of food on a table with a glass nearby.",
+        "P2_participle_syntax": "A girl holds a fork over a bowl of food on the table.",
+        "P3_hierarchical_prompt": "A hand holds a fork next to a bowl of food on a table with a glass nearby.",
+        "P4_diverse_k4": "A girl holds a fork over a bowl of food on the table with a glass nearby.",
+        "P5_combined_optimal": "A hand holds a fork next to a bowl of food on a table with a glass."
+      },
+      "references": [
+        "A young girl inhales with the intent of blowing out a candle.",
+        "A young girl is preparing to blow out her candle.",
+        "A kid is to blow out the single candle in a bowl of birthday goodness.",
+        "Girl blowing out the candle on an ice-cream",
+        "A little girl is getting ready to blow out a candle on a small dessert."
+      ]
+    },
+    {
+      "image_id": 483108,
+      "file_name": "COCO_val2014_000000483108.jpg",
+      "triplets_raw": [
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 2.9284468837431632e-05
+        },
+        {
+          "subject": "person",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 1.817391239455901e-05
+        },
+        {
+          "subject": "window",
+          "predicate": "on",
+          "object": "train",
+          "score": 1.209203401231207e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "jacket",
+          "score": 1.1510148397064768e-05
+        },
+        {
+          "subject": "sign",
+          "predicate": "on",
+          "object": "pole",
+          "score": 1.085985786630772e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "wearing",
+          "object": "pant",
+          "score": 1.0286685210303403e-05
+        }
+      ],
+      "captions": {
+        "P0_baseline_few": "A man in a jacket rides a bike past a train window.",
+        "P1_filtered_triplets": "A man in a jacket rides a bike past a train window.",
+        "P2_participle_syntax": "A man in a jacket rides a bike past a train with a sign nearby.",
+        "P3_hierarchical_prompt": "Two people ride bikes past a train window and a street sign.",
+        "P4_diverse_k4": "A man in a jacket rides a bike past a train window and a street sign.",
+        "P5_combined_optimal": "Two men ride bikes past a train window and a street sign on a cool day."
+      },
+      "references": [
+        "A man on a bicycle riding next to a train",
+        "A person is riding a bicycle but there is a train in the background.",
+        "a red and white train and a man riding a bicycle",
+        "a guy that is riding his bike next to a train",
+        "A man riding a bike past a train traveling along tracks."
+      ]
+    },
+    {
+      "image_id": 384213,
+      "file_name": "COCO_val2014_000000384213.jpg",
+      "triplets_raw": [
+        {
+          "subject": "towel",
+          "predicate": "on",
+          "object": "counter",
+          "score": 1.3752025552093983e-05
+        },
+        {
+          "subject": "towel",
+          "predicate": "on",
+          "object": "sink",
+          "score": 6.963373834878439e-06
+        },
+        {
+          "subject": "towel",
+          "predicate": "on",
+          "object": "cabinet",
+          "score": 6.84728956912295e-06
+        },
+        {
+          "subject": "curtain",
+          "predicate": "over",
+          "object": "window",
+          "score": 6.363862212310778e-06
+        },
+        {
+          "subject": "bottle",
+          "predicate": "on",
+          "object": "counter",
+          "score": 6.096707693359349e-06
+        },
+        {
+          "subject": "towel",
+          "predicate": "near",
+          "object": "sink",
+          "score": 4.841578174819006e-06
+        }
+      ],
+      "captions": {
+        "P0_baseline_few": "Towels are neatly arranged on the bathroom counter and sink near the window covered by curtains.",
+        "P1_filtered_triplets": "Towels are neatly arranged on the bathroom counter and sink near the window covered by curtains.",
+        "P2_participle_syntax": "Towels are neatly arranged on the bathroom counter, sink, and cabinet near the curtained window.",
+        "P3_hierarchical_prompt": "Towels are neatly arranged on the bathroom counter, sink, and cabinet.",
+        "P4_diverse_k4": "Towels are placed around the bathroom counter and sink near a covered window.",
+        "P5_combined_optimal": "Towels are placed around the bathroom counter and sink near a covered window."
+      },
+      "references": [
+        "A kitchen is shown with a variety of items on the counters.",
+        "A kitchen has the windows open and plaid curtains.",
+        "A kitchen with two windows and two metal sinks.",
+        "An older kitchen with cluttered counter tops but empty sink.",
+        "Glasses and bottles are placed near a kitchen sink."
+      ]
+    },
+    {
+      "image_id": 386164,
+      "file_name": "COCO_val2014_000000386164.jpg",
+      "triplets_raw": [
+        {
+          "subject": "chair",
+          "predicate": "at",
+          "object": "table",
+          "score": 7.5823541010322515e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "above",
+          "object": "table",
+          "score": 6.395148375304416e-06
+        },
+        {
+          "subject": "table",
+          "predicate": "made of",
+          "object": "chair",
+          "score": 4.2971878428943455e-06
+        },
+        {
+          "subject": "table",
+          "predicate": "made of",
+          "object": "table",
+          "score": 4.148845619056374e-06
+        },
+        {
+          "subject": "table",
+          "predicate": "at",
+          "object": "table",
+          "score": 2.2913670818525134e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "on",
+          "object": "table",
+          "score": 2.1838752672920236e-06
+        }
+      ],
+      "captions": {
+        "P0_baseline_few": "A table set with a bowl of fruit and boards lying atop it.",
+        "P1_filtered_triplets": "A table set with a bowl of fruit and boards lying atop it.",
+        "P2_participle_syntax": "A table cluttered with a bowl, fruit, and a board, constructed from other tables and chairs.",
+        "P3_hierarchical_prompt": "A creative setup with a table made of stacked chairs and another below.",
+        "P4_diverse_k4": "A table cluttered with a bowl, fruit, and boards lies in a messy setup.",
+        "P5_combined_optimal": "A table cluttered with a bowl, fruit, and boards lies in a messy setup."
+      },
+      "references": [
+        "A wooden ball on top of a wooden stick.",
+        "The table is full of wooden spoons and utensils.",
+        "A wood table holding an assortment of wood cooking utensils.",
+        "A selection of wooden kitchen tools on a counter.",
+        "Wooden spoons are lined up on a table"
+      ]
+    },
+    {
+      "image_id": 223648,
+      "file_name": "COCO_val2014_000000223648.jpg",
+      "triplets_raw": [
+        {
+          "subject": "chair",
+          "predicate": "at",
+          "object": "table",
+          "score": 1.555022936372552e-05
+        },
+        {
+          "subject": "fork",
+          "predicate": "on",
+          "object": "table",
+          "score": 1.139469623012701e-05
+        },
+        {
+          "subject": "fork",
+          "predicate": "laying on",
+          "object": "table",
+          "score": 1.1154110325151123e-05
+        },
+        {
+          "subject": "leg",
+          "predicate": "of",
+          "object": "chair",
+          "score": 1.0712147741287481e-05
+        },
+        {
+          "subject": "chair",
+          "predicate": "near",
+          "object": "table",
+          "score": 7.066231319186045e-06
+        },
+        {
+          "subject": "leg",
+          "predicate": "of",
+          "object": "table",
+          "score": 6.6712646002997644e-06
+        }
+      ],
+      "captions": {
+        "P0_baseline_few": "A fork lies on the table next to a chair.",
+        "P1_filtered_triplets": "A chair is positioned under a table with a fork laid out on it.",
+        "P2_participle_syntax": "A chair is placed at a table with a fork lying on it.",
+        "P3_hierarchical_prompt": "A chair is placed at a table with a fork laid out.",
+        "P4_diverse_k4": "A fork lies on the table next to a chair.",
+        "P5_combined_optimal": "A fork lies on the table next to a chair."
+      },
+      "references": [
+        "Multiple wooden spoons are shown on a table top.",
+        "A table surrounded by chairs and filled with cooking utensils.",
+        "Wooden spoons laid out across a kitchen table.",
+        "Wooden spoons and forks are all over a table.",
+        "A table and chairs with wooden kitchen tools on top."
+      ]
+    },
+    {
+      "image_id": 403385,
+      "file_name": "COCO_val2014_000000403385.jpg",
+      "triplets_raw": [
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "seat",
+          "score": 1.60657218657434e-05
+        },
+        {
+          "subject": "seat",
+          "predicate": "of",
+          "object": "toilet",
+          "score": 1.3774514627584722e-05
+        },
+        {
+          "subject": "paper",
+          "predicate": "for",
+          "object": "toilet",
+          "score": 5.937891273788409e-06
+        },
+        {
+          "subject": "bowl",
+          "predicate": "of",
+          "object": "toilet",
+          "score": 5.6174008022935595e-06
+        },
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "bowl",
+          "score": 5.097589564684313e-06
+        },
+        {
+          "subject": "sink",
+          "predicate": "near",
+          "object": "toilet",
+          "score": 4.077866833540611e-06
+        }
+      ],
+      "captions": {
+        "P0_baseline_few": "A toilet with its seat down is next to a sink in a bathroom.",
+        "P1_filtered_triplets": "A toilet with its seat down is next to a sink in a bathroom.",
+        "P2_participle_syntax": "A toilet with its seat down, next to a sink in a restroom.",
+        "P3_hierarchical_prompt": "A toilet is prepared with its seat down and stocked with toilet paper.",
+        "P4_diverse_k4": "A toilet with its seat down, next to a sink in what appears to be a bathroom.",
+        "P5_combined_optimal": "A toilet with its seat down, next to a sink in what appears to be a bathroom."
+      },
+      "references": [
+        "A bathroom that has a broken wall in the shower.",
+        "A bathroom looks clean but is missing tile at the shower stall.",
+        "A view of a bathroom that needs to be fixed up.",
+        "a shower toilet and sink in a basement bathroom",
+        "A very big whit rest room with a shabby looking shower."
+      ]
+    },
+    {
+      "image_id": 294832,
+      "file_name": "COCO_val2014_000000294832.jpg",
+      "triplets_raw": [
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "seat",
+          "score": 1.8247348634758964e-05
+        },
+        {
+          "subject": "cabinet",
+          "predicate": "above",
+          "object": "toilet",
+          "score": 8.370826435566414e-06
+        },
+        {
+          "subject": "cabinet",
+          "predicate": "above",
+          "object": "sink",
+          "score": 7.639225259481464e-06
+        },
+        {
+          "subject": "seat",
+          "predicate": "of",
+          "object": "toilet",
+          "score": 6.254459549381863e-06
+        },
+        {
+          "subject": "sink",
+          "predicate": "and",
+          "object": "toilet",
+          "score": 5.044117642682977e-06
+        },
+        {
+          "subject": "sink",
+          "predicate": "with",
+          "object": "seat",
+          "score": 3.7263314425217686e-06
+        }
+      ],
+      "captions": {
+        "P0_baseline_few": "A bathroom featuring a toilet with its seat down and a sink nearby.",
+        "P1_filtered_triplets": "A bathroom featuring a toilet with its seat down and a sink nearby.",
+        "P2_participle_syntax": "A toilet with its seat down, located in a bathroom near a sink and cabinet.",
+        "P3_hierarchical_prompt": "A toilet with its seat down in a bathroom near an overhead cabinet.",
+        "P4_diverse_k4": "A toilet with a seat is in the room, next to a sink and a cabinet above it.",
+        "P5_combined_optimal": "A toilet with a seat is in the room, next to a sink and a cabinet above it."
+      },
+      "references": [
+        "A bathroom with an enclosed shower next to a sink and a toilet.",
+        "A clean, spacious bathroom with a large shower stall.",
+        "There are a toilet, a sink, and a shower stall in a large bathroom.",
+        "A bathroom featuring a walk in shower, mirror, sink and toilet.",
+        "Bathroom with a shower, sink, and toilet in it."
+      ]
+    },
+    {
+      "image_id": 462565,
+      "file_name": "COCO_val2014_000000462565.jpg",
+      "triplets_raw": [
+        {
+          "subject": "woman",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 2.258795029774774e-05
+        },
+        {
+          "subject": "person",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 1.7346801541862078e-05
+        },
+        {
+          "subject": "man",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 1.0270075108564924e-05
+        },
+        {
+          "subject": "woman",
+          "predicate": "wearing",
+          "object": "helmet",
+          "score": 9.653210327087436e-06
+        },
+        {
+          "subject": "person",
+          "predicate": "wearing",
+          "object": "helmet",
+          "score": 7.213598564703716e-06
+        },
+        {
+          "subject": "car",
+          "predicate": "riding",
+          "object": "bike",
+          "score": 6.512650088552618e-06
+        }
+      ],
+      "captions": {
+        "P0_baseline_few": "A woman wears a helmet while riding a bicycle on the road.",
+        "P1_filtered_triplets": "A woman wears a helmet while riding a bicycle on the road.",
+        "P2_participle_syntax": "A woman wears a helmet while riding a bicycle outdoors.",
+        "P3_hierarchical_prompt": "Three people are riding bikes, with a focus on a woman wearing a helmet.",
+        "P4_diverse_k4": "Three people, including a woman in a helmet, ride bikes on a path.",
+        "P5_combined_optimal": "Three people, including a woman in a helmet, ride bikes on a path."
+      },
+      "references": [
+        "people on bicycles ride down a busy street",
+        "A group of people are riding bikes down the street in a bike lane",
+        "bike riders passing Burger King in city street",
+        "A group of bicyclists are riding in the bike lane.",
+        "Bicyclists on a city street, most not using the bike lane"
+      ]
+    },
+    {
+      "image_id": 436141,
+      "file_name": "COCO_val2014_000000436141.jpg",
+      "triplets_raw": [
+        {
+          "subject": "door",
+          "predicate": "under",
+          "object": "sink",
+          "score": 8.624557267467026e-06
+        },
+        {
+          "subject": "toilet",
+          "predicate": "has",
+          "object": "seat",
+          "score": 8.459249329462182e-06
+        },
+        {
+          "subject": "cabinet",
+          "predicate": "under",
+          "object": "sink",
+          "score": 5.464183686854085e-06
+        },
+        {
+          "subject": "paper",
+          "predicate": "under",
+          "object": "sink",
+          "score": 4.059543698531343e-06
+        },
+        {
+          "subject": "seat",
+          "predicate": "mounted on",
+          "object": "toilet",
+          "score": 3.895595455105649e-06
+        },
+        {
+          "subject": "paper",
+          "predicate": "hanging from",
+          "object": "cabinet",
+          "score": 3.643128820840502e-06
+        }
+      ],
+      "captions": {
+        "P0_baseline_few": "A bathroom with a toilet and sink, and cabinets underneath the sink.",
+        "P1_filtered_triplets": "A bathroom with a toilet and sink, and cabinets underneath the sink.",
+        "P2_participle_syntax": "A bathroom featuring a toilet and sink with supplies nearby.",
+        "P3_hierarchical_prompt": "A bathroom with a toilet, sink, and storage cabinet under the sink.",
+        "P4_diverse_k4": "A toilet with a seat is placed next to a sink and cabinets in a bathroom.",
+        "P5_combined_optimal": "A toilet with a seat is placed next to a sink and cabinets in a bathroom."
+      },
+      "references": [
+        "The bathroom is clean and ready to be used.",
+        "a small bathroom with a sink and a toilet.",
+        "A toilet, sink and mirror in the bathroom",
+        "Doorway view into bathroom with a sink and toilet.",
+        "A white toilet sitting next to a sink."
+      ]
+    }
+  ]
+}

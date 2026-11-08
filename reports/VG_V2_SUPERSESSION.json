@@ -1,0 +1,262 @@
+{
+  "utc": "2026-10-11T11:41:47.106718+00:00",
+  "status": "SUPERSEDED_BY_NEW_MATCHED_MICROBATCH_PROTOCOL",
+  "old_pid": 2235568,
+  "new_experiment": "vg_method_v2_speed_m2_v1",
+  "original_native_checkpoint": {
+    "run": "screening_native_1729",
+    "variant": "native",
+    "seed": 1729,
+    "status": "complete",
+    "selected_epoch": 5,
+    "history": [
+      {
+        "epoch": 1,
+        "metrics": {
+          "images": 5000,
+          "mode": "SGDet",
+          "constraint": "GC",
+          "matching": "class AND subject/object inclusive-IoU>=0.5",
+          "R@20": 0.191044660447219,
+          "mR@20": 0.11375763958314696,
+          "F@20": 0.1426025303960915,
+          "R@50": 0.2504834584074595,
+          "mR@50": 0.15544905552299537,
+          "F@50": 0.19184182442820488,
+          "R@100": 0.28777930082368613,
+          "mR@100": 0.18214738793478114,
+          "F@100": 0.22309117230698064
+        },
+        "train_loss": 2.590153156040199,
+        "seconds": 9317.44704079628
+      },
+      {
+        "epoch": 2,
+        "metrics": {
+          "images": 5000,
+          "mode": "SGDet",
+          "constraint": "GC",
+          "matching": "class AND subject/object inclusive-IoU>=0.5",
+          "R@20": 0.18637999794443372,
+          "mR@20": 0.1145587118523904,
+          "F@20": 0.14189900989461093,
+          "R@50": 0.24928679422194527,
+          "mR@50": 0.14758447995619448,
+          "F@50": 0.18540450911384784,
+          "R@100": 0.29140596698637067,
+          "mR@100": 0.1731334134475649,
+          "F@100": 0.2172134888379557
+        },
+        "train_loss": 2.558187822269551,
+        "seconds": 9317.676949977875
+      },
+      {
+        "epoch": 3,
+        "metrics": {
+          "images": 5000,
+          "mode": "SGDet",
+          "constraint": "GC",
+          "matching": "class AND subject/object inclusive-IoU>=0.5",
+          "R@20": 0.2064477140121301,
+          "mR@20": 0.10937150180076939,
+          "F@20": 0.14299001070421988,
+          "R@50": 0.27096080958160235,
+          "mR@50": 0.1447589972534745,
+          "F@50": 0.1887040956197848,
+          "R@100": 0.3112079636452847,
+          "mR@100": 0.17668275581810391,
+          "F@100": 0.22539916606679905
+        },
+        "train_loss": 2.5231085210666837,
+        "seconds": 9254.208346366882
+      },
+      {
+        "epoch": 4,
+        "metrics": {
+          "images": 5000,
+          "mode": "SGDet",
+          "constraint": "GC",
+          "matching": "class AND subject/object inclusive-IoU>=0.5",
+          "R@20": 0.18855624082343553,
+          "mR@20": 0.1180164607872683,
+          "F@20": 0.14517104807062023,
+          "R@50": 0.2523953915043535,
+          "mR@50": 0.158934320109307,
+          "F@50": 0.19504688727734765,
+          "R@100": 0.29553530146580614,
+          "mR@100": 0.1873147431903575,
+          "F@100": 0.2292973551951217
+        },
+        "train_loss": 2.4937125271804534,
+        "seconds": 9557.68494606018
+      },
+      {
+        "epoch": 5,
+        "metrics": {
+          "images": 5000,
+          "mode": "SGDet",
+          "constraint": "GC",
+          "matching": "class AND subject/object inclusive-IoU>=0.5",
+          "R@20": 0.19365215744778252,
+          "mR@20": 0.12053451674014125,
+          "F@20": 0.1485853547034452,
+          "R@50": 0.2566459178384792,
+          "mR@50": 0.16041746145925917,
+          "F@50": 0.1974303603584391,
+          "R@100": 0.2974868126454263,
+          "mR@100": 0.1939060337579284,
+          "F@100": 0.23477951849552503
+        },
+        "train_loss": 2.362679107130937,
+        "seconds": 9301.618749141693
+      },
+      {
+        "epoch": 6,
+        "metrics": {
+          "images": 5000,
+          "mode": "SGDet",
+          "constraint": "GC",
+          "matching": "class AND subject/object inclusive-IoU>=0.5",
+          "R@20": 0.19558825163014304,
+          "mR@20": 0.11752835974565316,
+          "F@20": 0.14682815005315739,
+          "R@50": 0.2580619924065285,
+          "mR@50": 0.1595557232649215,
+          "F@50": 0.19719119328742232,
+          "R@100": 0.299102444033907,
+          "mR@100": 0.19155715259138845,
+          "F@100": 0.23354363353465715
+        },
+        "train_loss": 2.3355152543507676,
+        "seconds": 9345.827054023743
+      }
+    ],
+    "frozen_baseline_metrics": {
+      "images": 5000,
+      "mode": "SGDet",
+      "constraint": "GC",
+      "matching": "class AND subject/object inclusive-IoU>=0.5",
+      "R@20": 0.1967726989626624,
+      "mR@20": 0.12699636190053643,
+      "F@20": 0.15436568783307117,
+      "R@50": 0.25775066327644924,
+      "mR@50": 0.16015570414662744,
+      "F@50": 0.1975573582467531,
+      "R@100": 0.298993532603537,
+      "mR@100": 0.18814722051163296,
+      "F@100": 0.2309591293710137
+    },
+    "test_scored": false,
+    "selected_metrics": {
+      "images": 5000,
+      "mode": "SGDet",
+      "constraint": "GC",
+      "matching": "class AND subject/object inclusive-IoU>=0.5",
+      "R@20": 0.19365215744778252,
+      "mR@20": 0.12053451674014125,
+      "F@20": 0.1485853547034452,
+      "R@50": 0.2566459178384792,
+      "mR@50": 0.16041746145925917,
+      "F@50": 0.1974303603584391,
+      "R@100": 0.2974868126454263,
+      "mR@100": 0.1939060337579284,
+      "F@100": 0.23477951849552503
+    },
+    "guardrail_met": true,
+    "checkpoint": "artifacts/vg_method_v2/screening_native_1729/best.pt",
+    "checkpoint_sha256": "dc6cefd34809b5d3154666f7da92675ab089fe8daf8a39a55219e2608d58158b",
+    "wall_seconds": 56096.99900341034,
+    "completed_unix": 1791715249.34241
+  },
+  "source_hashes": {
+    "src/rsgformer/vg_v2_runtime.py": "0d7157491c093a02362f25c8841aab50a4b95791d9de3f08550ee37faff6aff8",
+    "scripts/remote_vg_v2_pipeline.py": "b336c5a84f5a50eb8e667015efda8f619ae4def3129f84007cc8b3b8fb2e59aa",
+    "scripts/remote_vg_v2_probe.py": "4e58967bb2bd74bd8303a082360e68be726d226d8a7c016e4f291f7b90f5c560",
+    "configs/vg_method_v2.json": "4ac00b7819dd37f1b894f7301737e6a3d663643dc02a6e63b8344a3c31322d68",
+    "vendor/salience_sgg/models/salience_sgg/deformable_detr.py": "b79111a2ce07827915b37b6991e2904e2445ff701db30f7cac4be01d4783d67a",
+    "vendor/salience_sgg/models/salience_sgg/deformable_transformer.py": "16ab624681c3a43686346cb07be8b0d178c7535ac78ff182c1ff3abe9ef27558",
+    "src/rsgformer/vg_speedup.py": "249fc7d832560401a83377095d5fd42d085e9850b7793a31dcc4a2d899115068",
+    "scripts/remote_vg_speedup_benchmark.py": "cd2c70958fac7ca9dc88fc39e0a04d7701b3a47a66b823e510a678dcd2878853",
+    "scripts/remote_vg_v2_speed_pipeline.py": "f70681c72e2ee38aef0d869673ad58347379291c6a532254b4ef82e8ec5dc242",
+    "scripts/remote_adopt_vg_speedup.py": "da5fd744035f68322909523c2286002a4f755eb892ea1eb8499f8f50dc10fdbb",
+    "src/rsgformer/vg_speedup_schedule.py": "680ea9510346c7435a5605b17f400aa6072c15831fffd24ba1e7114493d1ce5d",
+    "src/rsgformer/data.py": "1bfffb6bd0aab95e77389469c1ee20b3b3bf1828030df7e332f46177575b8a80",
+    "src/rsgformer/geometry.py": "32f35ec030812af8ac8ebd2e3b036709af0b2a50a782d58044c77ac4b6a73455",
+    "configs/vg_method_v2_speed_m2_v1.json": "614037209eb83fc9247e90d605d95b79e0b9901034bbc9f382bf0d654089fd62",
+    "vendor/salience_sgg/configs/SalienceSGG_vg.yaml": "e6e28c8a6df584b162906b50a5d546dfaf68042e7bec0d50f337981aa1d7fb9f"
+  },
+  "preserved_before": [
+    {
+      "path": "reports/VG_V2_PREREGISTRATION.json",
+      "sha256": "145dfe54b6df9527515e37438d5c734a429c2496bef8547c93468e8a753a3e83",
+      "bytes": 4613
+    },
+    {
+      "path": "reports/VG_V2_PROGRESS.json",
+      "sha256": "25961b91924450ccb3d7eb00ed9b38bb86c374768eab950bef3d4141d901fe56",
+      "bytes": 306
+    },
+    {
+      "path": "artifacts/vg_method_v2/screening_native_1729/report.json",
+      "sha256": "a6bf6486b2884ffcfa8dff476b0e606236aacc734fd4eccc7a9758c862e8effb",
+      "bytes": 5008
+    }
+  ],
+  "preserved_after": [
+    {
+      "path": "reports/VG_V2_RESULT.json",
+      "sha256": "e147355ffb3f6be2f72cf7a1c6b01396e46f65eae9095912edff0e780207ed91",
+      "bytes": 1226
+    },
+    {
+      "path": "reports/VG_V2_PROGRESS.json",
+      "sha256": "c4dacead313d26402ff3c6eec391bd1549b006060038bda6364abd63732c8d91",
+      "bytes": 177
+    },
+    {
+      "path": "artifacts/vg_method_v2/pipeline.log",
+      "sha256": "4d7fd8fe24a35b4f8a6d2eb0e79dcf3e95b7c90514c6b93974a48a182352102a",
+      "bytes": 743559
+    }
+  ],
+  "preserved_run_files": [
+    {
+      "folder": "screening_context_1729",
+      "files": []
+    },
+    {
+      "folder": "screening_native_1729",
+      "files": [
+        {
+          "name": "current_validation_records.json",
+          "bytes": 1712071,
+          "sha256": "cc41bc6008db9ebf70d8f59384763fbd825504e5bb1af56c7c487077346727ab"
+        },
+        {
+          "name": "best_validation_records.json",
+          "bytes": 1712084,
+          "sha256": "fd23527c3745182892c50b11eddac92952a5017e0dddcfb9c2b71c56d4f85d5c"
+        },
+        {
+          "name": "fallback_validation_records.json",
+          "bytes": 1712084,
+          "sha256": "fd23527c3745182892c50b11eddac92952a5017e0dddcfb9c2b71c56d4f85d5c"
+        },
+        {
+          "name": "best.pt",
+          "bytes": 116754921,
+          "sha256": "dc6cefd34809b5d3154666f7da92675ab089fe8daf8a39a55219e2608d58158b"
+        },
+        {
+          "name": "report.json",
+          "bytes": 5008,
+          "sha256": "a6bf6486b2884ffcfa8dff476b0e606236aacc734fd4eccc7a9758c862e8effb"
+        }
+      ]
+    }
+  ],
+  "old_artifacts_preserved_in_place": true,
+  "old_stop_token": "d5866565e34555143af0f2f42c240841eaa8e1f2b0152c05c4ef60121561377c",
+  "original_absolute_wall_cap_retained": true,
+  "test_scored": false
+}

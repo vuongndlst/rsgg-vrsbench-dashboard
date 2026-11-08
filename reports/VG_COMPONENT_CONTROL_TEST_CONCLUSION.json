@@ -1,0 +1,74 @@
+{
+  "status": "COMPONENT_TEST_COMPLETE_VERIFIED",
+  "completed_utc": "2026-10-20T00:51:16.978770+00:00",
+  "variant": "context",
+  "seed": 1729,
+  "selected_epoch": 10,
+  "test": {
+    "mode": "SGDet",
+    "constraint": "GC",
+    "images": 26446,
+    "observed_images": 26446,
+    "empty_gt_images_excluded": 0,
+    "matching": "pinned native class/predicate AND inclusive float64 IoU>=0.5",
+    "absent_predicate_policy": "contributes zero in denominator50",
+    "R@20": 0.20698705708770174,
+    "mR@20": 0.11798923730360744,
+    "R@50": 0.27513692877179774,
+    "mR@50": 0.16919823015969826,
+    "R@100": 0.3228120836407376,
+    "mR@100": 0.20427976259644393
+  },
+  "published_references": [
+    {
+      "model": "Salience-SGG R50",
+      "R@50_percent": 28.8,
+      "mR@50_percent": 18.0,
+      "source": "https://arxiv.org/html/2601.08728v1",
+      "our_minus_published_R50_pp": -1.2863071228202259,
+      "our_minus_published_mR50_pp": -1.0801769840301745
+    },
+    {
+      "model": "Dual-SGG+LA tau0.2 R50",
+      "R@50_percent": 30.2,
+      "mR@50_percent": 18.7,
+      "source": "https://arxiv.org/html/2607.06176v1",
+      "our_minus_published_R50_pp": -2.6863071228202244,
+      "our_minus_published_mR50_pp": -1.7801769840301738
+    },
+    {
+      "model": "Dual-SGG+LA tau0.3 R50",
+      "R@50_percent": 25.3,
+      "mR@50_percent": 22.2,
+      "source": "https://arxiv.org/html/2607.06176v1",
+      "our_minus_published_R50_pp": 2.213692877179774,
+      "our_minus_published_mR50_pp": -5.280176984030174
+    }
+  ],
+  "claim": "Single validation-selected Context control provides a measured baseline; no SOTA or regional-superiority claim. Published recipe/architecture differences prevent strict ranking.",
+  "comparability_limitations": [
+    "single validation-selected seed; not3seed regional-method confirmation",
+    "pretrained SGG-head adaptation and fixed-transform training differs from native full recipe",
+    "current input resize uses component rounding convention",
+    "canonical evaluation targets/postprocessor/evaluator; not a native-training reproduction",
+    "benchmark images may overlap external caption tests; not caption-clean"
+  ],
+  "test_passes": 1,
+  "verification": {
+    "utc": "2026-10-20T01:22:22.565841+00:00",
+    "status": "PASS",
+    "preregistration_sha256": "6b57ddbdbaf51c7d9307ae33f9766efc74cfe639cc51b98f9e36adf9dd659b77",
+    "checkpoint_sha256": "29017a69d7cb6d76d68c834b5d540712775a9e0cf9cae13efd17d78a7b69292e",
+    "result_sha256": "81d7f9529f5230d18182064e52d7ec141a7460fb7c78d03baeec886fec9ec0b7",
+    "source_files_verified": 28,
+    "prediction_artifact_hashes_verified": {
+      "validation_predictions.jsonl.gz": "99cf87a0f9248f4ba95e2f25c8e7127f5ff893a22841cf901683e49b47ff1378",
+      "test_predictions.jsonl.gz": "1ebbe42de86960144bc5ccf1b427e6bb8a1600fb62697c70e2853b986a5e37de"
+    },
+    "validation_gate_verified": true,
+    "test_ledger_verified": true,
+    "observed_test_images": 26446,
+    "new_test_inference_or_scoring": false
+  },
+  "next_steps": "Preserve test as final assessment; continue caption-clean provenance and independent development, no tuning from this test."
+}

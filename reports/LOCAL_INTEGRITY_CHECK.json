@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "current_manifest_files": 39,
+  "historical_manifest_files": 8,
+  "reference_source_files": 12,
+  "syntax_files": 31,
+  "text_files_redaction_checked": 155,
+  "secret_leaks": 0,
+  "config_matches_preregistration": true,
+  "resource_caps_met": true
+}

@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETE_ORIGINAL_IMAGE_FIXED20_DEV_REVIEW_PACKET_VERIFIED_PENDING_ANNOTATION",
+  "utc": "2026-11-03T18:31:46.241549+00:00",
+  "phase": "vg_grounding_dev_review20_v1_20261104",
+  "preregistration_sha256": "6900f7e71d277ae91edbdffaea48536d368c7cda3da2f9c9f3f05c71589d25e9",
+  "source_images_zip_sha256": "c5e5bff9e6ead1bbc5e92237b32c32fab1d3d04f00ad3a7a13964100c5d3c1bc",
+  "review_bundle_sha256": "b2f0dab132b3b47272d18636e8845870db57b9f21d0f5da0988fb89ab52aa791",
+  "review_bundle_bytes": 3143743,
+  "local_entrypoint": "outputs/vg_grounding_dev_review20_v1_20261104/index_r1.html",
+  "entrypoint_sha256": "293b4065675fffaf2e70016db3a3b1bb47468d830d6175e7ce77d62c5c708965",
+  "units": 20,
+  "source_images": 16,
+  "caption_variants_per_unit": 3,
+  "predicted_directed_edges_rendered": 38,
+  "original_JPEG_hashes_preserved": true,
+  "source_data_and_outputs_unchanged": true,
+  "human_labels_created": 0,
+  "visual_semantic_labels_created": 0,
+  "assistant_source_images_viewed_for_UI_layout_only": 2,
+  "new_caption_or_metrics": false,
+  "factuality_review_completed": false,
+  "check_or_TEST_opened": false,
+  "policy_adopted": false,
+  "original_generation_phase_terminal_no_polling": true,
+  "successful_remote_contact_utc": "2026-11-03T18:25:00.672569+00:00",
+  "verification_reports": [
+    "reports/VG_GROUNDING_DEV_REVIEW20_VERIFICATION_20261104.json",
+    "reports/VG_GROUNDING_DEV_REVIEW20_UI_R1_VERIFICATION_20261104.json"
+  ]
+}

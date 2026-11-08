@@ -1,0 +1,8 @@
+{
+  "announced": [
+    "branch:vg_method_v2_speed_m2_v1:screening:native:d5866565e34555143af0f2f42c240841eaa8e1f2b0152c05c4ef60121561377c",
+    "branch:vg_method_v2_speed_m2_v1:screening:context:d5866565e34555143af0f2f42c240841eaa8e1f2b0152c05c4ef60121561377c",
+    "branch:vg_method_v2_speed_m2_v1:screening:feedback:d5866565e34555143af0f2f42c240841eaa8e1f2b0152c05c4ef60121561377c",
+    "branch:vg_method_v2_speed_m2_v1:screening:oneway:d5866565e34555143af0f2f42c240841eaa8e1f2b0152c05c4ef60121561377c"
+  ]
+}

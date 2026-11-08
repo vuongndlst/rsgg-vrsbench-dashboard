@@ -1,0 +1,33 @@
+{
+  "version": "vg_color_fresh_val_execution_r1_20261025",
+  "status": "LOCKED_FOR_INDEPENDENT_VAL_REVIEW_NOT_TEST",
+  "source_mask_color_rules": "configs/vg_object_color_rules_v3_20261025.json",
+  "native_binding": "configs/vg_color_object_binding_native_v1_20261025.json",
+  "selected_mask": "SAM2.1_small",
+  "selected_color_operating_point": "conservative",
+  "selected_binding_profile": "strict",
+  "selection_basis": "Prespecified conservative defaults fixed before fresh dev/check inference; TRAIN pilots exposed errors; no choice on fresh check scores",
+  "maximum_images": 1000,
+  "maximum_nodes": 4000,
+  "maximum_wall_seconds": 7000,
+  "own_GPU_GiB": 8,
+  "allocator_GiB": 6,
+  "RSS_GiB": 4,
+  "CPU": 4,
+  "disk_reserve_GiB": 16,
+  "phase_artifacts_GiB": 1,
+  "overall_deadline_unix": 1794670321.2414355,
+  "production_accepted": false,
+  "human_review_gate_pending": true,
+  "TEST_access_allowed": false,
+  "caption_launch_allowed": false,
+  "human_review_sampling": "Holdout color_check_v1 only; hash order COLOR_CHECK_REVIEW_V1_20261025; at most one conservative+strict candidate per parent, maximum200, minimum100 needed; no retuning after check",
+  "blind_annotation": "Before reveal, review sheet excludes predicted colors and CLIP scores; original/mask evidence and target label shown; predictions kept separate",
+  "all_nodes_in_denominator": true,
+  "repair": {
+    "parent_phase": "color_fresh_val_execution_v1_20261025",
+    "change": "JSON boundary NumPy scalar adapter only; rules/model/policy/membership unchanged",
+    "preserve_and_reuse_complete_prefix_rows": true,
+    "wall_budget_accounting": "7000seconds new worker plus conservatively200seconds prior failed execution <= original7200second stage budget; overall absolute deadline unchanged"
+  }
+}

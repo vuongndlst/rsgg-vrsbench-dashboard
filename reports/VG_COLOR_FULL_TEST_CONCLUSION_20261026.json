@@ -1,0 +1,43 @@
+{
+  "status": "COMPLETE_EXPLORATORY_COLOR_TEST_VERIFIED_NOT_HUMAN_PRECISION",
+  "completed_Vietnam_time": "2026-10-26 05:20:07 +07:00",
+  "images": 26446,
+  "requested_nodes": 88345,
+  "candidate_nodes": 5214,
+  "coverage": 0.059018620182240085,
+  "positive_matched_GT_candidates": 1824,
+  "subset_agreement_count": 1311,
+  "subset_agreement": 0.71875,
+  "exact_agreement_count": 1051,
+  "exact_agreement": 0.5762061403508771,
+  "human_labels": 0,
+  "human_precision_gate_passed": false,
+  "caption_generated_or_scored": false,
+  "whole_program_complete": false,
+  "TEST_used_for_tuning": false,
+  "verification": {
+    "status": "PASS_LOCAL_COMPLETION_SOURCE_LEDGER_CACHE_AND_FULL_SG_STRUCTURE",
+    "utc": "2026-10-26T04:32:16.472362+00:00",
+    "archive_sha256": "9273d663febaf7cc91b1eb82c46b05b3b5231d07a4166ba6793ad320c72dbbb5",
+    "pipeline_preregistration_sha256": "2f732c0e678d20f3023582a43201d6d99712c4430579fab79595e7d6e3b58339",
+    "color_cache_completion_sha256": "ddcd51dffdd065d25f5f2df2ed50bf19bb32f17531e870120016abba58828ea6",
+    "diagnostic_completion_sha256": "2bd5ead8f76715a3c2d69741b52393d85111b68f7ef982be1c3c4dbba6ef3123",
+    "local_binary_cache_SHA_verified": true,
+    "all_SG_row_commit_hashes_verified": true,
+    "all_original_graph_nodes_have_explicit_color_status": true,
+    "predicted_only_registered_selection_and_strict_binding_verified": true,
+    "counts": {
+      "requested_nodes": 88345,
+      "images": 26446,
+      "node_not_requested": 3240609,
+      "node_unknown": 83131,
+      "node_candidate_not_human_validated": 5214
+    },
+    "VAL_full_replay_numeric_max_difference": 0,
+    "human_precision_gate_passed": false,
+    "human_labels": 0,
+    "SGDet_inference_or_metric_rerun": false,
+    "TEST_pixels_or_GT_read_by_this_audit": false
+  },
+  "next_stage_plan": "research/VG_CAPTION_AFTER_COLOR_TEST_PLAN_20261026.md"
+}

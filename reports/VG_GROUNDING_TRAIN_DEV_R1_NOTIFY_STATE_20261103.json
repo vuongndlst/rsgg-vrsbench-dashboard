@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETION_REPORTED_IN_DIRECT_HUMAN_RESULT_CHECK",
+  "utc": "2026-11-03T00:28:51.137362+00:00",
+  "phase": "vg_grounding_train_dev_r1_20261103",
+  "preregistration_sha256": "394243d86641a9a32fa5818fa3a30a224f65e4682bc4637ed1d08fa37ed6b7b7",
+  "archive_sha256": "767c7e0c0f26c67aba6c8fe9b6c8d01c44754ca92af236a90d41c023227aa157",
+  "dedup_key": "394243d86641a9a32fa5818fa3a30a224f65e4682bc4637ed1d08fa37ed6b7b7:767c7e0c0f26c67aba6c8fe9b6c8d01c44754ca92af236a90d41c023227aa157",
+  "completion_notified": true,
+  "selected_from_dev": "G0",
+  "no_automatic_check_or_TEST_launch": true
+}

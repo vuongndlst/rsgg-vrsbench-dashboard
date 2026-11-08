@@ -1,0 +1,64 @@
+{
+  "status": "VRSBENCH_QWEN_LORA_COMPLETE",
+  "utc": "2026-11-07T01:06:56Z",
+  "wall_seconds": 901.1401162147522,
+  "metrics": {
+    "CIDEr": 11.250429393306701,
+    "Bleu_4": 5.7673418132697645,
+    "Bleu_1": 40.6730769230691,
+    "METEOR": 19.72102062353115,
+    "ROUGE_L": 29.128358378172734
+  },
+  "samples": [
+    {
+      "question_id": 0,
+      "generated": "The high-resolution GoogleEarth image shows a section of a road with two vehicles parked on either side. The top-most vehicle is positioned at the bottom-right corner of the frame, while the other vehicle is located towards the middle-left part of the image. There are no visible pedestrians or cyclists in this segment",
+      "ground_truth": "The aerial image from GoogleEarth features a group of large yellow buses lined up on the left side, and two small vehicles, one on the top-right and another large vehicle on the bottom-right side of the image. The buses are parked in a lot adjacent to a green area and a road running roughly north-south."
+    },
+    {
+      "question_id": 1,
+      "generated": "The high-resolution GoogleEarth image shows a section of a road with two vehicles parked on either side. The top-most vehicle is positioned at the bottom-right corner of the frame, while the other vehicle is located towards the middle-left part of the image. There are no visible pedestrians or cyclists in this segment",
+      "ground_truth": "The image from GoogleEarth captures a section of a road with three vehicles visible. One large vehicle is positioned towards the middle-left side of the frame, two small vehicles are located at the top of the frame and the other at the bottom, with the road curving around the landscape."
+    },
+    {
+      "question_id": 2,
+      "generated": "The high-resolution GoogleEarth image shows a section of a road with two vehicles parked on either side. The top-most vehicle is positioned at the bottom-right corner of the frame, while the other vehicle is located towards the middle-left part of the image. There are no visible pedestrians or cyclists in this segment",
+      "ground_truth": "The high-resolution image from GoogleEarth shows a parking area with vehicles and asphalt surfaces. A small vehicle is positioned towards the top of this aerial view."
+    },
+    {
+      "question_id": 3,
+      "generated": "The high-resolution GoogleEarth image shows a section of a road with two vehicles parked on either side. The top-most vehicle is positioned at the bottom-right corner of the frame, while the other vehicle is located towards the middle-left part of the image. There are no visible pedestrians or cyclists in this segment",
+      "ground_truth": "The aerial image, sourced from GoogleEarth with high resolution, shows a parking lot with large vehicles arranged neatly in rows. Most of the large vehicles are white, and they are predominantly parked in a north-south alignment. There is a large vehicle at the left edge of the road."
+    },
+    {
+      "question_id": 4,
+      "generated": "The high-resolution GoogleEarth image shows a section of a road with two vehicles parked on either side. The top-most vehicle is positioned at the bottom-right corner of the frame, while the other vehicle is located towards the middle-left part of the image. There are no visible pedestrians or cyclists in this segment",
+      "ground_truth": "A high-resolution Google Earth image capturing a gray parking lot with large vehicles and a small vehicle. The large vehicles are aligned in parallel rows. A small vehicle is positioned near the top-right corner."
+    },
+    {
+      "question_id": 5,
+      "generated": "The high-resolution GoogleEarth image shows a section of a road with two vehicles parked on either side. The top-most vehicle is positioned at the bottom-right corner of the frame, while the other vehicle is located towards the middle-left part of the image. There are no visible pedestrians or cyclists in this segment",
+      "ground_truth": "The high-resolution image captured via GoogleEarth shows a collection of vehicles in a parking area. There are five large vehicles positioned in the top and middle on the right. Small vehicle is towards the middle-left of the image."
+    },
+    {
+      "question_id": 6,
+      "generated": "The high-resolution GoogleEarth image shows a section of a road with two vehicles parked on either side. The top-most vehicle is positioned at the bottom-right corner of the frame, while the other vehicle is located towards the middle-left part of the image. There are no visible pedestrians or cyclists in this segment",
+      "ground_truth": "The high-resolution aerial image from GoogleEarth shows a parking lot with large vehicles aligned in rows at the top of the image. The green area below the vehicles is a vegetation."
+    },
+    {
+      "question_id": 7,
+      "generated": "The high-resolution GoogleEarth image shows a section of a road with two vehicles parked on either side. The top-most vehicle is positioned at the bottom-right corner of the frame, while the other vehicle is located towards the middle-left part of the image. There are no visible pedestrians or cyclists in this segment",
+      "ground_truth": "The image from GoogleEarth presents a high-resolution view of a residential area with a driveway leading to a house surrounded by lush greenery. A small vehicle is parked near the bottom-middle part of the image, closely aligned with the house."
+    },
+    {
+      "question_id": 8,
+      "generated": "The high-resolution GoogleEarth image shows a section of a road with two vehicles parked on either side. The top-most vehicle is positioned at the bottom-right corner of the frame, while the other vehicle is located towards the middle-left part of the image. There are no visible pedestrians or cyclists in this segment",
+      "ground_truth": "The high-resolution image from GoogleEarth shows a large house with a complex roof structure, surrounded by a well-manicured lawn with landscaping features. There is a large vehicle parked on the left side."
+    },
+    {
+      "question_id": 9,
+      "generated": "The high-resolution GoogleEarth image shows a section of a road with two vehicles parked on either side. The top-most vehicle is positioned at the bottom-right corner of the frame, while the other vehicle is located towards the middle-left part of the image. There are no visible pedestrians or cyclists in this segment",
+      "ground_truth": "The high-resolution image from Google Earth features a body of water with three small harbors. One harbor is located near the top right corner. Another is situated along the bottom edge. The third harbor is positioned between the other two, encompassing boat slips and a pier."
+    }
+  ]
+}

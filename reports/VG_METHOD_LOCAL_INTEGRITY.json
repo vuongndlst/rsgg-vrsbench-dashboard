@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "locked_source_files": 9,
+  "config_matches_remote_preregistration": true,
+  "mechanism_tests": 7,
+  "optimizer_checkpoint_probes": 6,
+  "syntax_files": 48,
+  "text_files_redaction_checked": 220,
+  "secret_leaks": 0
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-10T20:08:56.803053+00:00",
+  "synthetic_cases": {
+    "random": {
+      "exact_query_pairs_predicate_scores_ranking_nms_ids": "PASS",
+      "relation_rows": 100,
+      "native_zero_score_rows_retained": 0
+    },
+    "overlapping_duplicate_queries": {
+      "exact_query_pairs_predicate_scores_ranking_nms_ids": "PASS",
+      "relation_rows": 100,
+      "native_zero_score_rows_retained": 0
+    },
+    "tied_logits": {
+      "exact_query_pairs_predicate_scores_ranking_nms_ids": "PASS",
+      "relation_rows": 100,
+      "native_zero_score_rows_retained": 0
+    }
+  },
+  "upstream_source_sha256": "e284ccb5e0fab7ac0404ae12265c705c99eda873a64fe405062837f933d786fb",
+  "postprocessor_sha256": "9c8e4ad679eabc528421edb972e328ddf0da5db49670291bbb2f2499b54cdb08",
+  "reference_modification": "only CUDA device literals replaced with CPU in source-extracted fixture",
+  "class_indexing": "zero-based",
+  "self_relation_scores": "zero before predicate argmax/dedup",
+  "ranking": "object score product * salience * max predicate score; native Torch sort/dedup",
+  "cuda_used": false,
+  "model_initialized": false,
+  "benchmark_validation_scored": false,
+  "benchmark_test_scored": false,
+  "live_v2_modified": false,
+  "remaining": [
+    "Full trained-model integration and clean-release/resource/preregistration gates",
+    "Caption graph evidence selection must be registered on independent dev; benchmark zero-score rows are not caption evidence"
+  ]
+}

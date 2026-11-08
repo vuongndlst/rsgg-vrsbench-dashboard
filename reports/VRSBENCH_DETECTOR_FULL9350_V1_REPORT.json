@@ -1,0 +1,181 @@
+{
+  "task": "Full 9,350-Image VRSBench Detection & Grounding Evaluation (v1, artifacts/vrsbench_detector_epoch5.pth)",
+  "total_images": 9350,
+  "total_gt_boxes": 16159,
+  "localization_agnostic": {
+    "mIoU": 65.49,
+    "Acc@0.5": 80.38,
+    "Acc@0.7": 54.19,
+    "Acc@0.75": 44.69
+  },
+  "class_matched": {
+    "mIoU": 64.33,
+    "Acc@0.5": 79.03,
+    "Acc@0.7": 53.07,
+    "Acc@0.75": 43.62
+  },
+  "ap_metrics": {
+    "macro_mAP@50_all_26_classes": 44.61,
+    "weighted_mAP@50": 56.32,
+    "micro_mAP@50": 57.86,
+    "num_active_classes": 26,
+    "per_class_ap50": {
+      "airplane": {
+        "ap_all_point": 72.18,
+        "recall": 86.86,
+        "gt_count": 1461,
+        "tp": 1269
+      },
+      "airport": {
+        "ap_all_point": 7.18,
+        "recall": 34.87,
+        "gt_count": 195,
+        "tp": 68
+      },
+      "baseball-diamond": {
+        "ap_all_point": 80.37,
+        "recall": 87.5,
+        "gt_count": 712,
+        "tp": 623
+      },
+      "basketball-court": {
+        "ap_all_point": 69.36,
+        "recall": 80.29,
+        "gt_count": 345,
+        "tp": 277
+      },
+      "bridge": {
+        "ap_all_point": 41.18,
+        "recall": 64.78,
+        "gt_count": 846,
+        "tp": 548
+      },
+      "chimney": {
+        "ap_all_point": 66.41,
+        "recall": 76.47,
+        "gt_count": 170,
+        "tp": 130
+      },
+      "container-crane": {
+        "ap_all_point": 0.0,
+        "recall": 0.0,
+        "gt_count": 12,
+        "tp": 0
+      },
+      "dam": {
+        "ap_all_point": 17.41,
+        "recall": 42.47,
+        "gt_count": 146,
+        "tp": 62
+      },
+      "expressway-service-area": {
+        "ap_all_point": 32.41,
+        "recall": 48.72,
+        "gt_count": 234,
+        "tp": 114
+      },
+      "expressway-toll-station": {
+        "ap_all_point": 34.74,
+        "recall": 51.76,
+        "gt_count": 170,
+        "tp": 88
+      },
+      "golffield": {
+        "ap_all_point": 10.12,
+        "recall": 36.36,
+        "gt_count": 121,
+        "tp": 44
+      },
+      "ground-track-field": {
+        "ap_all_point": 61.97,
+        "recall": 85.43,
+        "gt_count": 446,
+        "tp": 381
+      },
+      "harbor": {
+        "ap_all_point": 43.79,
+        "recall": 77.98,
+        "gt_count": 1090,
+        "tp": 850
+      },
+      "helicopter": {
+        "ap_all_point": 20.18,
+        "recall": 50.0,
+        "gt_count": 56,
+        "tp": 28
+      },
+      "helipad": {
+        "ap_all_point": 0.0,
+        "recall": 0.0,
+        "gt_count": 1,
+        "tp": 0
+      },
+      "overpass": {
+        "ap_all_point": 34.12,
+        "recall": 57.04,
+        "gt_count": 419,
+        "tp": 239
+      },
+      "roundabout": {
+        "ap_all_point": 67.81,
+        "recall": 82.05,
+        "gt_count": 195,
+        "tp": 160
+      },
+      "ship": {
+        "ap_all_point": 54.23,
+        "recall": 79.85,
+        "gt_count": 1687,
+        "tp": 1347
+      },
+      "soccer-ball-field": {
+        "ap_all_point": 34.73,
+        "recall": 78.38,
+        "gt_count": 148,
+        "tp": 116
+      },
+      "stadium": {
+        "ap_all_point": 82.03,
+        "recall": 91.13,
+        "gt_count": 248,
+        "tp": 226
+      },
+      "storage-tank": {
+        "ap_all_point": 72.23,
+        "recall": 89.43,
+        "gt_count": 766,
+        "tp": 685
+      },
+      "swimming-pool": {
+        "ap_all_point": 36.08,
+        "recall": 69.89,
+        "gt_count": 269,
+        "tp": 188
+      },
+      "tennis-court": {
+        "ap_all_point": 78.86,
+        "recall": 93.9,
+        "gt_count": 1132,
+        "tp": 1063
+      },
+      "trainstation": {
+        "ap_all_point": 28.32,
+        "recall": 59.26,
+        "gt_count": 216,
+        "tp": 128
+      },
+      "vehicle": {
+        "ap_all_point": 54.01,
+        "recall": 83.12,
+        "gt_count": 4545,
+        "tp": 3778
+      },
+      "windmill": {
+        "ap_all_point": 60.03,
+        "recall": 69.0,
+        "gt_count": 529,
+        "tp": 365
+      }
+    }
+  }
+}

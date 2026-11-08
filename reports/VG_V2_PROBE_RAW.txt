@@ -1,0 +1,54 @@
+******use_fre_bias=False*********
+***********tau=0.2**********iou=0.6
+{
+  "test_scored": false,
+  "validation_scored": false,
+  "status": "PASS",
+  "train_images": 57723,
+  "train_split_hash": "e6d5c31f10baa92fedc23200cce81f7d7751b9f68387105bc07287976774ad26",
+  "trainable_native_parameters": 29171434,
+  "frontend_seconds": 1.9514129161834717,
+  "cached_fp32_max_abs_error": {
+    "pred_logits": 0.0,
+    "pred_boxes": 0.0,
+    "pred_rel": 0.0,
+    "pred_confidence": 0.0
+  },
+  "cached_fp16_max_abs_error": {
+    "pred_rel": 0.14620590209960938,
+    "pred_confidence": 0.0029709339141845703
+  },
+  "cache_dtype": "float32",
+  "upstream_synthetic_matching_parity": "PASS",
+  "region_zero_init_feedback_gradient_ID_contracts": "PASS",
+  "variants": {
+    "native": {
+      "loss": 1.9725093841552734,
+      "step_seconds": 0.21727609634399414,
+      "trainable": 29171434,
+      "active": 29171434,
+      "peak_bytes": 2307737600
+    },
+    "context": {
+      "loss": 1.9725093841552734,
+      "step_seconds": 0.15641331672668457,
+      "trainable": 29858333,
+      "active": 29858333,
+      "peak_bytes": 2764578816
+    },
+    "oneway": {
+      "loss": 1.9725093841552734,
+      "step_seconds": 0.15697479248046875,
+      "trainable": 29858333,
+      "active": 29858333,
+      "peak_bytes": 2851294208
+    },
+    "feedback": {
+      "loss": 1.9725093841552734,
+      "step_seconds": 0.15713787078857422,
+      "trainable": 29858333,
+      "active": 29858333,
+      "peak_bytes": 2851294208
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "images": 5000,
+  "full_detector_validation_smoke": "PASS",
+  "postprocess_source_parity_images": 32,
+  "legacy_selection_reproduced": {
+    "images": 5000,
+    "mode": "SGDet",
+    "constraint": "GC",
+    "matching": "class AND subject/object inclusive-IoU>=0.5",
+    "R@20": 0.18689159516532963,
+    "mR@20": 0.12133913799482057,
+    "F@20": 0.14714473682321252,
+    "R@50": 0.2493579449003898,
+    "mR@50": 0.16929900816804155,
+    "F@50": 0.20167372088793062,
+    "R@100": 0.2925810856196506,
+    "mR@100": 0.19217709273378072,
+    "F@100": 0.23198116064493965
+  },
+  "canonical_metrics_before_test": {
+    "mode": "SGDet",
+    "constraint": "GC",
+    "images": 5000,
+    "observed_images": 5000,
+    "empty_gt_images_excluded": 0,
+    "matching": "pinned native class/predicate AND inclusive float64 IoU>=0.5",
+    "absent_predicate_policy": "contributes zero in denominator50",
+    "R@20": 0.18000736712085408,
+    "mR@20": 0.12048978923248348,
+    "R@50": 0.24129438551408786,
+    "mR@50": 0.1682280422172078,
+    "R@100": 0.28400358495613254,
+    "mR@100": 0.19095456161640667
+  },
+  "independent_float64_evaluator_parity": "PASS",
+  "checkpoint_frozen_before_this_validation": true,
+  "test_scored": false
+}

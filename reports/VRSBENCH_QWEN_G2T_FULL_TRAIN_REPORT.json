@@ -1,0 +1,85 @@
+{
+  "task": "VRSBench Full-Scale LoRA Fine-Tuning (Remote Sensing Scene Graph to Text)",
+  "model": "Qwen2.5-14B + LoRA (r=16, alpha=32, target_modules=q,k,v,o)",
+  "dataset": "VRSBench (All 20,230 training pairs)",
+  "hardware": "GPU 1 (NVIDIA A40 48GB VRAM)",
+  "total_steps": 1264,
+  "final_loss": 1.4355,
+  "eval_history": [
+    {
+      "step": 300,
+      "CIDEr": 28.46,
+      "Bleu_4": 12.77,
+      "METEOR": 25.5,
+      "ROUGE_L": 36.19
+    },
+    {
+      "step": 600,
+      "CIDEr": 26.76,
+      "Bleu_4": 13.41,
+      "METEOR": 25.49,
+      "ROUGE_L": 37.89
+    },
+    {
+      "step": 900,
+      "CIDEr": 28.61,
+      "Bleu_4": 12.84,
+      "METEOR": 24.91,
+      "ROUGE_L": 36.9
+    },
+    {
+      "step": 1264,
+      "CIDEr": 26.355346585311594,
+      "Bleu_4": 12.653566626314674,
+      "Bleu_3": 19.081259528591115,
+      "Bleu_2": 29.323288097449517,
+      "Bleu_1": 45.891608391600364,
+      "METEOR": 25.36852996158793,
+      "ROUGE_L": 37.21911287246693,
+      "eval_seconds": 624.6786987781525
+    }
+  ],
+  "final_step_1264": {
+    "step": 1264,
+    "CIDEr": 26.355346585311594,
+    "Bleu_4": 12.653566626314674,
+    "Bleu_3": 19.081259528591115,
+    "Bleu_2": 29.323288097449517,
+    "Bleu_1": 45.891608391600364,
+    "METEOR": 25.36852996158793,
+    "ROUGE_L": 37.21911287246693,
+    "eval_seconds": 624.6786987781525
+  },
+  "sample_predictions": [
+    {
+      "id": "P0003_0002.png",
+      "graph": "vehicle (The large yellow vehicle situated closest to the green area); vehicle (The large vehicle located at the bottom-left corner of the image); vehicle (The small dark-colored vehicle located at the top-right corner of the image); vehicle (The small dark-colored vehicle positioned at the bottom-right corner of the image)",
+      "ground_truth": "The aerial image from GoogleEarth features a group of large yellow buses lined up on the left side, and two small vehicles, one on the top-right and another large vehicle on the bottom-right side of the image. The buses are parked in a lot adjacent to a green area and a road running roughly north-south.",
+      "prediction": "This high-resolution image sourced from GoogleEarth shows a section of an airport with various vehicles and structures visible. There is one large yellow vehicle near the center of the frame, another large vehicle towards the bottom left, and two small dark-colored vehicles on the right side of the image. The surrounding area includes patches of grass, parking spaces marked by white lines, and buildings with flat"
+    },
+    {
+      "id": "P0003_0004.png",
+      "graph": "vehicle (The large vehicle is situated towards the middle-left side of the image); vehicle (One small vehicle is positioned at the top of the image); vehicle (Another small vehicle is at the very bottom of the image)",
+      "ground_truth": "The image from GoogleEarth captures a section of a road with three vehicles visible. One large vehicle is positioned towards the middle-left side of the frame, two small vehicles are located at the top of the frame and the other at the bottom, with the road curving around the landscape.",
+      "prediction": "This high-resolution image sourced from GoogleEarth shows a section of an area with vehicles parked along the sides of roads. There is one large vehicle located on the left side of the frame, while two small vehicles can be seen; one near the top edge and another at the bottom-most part of the image. The surrounding environment includes patches of greenery and buildings with various rooftop colors"
+    },
+    {
+      "id": "P0007_0001.png",
+      "graph": "vehicle (The small vehicle located towards the top of the image)",
+      "ground_truth": "The high-resolution image from GoogleEarth shows a parking area with vehicles and asphalt surfaces. A small vehicle is positioned towards the top of this aerial view.",
+      "prediction": "This high-resolution image sourced from GoogleEarth shows a section of land with various features including buildings, roads, and vegetation. There is one small vehicle visible on the road at the top part of the image. The area includes patches of greenery interspersed among the built environment."
+    },
+    {
+      "id": "P0007_0004.png",
+      "graph": "vehicle (The large vehicle is at the left edge of the road)",
+      "ground_truth": "The aerial image, sourced from GoogleEarth with high resolution, shows a parking lot with large vehicles arranged neatly in rows. Most of the large vehicles are white, and they are predominantly parked in a north-south alignment. There is a large vehicle at the left edge of the road.",
+      "prediction": "This high-resolution image sourced from GoogleEarth shows a section of a roadway with one large vehicle visible on it. The vehicle is positioned towards the left side of the frame. There are no other vehicles or objects within the immediate vicinity that can be identified."
+    },
+    {
+      "id": "P0007_0005.png",
+      "graph": "vehicle (The large vehicle located on the right side); vehicle (The large vehicle located on the bottom-right corner); vehicle (The middle-left bottom side large vehicle in the image); vehicle (The small vehicle located near the top-right corner of the image)",
+      "ground_truth": "A high-resolution Google Earth image capturing a gray parking lot with large vehicles and a small vehicle. The large vehicles are aligned in parallel rows. A small vehicle is positioned near the top-right corner.",
+      "prediction": "This high-resolution image sourced from GoogleEarth shows a section of an airport with various vehicles and structures visible. There is a cluster of large vehicles positioned at the bottom-middle part of the frame, with one being notably larger than the others. Additionally, there's a small vehicle situated towards the top-right corner of the image. The area also includes buildings with distinct rooftops and parking"
+    }
+  ]
+}

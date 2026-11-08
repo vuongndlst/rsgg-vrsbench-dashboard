@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "NMS_query_provenance": true,
+  "region_focus_does_not_import_outside_relation": true,
+  "color_blind_retrieval_paired_ids": true,
+  "static_dynamic_distinct_train_parents": true,
+  "no_color_serialization_strips_attrs": true,
+  "test_bank_rejected": true,
+  "real_dataset_accessed": false
+}

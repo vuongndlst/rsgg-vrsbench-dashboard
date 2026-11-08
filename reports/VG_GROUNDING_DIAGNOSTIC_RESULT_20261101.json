@@ -1,0 +1,144 @@
+{
+  "status": "COMPLETE_TRAIN_LEXICAL_STRUCTURAL_DIAGNOSIS_NOT_VISUAL_ACCURACY",
+  "utc": "2026-11-01T09:01:53.469900+00:00",
+  "phase": "vg_grounding_diagnostic_v1_20261101",
+  "preregistration_sha256": "bd3f2bbccb71281c57a397d57b712ecf0cf20417bf8ebf012470f69c68fbb089",
+  "input_sha256": {
+    "outputs/vg_focus_repair_failure_20261030/parent/prepare/train_units.jsonl.gz": "63bb5b347218bfb65965ddc29f4138f5bc112ed6cb233274e4d363df925ea4f9",
+    "outputs/vg_focus_repair_failure_20261030/parent/prepare/train_graphs.jsonl.gz": "22c377483eed3c701f44cbb2693830fc9eb6666e6c2d3cf32fb2c3a54d9abc48",
+    "outputs/vg_focus_repair_failure_20261030/parent/train_generation/query_units_by_policy.json": "e5966f5a08d090d92a73dd4c050c067b1a8e4c7c35674ccb5a660d2c1498fa48",
+    "outputs/vg_focus_repair_failure_20261030/parent/train_generation/generation_commit.jsonl": "21529cefa0c7f0a5276005528cdbe940f0632a7f5578b19bc456f9f88abae394",
+    "outputs/vg_focus_repair_failure_20261030/parent/train_metrics/original_human_references.json": "43dfafa8e5853f6b755578a28a6e67ed5e385df614fed4df34826ba1b08f1340",
+    "outputs/vg_focus_repair_failure_20261030/parent/train_metrics/L0.json": "62becc54c648df4811a6a7dea4620fff3ca6f5cce2bfe1721b13feaf455da27f",
+    "outputs/vg_focus_repair_failure_20261030/parent/train_metrics/L1.json": "f0386d29a7df4ecda6580e149484f02565f27393c51d7ab5a9c585c966adcd16",
+    "outputs/vg_focus_repair_failure_20261030/parent/train_metrics/L2.json": "44a7e0a1ade8d86a038d04ab0139b5797390302cfadaed71e2f744493d44133a",
+    "outputs/vg_focus_repair_failure_20261030/parent/selection.json": "f399e748de4a08b9ed94703db3ce6ba5f8bea13313f564df7a7682dac7fbff55",
+    "configs/vg_object_color_rules_v3_20261025.json": "926ca4f13b8d0c0bc93210d3b15d61e674ae51c9d7f422b98c1cabb43a1a90bd",
+    "data/vg150/split_ids.json": "778bd00e3638c24bc9d72f8149a753926e20f3872d0f16a13348c3dbc869e568"
+  },
+  "source_config_sha256": {
+    "scripts/vg_grounding_diagnostic_v1_20261101.py": "c18bed85eceb1c28ce7a0cfb9a8bcc3cd0425244960cf5b7b1c355a8743000a8",
+    "scripts/remote_vg_grounding_fresh_membership_v1_20261101.py": "4f908eae36f72f5f849d797bb79c5b6d001eead28d907538ff19007ae4438e2f",
+    "configs/vg_grounding_diagnostic_v1_20261101.json": "d7de4f0fe01efbfe0b80a7f11ba934bd48a64beb9d11cd40a1664d037c08b2dd",
+    "research/VG_GROUNDING_DIAGNOSTIC_PREREGISTRATION_20261101.md": "71c768e7fd8a4ec57d0e7abdb13c09c2247dc5172a27da0ebcb03011aaa2bec4"
+  },
+  "TRAIN_images": 200,
+  "TRAIN_regions": 800,
+  "saved_caption_records": 2400,
+  "policy_summary": {
+    "L0": {
+      "all_units": 800,
+      "empty_graphs": 104,
+      "empty_captions": 104,
+      "units_with_any_ontology_reference_term": 618,
+      "units_with_all_matched_reference_terms_missing_full_graph": 16,
+      "units_with_any_reference_term_missing_full_graph": 39,
+      "units_with_any_reference_term_present_full_missing_focus": 267,
+      "units_with_any_reference_term_in_focus": 446,
+      "units_with_caption_class_absent_query": 12,
+      "attribute_flagged_outputs": {
+        "state": 1,
+        "material": 2,
+        "color": 5
+      },
+      "outputs_with_unverified_count_word": 137,
+      "relation_surface_status": {
+        "empty_caption": 104,
+        "unparsed_object_count": 312,
+        "no_explicit_matching_edge": 161,
+        "possible_forward_edge": 116,
+        "ambiguous_same_class_endpoints": 9,
+        "possible_forward_and_reverse": 1,
+        "unparsed_predicate": 97
+      }
+    },
+    "L1": {
+      "all_units": 800,
+      "empty_graphs": 0,
+      "empty_captions": 0,
+      "units_with_any_ontology_reference_term": 618,
+      "units_with_all_matched_reference_terms_missing_full_graph": 16,
+      "units_with_any_reference_term_missing_full_graph": 39,
+      "units_with_any_reference_term_present_full_missing_focus": 254,
+      "units_with_any_reference_term_in_focus": 471,
+      "units_with_caption_class_absent_query": 14,
+      "attribute_flagged_outputs": {
+        "state": 2,
+        "material": 2,
+        "color": 8
+      },
+      "outputs_with_unverified_count_word": 137,
+      "relation_surface_status": {
+        "unparsed_object_count": 414,
+        "no_explicit_matching_edge": 161,
+        "unparsed_predicate": 99,
+        "possible_forward_edge": 116,
+        "ambiguous_same_class_endpoints": 9,
+        "possible_forward_and_reverse": 1
+      }
+    },
+    "L2": {
+      "all_units": 800,
+      "empty_graphs": 0,
+      "empty_captions": 0,
+      "units_with_any_ontology_reference_term": 618,
+      "units_with_all_matched_reference_terms_missing_full_graph": 16,
+      "units_with_any_reference_term_missing_full_graph": 39,
+      "units_with_any_reference_term_present_full_missing_focus": 249,
+      "units_with_any_reference_term_in_focus": 477,
+      "units_with_caption_class_absent_query": 20,
+      "attribute_flagged_outputs": {
+        "state": 1,
+        "material": 1,
+        "color": 7
+      },
+      "outputs_with_unverified_count_word": 134,
+      "relation_surface_status": {
+        "unparsed_object_count": 406,
+        "no_explicit_matching_edge": 172,
+        "unparsed_predicate": 107,
+        "possible_forward_and_reverse": 1,
+        "possible_forward_edge": 104,
+        "ambiguous_same_class_endpoints": 9,
+        "reverse_edge_only": 1
+      }
+    }
+  },
+  "paired_changes": {
+    "L1": {
+      "paired_units": 800,
+      "captions_changed": 104,
+      "changed_from_L0_empty": 104,
+      "changed_from_L0_nonempty": 0
+    },
+    "L2": {
+      "paired_units": 800,
+      "captions_changed": 341,
+      "changed_from_L0_empty": 104,
+      "changed_from_L0_nonempty": 237
+    }
+  },
+  "synthetic_contract_cases_passed": 9,
+  "query_reference_used_as_generator_input": false,
+  "new_inference_or_metric_scoring": false,
+  "policy_selected_or_adopted": false,
+  "TEST_images_predictions_or_references_read": false,
+  "source_images_viewed": 0,
+  "human_labels_created": 0,
+  "limits": [
+    "Already-observed TRAIN only; no independent validation or model/prompt/focus selection.",
+    "Ontology surface matches and conservative plural forms are not semantic main-object labels; polysemy, synonyms, missing ontology categories and ambiguous man/men/person/people remain.",
+    "Reference terms evaluate missing lexical support only; no query reference enters graph selection or generation.",
+    "Attribute flags use surface presence and exclusion of object-label positions, not attribute-to-instance binding or visual truth.",
+    "Only two-object captions with registered literal predicates parse; unparsed output is never counted as supported.",
+    "A possible class-pair edge is not resolved instance grounding; distinct IDs do not certify physical counts.",
+    "No human labels or image review; counts are text proxy diagnostics, not accuracy/precision or hallucination rates.",
+    "Fresh dev/check ID reservation excludes historical528VAL and known JPEG/RGB identities including nonVAL metadata; perceptual audit remains incomplete.",
+    "Provisional fresh membership has no region units/reference cache yet and does not open a caption-check or TEST gate."
+  ],
+  "wall_seconds": 3.7544028759002686,
+  "outputs_sha256": {
+    "fixed20_TRAIN_packet.json": "34fc60ef33a8fe1b22c9b581ad4d22e8ee42f573f0d1c093b2622261c12d95f6",
+    "unit_diagnostics.jsonl": "4c99a32e3eb3f0bf548d2d008a647527f7ea8dcdf4d4920a0501253cf624fd8d"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "task": "VRSBench Full 9,350 Official Test Split Benchmark",
+  "description": "End-to-End Detector v2 -> Scene Graph Generation -> Qwen2.5-14B Captioning",
+  "total_images": 9350,
+  "detector_version": "v2_best (Epoch 5 / Step 10,132)",
+  "grounding_and_detection_metrics": {
+    "mIoU_class_agnostic": 70.35,
+    "mIoU_class_matched": 68.55,
+    "Acc@0.5_class_agnostic": 85.97,
+    "Acc@0.5_class_matched": 84.19,
+    "Acc@0.7_class_agnostic": 65.48,
+    "Acc@0.7_class_matched": 64.37,
+    "Acc@0.75_class_agnostic": 54.12,
+    "mAP@50_macro_all_26_classes": 84.19,
+    "total_test_images": 9350
+  },
+  "captioning_metrics_v2_best": {
+    "BLEU-1": 8.092480748521782,
+    "BLEU-2": 3.93917106720248,
+    "BLEU-3": 1.839312497481064,
+    "BLEU-4": 0.8331517765883626,
+    "METEOR": 8.173095360155665,
+    "ROUGE-L": 14.2928679338648,
+    "CIDEr": 1.9870428757660357,
+    "SPICE": 12.543721829091565
+  },
+  "oracle_gt_sg_metrics": {
+    "BLEU-1": 37.62711099625479,
+    "BLEU-2": 22.11873332649518,
+    "BLEU-3": 13.53631073607047,
+    "BLEU-4": 8.695705443840192,
+    "METEOR": 20.957541930131626,
+    "ROUGE-L": 28.68951238883787,
+    "CIDEr": 24.098698796571266,
+    "SPICE": 25.6846028594166
+  },
+  "comparison_sota": {
+    "LLaVA-1.5": {
+      "BLEU-1": 48.1,
+      "BLEU-2": 32.4,
+      "BLEU-3": 21.8,
+      "BLEU-4": 14.7,
+      "METEOR": 21.9,
+      "ROUGE-L": 36.9,
+      "CIDEr": 33.9,
+      "CHAIR_s": 0.78,
+      "Acc@0.5": 61.2,
+      "mIoU": 48.6
+    },
+    "GeoChat": {
+      "BLEU-1": 46.7,
+      "BLEU-2": 30.9,
+      "BLEU-3": 20.3,
+      "BLEU-4": 13.8,
+      "METEOR": 21.1,
+      "ROUGE-L": 35.2,
+      "CIDEr": 28.2,
+      "CHAIR_s": 0.77,
+      "Acc@0.5": 58.4,
+      "mIoU": 45.1
+    },
+    "Detector_v1_Baseline": {
+      "BLEU-1": 41.94,
+      "BLEU-2": 25.45,
+      "BLEU-3": 16.13,
+      "BLEU-4": 10.47,
+      "METEOR": 20.59,
+      "ROUGE-L": 31.65,
+      "CIDEr": 31.13,
+      "Acc@0.5": 79.03,
+      "mIoU": 63.94
+    }
+  },
+  "elapsed_seconds": 16312.33,
+  "timestamp": "2026-11-08 03:53:22"
+}

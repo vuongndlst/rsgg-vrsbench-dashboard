@@ -1,0 +1,8 @@
+{
+  "status": "NEW_FIXED20_ORIGINAL_IMAGE_REVIEW_PACKET_READY_NOTIFIED_ONCE",
+  "utc": "2026-11-03T18:31:46.270991+00:00",
+  "dedup_key": "6900f7e71d277ae91edbdffaea48536d368c7cda3da2f9c9f3f05c71589d25e9:b2f0dab132b3b47272d18636e8845870db57b9f21d0f5da0988fb89ab52aa791",
+  "entrypoint": "outputs/vg_grounding_dev_review20_v1_20261104/index_r1.html",
+  "human_labels_created": 0,
+  "new_metric_or_model_result": false
+}

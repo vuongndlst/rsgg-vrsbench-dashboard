@@ -1,0 +1,7 @@
+{
+  "status": "NEW_TRAIN_DIAGNOSTIC_CONCLUSION_REPORTED_DIRECT_HUMAN_NEXT_STEP",
+  "utc": "2026-11-01T09:05:41.873133+00:00",
+  "dedup_key": "bd3f2bbccb71281c57a397d57b712ecf0cf20417bf8ebf012470f69c68fbb089:9bfad5ac17f1bf6f93d47501bbb56929c368e754d97108666e21536996b47f1d",
+  "verification": "reports/VG_GROUNDING_DIAGNOSTIC_VERIFICATION_20261101.json",
+  "no_compute_phase_launched": true
+}

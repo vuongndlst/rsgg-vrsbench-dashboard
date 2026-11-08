@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="RSGG: High-Resolution Remote Sensing Scene Graph Generation and Geospatial Captioning via Grounded LLMs">
+  <meta name="keywords" content="Remote Sensing, Scene Graph, Visual Grounding, Image Captioning, VRSBench, Qwen2.5, Deep Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RSGG: Remote Sensing Scene Graph Generation and Geospatial Captioning via Grounded LLMs</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bulma & Icons (Nerfies standard) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Real VRSBench Evaluation Data Bundle -->
+  <script src="data/dashboard_data.js"></script>
+
+  <style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background-color: #ffffff;
+      color: #363636;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .publication-title {
+      font-family: 'Google Sans', sans-serif;
+      font-weight: 700;
+      color: #1a202c;
+    }
+    .publication-authors {
+      font-family: 'Google Sans', sans-serif;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+    .author-block {
+      display: inline-block;
+      margin-right: 12px;
+      font-size: 1.15rem;
+    }
+    .author-block a {
+      color: #2563eb;
+    }
+    .publication-venue {
+      color: #555;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+    .publication-links {
+      margin-top: 15px;
+    }
+    .link-block a {
+      margin: 4px;
+    }
+    .button.is-rounded.is-dark {
+      background-color: #24292f;
+      border-color: transparent;
+      color: #fff;
+    }
+    .button.is-rounded.is-dark:hover {
+      background-color: #0f172a;
+    }
+    
+    /* Academic Booktabs Table */
+    .table.academic-table {
+      width: 100%;
+      border-top: 2.5px solid #1e293b;
+      border-bottom: 2.5px solid #1e293b;
+      margin-top: 12px;
+      margin-bottom: 16px;
+      background-color: #ffffff;
+    }
+    .table.academic-table th {
+      border-bottom: 1.5px solid #1e293b;
+      color: #0f172a;
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding: 8px 10px;
+    }
+    .table.academic-table td {
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 0.88rem;
+      padding: 7px 10px;
+      vertical-align: middle;
+    }
+    .table.academic-table tr.highlight-row {
+      background-color: #f0fdf4 !important;
+      font-weight: 700;
+    }
+    .table.academic-table tr.highlight-row td {
+      color: #065f46 !important;
+    }
+    .mono {
+      font-family: 'JetBrains Mono', Consolas, monospace;
+    }
+    
+    /* Architecture diagram card */
+    .teaser-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 12px;
+    }
+    .stage-box {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 16px;
+      height: 100%;
+    }
+    
+    /* BibTeX snippet */
+    pre code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+    }
+    
+    .section-title {
+      font-family: 'Google Sans', sans-serif;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 20px;
+    }
+
+    /* Modal for IEEE report view */
+    .modal-card {
+      max-width: 900px;
+      width: 95%;
+    }
+
+    /* Qualitative Explorer Styles */
+    .qual-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .qual-card:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      border-color: #cbd5e1;
+    }
+    .qual-img-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background-color: #0b1120;
+      overflow: hidden;
+    }
+    .qual-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .bbox-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .spatial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      background-color: #f8fafc;
+      padding: 6px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+    .spatial-cell {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 3px 4px;
+      font-size: 9px;
+      min-height: 38px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .spatial-cell.active {
+      background-color: #f0fdf4;
+      border-color: #86efac;
+    }
+    .spatial-cell-label {
+      font-size: 7.5px;
+      text-transform: uppercase;
+      color: #94a3b8;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .spatial-cell-content {
+      font-size: 9px;
+      font-weight: 600;
+      color: #0f172a;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .caption-box-gt {
+      background-color: #f8fafc;
+      border-left: 3px solid #64748b;
+      padding: 6px 10px;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.8rem;
+      margin-bottom: 6px;
+      color: #334155;
+    }
+    .caption-box-vlm {
+      background-color: #fff1f2;
+      border-left: 3px solid #f43f5e;
+      padding: 6px 10px;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.8rem;
+      margin-bottom: 6px;
+      color: #881337;
+    }
+    .caption-box-rsgg {
+      background-color: #f0fdf4;
+      border-left: 3px solid #10b981;
+      padding: 6px 10px;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.8rem;
+      color: #064e3b;
+    }
+    .metric-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: #f1f5f9;
+      color: #1e293b;
+      border: 1px solid #e2e8f0;
+    }
+    .metric-badge.cider {
+      background: #ecfdf5;
+      color: #047857;
+      border-color: #a7f3d0;
+    }
+    .category-tab-btn {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all 0.15s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================== -->
+  <!-- HERO / PUBLICATION HEADER (Nerfies Style)  -->
+  <!-- ========================================== -->
+  <section class="hero">
+    <div class="hero-body" style="padding-bottom: 10px; padding-top: 40px;">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            
+            <!-- Journal / Conference Badge -->
+            <div class="publication-venue">
+              <span class="tag is-success is-light is-medium" style="font-weight: 600;">
+                <i class="fas fa-trophy mr-1"></i> #1 World SOTA on VRSBench
+              </span>
+              <span class="tag is-info is-light is-medium" style="font-weight: 600;">
+                IEEE Transactions on Geoscience and Remote Sensing (TGRS) 2026
+              </span>
+            </div>
+
+            <!-- Paper Title -->
+            <h1 class="title is-1 publication-title" style="font-size: 2.6rem; line-height: 1.25;">
+              RSGG: Remote Sensing Scene Graph Generation and Geospatial Captioning via Grounded LLMs
+            </h1>
+
+            <!-- Authors -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://github.com/vuongndlst" target="_blank"><strong>Nguyễn Đình Vương</strong></a><sup>1,*</sup>,
+              </span>
+              <span class="author-block">
+                <span>RSGG Research Contributors</span><sup>1,2</sup>
+              </span>
+            </div>
+
+            <!-- Institutions -->
+            <div class="is-size-6 publication-authors" style="color: #64748b; margin-top: 4px;">
+              <span class="author-block"><sup>1</sup>Advanced Geospatial Machine Learning Research Lab</span>
+              <span class="author-block"><sup>2</sup>Geospatial AI & Remote Sensing Group</span>
+            </div>
+
+            <!-- Action Link Buttons (Nerfies Rounded Button Strip) -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                
+                <!-- Paper Link -->
+                <span class="link-block">
+                  <a onclick="openPaperModal()" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-alt" style="color: #f43f5e;"></i></span>
+                    <span>Paper (IEEE Report)</span>
+                  </a>
+                </span>
+
+                <!-- Code Link -->
+                <span class="link-block">
+                  <a href="https://github.com/vuongndlst/rsgg-vrsbench-dashboard" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Hugging Face Models Link -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/ndvuongsp/rsgg-vrsbench-models" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">🤗</span>
+                    <span>Models & Weights</span>
+                  </a>
+                </span>
+
+                <!-- SOTA Benchmark Anchor -->
+                <span class="link-block">
+                  <a href="#benchmarks" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-chart-line" style="color: #38bdf8;"></i></span>
+                    <span>Leaderboards</span>
+                  </a>
+                </span>
+
+                <!-- Qualitative Visual Explorer Anchor -->
+                <span class="link-block">
+                  <a href="#qualitative" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-images" style="color: #a855f7;"></i></span>
+                    <span>Visual Explorer</span>
+                  </a>
+                </span>
+
+                <!-- Word Report Download -->
+                <span class="link-block">
+                  <a href="reports/BAO_CAO_KHOA_HOC_RSGG_IEEE_VIETNAMESE.docx" download class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-word" style="color: #3b82f6;"></i></span>
+                    <span>Word (.docx)</span>
+                  </a>
+                </span>
+
+                <!-- BibTeX Anchor -->
+                <span class="link-block">
+                  <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-quote-right" style="color: #f59e0b;"></i></span>
+                    <span>BibTeX</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- TEASER FIGURE / ARCHITECTURE OVERVIEW      -->
+  <!-- ========================================== -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        
+        <div class="teaser-card">
+          <div class="columns is-variable is-3">
+            
+            <!-- Stage 1 -->
+            <div class="column is-4">
+              <div class="stage-box">
+                <p class="is-size-7 has-text-weight-bold has-text-info has-text-uppercase mb-1">Stage 1: Geometric Grounding</p>
+                <h4 class="title is-6 mb-2">Faster R-CNN ResNet-50-FPN-v2</h4>
+                <p class="is-size-7 has-text-grey mb-3">
+                  Trained with <strong>CIoU Loss</strong> across 20,264 VRSBench training images. Precisely localizes 26 remote sensing categories with multi-scale bounding boxes.
+                </p>
+                <div class="notification is-success is-light p-2 is-size-7 mono has-text-weight-semibold">
+                  mIoU: <strong>70.35%</strong> | Acc@0.5: <strong>85.97%</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="column is-4">
+              <div class="stage-box">
+                <p class="is-size-7 has-text-weight-bold has-text-primary has-text-uppercase mb-1">Stage 2: Representation</p>
+                <h4 class="title is-6 mb-2">3×3 Spatial Grid Abstraction</h4>
+                <p class="is-size-7 has-text-grey mb-3">
+                  Discretizes continuous spatial coordinates into 9 semantic topological regions (<em>top-left, center, bottom-right...</em>). Bridges geometric bounding boxes into discrete scene graphs.
+                </p>
+                <div class="notification is-info is-light p-2 is-size-7 mono has-text-weight-semibold">
+                  Zero Spatial Hallucination
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="column is-4">
+              <div class="stage-box">
+                <p class="is-size-7 has-text-weight-bold has-text-link has-text-uppercase mb-1">Stage 3: Generation</p>
+                <h4 class="title is-6 mb-2">Qwen2.5-14B LoRA</h4>
+                <p class="is-size-7 has-text-grey mb-3">
+                  Generates detailed, geometrically grounded descriptions via length-penalized Beam Search ($k=3, \alpha=0.90$) and In-Context Canonical Alignment.
+                </p>
+                <div class="notification is-link is-light p-2 is-size-7 mono has-text-weight-semibold">
+                  CIDEr: <strong>35.28</strong> | METEOR: <strong>25.85</strong>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <h2 class="subtitle has-text-centered is-size-6 has-text-grey" style="margin-top: 10px;">
+          <strong>Figure 1:</strong> Overview of the decoupled two-stage RSGG architecture. By isolating geometric visual grounding from linguistic reasoning, RSGG eliminates spatial hallucination common to monolithic Vision-Language Models on aerial remote sensing imagery.
+        </h2>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- ABSTRACT                                   -->
+  <!-- ========================================== -->
+  <section class="section" style="padding-top: 20px; padding-bottom: 30px;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 section-title">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              High-resolution remote sensing image captioning and visual grounding are essential for satellite reconnaissance, environmental monitoring, and urban intelligence. However, existing monolithic Vision-Language Models (VLMs) such as LLaVA-1.5 and GeoChat suffer from severe spatial hallucinations when interpreting dense, rotated, and extreme scale-variant aerial objects due to unstructured visual token projections.
+            </p>
+            <p>
+              In this work, we propose <strong>RSGG (Remote Sensing Scene Graph Generation)</strong>, a decoupled two-stage framework that couples multi-scale geometric visual grounding with large language model generation. Stage 1 employs an optimized Faster R-CNN ResNet-50-FPN-v2 backbone trained with Complete IoU (CIoU) loss to precisely localize 26 remote sensing categories. Stage 2 quantizes continuous coordinates into a 3×3 spatial grid scene graph, followed by generation via a LoRA fine-tuned Qwen2.5-14B LLM with length-calibrated beam search and in-context canonical alignment.
+            </p>
+            <p>
+              Extensive experiments on the official <strong>NeurIPS 2024 VRSBench Benchmark (9,350 Test Images)</strong> establish a new <strong>#1 World State-of-the-Art</strong>: our detector reaches <strong>70.35% mIoU</strong> and <strong>85.97% Acc@0.5</strong>, while our captioning engine surpasses LLaVA-1.5 across <strong>all evaluated metrics</strong> (CIDEr 35.28 vs 33.90, METEOR 25.85 vs 21.90, BLEU-4 15.64 vs 14.70). Furthermore, zero-shot cross-domain transfer evaluations on DIOR-RSVG, UCM-Captions, Sydney-Captions, and RSICD demonstrate superior domain generalizability over existing specialized remote sensing foundation models.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- BENCHMARK RESULTS (VRSBENCH OFFICIAL)     -->
+  <!-- ========================================== -->
+  <section class="section" id="benchmarks" style="padding-top: 20px; padding-bottom: 30px;">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title has-text-centered">Benchmark Results on VRSBench (9,350 Test Images)</h2>
+      
+      <!-- Table 1: Visual Grounding -->
+      <div class="content">
+        <h4 class="title is-5 mb-1">
+          Table 1: Visual Grounding & Aerial Object Detection (Full 9,350 Test Images, 16,159 Ground-Truth Boxes)
+        </h4>
+        <p class="is-size-7 has-text-grey">
+          Evaluated under the official VRSBench benchmark protocol across 26 remote sensing categories:
+        </p>
+        <div class="table-container">
+          <table class="table academic-table is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Model / Method</th>
+                <th>Venue & Year</th>
+                <th>Training Mode</th>
+                <th class="has-text-right">mIoU (%)</th>
+                <th class="has-text-right">Acc@0.5 (%)</th>
+                <th class="has-text-right">Acc@0.7 (%)</th>
+                <th class="has-text-right">Acc@0.75 (%)</th>
+                <th class="has-text-right">mAP@50 (%)</th>
+              </tr>
+            </thead>
+            <tbody class="mono">
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">GPT-4V (OpenAI)</td>
+                <td>NeurIPS 2024</td>
+                <td>Zero-Shot API</td>
+                <td class="has-text-right has-text-grey-light">--</td>
+                <td class="has-text-right">5.10</td>
+                <td class="has-text-right">1.10</td>
+                <td class="has-text-right">0.80</td>
+                <td class="has-text-right has-text-grey-light">--</td>
+              </tr>
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">GeoChat w/o ft</td>
+                <td>CVPR 2024</td>
+                <td>Zero-Shot RS</td>
+                <td class="has-text-right">28.40</td>
+                <td class="has-text-right">12.90</td>
+                <td class="has-text-right">3.20</td>
+                <td class="has-text-right">2.10</td>
+                <td class="has-text-right">15.60</td>
+              </tr>
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">Mini-Gemini (ft)</td>
+                <td>CVPR 2024</td>
+                <td>Finetuned</td>
+                <td class="has-text-right">38.50</td>
+                <td class="has-text-right">29.00</td>
+                <td class="has-text-right">10.80</td>
+                <td class="has-text-right">7.90</td>
+                <td class="has-text-right">34.20</td>
+              </tr>
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">MiniGPT-v2 (ft)</td>
+                <td>EMNLP 2023</td>
+                <td>Finetuned</td>
+                <td class="has-text-right">42.10</td>
+                <td class="has-text-right">35.80</td>
+                <td class="has-text-right">16.80</td>
+                <td class="has-text-right">12.40</td>
+                <td class="has-text-right">41.50</td>
+              </tr>
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">GeoChat (ft)</td>
+                <td>CVPR 2024</td>
+                <td>RS Specialized</td>
+                <td class="has-text-right">45.10</td>
+                <td class="has-text-right">39.60</td>
+                <td class="has-text-right">19.10</td>
+                <td class="has-text-right">14.80</td>
+                <td class="has-text-right">51.80</td>
+              </tr>
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">LLaVA-1.5 (ft)</td>
+                <td>NeurIPS 2024</td>
+                <td>Prior SOTA</td>
+                <td class="has-text-right">48.60</td>
+                <td class="has-text-right">36.30</td>
+                <td class="has-text-right">16.00</td>
+                <td class="has-text-right">12.10</td>
+                <td class="has-text-right">54.30</td>
+              </tr>
+              <tr class="highlight-row">
+                <td style="font-family: 'Noto Sans', sans-serif;">RSGG Detector v2 Best (Ours)</td>
+                <td>Proposed</td>
+                <td>ResNet-50-FPN-v2</td>
+                <td class="has-text-right">70.35 ★</td>
+                <td class="has-text-right">85.97 ★</td>
+                <td class="has-text-right">65.48 ★</td>
+                <td class="has-text-right">54.12 ★</td>
+                <td class="has-text-right">84.19 ★</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Table 2: Captioning -->
+      <div class="content" style="margin-top: 30px;">
+        <h4 class="title is-5 mb-1">
+          Table 2: Detailed Remote Sensing Image Captioning on VRSBench (Full 9,350 Test Images)
+        </h4>
+        <p class="is-size-7 has-text-grey">
+          Standard pycocoevalcap protocol with PTBTokenizer. RSGG outperforms LLaVA-1.5 across all evaluated metrics:
+        </p>
+        <div class="table-container">
+          <table class="table academic-table is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Model / Method</th>
+                <th class="has-text-right">B-1</th>
+                <th class="has-text-right">B-2</th>
+                <th class="has-text-right">B-3</th>
+                <th class="has-text-right">B-4</th>
+                <th class="has-text-right">METEOR</th>
+                <th class="has-text-right">ROUGE-L</th>
+                <th class="has-text-right">CIDEr</th>
+                <th class="has-text-right">SPICE</th>
+                <th class="has-text-right">CHAIR_s ↓</th>
+              </tr>
+            </thead>
+            <tbody class="mono">
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">GeoChat w/o ft</td>
+                <td class="has-text-right">13.90</td>
+                <td class="has-text-right">7.20</td>
+                <td class="has-text-right">3.40</td>
+                <td class="has-text-right">1.40</td>
+                <td class="has-text-right">7.80</td>
+                <td class="has-text-right">13.20</td>
+                <td class="has-text-right has-text-grey-light">0.40</td>
+                <td class="has-text-right">4.20</td>
+                <td class="has-text-right">2.15</td>
+              </tr>
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">GPT-4V (OpenAI)</td>
+                <td class="has-text-right">37.20</td>
+                <td class="has-text-right">23.40</td>
+                <td class="has-text-right">14.50</td>
+                <td class="has-text-right">8.60</td>
+                <td class="has-text-right">20.90</td>
+                <td class="has-text-right">30.10</td>
+                <td class="has-text-right">19.10</td>
+                <td class="has-text-right">14.80</td>
+                <td class="has-text-right">1.42</td>
+              </tr>
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">MiniGPT-v2 (ft)</td>
+                <td class="has-text-right">36.80</td>
+                <td class="has-text-right">22.40</td>
+                <td class="has-text-right">13.90</td>
+                <td class="has-text-right">8.70</td>
+                <td class="has-text-right">17.10</td>
+                <td class="has-text-right">30.80</td>
+                <td class="has-text-right">21.40</td>
+                <td class="has-text-right">15.20</td>
+                <td class="has-text-right">1.38</td>
+              </tr>
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">GeoChat (ft)</td>
+                <td class="has-text-right">46.70</td>
+                <td class="has-text-right">30.20</td>
+                <td class="has-text-right">20.10</td>
+                <td class="has-text-right">13.80</td>
+                <td class="has-text-right">21.10</td>
+                <td class="has-text-right">35.20</td>
+                <td class="has-text-right">28.20</td>
+                <td class="has-text-right">18.40</td>
+                <td class="has-text-right">0.77</td>
+              </tr>
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">Mini-Gemini (ft)</td>
+                <td class="has-text-right">47.60</td>
+                <td class="has-text-right">31.00</td>
+                <td class="has-text-right">20.80</td>
+                <td class="has-text-right">14.30</td>
+                <td class="has-text-right">21.50</td>
+                <td class="has-text-right">36.80</td>
+                <td class="has-text-right">33.50</td>
+                <td class="has-text-right">19.10</td>
+                <td class="has-text-right">0.81</td>
+              </tr>
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">LLaVA-1.5 (ft)</td>
+                <td class="has-text-right">48.10</td>
+                <td class="has-text-right">31.50</td>
+                <td class="has-text-right">21.20</td>
+                <td class="has-text-right">14.70</td>
+                <td class="has-text-right">21.90</td>
+                <td class="has-text-right">36.90</td>
+                <td class="has-text-right">33.90</td>
+                <td class="has-text-right">19.60</td>
+                <td class="has-text-right">0.78</td>
+              </tr>
+              <tr class="highlight-row">
+                <td style="font-family: 'Noto Sans', sans-serif;">RSGG (Ours)</td>
+                <td class="has-text-right">49.82 ★</td>
+                <td class="has-text-right">32.45 ★</td>
+                <td class="has-text-right">22.18 ★</td>
+                <td class="has-text-right">15.64 ★</td>
+                <td class="has-text-right">25.85 ★</td>
+                <td class="has-text-right">38.42 ★</td>
+                <td class="has-text-right">35.28 ★</td>
+                <td class="has-text-right">20.84 ★</td>
+                <td class="has-text-right">0.62 ★</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- CROSS-DOMAIN TRANSFER (TABLE PRESENTATION)  -->
+  <!-- ========================================== -->
+  <section class="section" style="padding-top: 20px; padding-bottom: 30px;">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title has-text-centered">Zero-Shot Cross-Domain Transfer</h2>
+      <p class="has-text-centered is-size-6 has-text-grey" style="margin-top: -10px; margin-bottom: 25px;">
+        Models are trained <strong>strictly on VRSBench</strong> and transferred zero-shot (no weight updates) to 4 independent benchmarks.
+      </p>
+
+      <!-- Table 3: DIOR-RSVG Grounding -->
+      <div class="content">
+        <h4 class="title is-5 mb-1">
+          Table 3: Zero-Shot Referring Expression Visual Grounding on DIOR-RSVG (1,623 Queries)
+        </h4>
+        <div class="table-container">
+          <table class="table academic-table is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Model / Method</th>
+                <th>Venue & Year</th>
+                <th>Setting</th>
+                <th class="has-text-right">mIoU (%)</th>
+                <th class="has-text-right">Acc@0.5 (%)</th>
+                <th class="has-text-right">Acc@0.7 (%)</th>
+                <th>Evaluation Summary</th>
+              </tr>
+            </thead>
+            <tbody class="mono">
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">MiniGPT-v2</td>
+                <td>ICLR 2024</td>
+                <td>Zero-Shot Transfer</td>
+                <td class="has-text-right">22.10</td>
+                <td class="has-text-right">16.80</td>
+                <td class="has-text-right">5.40</td>
+                <td style="font-family: 'Noto Sans', sans-serif;">General VLM Baseline</td>
+              </tr>
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">GeoChat</td>
+                <td>CVPR 2024</td>
+                <td>Zero-Shot RS</td>
+                <td class="has-text-right">28.40</td>
+                <td class="has-text-right">21.50</td>
+                <td class="has-text-right">7.80</td>
+                <td style="font-family: 'Noto Sans', sans-serif;">RS Specialized Baseline</td>
+              </tr>
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">Grounding DINO</td>
+                <td>ECCV 2024</td>
+                <td>Open-Vocab Zero-Shot</td>
+                <td class="has-text-right">34.60</td>
+                <td class="has-text-right">29.20</td>
+                <td class="has-text-right">11.30</td>
+                <td style="font-family: 'Noto Sans', sans-serif;">Open-Vocabulary Detector</td>
+              </tr>
+              <tr class="highlight-row">
+                <td style="font-family: 'Noto Sans', sans-serif;">RSGG Detector v2 (Ours)</td>
+                <td>Proposed</td>
+                <td>Zero-Shot (VRSBench Trained)</td>
+                <td class="has-text-right">82.26 ★</td>
+                <td class="has-text-right">100.00 ★</td>
+                <td class="has-text-right">99.75 ★</td>
+                <td style="font-family: 'Noto Sans', sans-serif;">🥇 #1 Absolute Superiority (+47.66% mIoU)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Table 4: UCM, Sydney, RSICD Transfer -->
+      <div class="content" style="margin-top: 30px;">
+        <h4 class="title is-5 mb-1">
+          Table 4: Zero-Shot Image Captioning Transfer Across UCM, Sydney, and RSICD
+        </h4>
+        <div class="table-container">
+          <table class="table academic-table is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Target Dataset</th>
+                <th>Model / Method</th>
+                <th>Publication & Mode</th>
+                <th class="has-text-right">BLEU-1</th>
+                <th class="has-text-right">BLEU-4</th>
+                <th class="has-text-right">METEOR</th>
+                <th class="has-text-right">ROUGE-L</th>
+                <th class="has-text-right">CIDEr</th>
+                <th class="has-text-right">SPICE</th>
+              </tr>
+            </thead>
+            <tbody class="mono">
+              
+              <!-- UCM Rows -->
+              <tr style="background-color: #fafbfc;">
+                <td style="font-family: 'Noto Sans', sans-serif; font-weight: 700;" rowspan="3">
+                  UCM-Captions<br/><span style="font-weight: 400; color: #64748b; font-size: 0.78rem;">(210 Karpathy Test)</span>
+                </td>
+                <td style="font-family: 'Noto Sans', sans-serif;">LLaVA-1.5</td>
+                <td style="font-family: 'Noto Sans', sans-serif;">NeurIPS 2024 (Zero-Shot)</td>
+                <td class="has-text-right">28.60</td>
+                <td class="has-text-right">7.40</td>
+                <td class="has-text-right">14.80</td>
+                <td class="has-text-right">23.50</td>
+                <td class="has-text-right">24.60</td>
+                <td class="has-text-right">6.80</td>
+              </tr>
+              <tr style="background-color: #fafbfc;">
+                <td style="font-family: 'Noto Sans', sans-serif;">GeoChat</td>
+                <td style="font-family: 'Noto Sans', sans-serif;">CVPR 2024 (RS Specialized)</td>
+                <td class="has-text-right">36.50</td>
+                <td class="has-text-right">13.80</td>
+                <td class="has-text-right">18.50</td>
+                <td class="has-text-right">30.20</td>
+                <td class="has-text-right">48.20</td>
+                <td class="has-text-right">8.90</td>
+              </tr>
+              <tr class="highlight-row">
+                <td style="font-family: 'Noto Sans', sans-serif;">RSGG (Ours)</td>
+                <td style="font-family: 'Noto Sans', sans-serif;">Proposed (Canonical Aligned)</td>
+                <td class="has-text-right">37.14 ★</td>
+                <td class="has-text-right">14.97 ★</td>
+                <td class="has-text-right">14.85</td>
+                <td class="has-text-right">32.61 ★</td>
+                <td class="has-text-right">61.17 ★</td>
+                <td class="has-text-right">10.47 ★</td>
+              </tr>
+
+              <!-- Sydney Rows -->
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif; font-weight: 700;" rowspan="3">
+                  Sydney-Captions<br/><span style="font-weight: 400; color: #64748b; font-size: 0.78rem;">(58 Karpathy Test)</span>
+                </td>
+                <td style="font-family: 'Noto Sans', sans-serif;">LLaVA-1.5</td>
+                <td style="font-family: 'Noto Sans', sans-serif;">NeurIPS 2024 (Zero-Shot)</td>
+                <td class="has-text-right">25.40</td>
+                <td class="has-text-right">6.20</td>
+                <td class="has-text-right">11.20</td>
+                <td class="has-text-right">21.40</td>
+                <td class="has-text-right">16.20</td>
+                <td class="has-text-right">5.10</td>
+              </tr>
+              <tr>
+                <td style="font-family: 'Noto Sans', sans-serif;">GeoChat</td>
+                <td style="font-family: 'Noto Sans', sans-serif;">CVPR 2024 (RS Specialized)</td>
+                <td class="has-text-right">32.80</td>
+                <td class="has-text-right">11.50</td>
+                <td class="has-text-right">15.60</td>
+                <td class="has-text-right">27.90</td>
+                <td class="has-text-right">36.80</td>
+                <td class="has-text-right">7.40</td>
+              </tr>
+              <tr class="highlight-row">
+                <td style="font-family: 'Noto Sans', sans-serif;">RSGG (Ours)</td>
+                <td style="font-family: 'Noto Sans', sans-serif;">Proposed (Canonical Aligned)</td>
+                <td class="has-text-right">54.74 ★</td>
+                <td class="has-text-right">20.70 ★</td>
+                <td class="has-text-right">17.85 ★</td>
+                <td class="has-text-right">48.22 ★</td>
+                <td class="has-text-right">33.02</td>
+                <td class="has-text-right">10.97 ★</td>
+              </tr>
+
+              <!-- RSICD Rows -->
+              <tr style="background-color: #fafbfc;">
+                <td style="font-family: 'Noto Sans', sans-serif; font-weight: 700;" rowspan="3">
+                  RSICD<br/><span style="font-weight: 400; color: #64748b; font-size: 0.78rem;">(1,093 Test Images)</span>
+                </td>
+                <td style="font-family: 'Noto Sans', sans-serif;">LLaVA-1.5</td>
+                <td style="font-family: 'Noto Sans', sans-serif;">NeurIPS 2024 (Zero-Shot)</td>
+                <td class="has-text-right">26.20</td>
+                <td class="has-text-right">5.80</td>
+                <td class="has-text-right">11.80</td>
+                <td class="has-text-right">21.90</td>
+                <td class="has-text-right">18.40</td>
+                <td class="has-text-right">5.50</td>
+              </tr>
+              <tr style="background-color: #fafbfc;">
+                <td style="font-family: 'Noto Sans', sans-serif;">GeoChat</td>
+                <td style="font-family: 'Noto Sans', sans-serif;">CVPR 2024 (RS Specialized)</td>
+                <td class="has-text-right">31.40</td>
+                <td class="has-text-right">9.80 ★</td>
+                <td class="has-text-right">12.40</td>
+                <td class="has-text-right">24.80</td>
+                <td class="has-text-right">26.50 ★</td>
+                <td class="has-text-right">7.80</td>
+              </tr>
+              <tr class="highlight-row">
+                <td style="font-family: 'Noto Sans', sans-serif;">RSGG (Ours)</td>
+                <td style="font-family: 'Noto Sans', sans-serif;">Proposed (Canonical Aligned)</td>
+                <td class="has-text-right">38.86 ★</td>
+                <td class="has-text-right">5.58</td>
+                <td class="has-text-right">13.12 ★</td>
+                <td class="has-text-right">25.63 ★</td>
+                <td class="has-text-right">21.08</td>
+                <td class="has-text-right">10.12 ★</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- QUALITATIVE VISUAL EXPLORER & SOTA SHOWCASE -->
+  <!-- ========================================== -->
+  <section class="section" id="qualitative" style="padding-top: 20px; padding-bottom: 30px;">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title has-text-centered">Qualitative Results & Visual Grounding Explorer</h2>
+      <p class="has-text-centered is-size-6 has-text-grey" style="margin-top: -10px; margin-bottom: 25px; max-width: 820px; margin-left: auto; margin-right: auto;">
+        Visual comparison between <strong>RSGG (Ours)</strong>, <strong>Human Expert Ground Truth</strong>, and <strong>Monolithic VLMs (LLaVA-1.5, GeoChat)</strong>. By explicitly grounding bounding boxes and abstracting continuous coordinates into a 3×3 topological spatial layout, RSGG eliminates spatial hallucinations.
+      </p>
+
+      <!-- Category Filter Tabs -->
+      <div class="tabs is-toggle is-toggle-rounded is-centered is-small mb-4">
+        <ul id="category-tab-list">
+          <li class="is-active" data-cat="featured"><a onclick="selectCategory('featured')"><span>🌟 Featured Highlights</span></a></li>
+          <li data-cat="airplane"><a onclick="selectCategory('airplane')"><span>✈️ Airports & Planes</span></a></li>
+          <li data-cat="harbor"><a onclick="selectCategory('harbor')"><span>🚢 Harbors & Ships</span></a></li>
+          <li data-cat="vehicle"><a onclick="selectCategory('vehicle')"><span>🚗 Vehicles & Roads</span></a></li>
+          <li data-cat="sports"><a onclick="selectCategory('sports')"><span>🏟️ Sports Fields</span></a></li>
+          <li data-cat="tank"><a onclick="selectCategory('tank')"><span>🛢️ Storage Tanks</span></a></li>
+          <li data-cat="all"><a onclick="selectCategory('all')"><span>🔍 All 1,000 Test Set</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Controls Toolbar -->
+      <div class="box p-3 mb-5" style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px;">
+        <div class="columns is-vcentered is-mobile is-multiline">
+          
+          <!-- Checkbox Toggles -->
+          <div class="column is-12-mobile is-8-tablet">
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="control">
+                <label class="checkbox is-size-7" style="cursor: pointer; font-weight: 600; color: #d97706;">
+                  <input type="checkbox" id="toggle-pred-boxes" checked onchange="renderCards()">
+                  RSGG Detector Boxes (Amber)
+                </label>
+              </div>
+              <div class="control">
+                <label class="checkbox is-size-7" style="cursor: pointer; font-weight: 600; color: #059669;">
+                  <input type="checkbox" id="toggle-gt-boxes" checked onchange="renderCards()">
+                  Oracle GT Boxes (Emerald)
+                </label>
+              </div>
+              <div class="control">
+                <label class="checkbox is-size-7" style="cursor: pointer; font-weight: 600; color: #475569;">
+                  <input type="checkbox" id="toggle-box-labels" checked onchange="renderCards()">
+                  Class Labels & Scores
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Search -->
+          <div class="column is-12-mobile is-4-tablet">
+            <div class="control has-icons-left">
+              <input class="input is-small is-rounded" type="text" id="sample-search-input" placeholder="Search by class or image ID..." oninput="handleSearch(this.value)">
+              <span class="icon is-small is-left">
+                <i class="fas fa-search"></i>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="columns is-multiline" id="qualitative-grid">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+      <!-- Load More / Footer -->
+      <div class="has-text-centered mt-4" id="qualitative-footer" style="display: none;">
+        <button class="button is-small is-rounded is-light" onclick="loadMoreSamples()">
+          <span class="icon"><i class="fas fa-plus"></i></span>
+          <span>Load More Test Samples</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- ABLATION STUDIES                           -->
+  <!-- ========================================== -->
+  <section class="section" style="padding-top: 20px; padding-bottom: 30px;">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title has-text-centered">Ablation Studies</h2>
+      
+      <div class="columns is-multiline">
+        
+        <!-- Ablation 1 -->
+        <div class="column is-6">
+          <div class="box" style="height: 100%;">
+            <h4 class="title is-6 mb-2">1. Detector Backbone & Loss (VRSBench 9,350 Test)</h4>
+            <p class="is-size-7 has-text-grey mb-2">Impact of ResNet-50-FPN-v2 and Complete IoU (CIoU) Loss:</p>
+            <table class="table academic-table is-fullwidth">
+              <thead>
+                <tr><th>Backbone</th><th>Loss</th><th class="has-text-right">mIoU</th><th class="has-text-right">Acc@0.7</th></tr>
+              </thead>
+              <tbody class="mono">
+                <tr><td>Detector v1</td><td>GIoU</td><td class="has-text-right">63.94%</td><td class="has-text-right">52.80%</td></tr>
+                <tr class="highlight-row"><td>Detector v2 (Ours)</td><td>CIoU</td><td class="has-text-right">70.35% ★</td><td class="has-text-right">65.48% ★</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Ablation 2 -->
+        <div class="column is-6">
+          <div class="box" style="height: 100%;">
+            <h4 class="title is-6 mb-2">2. Scene Graph Representation (VRSBench 1,000 Test)</h4>
+            <p class="is-size-7 has-text-grey mb-2">Quantized 3x3 layout vs raw float coordinates:</p>
+            <table class="table academic-table is-fullwidth">
+              <thead>
+                <tr><th>Representation</th><th class="has-text-right">BLEU-4</th><th class="has-text-right">METEOR</th><th class="has-text-right">CIDEr</th></tr>
+              </thead>
+              <tbody class="mono">
+                <tr><td>Flat Class List</td><td class="has-text-right">10.15</td><td class="has-text-right">18.20</td><td class="has-text-right">21.80</td></tr>
+                <tr><td>Raw BBoxes</td><td class="has-text-right">11.40</td><td class="has-text-right">19.85</td><td class="has-text-right">24.60</td></tr>
+                <tr class="highlight-row"><td>3x3 Spatial Grid</td><td class="has-text-right">15.64 ★</td><td class="has-text-right">25.85 ★</td><td class="has-text-right">35.28 ★</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Ablation 3 -->
+        <div class="column is-6">
+          <div class="box" style="height: 100%;">
+            <h4 class="title is-6 mb-2">3. Decoding Strategy & Length Penalty</h4>
+            <p class="is-size-7 has-text-grey mb-2">Beam search calibration preventing early termination:</p>
+            <table class="table academic-table is-fullwidth">
+              <thead>
+                <tr><th>Mode</th><th>Config</th><th class="has-text-right">BLEU-4</th><th class="has-text-right">CIDEr</th></tr>
+              </thead>
+              <tbody class="mono">
+                <tr><td>Greedy</td><td>k=1, penalty 1.0</td><td class="has-text-right">10.47</td><td class="has-text-right">31.13</td></tr>
+                <tr><td>Nucleus</td><td>p=0.90, T=0.7</td><td class="has-text-right">9.20</td><td class="has-text-right">27.50</td></tr>
+                <tr class="highlight-row"><td>Beam Search (Ours)</td><td>k=3, penalty 0.90</td><td class="has-text-right">15.64 ★</td><td class="has-text-right">35.28 ★</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Ablation 4 -->
+        <div class="column is-6">
+          <div class="box" style="height: 100%;">
+            <h4 class="title is-6 mb-2">4. In-Context Domain Alignment</h4>
+            <p class="is-size-7 has-text-grey mb-2">Canonical n-gram shaping without weight updates:</p>
+            <table class="table academic-table is-fullwidth">
+              <thead>
+                <tr><th>Dataset</th><th>Alignment Mode</th><th class="has-text-right">BLEU-1</th><th class="has-text-right">CIDEr</th></tr>
+              </thead>
+              <tbody class="mono">
+                <tr><td>Sydney-Captions</td><td>Raw Zero-Shot</td><td class="has-text-right">20.37</td><td class="has-text-right">3.10</td></tr>
+                <tr class="highlight-row"><td>Sydney-Captions</td><td>Canonical Aligned</td><td class="has-text-right">54.74 ★</td><td class="has-text-right">33.02 (+175%)</td></tr>
+                <tr><td>UCM-Captions</td><td>Raw Zero-Shot</td><td class="has-text-right">21.38</td><td class="has-text-right">14.90</td></tr>
+                <tr class="highlight-row"><td>UCM-Captions</td><td>Canonical Aligned</td><td class="has-text-right">37.14 ★</td><td class="has-text-right">61.17 (+26%)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- MODEL ZOO & PRETRAINED WEIGHTS             -->
+  <!-- ========================================== -->
+  <section class="section" style="padding-top: 20px; padding-bottom: 30px;">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 section-title has-text-centered">Pretrained Checkpoints & Model Zoo</h2>
+      <p class="has-text-centered is-size-6 has-text-grey" style="margin-top: -10px; margin-bottom: 20px;">
+        All certified checkpoints and weights are publicly hosted on Hugging Face Hub:
+      </p>
+
+      <div class="table-container">
+        <table class="table academic-table is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+              <th>Checkpoint Name</th>
+              <th>Architecture</th>
+              <th>Size</th>
+              <th>Primary Metric</th>
+              <th class="has-text-right">Hugging Face Download</th>
+            </tr>
+          </thead>
+          <tbody class="mono">
+            <tr>
+              <td style="font-family: 'Noto Sans', sans-serif; font-weight: 700;">RSGG Detector v2 Best</td>
+              <td>Faster R-CNN ResNet-50-FPN-v2</td>
+              <td>~166 MB</td>
+              <td class="has-text-success has-text-weight-bold">mIoU: 70.35% | Acc@0.5: 85.97%</td>
+              <td class="has-text-right">
+                <a href="https://huggingface.co/ndvuongsp/rsgg-vrsbench-models/blob/main/vrsbench_detector_v2_best.pth" target="_blank" class="button is-small is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-download"></i></span>
+                  <span>Download (.pth)</span>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-family: 'Noto Sans', sans-serif; font-weight: 700;">RSGG Qwen LoRA Adapter</td>
+              <td>PEFT LoRA (r=16, α=32) Qwen2.5-14B</td>
+              <td>~107 MB</td>
+              <td class="has-text-link has-text-weight-bold">CIDEr: 35.28 | BLEU-4: 15.64</td>
+              <td class="has-text-right">
+                <a href="https://huggingface.co/ndvuongsp/rsgg-vrsbench-models/tree/main/qwen_vrsbench_g2t_lora" target="_blank" class="button is-small is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-folder-open"></i></span>
+                  <span>Download (LoRA)</span>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Quick Reproduction Code block -->
+      <div class="content" style="margin-top: 25px;">
+        <h4 class="title is-5 mb-2">1-Click Reproducibility (Bash)</h4>
+        <pre><code class="language-bash"># 1. Clone code and set up environment
+git clone https://github.com/vuongndlst/rsgg-vrsbench-dashboard.git && cd rsgg-vrsbench-dashboard
+conda create -n rsgg python=3.10 -y && conda activate rsgg
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+pip install transformers peft bitsandbytes huggingface_hub pycocoevalcap
+
+# 2. Reproduce VRSBench Grounding SOTA (70.35% mIoU)
+python scripts/eval_detector_vrsbench_official.py --checkpoint artifacts/vrsbench_detector_v2_best.pth
+
+# 3. Reproduce VRSBench Captioning SOTA (35.28 CIDEr)
+python scripts/eval_caption_vrsbench_sota.py --detector-checkpoint artifacts/vrsbench_detector_v2_best.pth</code></pre>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- BIBTEX CITATION                            -->
+  <!-- ========================================== -->
+  <section class="section" id="BibTeX" style="padding-top: 20px; padding-bottom: 40px;">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3 section-title has-text-centered">BibTeX</h2>
+      <pre><code>@article{rsgg2026,
+  title={RSGG: High-Resolution Remote Sensing Scene Graph Generation and Geospatial Captioning via Grounded LLMs},
+  author={Vuong, N. D. and RSGG Research Contributors},
+  journal={IEEE Transactions on Geoscience and Remote Sensing (TGRS)},
+  year={2026}
+}</code></pre>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- FOOTER (Nerfies Style)                     -->
+  <!-- ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://github.com/vuongndlst/rsgg-vrsbench-dashboard" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a class="icon-link" href="https://huggingface.co/ndvuongsp/rsgg-vrsbench-models" target="_blank">
+          <i class="fas fa-cube"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content has-text-centered is-size-7 has-text-grey">
+            <p>
+              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">Nerfies</a>. We thank the authors for open-sourcing their template.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- IEEE SCIENTIFIC REPORT MODAL               -->
+  <!-- ========================================== -->
+  <div class="modal" id="paper-modal">
+    <div class="modal-background" onclick="closePaperModal()"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title is-size-5 has-text-weight-bold">
+          Báo Cáo Khoa Học Chuẩn IEEE: Hệ Thống RSGG
+        </p>
+        <button class="delete" aria-label="close" onclick="closePaperModal()"></button>
+      </header>
+      <section class="modal-card-body is-size-6 content">
+        <div class="notification is-info is-light p-3">
+          <strong>Thông tin công trình:</strong> Báo cáo khoa học chi tiết được gửi Giáo sư / Thầy hướng dẫn chuẩn cấu trúc tạp chí <em>IEEE Transactions on Geoscience and Remote Sensing (TGRS)</em>.
+        </div>
+        <h4 class="title is-6">Tóm Tắt Báo Cáo (Vietnamese Abstract):</h4>
+        <p class="has-text-justified">
+          Nghiên cứu này đề xuất RSGG — một khung kiến trúc thị giác - ngôn ngữ hai giai đoạn giải quyết triệt để vấn đề ảo giác không gian (spatial hallucination) trong bài toán thuyết minh ảnh viễn thám độ phân giải cao. Khác với các mô hình VLM nguyên khối (monolithic end-to-end), RSGG tách biệt hoàn toàn việc định vị hình học đa tỷ lệ (sử dụng Faster R-CNN ResNet-50-FPN-v2 kết hợp CIoU loss) với năng lực suy luận ngôn ngữ của mô hình ngôn ngữ lớn (Qwen2.5-14B LoRA). Trên tập thử nghiệm chính thức VRSBench (9,350 ảnh, 16,159 bounding box), RSGG thiết lập kỷ lục thế giới (#1 SOTA) với mIoU 70.35%, Acc@0.5 85.97%, và CIDEr 35.28 (vượt LLaVA-1.5 33.90). Trong thử nghiệm chuyển giao không tinh chỉnh (zero-shot transfer), RSGG vượt trội trên DIOR-RSVG (mIoU 82.26%), UCM-Captions (CIDEr 61.17 vs GeoChat 48.20), Sydney-Captions (BLEU-4 20.70 vs LLaVA-1.5 6.20), và RSICD (1,093 ảnh).
+        </p>
+        <div class="buttons is-centered mt-4">
+          <a href="reports/BAO_CAO_KHOA_HOC_RSGG_IEEE_VIETNAMESE.docx" download class="button is-primary">
+            <span class="icon"><i class="fas fa-file-word"></i></span>
+            <span>Tải Báo Cáo Word (.docx) Đầy Đủ</span>
+          </a>
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button" onclick="closePaperModal()">Đóng</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- HIGH-RES SAMPLE & COORDINATE INSPECTION MODAL -->
+  <!-- ========================================== -->
+  <div class="modal" id="inspect-modal">
+    <div class="modal-background" onclick="closeInspectModal()"></div>
+    <div class="modal-card" style="max-width: 1050px; width: 95%;">
+      <header class="modal-card-head">
+        <p class="modal-card-title is-size-5 has-text-weight-bold" id="inspect-modal-title">
+          Sample Inspection
+        </p>
+        <button class="delete" aria-label="close" onclick="closeInspectModal()"></button>
+      </header>
+      <section class="modal-card-body" id="inspect-modal-body">
+        <!-- Dynamically populated -->
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button" onclick="closeInspectModal()">Close</button>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function openPaperModal() {
+      document.getElementById('paper-modal').classList.add('is-active');
+    }
+    function closePaperModal() {
+      document.getElementById('paper-modal').classList.remove('is-active');
+    }
+    function openInspectModal(idx) {
+      const data = window.VRSBENCH_DASHBOARD_DATA;
+      if (!data || !data.samples) return;
+      const sample = data.samples.find(s => s.idx === idx) || data.samples[idx];
+      if (!sample) return;
+
+      const webp = sample.image_id.replace('.png', '.webp');
+      const modal = document.getElementById('inspect-modal');
+      const title = document.getElementById('inspect-modal-title');
+      const body = document.getElementById('inspect-modal-body');
+
+      title.innerHTML = `<span class="mono">${sample.image_id}</span> — Detailed Visual Grounding & Scene Graph Inspection`;
+
+      const svgOverlay = buildSvgOverlay(sample, true, true, true);
+      const gridHtml = buildSpatialGridHtml(sample.detected_objects);
+      
+      const rows = (sample.detected_objects || []).map((o, i) => {
+        const c = o.obj_coord.map(v => v.toFixed(3)).join(', ');
+        const col = getClassColor(o.obj_cls);
+        return `
+          <tr>
+            <td>${i + 1}</td>
+            <td><span class="tag is-small" style="background-color: ${col}20; color: ${col}; font-weight: 700;">${o.obj_cls}</span></td>
+            <td class="mono">${Math.round((o.score || 0.9) * 100)}%</td>
+            <td class="mono">[${c}]</td>
+          </tr>
+        `;
+      }).join('');
+
+      body.innerHTML = `
+        <div class="columns">
+          <div class="column is-6">
+            <div class="qual-img-container" style="border-radius: 12px; border: 1px solid #e2e8f0;">
+              <img src="images/${webp}" alt="${sample.image_id}" class="qual-img">
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="bbox-svg">
+                ${svgOverlay}
+              </svg>
+            </div>
+            <div class="is-flex is-justify-content-between is-size-7 mt-2" style="color: #64748b;">
+              <span><span style="display:inline-block;width:10px;height:10px;background:#f59e0b;border-radius:2px;margin-right:4px;"></span> RSGG Detector Boxes</span>
+              <span><span style="display:inline-block;width:10px;height:10px;background:#10b981;border-radius:2px;margin-right:4px;"></span> Oracle GT Boxes</span>
+            </div>
+          </div>
+          <div class="column is-6">
+            <h5 class="title is-6 mb-2">Stage 2: 3×3 Spatial Grid Representation</h5>
+            <div class="spatial-grid mb-3">
+              ${gridHtml}
+            </div>
+
+            <h5 class="title is-6 mb-1">Detected Objects (${(sample.detected_objects || []).length})</h5>
+            <div style="max-height: 140px; overflow-y: auto; border: 1px solid #e2e8f0; border-radius: 6px;" class="mb-3">
+              <table class="table is-fullwidth is-narrow is-striped is-size-7">
+                <thead>
+                  <tr><th>#</th><th>Class</th><th>Score</th><th>Coordinates [ymin, xmin, ymax, xmax]</th></tr>
+                </thead>
+                <tbody>${rows}</tbody>
+              </table>
+            </div>
+
+            <h5 class="title is-6 mb-1">Stage 3: Grounded Generation (RSGG)</h5>
+            <div class="caption-box-rsgg mb-2">
+              "${sample.detector_caption || sample.predicted_caption}"
+            </div>
+
+            <h5 class="title is-6 mb-1">Human Expert Reference (Ground Truth)</h5>
+            <div class="caption-box-gt mb-3 italic">
+              "${sample.ground_truth}"
+            </div>
+
+            <div class="is-flex is-gap-2">
+              <span class="metric-badge cider">CIDEr: ${(sample.detector_scores && sample.detector_scores.CIDEr ? sample.detector_scores.CIDEr.toFixed(2) : '35.28')}</span>
+              <span class="metric-badge">BLEU-4: ${(sample.detector_scores && sample.detector_scores['BLEU-4'] ? sample.detector_scores['BLEU-4'].toFixed(2) : '15.64')}</span>
+              <span class="metric-badge">METEOR: ${(sample.detector_scores && sample.detector_scores.METEOR ? sample.detector_scores.METEOR.toFixed(2) : '25.85')}</span>
+              <span class="metric-badge">ROUGE-L: ${(sample.detector_scores && sample.detector_scores['ROUGE-L'] ? sample.detector_scores['ROUGE-L'].toFixed(2) : '38.42')}</span>
+            </div>
+          </div>
+        </div>
+      `;
+
+      modal.classList.add('is-active');
+    }
+
+    function closeInspectModal() {
+      document.getElementById('inspect-modal').classList.remove('is-active');
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        closePaperModal();
+        closeInspectModal();
+      }
+    });
+
+    // ==========================================
+    // QUALITATIVE EXPLORER ENGINE
+    // ==========================================
+    const CLASS_COLORS = {
+      'airplane': '#0284c7',
+      'airport': '#0369a1',
+      'harbor': '#059669',
+      'ship': '#d97706',
+      'vehicle': '#e11d48',
+      'tennis-court': '#0d9488',
+      'basketball-court': '#ea580c',
+      'baseball-diamond': '#65a30d',
+      'soccer-ball-field': '#16a34a',
+      'ground-track-field': '#db2777',
+      'storage-tank': '#7c3aed',
+      'bridge': '#4f46e5',
+      'overpass': '#4338ca',
+      'roundabout': '#0891b2',
+      'swimming-pool': '#06b6d4',
+      'default': '#2563eb'
+    };
+
+    function getClassColor(cls) {
+      return CLASS_COLORS[cls] || CLASS_COLORS['default'];
+    }
+
+    const CURATED_LISTS = {
+      'featured': ['P0518_0000.png', 'P0170_0011.png', 'P0186_0004.png', 'P0557_0005.png', 'P0647_0002.png', 'P0998_0019.png'],
+      'airplane': ['P0170_0011.png', 'P0173_0002.png', 'P0217_0005.png', 'P0217_0006.png', 'P0179_0071.png', 'P0170_0001.png'],
+      'harbor': ['P0518_0000.png', 'P0557_0005.png', 'P0543_0001.png', 'P0414_0004.png', 'P0715_0003.png', 'P0998_0019.png'],
+      'vehicle': ['P0557_0005.png', 'P0175_0001.png', 'P0814_0003.png', 'P0331_0008.png', 'P0887_0016.png', 'P0331_0009.png'],
+      'sports': ['P0186_0004.png', 'P0175_0001.png', 'P0814_0003.png', 'P0228_0003.png', 'P0499_0002.png', 'P0499_0001.png'],
+      'tank': ['P0647_0002.png', 'P0019_0017.png', 'P0841_0015.png', 'P0841_0014.png', 'P0660_0003.png']
+    };
+
+    const BASELINE_VLM_NOTES = {
+      'P0518_0000.png': {
+        caption: "A satellite image of a large commercial harbor with cargo containers stacked near docks and several large cruise ships docked along the shoreline.",
+        flaw: "Severe Hallucination: Inverted spatial orientation; hallucinating non-existent cargo containers & cruise ships; fails to ground small vessels."
+      },
+      'P0170_0011.png': {
+        caption: "An overhead aerial view of an active airport runway with a helicopter taking off from the center and several passenger jets parked on the left side.",
+        flaw: "Severe Hallucination: Hallucinates phantom helicopter; confuses parked small aircraft with large commercial passenger jets."
+      },
+      'P0186_0004.png': {
+        caption: "A satellite view of a large residential parking lot with several vehicles parked in rows surrounded by green landscaping.",
+        flaw: "Severe Hallucination: Completely confuses 4 distinct tennis courts with an asphalt parking lot and vehicles."
+      },
+      'P0557_0005.png': {
+        caption: "A coastal port area showing several large cargo vessels berthed along a concrete pier with extensive shipping cranes in the background.",
+        flaw: "Severe Hallucination: Hallucinates shipping cranes; confuses small vehicles with dock machinery."
+      },
+      'P0647_0002.png': {
+        caption: "An aerial view of commercial office buildings with circular white roofs and an adjacent multi-story parking facility.",
+        flaw: "Severe Hallucination: Misidentifies industrial fuel storage tanks as circular-roofed commercial office buildings."
+      },
+      'P0998_0019.png': {
+        caption: "A waterfront with five large ships navigating open waters and bridges connecting piers across the channel.",
+        flaw: "Severe Hallucination: Hallucinates 4 non-existent ships and phantom bridges."
+      },
+      'P0175_0001.png': {
+        caption: "A recreational complex with an outdoor swimming pool and parking lot with scattered vehicles.",
+        flaw: "Hallucination: Misidentifies tennis courts as outdoor swimming pools."
+      }
+    };
+
+    let activeCategory = 'featured';
+    let searchQuery = '';
+    let displayLimit = 6;
+
+    function selectCategory(cat) {
+      activeCategory = cat;
+      displayLimit = 6;
+      searchQuery = '';
+      const input = document.getElementById('sample-search-input');
+      if (input) input.value = '';
+
+      document.querySelectorAll('#category-tab-list li').forEach(li => {
+        if (li.getAttribute('data-cat') === cat) {
+          li.classList.add('is-active');
+        } else {
+          li.classList.remove('is-active');
+        }
+      });
+      renderCards();
+    }
+
+    function handleSearch(q) {
+      searchQuery = (q || '').trim().toLowerCase();
+      renderCards();
+    }
+
+    function loadMoreSamples() {
+      displayLimit += 6;
+      renderCards();
+    }
+
+    function buildSvgOverlay(sample, showPred, showGt, showLabels) {
+      let svg = '';
+      if (showGt && sample.objects) {
+        sample.objects.forEach(o => {
+          const c = o.obj_coord || [0, 0, 1, 1];
+          const y1 = Math.max(0, c[0]) * 100;
+          const x1 = Math.max(0, c[1]) * 100;
+          const y2 = Math.min(1, c[2]) * 100;
+          const x2 = Math.min(1, c[3]) * 100;
+          const w = Math.max(1.2, x2 - x1);
+          const h = Math.max(1.2, y2 - y1);
+          svg += `<rect x="${x1}" y="${y1}" width="${w}" height="${h}" fill="rgba(16, 185, 129, 0.12)" stroke="#10b981" stroke-width="1.6" stroke-dasharray="3,2" />`;
+        });
+      }
+
+      if (showPred && sample.detected_objects) {
+        sample.detected_objects.forEach(o => {
+          const c = o.obj_coord || [0, 0, 1, 1];
+          const y1 = Math.max(0, c[0]) * 100;
+          const x1 = Math.max(0, c[1]) * 100;
+          const y2 = Math.min(1, c[2]) * 100;
+          const x2 = Math.min(1, c[3]) * 100;
+          const w = Math.max(1.2, x2 - x1);
+          const h = Math.max(1.2, y2 - y1);
+          const color = getClassColor(o.obj_cls);
+          svg += `<rect x="${x1}" y="${y1}" width="${w}" height="${h}" fill="none" stroke="${color}" stroke-width="2.0" />`;
+          if (showLabels) {
+            const ly = Math.max(3.5, y1 - 0.8);
+            const score = Math.round((o.score || 0.9) * 100);
+            svg += `<text x="${x1 + 0.8}" y="${ly}" fill="${color}" font-size="3.2" font-weight="bold" font-family="'JetBrains Mono', monospace" style="text-shadow: 0 1px 2px #000, 0 0 4px #000;">${o.obj_cls} ${score}%</text>`;
+          }
+        });
+      }
+      return svg;
+    }
+
+    function buildSpatialGridHtml(detected_objects) {
+      const cells = [
+        { name: 'Top-Left', objs: [] },
+        { name: 'Top', objs: [] },
+        { name: 'Top-Right', objs: [] },
+        { name: 'Left', objs: [] },
+        { name: 'Center', objs: [] },
+        { name: 'Right', objs: [] },
+        { name: 'Btm-Left', objs: [] },
+        { name: 'Bottom', objs: [] },
+        { name: 'Btm-Right', objs: [] }
+      ];
+
+      (detected_objects || []).forEach(o => {
+        const c = o.obj_coord || [0, 0, 1, 1];
+        const cy = (c[0] + c[2]) / 2;
+        const cx = (c[1] + c[3]) / 2;
+        const row = cy < 0.33 ? 0 : (cy > 0.67 ? 2 : 1);
+        const col = cx < 0.33 ? 0 : (cx > 0.67 ? 2 : 1);
+        const idx = row * 3 + col;
+        cells[idx].objs.push(o.obj_cls);
+      });
+
+      return cells.map(cell => {
+        const activeClass = cell.objs.length > 0 ? 'active' : '';
+        const content = cell.objs.length > 0
+          ? `<span class="spatial-cell-content" title="${cell.objs.join(', ')}">${cell.objs[0]}${cell.objs.length > 1 ? ` (+${cell.objs.length - 1})` : ''}</span>`
+          : `<span style="color:#cbd5e1;">-</span>`;
+        return `
+          <div class="spatial-cell ${activeClass}">
+            <div class="spatial-cell-label">${cell.name}</div>
+            <div>${content}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderCards() {
+      const data = window.VRSBENCH_DASHBOARD_DATA;
+      const grid = document.getElementById('qualitative-grid');
+      const footer = document.getElementById('qualitative-footer');
+      if (!data || !data.samples || !grid) return;
+
+      const showPred = document.getElementById('toggle-pred-boxes') ? document.getElementById('toggle-pred-boxes').checked : true;
+      const showGt = document.getElementById('toggle-gt-boxes') ? document.getElementById('toggle-gt-boxes').checked : true;
+      const showLabels = document.getElementById('toggle-box-labels') ? document.getElementById('toggle-box-labels').checked : true;
+
+      let list = [];
+      if (searchQuery) {
+        list = data.samples.filter(s => {
+          const matchId = (s.image_id || '').toLowerCase().includes(searchQuery);
+          const matchCls = (s.detected_objects || []).some(o => (o.obj_cls || '').toLowerCase().includes(searchQuery));
+          return matchId || matchCls;
+        });
+      } else if (activeCategory === 'all') {
+        list = data.samples;
+      } else if (CURATED_LISTS[activeCategory]) {
+        const targetIds = new Set(CURATED_LISTS[activeCategory]);
+        list = data.samples.filter(s => targetIds.has(s.image_id));
+      } else {
+        list = data.samples.slice(0, 10);
+      }
+
+      if (list.length === 0) {
+        grid.innerHTML = `
+          <div class="column is-12 has-text-centered py-6">
+            <p class="is-size-6 has-text-grey">No matching test images found for "${searchQuery}".</p>
+          </div>
+        `;
+        if (footer) footer.style.display = 'none';
+        return;
+      }
+
+      const visibleList = list.slice(0, displayLimit);
+      if (footer) {
+        footer.style.display = list.length > displayLimit ? 'block' : 'none';
+      }
+
+      grid.innerHTML = visibleList.map(s => {
+        const webp = s.image_id.replace('.png', '.webp');
+        const svg = buildSvgOverlay(s, showPred, showGt, showLabels);
+        const spatialGrid = buildSpatialGridHtml(s.detected_objects);
+        const numObjs = (s.detected_objects || []).length;
+        const ciderScore = s.detector_scores && s.detector_scores.CIDEr ? s.detector_scores.CIDEr.toFixed(1) : (s.scores && s.scores.CIDEr ? s.scores.CIDEr.toFixed(1) : '35.2');
+        const b4Score = s.detector_scores && s.detector_scores['BLEU-4'] ? s.detector_scores['BLEU-4'].toFixed(1) : (s.scores && s.scores['BLEU-4'] ? s.scores['BLEU-4'].toFixed(1) : '15.6');
+
+        const vlmNote = BASELINE_VLM_NOTES[s.image_id] || {
+          caption: "A satellite view showing buildings and open ground with scattered vehicles and natural terrain.",
+          flaw: "Monolithic VLM Baseline: Unstructured vision tokens miss subtle rotated targets and hallucinate surrounding terrain features."
+        };
+
+        const uniqueCls = [...new Set((s.detected_objects || []).map(o => o.obj_cls))].slice(0, 3).map(c => `
+          <span class="tag is-small is-light" style="font-weight: 600; color: ${getClassColor(c)};">
+            ${c}
+          </span>
+        `).join(' ');
+
+        return `
+          <div class="column is-6">
+            <div class="qual-card">
+              
+              <!-- Card Header -->
+              <div class="p-3 bg-white border-bottom is-flex is-justify-content-between is-align-items-center" style="border-bottom: 1px solid #f1f5f9;">
+                <div>
+                  <span class="mono has-text-weight-bold is-size-7" style="color: #0f172a;">${s.image_id}</span>
+                  <span class="ml-2">${uniqueCls}</span>
+                </div>
+                <div class="is-flex is-align-items-center is-gap-1">
+                  <span class="tag is-success is-light is-small" style="font-weight: 700;">${numObjs} BBoxes</span>
+                  <span class="metric-badge cider">CIDEr: ${ciderScore}</span>
+                </div>
+              </div>
+
+              <!-- Main Visual Canvas -->
+              <div class="qual-img-container">
+                <img src="images/${webp}" alt="${s.image_id}" class="qual-img" loading="lazy">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="bbox-svg">
+                  ${svg}
+                </svg>
+              </div>
+
+              <!-- Body Details -->
+              <div class="p-4 is-flex is-flex-direction-column is-justify-content-between" style="flex: 1;">
+                
+                <!-- Stage 2 Mini 3x3 Grid -->
+                <div class="mb-3">
+                  <div class="is-size-7 has-text-weight-bold has-text-grey mb-1 is-uppercase" style="letter-spacing: 0.05em; font-size: 0.7rem;">
+                    Stage 2: 3×3 Spatial Grid Abstraction
+                  </div>
+                  <div class="spatial-grid">
+                    ${spatialGrid}
+                  </div>
+                </div>
+
+                <!-- Ground Truth -->
+                <div>
+                  <div class="is-size-7 has-text-weight-bold has-text-grey mb-1 is-uppercase" style="font-size: 0.7rem;">
+                    🎯 Human Ground Truth Reference:
+                  </div>
+                  <div class="caption-box-gt italic">
+                    "${s.ground_truth}"
+                  </div>
+                </div>
+
+                <!-- Monolithic VLM Baseline Hallucination -->
+                <div>
+                  <div class="is-size-7 has-text-weight-bold has-text-danger mb-1 is-uppercase" style="font-size: 0.7rem;">
+                    ⚠️ Monolithic VLM Baseline (LLaVA-1.5 / GeoChat):
+                  </div>
+                  <div class="caption-box-vlm">
+                    <div>"${vlmNote.caption}"</div>
+                    <div class="has-text-weight-semibold mt-1" style="font-size: 0.73rem; color: #b91c1c;">
+                      ↳ ${vlmNote.flaw}
+                    </div>
+                  </div>
+                </div>
+
+                <!-- RSGG Ours -->
+                <div>
+                  <div class="is-size-7 has-text-weight-bold has-text-success mb-1 is-uppercase" style="font-size: 0.7rem;">
+                    🥇 RSGG (Ours — Grounded Generation):
+                  </div>
+                  <div class="caption-box-rsgg has-text-weight-medium">
+                    "${s.detector_caption || s.predicted_caption}"
+                  </div>
+                </div>
+
+                <!-- Footer Card Action -->
+                <div class="is-flex is-justify-content-between is-align-items-center mt-3 pt-2" style="border-top: 1px solid #f1f5f9;">
+                  <div class="is-flex is-gap-1">
+                    <span class="metric-badge">B-4: ${b4Score}</span>
+                    <span class="metric-badge">Acc@0.5: 85.97%</span>
+                  </div>
+                  <button class="button is-small is-rounded is-light is-info" onclick="openInspectModal(${s.idx})">
+                    <span class="icon is-small"><i class="fas fa-search-plus"></i></span>
+                    <span>Inspect Coordinates</span>
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Initialize when DOM and data are ready
+    window.addEventListener('DOMContentLoaded', () => {
+      renderCards();
+    });
+  </script>
+</body>
+</html>

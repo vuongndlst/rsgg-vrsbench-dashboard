@@ -1,0 +1,4 @@
+model,task,split,train_images,validation_images,seed,GC_R50_percent,GC_mR50_percent,claim
+frequency,VG150 PredCls,validation smoke,56224,32,1729,38.768713924963926,5.878267512538612,smoke_only_not_SOTA
+A0,VG150 PredCls,validation smoke,64,32,1729,34.42193253346271,4.158518676549368,smoke_only_not_SOTA
+A1,VG150 PredCls,validation smoke,64,32,1729,35.06207005398816,5.0668866087024655,smoke_only_not_SOTA

@@ -1,0 +1,10 @@
+{
+  "type": "anomaly",
+  "condition": "monitor_approval_quota_gap_recovered",
+  "blocked_check_utc": "2026-10-10T23:40:18.830Z",
+  "recovered_check_utc": "2026-10-11T00:10:33.281128+00:00",
+  "reason": "Automatic approval review could not complete because usage limit was reached; monitor command was not executed; not a determination of unsafe action",
+  "current_remote_pipeline_active": true,
+  "job_stop_during_gap_unknown": true,
+  "user_action_required": false
+}

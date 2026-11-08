@@ -1,0 +1,10 @@
+{
+  "status": "FAIL",
+  "utc": "2026-10-10T20:08:48.618494+00:00",
+  "scope": "source-extracted CPU fixture setup",
+  "error_type": "NameError",
+  "reason": "Fixture missing native rel_confideces and batch j context",
+  "script_sha256": "dbfc36d7a52d907055a90b130154c342514b6ca2f0c86c2319c443c95cfedcfc",
+  "live_v2_modified": false,
+  "benchmark_test_scored": false
+}

@@ -1,0 +1,244 @@
+{
+  "phase": "vg_color_enrichment_v1",
+  "status": "PLAN_ONLY_NOT_TEST_PREREGISTRATION",
+  "parent_plan": "research/VG_CONTEXT_CAPTION_PLAN_20261024.md",
+  "plan": "research/VG_COLOR_ENRICHED_SG_CAPTION_PLAN_20261024.md",
+  "audit": "reports/VG150_OBJECT_COLOR_TRAIN_VAL_AUDIT_V2_20261024.json",
+  "summary": "reports/VG_COLOR_AUDIT_SUMMARY_20261024.json",
+  "checkpoint_sha256": "29017a69d7cb6d76d68c834b5d540712775a9e0cf9cae13efd17d78a7b69292e",
+  "training_allowed": false,
+  "additional_training_seeds_paused": [
+    2718,
+    3141
+  ],
+  "new_sgdet_test_scoring_allowed": false,
+  "caption_test_launch_allowed": false,
+  "test_gt_attributes_in_generation_allowed": false,
+  "predicted_objects_relations_changed": false,
+  "palette": {
+    "core": [
+      "black",
+      "white",
+      "gray",
+      "red",
+      "green",
+      "blue",
+      "yellow",
+      "brown",
+      "orange",
+      "pink",
+      "purple"
+    ],
+    "extensions_require_validation": [
+      "tan",
+      "beige",
+      "maroon",
+      "cream",
+      "khaki"
+    ],
+    "appearance_separate": [
+      "silver",
+      "gold"
+    ],
+    "hair_only": [
+      "blond"
+    ],
+    "maximum_accepted_colors_per_object": 2,
+    "unrepresented_or_ambiguous": "abstain; preserve exact original GT; never force nearest palette label",
+    "pattern_statuses_separate": [
+      "multicolored",
+      "colorful"
+    ]
+  },
+  "pilot": {
+    "classes": [
+      "shirt",
+      "jacket",
+      "pant",
+      "short",
+      "coat",
+      "hat",
+      "cap",
+      "helmet",
+      "shoe",
+      "bag",
+      "bus",
+      "truck",
+      "car",
+      "train",
+      "cat",
+      "dog",
+      "horse",
+      "cow",
+      "plate",
+      "toilet"
+    ],
+    "selection_basis": "TRAIN annotation frequency/support and semantic suitability; plate/toilet as low-variation controls; not validated production whitelist",
+    "train_prototype_crop_cap": 200,
+    "val_dev_crop_cap": 400,
+    "val_check_crop_cap": 400,
+    "target_maximum_crops_per_class_per_val_partition": 20,
+    "selection": "fixed namespace/hash IDs before inspecting GT color, captions or prediction quality; dev/check disjoint by image and from prior caption dev/check",
+    "matching": "one-to-one same-class predicted/GT object IoU>=0.5 in locked native rank order; report all unmatched/failures",
+    "extractors": [
+      "E0_bbox_pixels",
+      "E1_grabcut_pixels",
+      "E2_clip_bbox",
+      "E3_grabcut_clip",
+      "E4_grabcut_pixels_clip_agreement"
+    ],
+    "maximum_global_operating_points_per_extractor": 3,
+    "maximum_dev_settings": 15,
+    "threshold_values_locked_before_dev_required": true,
+    "check_evaluations_per_selected_policy": 1,
+    "target_accepted_color_precision": 0.9,
+    "minimum_visually_audited_accepted_check_instances_for_gate": 100,
+    "target_is_not_an_achieved_result": true,
+    "visually_audited_units_cap_per_partition": 200,
+    "uncertainty": "cluster bootstrap by parent image; report annotation and reviewer limitations"
+  },
+  "extractor_prototype": {
+    "bbox_source": "frozen Context saved predictions in original RGB coordinates",
+    "grabcut_padding_fraction": 0.15,
+    "maximum_roi_long_side": 256,
+    "grabcut_iterations": 5,
+    "manual_test_scribbles_or_gt_masks_allowed": false,
+    "seed_and_numeric_quality_thresholds": "pending prototype lock; no test launch",
+    "pixel_statistics": "masked Lab/HSV prototypes/histograms; exclude fill/background pixels",
+    "clip_model": "openai/clip-vit-base-patch32",
+    "clip_source": "existing shared-assets/models/clip-vit-base-patch32 offline",
+    "clip_known_shared_weight_sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+    "clip_templates": [
+      "a photo of a {color} {object}",
+      "a {color} {object}"
+    ],
+    "clip_similarity_is_probability": false,
+    "clip_neutral_object_only_control_required": true,
+    "unknown_policy": "omit color; preserve node and failure status, never use GT/class-prior color fallback",
+    "person_color_transfer_allowed": false,
+    "namespace": "sidecar node attributes; original 50 predicates unchanged"
+  },
+  "caption_ablation": {
+    "graph_structure_and_prompt_selected_before_color_ablation": true,
+    "arms": [
+      "N-Z_no_color_zero_shot",
+      "N-S_no_color_static_2shot",
+      "N-D_no_color_dynamic_2shot",
+      "C-Z_color_zero_shot",
+      "C-S_color_static_2shot",
+      "C-D_color_dynamic_2shot"
+    ],
+    "same_qwen_revision_prompt_decoding_budgets": true,
+    "maximum_input_tokens": 768,
+    "maximum_output_tokens": 32,
+    "token_overflow": "fixed attribute budget; drop low-ranked color attributes before graph facts; report coverage",
+    "reference_input_allowed": false,
+    "primary_metric": "native corpus METEOR",
+    "secondary": [
+      "CIDEr",
+      "SPICE if defined/complete",
+      "BLEU4",
+      "ROUGE-L",
+      "visual factuality",
+      "unsupported color rate",
+      "wrong-node color binding",
+      "coverage"
+    ],
+    "initial_test_max_images_after_all_gates": 500,
+    "maximum_regions_per_image": 4,
+    "initial_test_max_units": 2000,
+    "test_launch_requires_separate_locked_preregistration_and_admission": true,
+    "automatic_densecap_map_claim_allowed": false,
+    "primary_contrasts": [
+      "C-D vs C-S: retrieval selection",
+      "C-D vs N-D: color contribution"
+    ],
+    "query_graph_identical_across_six_arms_except_color_fields": true,
+    "same_examples_count_and_token_caps_for_static_dynamic": true,
+    "exact_actual_token_length_matching_claim": false
+  },
+  "global_caption": {
+    "after_region_diagnostic": true,
+    "controls": [
+      "direct_global_sg_to_text",
+      "region_facts_to_global_text"
+    ],
+    "claim_to_evidence_mapping_required": true,
+    "human_image_level_references_and_split_required_for_metric_claim": true,
+    "concatenated_region_phrases_as_global_gt_allowed": false,
+    "benchmark_weights_caption_clean_claim_allowed": false
+  },
+  "resource_gates": {
+    "current_allocator_gib": 6,
+    "current_own_gpu_gib": 8,
+    "cpu_cap": 4,
+    "rss_gib": 4,
+    "disk_reserve_gib": 16,
+    "aggregate_artifacts_gib": 40,
+    "storage_admission_passed": false,
+    "clip_measured_resource_pilot_passed": false,
+    "qwen_resource_gate_passed": false,
+    "resource_increase_approved": false,
+    "shared_environment_modification_allowed": false,
+    "vg_zip_extraction_allowed": false,
+    "automation_remains_paused": true
+  },
+  "current_amendment": "research/VG_DYNAMIC_FEWSHOT_CACHE_AMENDMENT_20261024.md",
+  "fewshot": {
+    "bank_split": "TRAIN_ONLY_FOR_THE_LOCKED_EVALUATION_SPLIT",
+    "bank_example_cap": 2000,
+    "initial_pilot_cap": 200,
+    "outputs": "paired curated supported-fact demonstrations caption_color/caption_no_color; original human TRAIN phrase/hash retained separately",
+    "gt_query_caption_or_attributes_allowed": false,
+    "known_protected_identity_exclusion_required": true,
+    "examples_per_static_or_dynamic_prompt": 2,
+    "maximum_example_tokens": 128,
+    "maximum_all_examples_tokens": 256,
+    "static": "fixed two IDs/order/hash from same TRAIN bank, object/relation strata; reserved fallback IDs locked before VAL",
+    "dynamic_hierarchy": [
+      "exact_ordered_spo",
+      "subject_predicate_or_predicate_object",
+      "subject_object",
+      "focus_object_class",
+      "fixed_static_fallback"
+    ],
+    "tie_break": "deterministic fixed hash; different parent images",
+    "query_keys": "predicted labels/ordered relations only; no reference text or color key",
+    "paired_color_no_color_same_retrieved_ids": true,
+    "example_color_transfer_to_query_allowed": false,
+    "maximum_query_graph_tokens": 448,
+    "maximum_instruction_chat_overhead_draft": 64,
+    "native_tokenizer_budget_verification_required": true,
+    "no_color_demonstration_text_must_be_color_free": true
+  },
+  "cache": {
+    "status": "SPEC_PREPARED_REAL_IMAGE_CACHE_NOT_BUILT",
+    "primary_local_directory": "D:/SBIR/RSGG/outputs/vg_sg_color_cache_v1",
+    "format": "immutable JSONL.gz shards + SHA256 manifest",
+    "layers": [
+      "base_sg",
+      "color_sidecar",
+      "full_sg_view",
+      "region_view",
+      "retrieval_log",
+      "caption_outputs"
+    ],
+    "reference_store_separate": true,
+    "source_sg_reinference_required": false,
+    "full_sg_means": "full saved predicted record plus sidecar; not GT completeness",
+    "images_per_shard": 128,
+    "maximum_compressed_shard_mib": 32,
+    "local_phase_cap_gib": 8,
+    "local_reserve_gib": 16,
+    "overall_artifact_accounting_cap_gib": 40,
+    "pilot_images_before_full_size_forecast": 200,
+    "color_targeting": "predicted priority classes + bbox/mask quality + planned-region focus union, independent of query reference",
+    "extract_once_per_node_bbox_image_and_policy_sha": true,
+    "unrequested_node_status": "not_requested",
+    "server_mode": "prefer memory processing and direct stdout stream to verified local shard; staged shard only after storage admission",
+    "upload_full_cache_required": false,
+    "test_color_materialization_before_lock_allowed": false
+  },
+  "qwen_model_path": "${REMOTE_HOME}/etechs/msvd-tkg-captioning/models/qwen2.5-14b",
+  "qwen_local_files_only": true
+}

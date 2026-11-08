@@ -1,0 +1,214 @@
+{
+  "utc": "2026-10-14T06:39:27.999172+00:00",
+  "config": {
+    "experiment_id": "vg_method_v2_speed_m2_v1",
+    "upstream_commit": "d316a0b2057e549764eb8dd8a0bcce8b1136d98a",
+    "task": "VG150 SGDet, predicted objects; cached frozen VG-trained native detector; controlled relation-head adaptation",
+    "not_claimed": [
+      "native full training recipe reproduction",
+      "caption-clean weights",
+      "SOTA before matched evidence",
+      "new detector trained from scratch in this run"
+    ],
+    "test_policy": "No test access until preregistered confirmation gate; no test rerun/tuning",
+    "cache": {
+      "splits": [
+        "val",
+        "train"
+      ],
+      "shard_images": 64,
+      "resize_short": 800,
+      "resize_max": 1333,
+      "train_augmentation": "fixed evaluation transform; same for all arms",
+      "dtype_policy": "FP16 only if probe max logit error <0.02, otherwise FP32"
+    },
+    "screening": {
+      "variants": [
+        "native",
+        "context",
+        "oneway",
+        "feedback"
+      ],
+      "seed": 1729,
+      "epochs": 6,
+      "gate_gain_mR50": 0.001,
+      "max_R50_drop": 0.01
+    },
+    "confirmation": {
+      "seeds": [
+        1729,
+        2718,
+        3141
+      ],
+      "epochs": 13,
+      "min_gain_mR50": 0.01,
+      "max_R50_drop": 0.01,
+      "bootstrap_replicates": 1000,
+      "bootstrap_seed": 4455,
+      "resource_admission": "Before confirmation, measured maximum screening epoch duration times planned epochs plus test allowance, with25% margin, must fit original absolute remaining budget; otherwise preserve screening and block admission without relaxing scientific gate"
+    },
+    "optimizer": {
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "effective_batch": 16,
+      "microbatch": 2,
+      "gradient_clip": 0.1,
+      "drop_factor": 0.1,
+      "drop_epoch_from_end": 2
+    },
+    "selection": {
+      "primary": "mR@50",
+      "guardrail": "R@50 >= frozen native validation R@50 - 0.01",
+      "tie": "earliest epoch",
+      "fallback": "best mR@50 with guardrail failure explicitly reported"
+    },
+    "regional": {
+      "tokens": 8,
+      "hidden": 256,
+      "rounds": 2,
+      "geometry_learning": false,
+      "output_zero_init": true
+    },
+    "resource": {
+      "cuda_allocator_gib": 6,
+      "cpu_threads": 4,
+      "minimum_free_disk_gib": 16,
+      "artifact_limit_gib": 40,
+      "wall_hours": 840,
+      "preparation_wait_minutes": 90,
+      "checkpoint_per_completed_run": 1,
+      "own_gpu_nvml_gib": 8,
+      "peak_rss_gib": 4,
+      "minimum_gpu_free_gib": 9
+    },
+    "adjustment_policy": "No core/config changes inside a locked run. Technical failures may be repaired with new source lock and explicit audit. Scientific changes become a new preregistered experiment; tests remain unopened.",
+    "caption_stage": "Required follow-on: audit external test overlap, train fresh caption-clean detector/SGG, fixed Qwen14B and matched prompt budgets; never use benchmark weights as contamination-free caption model without proof",
+    "satellite_stage": "Only after natural-image evidence; independent domain training",
+    "parent_experiment": "vg_method_v2",
+    "benchmark_evidence_sha256": "bec2a2cfbfd39e5edf52c7bfc7806385e061d1f4a5777a22e95b52b32b7ef4e3",
+    "original_wall_deadline_unix": 1792510321.2414355,
+    "batching": {
+      "case": "packed_fp32_m2",
+      "pinned_cpu": true,
+      "non_blocking": true,
+      "criterion": "unchanged per-image normalization; sum losses / effective_batch16",
+      "tail": "same as original: final incomplete effective batch still divided by16",
+      "dropout": "different RNG trajectory from micro1; all four arms freshly initialized, no old native reuse",
+      "validation": "original singleton FP32 evaluator, same predictions/IoU/GC metrics",
+      "order": "original seeded shard and intra-shard shuffle; contiguous microgroups across shards",
+      "search": "one adopted configuration; no further batch/precision search inside this run"
+    },
+    "execution_revision": "vg_method_v2_time_extension_v1",
+    "authorized_wall_deadline_unix": 1794670321.2414355,
+    "time_extension_authorization": "Human14Oct2026: continue; time is not important; seek one best research pipeline. Time only; GPU/RAM/CPU/artifact/scientific/test gates unchanged."
+  },
+  "source_hashes": {
+    "src/rsgformer/vg_v2_runtime.py": "0d7157491c093a02362f25c8841aab50a4b95791d9de3f08550ee37faff6aff8",
+    "scripts/remote_vg_v2_pipeline.py": "b336c5a84f5a50eb8e667015efda8f619ae4def3129f84007cc8b3b8fb2e59aa",
+    "scripts/remote_vg_v2_probe.py": "4e58967bb2bd74bd8303a082360e68be726d226d8a7c016e4f291f7b90f5c560",
+    "configs/vg_method_v2.json": "4ac00b7819dd37f1b894f7301737e6a3d663643dc02a6e63b8344a3c31322d68",
+    "vendor/salience_sgg/models/salience_sgg/deformable_detr.py": "b79111a2ce07827915b37b6991e2904e2445ff701db30f7cac4be01d4783d67a",
+    "vendor/salience_sgg/models/salience_sgg/deformable_transformer.py": "16ab624681c3a43686346cb07be8b0d178c7535ac78ff182c1ff3abe9ef27558",
+    "src/rsgformer/vg_speedup.py": "249fc7d832560401a83377095d5fd42d085e9850b7793a31dcc4a2d899115068",
+    "scripts/remote_vg_speedup_benchmark.py": "cd2c70958fac7ca9dc88fc39e0a04d7701b3a47a66b823e510a678dcd2878853",
+    "scripts/remote_vg_v2_speed_pipeline.py": "f70681c72e2ee38aef0d869673ad58347379291c6a532254b4ef82e8ec5dc242",
+    "scripts/remote_adopt_vg_speedup.py": "da5fd744035f68322909523c2286002a4f755eb892ea1eb8499f8f50dc10fdbb",
+    "src/rsgformer/vg_speedup_schedule.py": "680ea9510346c7435a5605b17f400aa6072c15831fffd24ba1e7114493d1ce5d",
+    "src/rsgformer/data.py": "1bfffb6bd0aab95e77389469c1ee20b3b3bf1828030df7e332f46177575b8a80",
+    "src/rsgformer/geometry.py": "32f35ec030812af8ac8ebd2e3b036709af0b2a50a782d58044c77ac4b6a73455",
+    "configs/vg_method_v2_speed_m2_v1.json": "614037209eb83fc9247e90d605d95b79e0b9901034bbc9f382bf0d654089fd62",
+    "vendor/salience_sgg/configs/SalienceSGG_vg.yaml": "e6e28c8a6df584b162906b50a5d546dfaf68042e7bec0d50f337981aa1d7fb9f",
+    "scripts/remote_vg_v2_time_extension_v1.py": "17dd07c012db46b8e17ad42aadef03a1179a42b6ce9ab036fd0a9f3e897c3a44",
+    "scripts/remote_launch_vg_time_extension_v1.py": "1c5f67b3945b3d06cb507a9404ca2890069faad881869bd6f90c3ce336e9c5c6",
+    "configs/vg_method_v2_time_extension_v1.json": "0a2b3bbad0f8701eeff8df6651459dfe368cc5f8175e6d533c55bb15eaeffa5e"
+  },
+  "benchmark_evidence_sha256": "bec2a2cfbfd39e5edf52c7bfc7806385e061d1f4a5777a22e95b52b32b7ef4e3",
+  "controller_evidence_sha256": "84d6e490df568ac2a346611c5647cdfd7dad283c386fb77dedd346e12ca4863c",
+  "original_preregistration_sha256": "145dfe54b6df9527515e37438d5c734a429c2496bef8547c93468e8a753a3e83",
+  "cache_manifest_sha256": "f978799bbd19047b6a74f291aa816f43052251f9b84751f633e8ddf04622abf1",
+  "split_hashes": {
+    "train": "e6d5c31f10baa92fedc23200cce81f7d7751b9f68387105bc07287976774ad26",
+    "val": "8d83adf29e1ee9ac552c1f3d72ff4575a849444103f0ba6ec72519b9f4cc52a2"
+  },
+  "assets": {
+    "upstream_commit": "d316a0b2057e549764eb8dd8a0bcce8b1136d98a",
+    "assets": [
+      {
+        "name": "dab_deformable_detr_vg_150_classes.pth",
+        "public_file_id": "1uGgHVH2SjXm7zAlUmdiKUJQ6MoBA4KBX",
+        "bytes": 568820289,
+        "sha256": "b4fc7f65b2084c9cd8aa5ba67b8601e86c9350373b61269053d34a9658e5c2f8"
+      },
+      {
+        "name": "salinece_vg_iou_0.6.ckpt",
+        "public_file_id": "1MY4YNkyN6hUoVM_8tBSiK5jxw0faPF9T",
+        "bytes": 545842873,
+        "sha256": "f2d6af5ee63fe33f7fbb745dd98dc9e9f3b53c50c81a938c1c8266eb66ef863b"
+      },
+      {
+        "name": "vg_glove_6B.300d.pt",
+        "public_file_id": "1GGkEdlkSc38CcEvjZa8c3_rBnjS034_6",
+        "bytes": 181178,
+        "sha256": "25de6a6b4764b4dd46e236f4641ffddfad047acf05979d9290a3be015a13cfe1"
+      },
+      {
+        "name": "vg_prior_static.pt",
+        "public_file_id": "14VQUPJpMy64PIIQGxwynkjvtk-T_faFB",
+        "bytes": 9121780,
+        "sha256": "f4c84b9c0ad294aefbc10bb6112a0f4a6008d80e3203e8a34a6309c150421bcf"
+      }
+    ]
+  },
+  "frozen_baseline_source_hashes": {
+    "artifacts/vg_method_v2/frozen_native_validation.json": "b9bed5b83a4630fac0c9f28439009258a33e7fb563f30009d94f35e2e5463fcb",
+    "artifacts/vg_method_v2/frozen_native_validation_records.json": "5537924c2d434d13d427807a1bb4eedddd2eb5eb2be7982b6661e1c3f240e017"
+  },
+  "noncache_artifact_reserve_bytes": 8589934592,
+  "screening_required_seconds_conservative": 286730.5483818054,
+  "all_four_arms_restart_from_original_initialization": true,
+  "old_native_not_matched_control": true,
+  "batch_schedule_contracts_pass": [
+    0,
+    1,
+    15,
+    16,
+    17,
+    31,
+    32,
+    33,
+    64,
+    57720
+  ],
+  "test_scored": false,
+  "authorization": "Human14Oct2026: continue; time is not important; seek one best research pipeline. Time only; GPU/RAM/CPU/artifact/scientific/test gates unchanged.",
+  "inherited_screening_file_hashes": {
+    "artifacts/vg_method_v2_speed_m2_v1/screening_native_1729/report.json": "ed04224d75a60f8ad53a40a409ee3fc67dbba1046cac859323974c22ad7f4112",
+    "artifacts/vg_method_v2_speed_m2_v1/screening_native_1729/best.pt": "85d4b2e1069f1a37763831a5b5b5256520a3f4eacf088ae1d41067b771d11fa6",
+    "artifacts/vg_method_v2_speed_m2_v1/screening_native_1729/best_validation_records.json": "b589636ee60e5d6f289fa3e5a1197c1bff7a0aa3be23632e6c9c00b9efeaf306",
+    "artifacts/vg_method_v2_speed_m2_v1/screening_context_1729/report.json": "87f3726f63974ffdda846b14f683a1c9be94e8961bad46ac5fc940772910f582",
+    "artifacts/vg_method_v2_speed_m2_v1/screening_context_1729/best.pt": "45ae94f187ce1a6092f7f7cadb7f3dc291d186199cfd5d16d622a577a8d62f7c",
+    "artifacts/vg_method_v2_speed_m2_v1/screening_context_1729/best_validation_records.json": "d907472d5bac96824077b73d81b09947adf53a79b47bd87a246bb433ea5f3725",
+    "artifacts/vg_method_v2_speed_m2_v1/screening_oneway_1729/report.json": "e51b67c5b0ecf71de087d6dd6f692945b972ece9d487ebf4d403e9aa4afcdd4b",
+    "artifacts/vg_method_v2_speed_m2_v1/screening_oneway_1729/best.pt": "911f37c6bab03924399e148fd0134ecaf4b9ad6c81597130d0c6fb83534296fe",
+    "artifacts/vg_method_v2_speed_m2_v1/screening_oneway_1729/best_validation_records.json": "f279b3536bc2e12d9329cd4d7de60c798bfc25cebf8b05823ac4b8a235db1b80",
+    "artifacts/vg_method_v2_speed_m2_v1/screening_feedback_1729/report.json": "598be9e9b097050cd016f71e66d2d2654294b54f94e4c785ba428fa13060caa8",
+    "artifacts/vg_method_v2_speed_m2_v1/screening_feedback_1729/best.pt": "3c135409d50a6c7adf2dddecfda71effc2b236740f8f3f4b1cc4584749fb2441",
+    "artifacts/vg_method_v2_speed_m2_v1/screening_feedback_1729/best_validation_records.json": "0e13a3165fb23573d4773820cd35f707eec026c9dae5123a769ee8e69b3b17ac"
+  },
+  "parent_preregistration_sha256": "d5866565e34555143af0f2f42c240841eaa8e1f2b0152c05c4ef60121561377c",
+  "preserved_before": {
+    "reports/VG_ACTIVE_EXPERIMENT.json": "6f0eb28fd6e9c21c7ffeeafbb786fd5434909f1f826e804c00e9984f819791ce",
+    "reports/VG_V2_SPEED_RESULT.json": "9dd25d2ac56522cdb0100b36ecde3f4acfce3d919b92d2e0777dd5db3f6dc360",
+    "reports/VG_V2_SPEED_PROGRESS.json": "9eff510055fca878712b2cbd7e36d37447ab4572adcd5af52309231218b0a4dc",
+    "reports/VG_V2_SPEED_PREREGISTRATION.json": "d5866565e34555143af0f2f42c240841eaa8e1f2b0152c05c4ef60121561377c",
+    "artifacts/vg_method_v2_speed_m2_v1/confirmation_admission.json": "8744abeac5aab98793454e4f8738e68baf2e3c0282cc2ce64285b256fc1b9639",
+    "artifacts/vg_method_v2_speed_m2_v1/pipeline.log": "f61231ebd46770590bcbedbec77debb57ea2af198eea11fa8ecddcb61dc31d42",
+    "artifacts/vg_method_v2_speed_m2_v1/pipeline.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "artifacts/vg_method_v2_speed_m2_v1/pipeline.pid": "e8cbe31c512abb1c89ffff8cda20c785b44ed4d89d091987aad489b5e44c7d59",
+    "artifacts/vg_method_v2_speed_m2_v1/initialization.json": "45124be16976827b871dd56f9968f0a931c19968dfb91d2408306b29f213198c"
+  },
+  "execution_revision": "vg_method_v2_time_extension_v1",
+  "scientific_protocol_changed": false,
+  "confirmation_starts_original_initialization": true,
+  "screening_not_retrained": true
+}

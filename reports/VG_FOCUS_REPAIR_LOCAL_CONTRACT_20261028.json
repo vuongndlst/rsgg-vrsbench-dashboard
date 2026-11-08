@@ -1,0 +1,13 @@
+{
+  "status": "LOCAL_FOCUS_REPAIR_SYNTHETIC_AND_STRUCTURE_CONTRACT_PASS",
+  "cases": 300,
+  "synthetic": {
+    "status": "SYNTHETIC_GEOMETRY_CONTRACT_PASS",
+    "tiny_crop_fallback": true,
+    "disjoint_remains_empty": true,
+    "tie_order_deterministic": true,
+    "legacy_nonempty_preserved_in_L1": true
+  },
+  "historical_sources_edited": false,
+  "TEST_read": false
+}

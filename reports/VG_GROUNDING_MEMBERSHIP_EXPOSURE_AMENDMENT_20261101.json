@@ -1,0 +1,12 @@
+{
+  "status": "PREREGISTERED_METADATA_EXPOSURE_CORRECTION_BEFORE_SECOND_CONTACT",
+  "utc": "2026-11-01T09:03:04.510462+00:00",
+  "reason": "First provisional reservation excluded528historical caption/color parents but omitted1000fresh-colorVALparents. Before any new graph/reference/generation, preserve that provisional evidence and replace by expanded historical-exposure exclusion. This changes metadata membership only, not science thresholds, prompts or observed-check selection.",
+  "superseded_provisional_report": "reports\\VG_GROUNDING_FRESH_MEMBERSHIP_20261101.json",
+  "superseded_report_sha256": "c997f78d1f7bae6b2d311f16039e8398b6c421c7171d1ec107cac850fe072618",
+  "new_readonly_script": "scripts\\remote_vg_grounding_fresh_membership_v2_20261101.py",
+  "new_source_sha256": "72e3c2e95c33bf34681fc39dca71fb5b79c930a8228bfe6f7caa66cb64694219",
+  "historical_color_membership_expected_sha256": "23235f2ef18fe99e6126118b607fd74a43c847344460a069d61dc317ba8d9b28",
+  "no_new_caption_reference_or_model_access": true,
+  "same_CPU_RSS_wall_caps": true
+}

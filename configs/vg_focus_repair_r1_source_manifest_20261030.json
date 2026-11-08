@@ -1,0 +1,30 @@
+{
+  "source_sha256": {
+    "scripts/remote_vg_focus_repair_prepare_v1_20261028.py": "be9063e3df404ccce8cbe131805672ca1689d17b1dac16126e515720faa721a0",
+    "scripts/remote_vg_focus_repair_generate_v1_20261028.py": "b9889e03ba9cf46dc5c98ecf5db696e59dfffaf6d91d290c2bd08483506925fd",
+    "scripts/remote_vg_focus_repair_score_v1_20261028.py": "10bf0f3f1a3f5ffe8df9fc92703c180f52fa566a07c2cc156f99c5cf0e380c45",
+    "scripts/remote_vg_focus_repair_controller_v1_20261028.py": "5662a760e32ba615c27a37f103f6965b1781616d683065bcb683d1c2a605b493",
+    "scripts/remote_launch_vg_focus_repair_v1_20261028.py": "ad2e4dc42a9b06cb2fcb09dca2a572d0df23c7b0d93c950b79b618e30610f3a9",
+    "scripts/remote_vg_focus_repair_status_v1_20261028.py": "abdc872a7a0fded55199849f7217e7816bb3e56d32f8b8d35cefbad36d57734c",
+    "src/rsgformer/vg_region_focus_repair_v1.py": "02fd0dd3c1cdafbe92cc78abc4c7ae6f722d932d32da6f8147ca3b4b35a54ee9",
+    "src/rsgformer/vg_caption_candidate_prompt_v2.py": "069255afd7488c5e9cb6b2e21561614f5413977b5c64583fbc14539bb5b8e60d",
+    "src/rsgformer/vg_caption_graph_v1.py": "625a7ce696b8b6609de923227bb9184b82d2a5fc96969fd49bdcf7b9891c658e",
+    "src/rsgformer/qwen_streaming_v1.py": "a6806b7d5eb0142842af39d9b5ac5995a0cdbe0556619a49cd245d48ddfb8a20",
+    "src/rsgformer/caption_metrics.py": "1d511787bc935ac65015f2015c64104859ce7691b75f3084361f77ca37c43288",
+    "src/rsgformer/caption_metrics_v2.py": "a7aad2184fd65591099874c7169f24d69b7abf0fd8142d8b38c2fa1d4dc71ea2",
+    "src/rsgformer/caption_metric_runtime.py": "cfc40111a5e8d28f5b0a18a3c3ac38aee746422545384c8394b67eb8ab03d8b6",
+    "src/rsgformer/vg_color_execution_common_v1.py": "75b9c5e3e53242958bcb4d470cabaf2a8ffa09ada5d4126331ff1afaeb1ad35b",
+    "src/rsgformer/numpy_json_adapter_v1.py": "780f0f0ec0c564a0838ef2a59e424db970fe7b6a32dab43fa1df22d41ac5011b",
+    "configs/vg_focus_repair_v1_20261028.json": "ac5b2a3b27a2850aaa654854b53d8790ad5adee336f85966ad2bdfb894c343de",
+    "configs/qwen_runtime.json": "a3e4fe99474a9606581bb27bf6270182120fa904e8dfd53b42e54658c12ee65d",
+    "scripts/remote_vg_caption_pilot100_controller_v1_20261026.py": "d71a32c7b82a284cbb5a5a52cd88d602efae248815e22aa12e7521755dcec72d",
+    "scripts/remote_vg_focus_repair_generate_r1_20261030.py": "7ac4e299c5b149fa99ab0cae8334d998395c374ffd2a3ed4ae93e9c5feade41d",
+    "scripts/remote_vg_focus_repair_score_r1_20261030.py": "8b4bfccad9e09b11e015b9255957eb904db47e17df41fea1b9c5206a6771b07a",
+    "scripts/remote_vg_focus_repair_controller_r1_20261030.py": "da0ebf9e3dd5cb532694f1008bc2d7cf15030887abd1cdf5876c7e6b1b087676",
+    "scripts/remote_launch_vg_focus_repair_r1_20261030.py": "69ddd8a4b5c914748ba89a1d5480a2f3f884a51e77900ef4b0bc6cedf275f4f3",
+    "scripts/remote_vg_focus_repair_status_r1_20261030.py": "2e28b92f49645978d3e6bf209472071c6e9f5bedb0d67110547f2959a19c60c1",
+    "configs/vg_focus_repair_r1_20261030.json": "37fcbd3535ce463ecc2e90db99d7be67c7b2e8d5a455a80357b76440b527c0b6",
+    "research/VG_FOCUS_REPAIR_FAILURE_AND_R1_PREREGISTRATION_20261030.md": "1e3f196bbd300f959f05230523d9d0fcfaf09503d694900b289638e355527977"
+  },
+  "parent_manifest_sha256": "a9f896802b25b92ba8da0e659d8d388fc403b6465e78294db68f3f8ceb7d1a38"
+}

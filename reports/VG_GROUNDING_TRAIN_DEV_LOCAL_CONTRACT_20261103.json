@@ -1,0 +1,20 @@
+{
+  "status": "PASS_NEW_EXECUTABLE_SOURCE_CONFIG_INPUT_AND_STRUCTURAL_CONTRACTS_BEFORE_REMOTE_PREFLIGHT",
+  "utc": "2026-11-02T22:35:10.287932+00:00",
+  "new_Python_sources_compile": 7,
+  "known_parent_input_files_verified": 8,
+  "dev_cache_input_files_verified": 6,
+  "native_generate_kwargs": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 32
+  },
+  "generation_module_does_not_open_reference_paths": true,
+  "only_TRAIN_and_dev_stages": true,
+  "exclusive_launcher_and_38GiB_admission": true,
+  "frozen_core_manifest_unchanged": true,
+  "G1_G2_core_contract": "reports/VG_GROUNDING_CONTROLS_LOCAL_CONTRACT_20261102.json",
+  "native_tokenizer_and_G0_exact_reuse_preflight_pending": true,
+  "no_new_caption_or_metric_computed": true,
+  "check_or_TEST_opened": false
+}

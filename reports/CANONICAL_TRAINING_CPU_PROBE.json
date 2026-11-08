@@ -1,0 +1,381 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-10T19:19:05.418239+00:00",
+  "scope": "4 known-identity-excluded TRAIN images, 4 RNG seeds, native detection and SGG recipes",
+  "elapsed_seconds": 19.67092060856521,
+  "cases": [
+    {
+      "task": "detection",
+      "image_id": 498334,
+      "seed": 0,
+      "output_height_width": [
+        778,
+        736
+      ],
+      "objects": 12,
+      "source_objects": 14
+    },
+    {
+      "task": "detection",
+      "image_id": 498334,
+      "seed": 1,
+      "output_height_width": [
+        704,
+        816
+      ],
+      "objects": 14,
+      "source_objects": 14
+    },
+    {
+      "task": "detection",
+      "image_id": 498334,
+      "seed": 2,
+      "output_height_width": [
+        640,
+        674
+      ],
+      "objects": 13,
+      "source_objects": 14
+    },
+    {
+      "task": "detection",
+      "image_id": 498334,
+      "seed": 3,
+      "output_height_width": [
+        800,
+        969
+      ],
+      "objects": 13,
+      "source_objects": 14
+    },
+    {
+      "task": "detection",
+      "image_id": 498335,
+      "seed": 0,
+      "output_height_width": [
+        851,
+        736
+      ],
+      "objects": 6,
+      "source_objects": 10
+    },
+    {
+      "task": "detection",
+      "image_id": 498335,
+      "seed": 1,
+      "output_height_width": [
+        743,
+        704
+      ],
+      "objects": 7,
+      "source_objects": 10
+    },
+    {
+      "task": "detection",
+      "image_id": 498335,
+      "seed": 2,
+      "output_height_width": [
+        671,
+        640
+      ],
+      "objects": 7,
+      "source_objects": 10
+    },
+    {
+      "task": "detection",
+      "image_id": 498335,
+      "seed": 3,
+      "output_height_width": [
+        876,
+        800
+      ],
+      "objects": 7,
+      "source_objects": 10
+    },
+    {
+      "task": "detection",
+      "image_id": 498336,
+      "seed": 0,
+      "output_height_width": [
+        851,
+        736
+      ],
+      "objects": 7,
+      "source_objects": 7
+    },
+    {
+      "task": "detection",
+      "image_id": 498336,
+      "seed": 1,
+      "output_height_width": [
+        743,
+        704
+      ],
+      "objects": 7,
+      "source_objects": 7
+    },
+    {
+      "task": "detection",
+      "image_id": 498336,
+      "seed": 2,
+      "output_height_width": [
+        671,
+        640
+      ],
+      "objects": 6,
+      "source_objects": 7
+    },
+    {
+      "task": "detection",
+      "image_id": 498336,
+      "seed": 3,
+      "output_height_width": [
+        876,
+        800
+      ],
+      "objects": 7,
+      "source_objects": 7
+    },
+    {
+      "task": "detection",
+      "image_id": 498337,
+      "seed": 0,
+      "output_height_width": [
+        778,
+        736
+      ],
+      "objects": 5,
+      "source_objects": 6
+    },
+    {
+      "task": "detection",
+      "image_id": 498337,
+      "seed": 1,
+      "output_height_width": [
+        704,
+        816
+      ],
+      "objects": 6,
+      "source_objects": 6
+    },
+    {
+      "task": "detection",
+      "image_id": 498337,
+      "seed": 2,
+      "output_height_width": [
+        640,
+        674
+      ],
+      "objects": 5,
+      "source_objects": 6
+    },
+    {
+      "task": "detection",
+      "image_id": 498337,
+      "seed": 3,
+      "output_height_width": [
+        800,
+        969
+      ],
+      "objects": 6,
+      "source_objects": 6
+    },
+    {
+      "task": "sgg",
+      "image_id": 498334,
+      "seed": 0,
+      "output_height_width": [
+        480,
+        639
+      ],
+      "objects": 14,
+      "source_objects": 14
+    },
+    {
+      "task": "sgg",
+      "image_id": 498334,
+      "seed": 1,
+      "output_height_width": [
+        608,
+        810
+      ],
+      "objects": 14,
+      "source_objects": 14
+    },
+    {
+      "task": "sgg",
+      "image_id": 498334,
+      "seed": 2,
+      "output_height_width": [
+        512,
+        682
+      ],
+      "objects": 14,
+      "source_objects": 14
+    },
+    {
+      "task": "sgg",
+      "image_id": 498334,
+      "seed": 3,
+      "output_height_width": [
+        768,
+        1022
+      ],
+      "objects": 14,
+      "source_objects": 14
+    },
+    {
+      "task": "sgg",
+      "image_id": 498335,
+      "seed": 0,
+      "output_height_width": [
+        724,
+        480
+      ],
+      "objects": 10,
+      "source_objects": 10
+    },
+    {
+      "task": "sgg",
+      "image_id": 498335,
+      "seed": 1,
+      "output_height_width": [
+        918,
+        608
+      ],
+      "objects": 10,
+      "source_objects": 10
+    },
+    {
+      "task": "sgg",
+      "image_id": 498335,
+      "seed": 2,
+      "output_height_width": [
+        773,
+        512
+      ],
+      "objects": 10,
+      "source_objects": 10
+    },
+    {
+      "task": "sgg",
+      "image_id": 498335,
+      "seed": 3,
+      "output_height_width": [
+        1159,
+        768
+      ],
+      "objects": 10,
+      "source_objects": 10
+    },
+    {
+      "task": "sgg",
+      "image_id": 498336,
+      "seed": 0,
+      "output_height_width": [
+        639,
+        480
+      ],
+      "objects": 7,
+      "source_objects": 7
+    },
+    {
+      "task": "sgg",
+      "image_id": 498336,
+      "seed": 1,
+      "output_height_width": [
+        810,
+        608
+      ],
+      "objects": 7,
+      "source_objects": 7
+    },
+    {
+      "task": "sgg",
+      "image_id": 498336,
+      "seed": 2,
+      "output_height_width": [
+        682,
+        512
+      ],
+      "objects": 7,
+      "source_objects": 7
+    },
+    {
+      "task": "sgg",
+      "image_id": 498336,
+      "seed": 3,
+      "output_height_width": [
+        1022,
+        768
+      ],
+      "objects": 7,
+      "source_objects": 7
+    },
+    {
+      "task": "sgg",
+      "image_id": 498337,
+      "seed": 0,
+      "output_height_width": [
+        480,
+        812
+      ],
+      "objects": 6,
+      "source_objects": 6
+    },
+    {
+      "task": "sgg",
+      "image_id": 498337,
+      "seed": 1,
+      "output_height_width": [
+        608,
+        1027
+      ],
+      "objects": 6,
+      "source_objects": 6
+    },
+    {
+      "task": "sgg",
+      "image_id": 498337,
+      "seed": 2,
+      "output_height_width": [
+        512,
+        865
+      ],
+      "objects": 6,
+      "source_objects": 6
+    },
+    {
+      "task": "sgg",
+      "image_id": 498337,
+      "seed": 3,
+      "output_height_width": [
+        768,
+        1299
+      ],
+      "objects": 6,
+      "source_objects": 6
+    }
+  ],
+  "provisional_train_images": 55235,
+  "provisional_train_ids_sha256": "6b53b60a4ef3dd766e55fa834b37cc2d72c8ef73aa16b908b869c19fbf7058ee",
+  "provisional_manifest_sha256": "9f23205cb05ac6689253e069ecc37b0f496cd313c88d99a5619332f5ca999485",
+  "source_hashes": {
+    "src/rsgformer/vg_canonical_training.py": "5474d999d9a4306b263e69efa0919b5af5996565dbb282532ac30ec93993ee84",
+    "src/rsgformer/vg_canonical_data.py": "f14af9890c36d59531466372f05c6ccacc38879e10711ddacff61857be1914e6",
+    "vendor/salience_sgg/datasets/coco.py": "429ba75358fa90c89b70a7ca2a339e2991b9206fba06cb88fd3f042d0eee88a1",
+    "vendor/salience_sgg/datasets/visual_genome.py": "a80a0009fca01106fa0be394dfdcb00deb084c34f96ef6126cec854190beb993",
+    "vendor/salience_sgg/datasets/transforms.py": "b96788059ed7146be09f8724434cb06d3ac49c816613a5fafb019d557c751a9d"
+  },
+  "detection_has_native_random_crop": true,
+  "sgg_has_native_random_crop": false,
+  "native_criterion_finite_loss_and_gradients_on_augmented_targets": "PASS",
+  "spawn_worker_pickle_and_reopen": "PASS",
+  "cuda_used": false,
+  "detector_forward_executed": false,
+  "image_archives_extracted": false,
+  "test_scored": false,
+  "training_started": false,
+  "clean_release_certified": false,
+  "vg_checkpoint_loaded": false
+}

@@ -1,0 +1,28 @@
+{
+  "status": "checked",
+  "notify": true,
+  "events": [
+    {
+      "type": "pipeline_finished",
+      "outcome": "screening_failed_to_establish_benefit",
+      "reason": null,
+      "test_scored": false
+    }
+  ],
+  "finished": true,
+  "process_active": false,
+  "eta": {
+    "measured_epoch_seconds": 182.3,
+    "method": "recent full-data epoch medians; train-only architecture timing ratios for unmeasured variants; shared-GPU ETA is provisional",
+    "upcoming_checkpoints": [],
+    "screening_finish_Asia_Saigon": "10/10 21:45",
+    "confirmation_finish_Asia_Saigon": "11/10 22:01",
+    "confirmation_conditional_on_gate": true,
+    "locked_test_extra_hours_estimate": [
+      1,
+      3
+    ],
+    "uncertainty": "allow approximately +/-25% remaining wall time; this is not a resource reservation"
+  },
+  "initialization": false
+}

@@ -1,0 +1,48 @@
+{
+  "announced": [
+    "oi_test_storage_gate:128:12773:failed",
+    "oi_test_metadata:e7b549a24b718edc1389ed6946fde80a237a3200b7e27d8bcca96468c7190be2",
+    "canonical_parity_audit:56856b4386220f40d6b1b522a2ae199a8b4188765fd9ebb5321c1d0f4f2d7fbc",
+    "caption_audit:truncated_region_json:f6fcc35abbfd99f9e1bba0d5895662751f610477b9a427c0819114e539effa74",
+    "caption_audit:known_identity_overlap:7e73a2209ae9270dccbdf165e7f40b41db106ae73487bc5be534f5f575758418",
+    "region_references:complete:19624f10afb10bf69e30ecf48d85b1a71420c7432e8c88f1011a3c4fd60ec768",
+    "vg_cross_split_identity_overlap:78d451353331e105c79211604f39cf81c962f88e82958bb997cd79a0979a3f3b",
+    "fresh_native_gpu_probe_failure:27f21a111eab601d7ffd76f2bd53624fc4dfef40936813f93363e21dc3892171",
+    "exact_retained_draft_protected_match:train:2345961",
+    "monitor_approval_quota_gap:2026-10-10T23:40",
+    "oi_full_fixture_total_wall_overrun:a348a7e47526da484257939b9b5e7e1cea113c385ed1847a4c81679aeb9478c5",
+    "oi_full_stream_retry_exhausted:61717d618eaab7306f7d17c302efdef095943f41fcf0d37a9488eb3b905ec775",
+    "oi_source_primary_pixel_cap:reader_v2:16000000",
+    "exact_retained_draft_protected_match:train:2363451",
+    "checkpoint:screening_native_1729:dc6cefd34809b5d3154666f7da92675ab089fe8daf8a39a55219e2608d58158b",
+    "oi_source_network_timeout:61717d618eaab7306f7d17c302efdef095943f41fcf0d37a9488eb3b905ec775",
+    "checkpoint:screening_native_1729:85d4b2e1069f1a37763831a5b5b5256520a3f4eacf088ae1d41067b771d11fa6",
+    "checkpoint:screening_context_1729:45ae94f187ce1a6092f7f7cadb7f3dc291d186199cfd5d16d622a577a8d62f7c",
+    "checkpoint:screening_feedback_1729:3c135409d50a6c7adf2dddecfda71effc2b236740f8f3f4b1cc4584749fb2441",
+    "checkpoint:screening_oneway_1729:911f37c6bab03924399e148fd0134ecaf4b9ad6c81597130d0c6fb83534296fe",
+    "oi_full_stream_terminal:61717d618eaab7306f7d17c302efdef095943f41fcf0d37a9488eb3b905ec775:incomplete_source_retry_exhausted",
+    "result:vg_method_v2_speed_m2_v1:confirmation_resource_admission_blocked",
+    "checkpoint:confirmation_native_1729:99c9cf7250491b546c65872b8a4430a554594b3eb8ef229a4d3f24bfeabf71dc",
+    "checkpoint:confirmation_context_1729:29017a69d7cb6d76d68c834b5d540712775a9e0cf9cae13efd17d78a7b69292e",
+    "checkpoint:confirmation_oneway_1729:17ae18fc89ec24546c5cd1f3e4a9049aa1cda31efc067fe64ef653fa7f3dfce2",
+    "checkpoint:confirmation_feedback_1729:c2d66cd2854cbc82dd1be012179fb98d7cc51e1751aa24dccba35005f6865265"
+  ],
+  "anomalies": [],
+  "last_changed_unix": 1792449220.4079716,
+  "last_check_unix": 1792449220.4079716,
+  "progress_signature": {
+    "experiment_id": "vg_method_v2_speed_m2_v1",
+    "stage": "training",
+    "run": "confirmation_native_2718",
+    "epoch": 4,
+    "images": 30208,
+    "download_bytes": 1123966120
+  },
+  "oi_audit_last_changed_unix": 1791873064.392131,
+  "oi_audit_progress_signature": [
+    2461,
+    109072,
+    182,
+    35961122631
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": "vg_color_fast_engine_selection_v1_20261025",
+  "status": "ENGINEERING_SELECTED_NOT_TEST_PREREGISTRATION",
+  "mode": "safe_cache",
+  "implementation": "src/rsgformer/vg_color_fast_engine_v1.py",
+  "implementation_sha256": "340bb34b60f1a402000212b444f77633ae119914140826ce4a9c60a224018a4d",
+  "parent_scientific_rules": "configs/vg_object_color_rules_v3_20261025.json",
+  "parent_binding_rules": "configs/vg_color_object_binding_native_v1_20261025.json",
+  "benchmark_result": "reports/VG_COLOR_SPEED_BENCHMARK_V1_20261025.json",
+  "quality_decision": "reports/VG_COLOR_SPEED_QUALITY_DECISION_20261025.json",
+  "scientific_thresholds_changed": false,
+  "full_TEST_allowed": false,
+  "visual_quality_gate_passed": false,
+  "forced_gc_collect_interval_nodes": 16,
+  "per_node_resource_guard_required": true,
+  "resource_limits": {
+    "own_GPU_GiB": 8,
+    "allocator_GiB": 6,
+    "RSS_GiB": 4,
+    "CPU": 4,
+    "reserve_GiB": 16,
+    "overall_deadline_unix": 1794670321.2414355
+  }
+}

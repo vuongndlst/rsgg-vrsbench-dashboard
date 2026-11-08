@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-11T04:14:34.406038+00:00",
+  "notify": true,
+  "event": {
+    "type": "resource_gate_failed",
+    "condition": "oi_sources_exceed_registered_primary_frame_pixel_cap",
+    "stage": "openimages_full_test_pixel_identity_audit",
+    "primary_frame_pixel_cap": 16000000,
+    "blocked_sources": [
+      {
+        "image_id": "050b7c4534e9b37f",
+        "dimensions": [
+          6016,
+          4000
+        ],
+        "primary_pixels": 24064000
+      },
+      {
+        "image_id": "053a77b349ed1e9d",
+        "dimensions": [
+          7019,
+          4725
+        ],
+        "primary_pixels": 33164775
+      }
+    ],
+    "header_preregistration_sha256": "daefdcc56989418d1f478ef93f2371f62af5347a94e7e29bd480d042d85c6f48",
+    "full_body_retry_launched": false,
+    "test_scored": false,
+    "live_v2_modified": false,
+    "next": "Preserve all IDs; current reader cannot certify these sources within its cap. Continue independent work; no silent cap increase or missing-ID omission"
+  },
+  "reader_sha_verified": true,
+  "real_training_state_modified": false
+}

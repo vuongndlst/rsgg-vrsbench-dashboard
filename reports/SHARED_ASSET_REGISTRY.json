@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "path_policy": "Paths are expanded on the server; ${REMOTE_HOME} means pathlib.Path.home(). No global environment settings changed.",
+  "qwen14b": {
+    "model_id": "Qwen/Qwen2.5-14B-Instruct",
+    "revision": "cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8",
+    "path": "${REMOTE_HOME}/etechs/msvd-tkg-captioning/models/qwen2.5-14b",
+    "load_path": "${REMOTE_HOME}/etechs/msvd-tkg-captioning/models/qwen2.5-14b",
+    "storage_policy": "2026-10-25 human-authorized canonical directory; full SHA256 equality verified before shared weight retirement"
+  },
+  "clip": {
+    "model_id": "openai/clip-vit-base-patch32",
+    "path": "${REMOTE_HOME}/shared-assets/models/clip-vit-base-patch32"
+  },
+  "datasets": {
+    "coco_karpathy": {
+      "root": "${REMOTE_HOME}/shared-assets/datasets/coco_karpathy",
+      "metadata_sha256": "2fd999220673258012acfb411a4e7e66af7d488050b2519b0badcc49b7600b8d",
+      "split_counts": {
+        "test": 5000,
+        "restval": 30504,
+        "val": 5000,
+        "train": 82783
+      },
+      "expected_test_images": 5000,
+      "available_test_images": 5000,
+      "missing_test_images": 0,
+      "human_reference_captions": 25010,
+      "status": "TEST_IMAGE_COVERAGE_COMPLETE",
+      "image_files_moved_total": 5503,
+      "test_manifest_sha256": "d18d88683e801104b19fd3cc3b1dc6d14d99feb27b71a89cc3dcbcb746f658b4",
+      "references_sha256": "7b8e5548255c73811737a270884f690d1efe37d1843fb32cfd4d8330715e81a9"
+    },
+    "flickr30k_karpathy": {
+      "root": "${REMOTE_HOME}/shared-assets/datasets/flickr30k_karpathy",
+      "metadata_sha256": "db779ee2c5df40c25ff0eebeca464f6124b620cc4a9398650aea71fd1b53d4af",
+      "split_counts": {
+        "train": 29000,
+        "test": 1000,
+        "val": 1014
+      },
+      "expected_test_images": 1000,
+      "available_test_images": 34,
+      "missing_test_images": 966,
+      "human_reference_captions": 5000,
+      "status": "INCOMPLETE_DO_NOT_SCORE_AS_FULL_TEST",
+      "image_files_moved_total": 1000,
+      "test_manifest_sha256": "17bf2ddf17eaf2e5553e60abcd4ab32d6adfde6365cb5f695558cd8238b79964",
+      "references_sha256": "4a49eeff0f8ea602154b280293cbbf88a03cab0c8f7356b5c7ab2b24e861aa9a"
+    }
+  },
+  "caption_reference_policy": "References are evaluation-only. Never inject them into graph-to-text prompts. Flickr full test remains blocked until all required images exist."
+}

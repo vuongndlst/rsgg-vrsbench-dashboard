@@ -1,0 +1,72 @@
+{
+  "status": "PASS_R1_NATIVE_PREFLIGHT_LAUNCH_AND_INITIAL_OWNED_PROCESSES",
+  "utc": "2026-11-02T22:41:55.830032+00:00",
+  "phase": "vg_grounding_train_dev_r1_20261103",
+  "source_manifest_sha256": "8d39e5dda29b19f54a8e06a3ce5c1adf2cff215c80528988d0f4ae860ff5b7a4",
+  "preregistration_sha256": "394243d86641a9a32fa5818fa3a30a224f65e4682bc4637ed1d08fa37ed6b7b7",
+  "preflight_completion_sha256": "e83f0d08581d4ab0988b16de1782e3a5bc4d11b2d94ac23800b6ba8c2460eaf8",
+  "controller_pid": 3281195,
+  "child_pid": 3281213,
+  "initial_stage": "train_generation",
+  "source_hashes_locally_verified": 23,
+  "native_preflight": {
+    "status": "GROUNDING_NATIVE_PROMPTS_AND_G0_REUSE_PREFLIGHT_PASS",
+    "utc": "2026-11-02T22:40:13.982602+00:00",
+    "source_manifest_sha256": "8d39e5dda29b19f54a8e06a3ce5c1adf2cff215c80528988d0f4ae860ff5b7a4",
+    "config_sha256": "fd7e23064a81a536222c2d60ccd3130e3af8840d007e4597b9ee924a83ba3036",
+    "synthetic_contract": {
+      "status": "SYNTHETIC_GROUNDING_CONTRACT_PASS",
+      "invalid_selection_cases": 12,
+      "no_inverse_edge_or_reference_correction": true,
+      "empty_invalid_outputs_retained": true,
+      "reference_independent_geometry": true
+    },
+    "TRAIN_units": 800,
+    "dev_units": 256,
+    "G0_TRAIN_exact_reuse_matches": 800,
+    "maximum_native_input_tokens": {
+      "G0": 390,
+      "G2": 618
+    },
+    "shared_query_graph_for_all_arms": true,
+    "generator_reference_text_read": false,
+    "new_inference_or_metric_scoring": false,
+    "TEST_or_check_opened": false,
+    "peak_RSS_bytes": 959696896,
+    "wall_seconds": 9.067480755969882,
+    "file_sha256": {
+      "preregistration.json": "81e49470d8a96b7c05f76261eaeccd9da2009f8ddfb80d2bcf56d045aacb655c",
+      "fixed20_dev_ids.json": "b775c6769354b8b0afc1798e1a4baf326c66e99b75de58faeedb3d19c789d163",
+      "queries_train.json": "8ada1beb0909cddedf0cf6a6b50481640d06483d25ffd5c5a80d1dac277a25b7",
+      "queries_dev.json": "03122c5743f9722ec7536446edacada2aace4baaf2eb9e393437af3cf6fafae3"
+    }
+  },
+  "initial_compact_status": {
+    "status.json": {
+      "status": "RUNNING",
+      "stage": "train_generation",
+      "controller_pid": 3281195,
+      "child_pid": 3281213,
+      "child_start_ticks": "1380569134",
+      "utc": "2026-11-02T22:40:58.760023+00:00",
+      "own_GPU_cap_GiB": 36,
+      "own_tree_RSS_cap_GiB": 12,
+      "wall_seconds": 7200,
+      "TEST_accessed": false
+    },
+    "controller_pid_proc_exists": true,
+    "child_pid_proc_exists": true
+  },
+  "own_worker_confirmed_by_cwd_command_and_parent": true,
+  "new_check_or_TEST_opened": false,
+  "seeds_resumed": false,
+  "policy_adopted": false,
+  "new_results_complete": false,
+  "current_launch_resources": {
+    "disk_free_bytes": 65485344768,
+    "aggregate_artifacts_bytes": 4359669778,
+    "GPU_free_bytes": 41672507392,
+    "RAM_available_bytes": 46096375808
+  },
+  "raw_metadata_repair_no_science_change": "reports/VG_GROUNDING_RUNTIME_METADATA_RAW_AUDIT_20261103.json"
+}

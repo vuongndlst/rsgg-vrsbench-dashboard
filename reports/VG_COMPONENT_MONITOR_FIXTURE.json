@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-19T22:38:13.960113+00:00",
+  "status": "PASS",
+  "cases": [
+    "healthy_validation_quiet",
+    "completed_event",
+    "stable_completion_dedup_key",
+    "opened_test_failure_never_blind_retry",
+    "unexpected_exit",
+    "12h_cadence_early_skip_and_due_allow"
+  ],
+  "real_test_accessed": false,
+  "source_hashes": {
+    "scripts/monitor_vg_component_control.py": "ee2b7bf2beb8a03b23c09128c0ef5be35d96d8c19cc0964c1c9566cffe445f5e",
+    "scripts/check_vg_heartbeat_cadence.py": "f7667ec8935b88d294496279ac33c34c934a1f0dd28d85a876c6fcb3215a321f"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "status": "PASS_TWO_FIXED_SHARD_LOCAL_LOSSLESS_BYTE_PARITY",
+  "utc": "2026-11-01T00:26:30.147213+00:00",
+  "last_successful_remote_contact_utc": "2026-11-01T00:25:43.559323+00:00",
+  "server_writes": 0,
+  "files_deleted": 0,
+  "extractor_or_model_run": false,
+  "SGDet_or_caption_scoring": false,
+  "TEST_accessed": false,
+  "precision_changed": false,
+  "cache_dtype": "float32",
+  "image_counts": {
+    "val": 5000,
+    "train": 57720
+  },
+  "full_cache_logical_bytes": 21862848819,
+  "shards": [
+    {
+      "split": "train",
+      "shard": "train_00000.pt",
+      "original_sha256": "7f97b3cf0e392d8dbad8209615c015e5ccdaaba0981195ca0937aa53d246caef",
+      "raw_bytes": 22309015,
+      "images": 64,
+      "tensor_layout": {
+        "nodes": {
+          "shape": [
+            200,
+            256
+          ],
+          "dtype": "torch.float32",
+          "bytes": 204800
+        },
+        "boxes": {
+          "shape": [
+            200,
+            4
+          ],
+          "dtype": "torch.float32",
+          "bytes": 3200
+        },
+        "logits": {
+          "shape": [
+            200,
+            150
+          ],
+          "dtype": "torch.float32",
+          "bytes": 120000
+        },
+        "visual": {
+          "shape": [
+            19,
+            256
+          ],
+          "dtype": "torch.float32",
+          "bytes": 19456
+        }
+      },
+      "all_tensor_bytes": 22237184,
+      "serialization_overhead_bytes": 71831,
+      "algorithms": {
+        "gzip6": {
+          "compressed_bytes": 20040844,
+          "retained_fraction": 0.898329397331079,
+          "saved_percent": 10.167060266892102,
+          "compression_seconds": 1.4841367000000076,
+          "decompression_seconds": 0.16704339999999718,
+          "restored_SHA256_matches_original": true
+        },
+        "xz3": {
+          "compressed_bytes": 19794688,
+          "retained_fraction": 0.887295472256395,
+          "saved_percent": 11.270452774360496,
+          "compression_seconds": 11.320150600000005,
+          "decompression_seconds": 1.574508300000005,
+          "restored_SHA256_matches_original": true
+        }
+      },
+      "torch_zip_compression_methods": {
+        "0": 262
+      }
+    },
+    {
+      "split": "val",
+      "shard": "val_00000.pt",
+      "original_sha256": "a5627c7dd6097aacc5ed0dd072e418cd27128a6bde46f7ab45aca18eea7ce11a",
+      "raw_bytes": 22308299,
+      "images": 64,
+      "tensor_layout": {
+        "nodes": {
+          "shape": [
+            200,
+            256
+          ],
+          "dtype": "torch.float32",
+          "bytes": 204800
+        },
+        "boxes": {
+          "shape": [
+            200,
+            4
+          ],
+          "dtype": "torch.float32",
+          "bytes": 3200
+        },
+        "logits": {
+          "shape": [
+            200,
+            150
+          ],
+          "dtype": "torch.float32",
+          "bytes": 120000
+        },
+        "visual": {
+          "shape": [
+            19,
+            256
+          ],
+          "dtype": "torch.float32",
+          "bytes": 19456
+        }
+      },
+      "all_tensor_bytes": 22237184,
+      "serialization_overhead_bytes": 71115,
+      "algorithms": {
+        "gzip6": {
+          "compressed_bytes": 20039742,
+          "retained_fraction": 0.8983088311663745,
+          "saved_percent": 10.16911688336255,
+          "compression_seconds": 1.4287384000000003,
+          "decompression_seconds": 0.20882319999999766,
+          "restored_SHA256_matches_original": true
+        },
+        "xz3": {
+          "compressed_bytes": 19790500,
+          "retained_fraction": 0.8871362177815529,
+          "saved_percent": 11.286378221844707,
+          "compression_seconds": 10.846205799999993,
+          "decompression_seconds": 1.5155256999999978,
+          "restored_SHA256_matches_original": true
+        }
+      },
+      "torch_zip_compression_methods": {
+        "0": 262
+      }
+    }
+  ],
+  "projection_is_sample_based_not_full_cache_measurement": true,
+  "gzip6_sample_projection_GiB": 18.29100306112848,
+  "xz3_sample_projection_GiB": 18.064925370186614
+}

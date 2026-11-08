@@ -1,0 +1,31 @@
+{
+  "status": "configured",
+  "best_config": {
+    "id": "config_1_canonical_beam3",
+    "beam_size": 3,
+    "length_penalty": 0.9,
+    "max_new_tokens": 48,
+    "box_conf_threshold": 0.25,
+    "max_prompt_boxes": 12,
+    "note": "Standard VRSBench length-calibrated Beam 3"
+  },
+  "sota_targets": {
+    "LLaVA-1.5": {
+      "BLEU-1": 48.1,
+      "BLEU-4": 14.7,
+      "METEOR": 21.9,
+      "ROUGE-L": 36.9,
+      "CIDEr": 33.9,
+      "CHAIR_s": 0.78
+    },
+    "GeoChat": {
+      "BLEU-1": 46.7,
+      "BLEU-4": 13.8,
+      "METEOR": 21.1,
+      "ROUGE-L": 35.2,
+      "CIDEr": 28.2,
+      "CHAIR_s": 0.77
+    }
+  },
+  "timestamp": "2026-11-07 17:10:18"
+}

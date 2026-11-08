@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-10-10T16:23:00.253829+00:00",
+  "status": "PROVISIONAL_KNOWN_IDENTITY_EXCLUSIONS_NOT_FULL_PIXEL_CLEAN_RELEASE",
+  "oi_known_vg_overlap_all_metadata_images": 152,
+  "oi_vg_train_matches": 82,
+  "oi_vg_val_matches": 1,
+  "new_train_val_exclusions_after_coco_flickr": 82,
+  "combined_excluded_train_val_images": 2539,
+  "provisional_sorted_split_counts": {
+    "train": 55235,
+    "val": 4949
+  },
+  "provisional_sorted_split_sha256": {
+    "train": "6b53b60a4ef3dd766e55fa834b37cc2d72c8ef73aa16b908b869c19fbf7058ee",
+    "val": "4b9446cc0f93e419775dc270774b85183b7d6421edb92d0f6d9db9a3e2a91a2a"
+  },
+  "oi_test_identity_source_sha256": "de55c6b8cbda32a79f4a20f28572d54e9c49d527a4006725675764074a51a36d",
+  "reference_text_used_for_exclusions": false,
+  "fresh_training_launched": false,
+  "remaining": [
+    "exact/perceptual duplicates and unresolved identity mappings",
+    "fresh initialization provenance and resource/augmentation/evaluator smoke",
+    "full protected image manifests with a versioned training preregistration"
+  ],
+  "manifest_sha256": "9f23205cb05ac6689253e069ecc37b0f496cd313c88d99a5619332f5ca999485"
+}

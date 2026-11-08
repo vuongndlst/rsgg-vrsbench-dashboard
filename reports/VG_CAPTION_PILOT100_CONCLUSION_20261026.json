@@ -1,0 +1,23 @@
+{
+  "status": "PILOT100_COMPLETE_LOW_SCORES_REGION_FOCUS_AND_COLOR_COVERAGE_LIMITED",
+  "completed_Vietnam": "2026-10-26 13:56:38 +07:00",
+  "images": 100,
+  "regions": 100,
+  "outputs": 1200,
+  "configurations": 12,
+  "no_evidence_regions": 19,
+  "queries_with_candidate_color": 1,
+  "best_observed_METEOR": {
+    "configuration": "P2_N-Z",
+    "score_x100": 6.1953348209633035
+  },
+  "best_observed_CIDEr": {
+    "configuration": "P1_N-D",
+    "score_x100": 30.365210570805722
+  },
+  "automatic_method_selection": false,
+  "caption_TEST_opened": false,
+  "human_color_precision_gate_passed": false,
+  "whole_program_complete": false,
+  "source": "reports/VG_CAPTION_PILOT100_COMPLETION_VERIFICATION_20261026.json"
+}

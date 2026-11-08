@@ -1,0 +1,532 @@
+{
+  "status": "BENCHMARK_COMPLETE",
+  "protocol": {
+    "utc": "2026-10-11T10:40:53.867750+00:00",
+    "source_hashes": {
+      "src/rsgformer/vg_v2_runtime.py": "0d7157491c093a02362f25c8841aab50a4b95791d9de3f08550ee37faff6aff8",
+      "scripts/remote_vg_v2_pipeline.py": "b336c5a84f5a50eb8e667015efda8f619ae4def3129f84007cc8b3b8fb2e59aa",
+      "scripts/remote_vg_v2_probe.py": "4e58967bb2bd74bd8303a082360e68be726d226d8a7c016e4f291f7b90f5c560",
+      "configs/vg_method_v2.json": "4ac00b7819dd37f1b894f7301737e6a3d663643dc02a6e63b8344a3c31322d68",
+      "vendor/salience_sgg/models/salience_sgg/deformable_detr.py": "b79111a2ce07827915b37b6991e2904e2445ff701db30f7cac4be01d4783d67a",
+      "vendor/salience_sgg/models/salience_sgg/deformable_transformer.py": "16ab624681c3a43686346cb07be8b0d178c7535ac78ff182c1ff3abe9ef27558",
+      "src/rsgformer/vg_speedup.py": "249fc7d832560401a83377095d5fd42d085e9850b7793a31dcc4a2d899115068",
+      "scripts/remote_vg_speedup_benchmark.py": "cd2c70958fac7ca9dc88fc39e0a04d7701b3a47a66b823e510a678dcd2878853"
+    },
+    "manifest_sha256": "f978799bbd19047b6a74f291aa816f43052251f9b84751f633e8ddf04622abf1",
+    "selection": "first 32 images of first locked TRAIN shard; no metric selection",
+    "shard": {
+      "path": "train_00000.pt",
+      "images": 64,
+      "image_ids": [
+        498334,
+        498335,
+        498336,
+        498337,
+        498338,
+        498339,
+        498340,
+        498341,
+        498342,
+        498345,
+        498346,
+        498348,
+        498349,
+        498350,
+        498352,
+        498353,
+        498354,
+        498355,
+        498356,
+        498358,
+        498359,
+        498360,
+        498361,
+        498364,
+        498365,
+        498366,
+        498367,
+        498368,
+        498369,
+        498370,
+        498371,
+        498373,
+        498374,
+        498375,
+        498376,
+        498377,
+        498378,
+        498381,
+        498382,
+        498383,
+        498384,
+        498385,
+        498386,
+        498388,
+        498389,
+        498390,
+        498391,
+        498392,
+        498394,
+        498396,
+        498397,
+        498398,
+        498399,
+        498400,
+        498401,
+        498402,
+        498403,
+        498406,
+        498407,
+        498409,
+        498411,
+        712948,
+        712949,
+        712950
+      ],
+      "bytes": 22309015,
+      "sha256": "7f97b3cf0e392d8dbad8209615c015e5ccdaaba0981195ca0937aa53d246caef",
+      "last_index": 63
+    },
+    "seed": 1729,
+    "effective_batch": 16,
+    "warmup_images": 16,
+    "timed_images": 16,
+    "variants": [
+      "native",
+      "context",
+      "oneway",
+      "feedback"
+    ],
+    "cases": [
+      "original_fp32_m1",
+      "packed_fp32_m1",
+      "packed_fp32_m2",
+      "packed_fp32_m4"
+    ],
+    "parity": {
+      "mode": "eval with gradients, first four train images",
+      "output_rtol": 1e-05,
+      "output_atol": 1e-05,
+      "loss_rtol": 1e-05,
+      "loss_atol": 1e-05,
+      "gradient_rtol": 0.0001,
+      "gradient_atol": 1e-05,
+      "update_rtol": 0.0001,
+      "update_atol": 1e-06
+    },
+    "selection_rule": "all four arms pass parity/resource; minimum arm speedup >=1.10; choose highest minimum speedup; otherwise keep original",
+    "training_adoption": "new experiment for microbatch>1; all four arms restart from identical original initialization; no reuse of old native as matched new control",
+    "resource": {
+      "cpu_threads": 4,
+      "own_gpu_nvml_bytes_cap": 8589934592,
+      "cuda_allocator_gib": 6,
+      "peak_rss_gib": 4,
+      "timeout_seconds": 240,
+      "minimum_free_disk_gib": 16,
+      "minimum_gpu_free_gib": 9
+    },
+    "benchmark_test_accessed": false,
+    "validation_scored": false,
+    "live_sources_modified": false
+  },
+  "preregistration_sha256": "8f9b509ca18b4a931c9dced114764594227a10542739fe6d8017b9fa9f1e27ae",
+  "benchmark_test_accessed": false,
+  "validation_scored": false,
+  "training_adopted": false,
+  "cases": {
+    "native": {
+      "original_fp32_m1": {
+        "status": "PASS",
+        "warmup": {
+          "seconds": 2.6080129090696573,
+          "images": 16,
+          "loss_mean": 3.0290937572717667,
+          "peak_allocated_bytes": 2367869440,
+          "observed_nvml_bytes": 2956984320
+        },
+        "timed": {
+          "seconds": 2.4777666851878166,
+          "images": 16,
+          "loss_mean": 2.3231836706399918,
+          "peak_allocated_bytes": 2600629248,
+          "observed_nvml_bytes": 3326083072
+        },
+        "seconds_per_image": 0.15486041782423854
+      },
+      "packed_fp32_m1": {
+        "status": "PASS",
+        "warmup": {
+          "seconds": 2.5613627154380083,
+          "images": 16,
+          "loss_mean": 3.0290937572717667,
+          "peak_allocated_bytes": 2367869440,
+          "observed_nvml_bytes": 2956984320
+        },
+        "timed": {
+          "seconds": 2.6069163866341114,
+          "images": 16,
+          "loss_mean": 2.3231836706399918,
+          "peak_allocated_bytes": 2600629248,
+          "observed_nvml_bytes": 3326083072
+        },
+        "seconds_per_image": 0.16293227416463196
+      },
+      "packed_fp32_m2": {
+        "status": "PASS",
+        "warmup": {
+          "seconds": 2.066669851541519,
+          "images": 16,
+          "loss_mean": 3.0122488662600517,
+          "peak_allocated_bytes": 4281803264,
+          "observed_nvml_bytes": 5221908480
+        },
+        "timed": {
+          "seconds": 2.0487664695829153,
+          "images": 16,
+          "loss_mean": 2.3124540597200394,
+          "peak_allocated_bytes": 4518622720,
+          "observed_nvml_bytes": 5922357248
+        },
+        "seconds_per_image": 0.1280479043489322
+      },
+      "packed_fp32_m4": {
+        "status": "NOT_TIMED_PARITY_REJECTED"
+      }
+    },
+    "context": {
+      "original_fp32_m1": {
+        "status": "PASS",
+        "warmup": {
+          "seconds": 2.7028975524008274,
+          "images": 16,
+          "loss_mean": 3.0290937572717667,
+          "peak_allocated_bytes": 2850362880,
+          "observed_nvml_bytes": 3487563776
+        },
+        "timed": {
+          "seconds": 2.53357564099133,
+          "images": 16,
+          "loss_mean": 2.323181375861168,
+          "peak_allocated_bytes": 3089997824,
+          "observed_nvml_bytes": 3898605568
+        },
+        "seconds_per_image": 0.15834847756195813
+      },
+      "packed_fp32_m1": {
+        "status": "PASS",
+        "warmup": {
+          "seconds": 2.57576703466475,
+          "images": 16,
+          "loss_mean": 3.0290937572717667,
+          "peak_allocated_bytes": 2850362880,
+          "observed_nvml_bytes": 3487563776
+        },
+        "timed": {
+          "seconds": 2.5768287740647793,
+          "images": 16,
+          "loss_mean": 2.323181375861168,
+          "peak_allocated_bytes": 3089997824,
+          "observed_nvml_bytes": 3898605568
+        },
+        "seconds_per_image": 0.1610517983790487
+      },
+      "packed_fp32_m2": {
+        "status": "PASS",
+        "warmup": {
+          "seconds": 2.2314265202730894,
+          "images": 16,
+          "loss_mean": 3.0122488662600517,
+          "peak_allocated_bytes": 5229897728,
+          "observed_nvml_bytes": 6257901568
+        },
+        "timed": {
+          "seconds": 2.189745172858238,
+          "images": 16,
+          "loss_mean": 2.312453515827656,
+          "peak_allocated_bytes": 5471419392,
+          "observed_nvml_bytes": 6308233216
+        },
+        "seconds_per_image": 0.1368590733036399
+      },
+      "packed_fp32_m4": {
+        "status": "NOT_TIMED_PARITY_REJECTED"
+      }
+    },
+    "oneway": {
+      "original_fp32_m1": {
+        "status": "PASS",
+        "warmup": {
+          "seconds": 2.5631023216992617,
+          "images": 16,
+          "loss_mean": 3.0290937572717667,
+          "peak_allocated_bytes": 2934409216,
+          "observed_nvml_bytes": 3573547008
+        },
+        "timed": {
+          "seconds": 2.5629701763391495,
+          "images": 16,
+          "loss_mean": 2.3231813833117485,
+          "peak_allocated_bytes": 3171187712,
+          "observed_nvml_bytes": 3743416320
+        },
+        "seconds_per_image": 0.16018563602119684
+      },
+      "packed_fp32_m1": {
+        "status": "PASS",
+        "warmup": {
+          "seconds": 2.5912718307226896,
+          "images": 16,
+          "loss_mean": 3.0290937572717667,
+          "peak_allocated_bytes": 2934409216,
+          "observed_nvml_bytes": 3573547008
+        },
+        "timed": {
+          "seconds": 2.563712079077959,
+          "images": 16,
+          "loss_mean": 2.3231813833117485,
+          "peak_allocated_bytes": 3171187712,
+          "observed_nvml_bytes": 3743416320
+        },
+        "seconds_per_image": 0.16023200494237244
+      },
+      "packed_fp32_m2": {
+        "status": "PASS",
+        "warmup": {
+          "seconds": 2.2150604147464037,
+          "images": 16,
+          "loss_mean": 3.0122488662600517,
+          "peak_allocated_bytes": 5394057728,
+          "observed_nvml_bytes": 6425673728
+        },
+        "timed": {
+          "seconds": 2.2054196298122406,
+          "images": 16,
+          "loss_mean": 2.312453515827656,
+          "peak_allocated_bytes": 5635579392,
+          "observed_nvml_bytes": 6476005376
+        },
+        "seconds_per_image": 0.13783872686326504
+      },
+      "packed_fp32_m4": {
+        "status": "NOT_TIMED_PARITY_REJECTED"
+      }
+    },
+    "feedback": {
+      "original_fp32_m1": {
+        "status": "PASS",
+        "warmup": {
+          "seconds": 2.560633648186922,
+          "images": 16,
+          "loss_mean": 3.0290937572717667,
+          "peak_allocated_bytes": 2932725248,
+          "observed_nvml_bytes": 3730833408
+        },
+        "timed": {
+          "seconds": 2.5517644435167313,
+          "images": 16,
+          "loss_mean": 2.3231815695762634,
+          "peak_allocated_bytes": 3168270336,
+          "observed_nvml_bytes": 3770679296
+        },
+        "seconds_per_image": 0.1594852777197957
+      },
+      "packed_fp32_m1": {
+        "status": "PASS",
+        "warmup": {
+          "seconds": 3.5644974056631327,
+          "images": 16,
+          "loss_mean": 3.0290937572717667,
+          "peak_allocated_bytes": 2932725248,
+          "observed_nvml_bytes": 3730833408
+        },
+        "timed": {
+          "seconds": 3.3898078482598066,
+          "images": 16,
+          "loss_mean": 2.3231815695762634,
+          "peak_allocated_bytes": 3168270336,
+          "observed_nvml_bytes": 3770679296
+        },
+        "seconds_per_image": 0.21186299051623791
+      },
+      "packed_fp32_m2": {
+        "status": "PASS",
+        "warmup": {
+          "seconds": 2.429201889783144,
+          "images": 16,
+          "loss_mean": 3.0122488662600517,
+          "peak_allocated_bytes": 5364197888,
+          "observed_nvml_bytes": 6673137664
+        },
+        "timed": {
+          "seconds": 2.248591788113117,
+          "images": 16,
+          "loss_mean": 2.312453471124172,
+          "peak_allocated_bytes": 5607973376,
+          "observed_nvml_bytes": 6721372160
+        },
+        "seconds_per_image": 0.14053698675706983
+      },
+      "packed_fp32_m4": {
+        "status": "NOT_TIMED_PARITY_REJECTED"
+      }
+    }
+  },
+  "parity": {
+    "native": {
+      "1": {
+        "status": "PASS",
+        "gradient_tensors": 244,
+        "max_output_error": 0.0,
+        "max_gradient_error": 0.0,
+        "max_update_error": 0.0,
+        "losses": [
+          1.8052531480789185,
+          3.00710129737854,
+          2.03672194480896,
+          2.763596534729004
+        ],
+        "observed_nvml_bytes": 2795503616
+      },
+      "2": {
+        "status": "PASS",
+        "gradient_tensors": 244,
+        "max_output_error": 2.86102294921875e-05,
+        "max_gradient_error": 8.419156074523926e-07,
+        "max_update_error": 1.0672956705093384e-06,
+        "losses": [
+          1.8052533864974976,
+          3.007101058959961,
+          2.036722183227539,
+          2.7635958194732666
+        ],
+        "observed_nvml_bytes": 4959764480
+      },
+      "4": {
+        "status": "REJECTED",
+        "error_type": "OutOfMemoryError",
+        "reason": "CUDA out of memory. Tried to allocate 1.22 GiB. GPU 0 has a total capacity of 44.42 GiB of which 33.66 GiB is free. Process 4016943 has 262.00 MiB memory in use. Process 3578472 has 2.42 GiB memory in use. Process 2653743 has 2.91 GiB memory in use. Including non-PyTorch memory, this process has 5.15 GiB memory in use. 6.00 GiB allowed; Of the allocated memory 4.71 GiB is allocated by PyTorch, and 122.53 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation "
+      }
+    },
+    "context": {
+      "1": {
+        "status": "PASS",
+        "gradient_tensors": 264,
+        "max_output_error": 0.0,
+        "max_gradient_error": 0.0,
+        "max_update_error": 0.0,
+        "losses": [
+          1.8052531480789185,
+          3.00710129737854,
+          2.03672194480896,
+          2.763596534729004
+        ],
+        "observed_nvml_bytes": 3003121664
+      },
+      "2": {
+        "status": "PASS",
+        "gradient_tensors": 264,
+        "max_output_error": 2.86102294921875e-05,
+        "max_gradient_error": 8.419156074523926e-07,
+        "max_update_error": 1.0672956705093384e-06,
+        "losses": [
+          1.8052533864974976,
+          3.007101058959961,
+          2.036722183227539,
+          2.7635958194732666
+        ],
+        "observed_nvml_bytes": 5888802816
+      },
+      "4": {
+        "status": "REJECTED",
+        "error_type": "OutOfMemoryError",
+        "reason": "CUDA out of memory. Tried to allocate 1.22 GiB. GPU 0 has a total capacity of 44.42 GiB of which 33.65 GiB is free. Process 4016943 has 262.00 MiB memory in use. Process 3578472 has 2.42 GiB memory in use. Process 2653743 has 2.91 GiB memory in use. Including non-PyTorch memory, this process has 5.15 GiB memory in use. 6.00 GiB allowed; Of the allocated memory 4.71 GiB is allocated by PyTorch, and 121.91 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation "
+      }
+    },
+    "oneway": {
+      "1": {
+        "status": "PASS",
+        "gradient_tensors": 264,
+        "max_output_error": 0.0,
+        "max_gradient_error": 0.0,
+        "max_update_error": 0.0,
+        "losses": [
+          1.8052531480789185,
+          3.00710129737854,
+          2.03672194480896,
+          2.763596534729004
+        ],
+        "observed_nvml_bytes": 3087007744
+      },
+      "2": {
+        "status": "PASS",
+        "gradient_tensors": 264,
+        "max_output_error": 2.86102294921875e-05,
+        "max_gradient_error": 8.419156074523926e-07,
+        "max_update_error": 1.0672956705093384e-06,
+        "losses": [
+          1.8052533864974976,
+          3.007101058959961,
+          2.036722183227539,
+          2.7635958194732666
+        ],
+        "observed_nvml_bytes": 5972688896
+      },
+      "4": {
+        "status": "REJECTED",
+        "error_type": "OutOfMemoryError",
+        "reason": "CUDA out of memory. Tried to allocate 1.22 GiB. GPU 0 has a total capacity of 44.42 GiB of which 33.65 GiB is free. Process 4016943 has 262.00 MiB memory in use. Process 3578472 has 2.42 GiB memory in use. Process 2653743 has 2.91 GiB memory in use. Including non-PyTorch memory, this process has 5.15 GiB memory in use. 6.00 GiB allowed; Of the allocated memory 4.71 GiB is allocated by PyTorch, and 121.91 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation "
+      }
+    },
+    "feedback": {
+      "1": {
+        "status": "PASS",
+        "gradient_tensors": 264,
+        "max_output_error": 0.0,
+        "max_gradient_error": 0.0,
+        "max_update_error": 0.0,
+        "losses": [
+          1.8052531480789185,
+          3.00710129737854,
+          2.03672194480896,
+          2.763596534729004
+        ],
+        "observed_nvml_bytes": 3177185280
+      },
+      "2": {
+        "status": "PASS",
+        "gradient_tensors": 264,
+        "max_output_error": 2.86102294921875e-05,
+        "max_gradient_error": 8.419156074523926e-07,
+        "max_update_error": 1.0672956705093384e-06,
+        "losses": [
+          1.8052533864974976,
+          3.007101058959961,
+          2.036722183227539,
+          2.7635958194732666
+        ],
+        "observed_nvml_bytes": 6218055680
+      },
+      "4": {
+        "status": "REJECTED",
+        "error_type": "OutOfMemoryError",
+        "reason": "CUDA out of memory. Tried to allocate 1.22 GiB. GPU 0 has a total capacity of 44.42 GiB of which 33.65 GiB is free. Process 4016943 has 262.00 MiB memory in use. Process 3578472 has 2.42 GiB memory in use. Process 2653743 has 2.91 GiB memory in use. Including non-PyTorch memory, this process has 5.15 GiB memory in use. 6.00 GiB allowed; Of the allocated memory 4.71 GiB is allocated by PyTorch, and 121.91 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation "
+      }
+    }
+  },
+  "accepted": {
+    "packed_fp32_m2": {
+      "minimum_arm_speedup": 1.1348277873317407,
+      "speedup_by_arm": {
+        "native": 1.2093943951026476,
+        "context": 1.1570184843400275,
+        "oneway": 1.1621235894038673,
+        "feedback": 1.1348277873317407
+      }
+    }
+  },
+  "selected_case": "packed_fp32_m2",
+  "adoption_ready": true,
+  "limits": "One timed optimizer update per arm/case; GPU shared; no full-epoch or validation accuracy guarantee; train dropout RNG trajectory differs across microbatches.",
+  "utc": "2026-10-11T10:42:20.254298+00:00",
+  "source_lock_still_verified": true
+}

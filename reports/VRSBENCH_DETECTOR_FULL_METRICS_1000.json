@@ -1,0 +1,173 @@
+{
+  "dataset": "VRSBench Test Set (1,000 Images, 2,198 GT Objects, 3,539 Predicted Boxes)",
+  "model": "Faster R-CNN (ResNet-50-FPN, Epoch 5 Checkpoint)",
+  "grounding_and_localization_metrics": {
+    "best_overlap_class_agnostic": {
+      "mIoU": 63.94,
+      "Acc@0.5": 79.03,
+      "Acc@0.7": 57.69,
+      "Acc@0.75": 46.68,
+      "count": 2198
+    },
+    "best_overlap_class_matched": {
+      "mIoU": 62.78,
+      "Acc@0.5": 77.75,
+      "Acc@0.7": 56.92,
+      "Acc@0.75": 46.04,
+      "count": 2198
+    },
+    "one_to_one_class_agnostic": {
+      "mIoU": 63.07,
+      "Acc@0.5": 78.16,
+      "Acc@0.7": 57.01,
+      "Acc@0.75": 46.27,
+      "count": 2198
+    },
+    "one_to_one_class_matched": {
+      "mIoU": 62.48,
+      "Acc@0.5": 77.53,
+      "Acc@0.7": 56.78,
+      "Acc@0.75": 45.91,
+      "count": 2198
+    },
+    "positive_detected_only_mIoU": {
+      "mIoU": 71.23,
+      "Acc@0.5": 88.04,
+      "Acc@0.7": 64.27,
+      "Acc@0.75": 52.0,
+      "count": 1973
+    }
+  },
+  "ap_metrics": {
+    "micro_class_agnostic": {
+      "mAP@50": 57.87,
+      "mAP@70": 35.49,
+      "mAP@75": 24.99,
+      "mAP@50:95": 28.88,
+      "recall@50_1to1": 78.89,
+      "precision@50_1to1": 49.0
+    },
+    "class_matched_weighted": {
+      "mAP@50": 56.33,
+      "mAP@70": 34.36,
+      "mAP@75": 24.56,
+      "mAP@50:95": 28.63
+    },
+    "class_matched_macro_26_classes": {
+      "mAP@50": 62.9,
+      "mAP@70": 45.44,
+      "mAP@75": 30.68,
+      "mAP@50:95": 34.34
+    },
+    "per_class_ap50": {
+      "airplane": {
+        "ap_all_point": 71.42011635799955,
+        "ap_101_point": 71.21331283247096,
+        "recall": 89.40397350993378,
+        "precision": 54.655870445344135,
+        "gt_count": 151,
+        "pred_count": 247,
+        "tp": 135
+      },
+      "baseball-diamond": {
+        "ap_all_point": 70.96332462533081,
+        "ap_101_point": 70.6994312392926,
+        "recall": 75.60975609756098,
+        "precision": 75.60975609756098,
+        "gt_count": 41,
+        "pred_count": 41,
+        "tp": 31
+      },
+      "basketball-court": {
+        "ap_all_point": 71.33858448456084,
+        "ap_101_point": 70.94050699883113,
+        "recall": 77.77777777777779,
+        "precision": 68.29268292682927,
+        "gt_count": 36,
+        "pred_count": 41,
+        "tp": 28
+      },
+      "ground-track-field": {
+        "ap_all_point": 100.0,
+        "ap_101_point": 100.00000000000007,
+        "recall": 100.0,
+        "precision": 57.14285714285714,
+        "gt_count": 4,
+        "pred_count": 7,
+        "tp": 4
+      },
+      "harbor": {
+        "ap_all_point": 48.21514373883194,
+        "ap_101_point": 48.070726771922686,
+        "recall": 76.875,
+        "precision": 42.30438521066208,
+        "gt_count": 640,
+        "pred_count": 1163,
+        "tp": 492
+      },
+      "helicopter": {
+        "ap_all_point": 0.0,
+        "ap_101_point": 0.0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "gt_count": 4,
+        "pred_count": 0,
+        "tp": 0
+      },
+      "roundabout": {
+        "ap_all_point": 100.0,
+        "ap_101_point": 100.00000000000007,
+        "recall": 100.0,
+        "precision": 100.0,
+        "gt_count": 10,
+        "pred_count": 10,
+        "tp": 10
+      },
+      "ship": {
+        "ap_all_point": 54.12421438345357,
+        "ap_101_point": 54.244640379300726,
+        "recall": 70.2020202020202,
+        "precision": 53.46153846153846,
+        "gt_count": 396,
+        "pred_count": 520,
+        "tp": 278
+      },
+      "soccer-ball-field": {
+        "ap_all_point": 40.08403361344538,
+        "ap_101_point": 40.29120559114737,
+        "recall": 57.14285714285714,
+        "precision": 34.78260869565217,
+        "gt_count": 14,
+        "pred_count": 23,
+        "tp": 8
+      },
+      "swimming-pool": {
+        "ap_all_point": 71.79416003548162,
+        "ap_101_point": 71.4287986066462,
+        "recall": 81.70731707317073,
+        "precision": 72.04301075268818,
+        "gt_count": 82,
+        "pred_count": 93,
+        "tp": 67
+      },
+      "tennis-court": {
+        "ap_all_point": 82.03903479297433,
+        "ap_101_point": 81.95559252710524,
+        "recall": 95.1048951048951,
+        "precision": 59.130434782608695,
+        "gt_count": 286,
+        "pred_count": 460,
+        "tp": 272
+      },
+      "vehicle": {
+        "ap_all_point": 44.84187594458394,
+        "ap_101_point": 44.74043315750693,
+        "recall": 71.91011235955057,
+        "precision": 41.69381107491857,
+        "gt_count": 534,
+        "pred_count": 921,
+        "tp": 384
+      }
+    }
+  }
+}

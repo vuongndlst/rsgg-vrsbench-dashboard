@@ -1,0 +1,37 @@
+{
+  "model_id": "Qwen/Qwen2.5-14B-Instruct",
+  "revision": "cf98f3b3bbb457ad9e2bb7baf9a0125b6b88caa8",
+  "model_path": "${REMOTE_HOME}/etechs/msvd-tkg-captioning/models/qwen2.5-14b",
+  "local_files_only": true,
+  "text_only": true,
+  "full_weights_sha256": {
+    "model-00001-of-00008.safetensors": "b477be7572f0ab3ae3cbba38d508cc33e70600b2045669c4ad848051c3432094",
+    "model-00002-of-00008.safetensors": "eb356aacae443e30f52712b1e98fadf206976365e2f5ee886321b0bb38c7cea8",
+    "model-00003-of-00008.safetensors": "cee9dbdf738ce61adb21c70ad5c5585747caaab6457c9ffc3bfa20d73127c2c6",
+    "model-00004-of-00008.safetensors": "b1201a6edcac8ef96a37040524fe37a5a84e446513ed40491e764a37302385fa",
+    "model-00005-of-00008.safetensors": "fbbda3cdee31895d0c57d617449af5579d219df34f3d63f7a23acbfe7fb0a647",
+    "model-00006-of-00008.safetensors": "f7ac652aa101717c97cfeccf5109985cca5b04529b57d3f4d2ec7a802266296b",
+    "model-00007-of-00008.safetensors": "e9115e615b575acb6e8b3a06524b32cbf7f680f07517125e4334f62c3f4acb0d",
+    "model-00008-of-00008.safetensors": "a77f603d8368749c19d3ac9cf2a300e476edcc794ea41af8e473ee12935eadb8"
+  },
+  "auxiliary_files_sha256": {
+    "model.safetensors.index.json": "46627f7a9e851d9cede6a7a4c49999082148ced9c22d2b9cfaaa5ba8b65dc68f",
+    "config.json": "0f2085dbbe2ee251bd6a6a0797d84a6ce34436044d629aa3cba793b43d311a9e",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "generation_config.json": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9"
+  },
+  "inference_resource_admission_granted": true,
+  "caption_phase_resource_authorization_20261025": {
+    "human_explicit_approval": true,
+    "own_gpu_gib": 36,
+    "allocator_gib": 32,
+    "process_ram_gib": 12,
+    "cpu": 4,
+    "conditional_on_measured_headroom": true,
+    "admission_report": "reports/VG_CAPTION_GENERATION_ADMISSION_V1_20261025.json",
+    "scope": "finite caption phase only; other jobs and stages unchanged"
+  }
+}

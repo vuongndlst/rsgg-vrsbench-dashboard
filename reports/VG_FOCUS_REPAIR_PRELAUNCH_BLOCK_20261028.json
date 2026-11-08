@@ -1,0 +1,34 @@
+{
+  "status": "BLOCKED_PRELAUNCH_GPU_ADMISSION",
+  "utc": "2026-10-27T22:47:46.844058+00:00",
+  "event_key": "PRELAUNCH_GPU_FREE_BELOW_38GiB",
+  "GPU_free_bytes": 18673041408,
+  "GPU_required_free_bytes": 40802189312,
+  "resource_snapshot": {
+    "utc": "2026-10-27T22:47:46.844058+00:00",
+    "aggregate_artifacts_bytes_deduplicated_inodes": 26193211262,
+    "aggregate_cap_bytes": 42949672960,
+    "disk_free_bytes": 38357323776,
+    "GPU_free_bytes": 18673041408,
+    "RAM_available_bytes": 40676196352,
+    "admitted": false,
+    "TEST_accessed": false
+  },
+  "other_admission_conditions_passed": true,
+  "experiment_namespace_created": false,
+  "controller_pid": null,
+  "source_manifest_sha256": "a9f896802b25b92ba8da0e659d8d388fc403b6465e78294db68f3f8ceb7d1a38",
+  "contracts_verification": {
+    "status": "PASS_LOCAL_PRELAUNCH_CONTRACT_RAW_SHA_AND_ALL_SOURCES",
+    "utc": "2026-10-27T22:49:48.321269+00:00",
+    "archive_sha256": "8413c1d52555b36c01ebf05ea241043ee0cc9913f186020b0613e795007b7209",
+    "source_manifest_sha256": "a9f896802b25b92ba8da0e659d8d388fc403b6465e78294db68f3f8ceb7d1a38",
+    "exact_legacy_views": 1056,
+    "structural_cases": 3168,
+    "experiment_launched": false,
+    "TEST_accessed": false
+  },
+  "new_policy_adopted": false,
+  "TEST_accessed": false,
+  "retry_when_due_and_resources_admitted_without_source_change": true
+}

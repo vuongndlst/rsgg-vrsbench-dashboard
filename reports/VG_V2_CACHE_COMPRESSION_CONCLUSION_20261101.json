@@ -1,0 +1,58 @@
+{
+  "status": "LOCAL_LOSSLESS_STORAGE_PROBE_COMPLETE_SERVER_UNCHANGED",
+  "utc": "2026-11-01T00:27:56.086238+00:00",
+  "images_cached": 62720,
+  "image_counts": {
+    "val": 5000,
+    "train": 57720
+  },
+  "raw_cache_GiB": 20.361364650540054,
+  "per_image_tensor_bytes": 347456,
+  "layout": {
+    "nodes": {
+      "shape": [
+        200,
+        256
+      ],
+      "dtype": "torch.float32",
+      "bytes": 204800
+    },
+    "boxes": {
+      "shape": [
+        200,
+        4
+      ],
+      "dtype": "torch.float32",
+      "bytes": 3200
+    },
+    "logits": {
+      "shape": [
+        200,
+        150
+      ],
+      "dtype": "torch.float32",
+      "bytes": 120000
+    },
+    "visual": {
+      "shape": [
+        19,
+        256
+      ],
+      "dtype": "torch.float32",
+      "bytes": 19456
+    }
+  },
+  "gzip_projected_GiB": 18.29100306112848,
+  "xz_projected_GiB": 18.064925370186614,
+  "shuffle_gzip_projected_GiB": 16.455830760156836,
+  "lossless_samples": 2,
+  "all_lossless_restored_raw_SHA256_pass": true,
+  "projection_not_full_cache_measurement": true,
+  "fp16_prior_TRAIN_probe_pred_rel_max_abs_error": 0.14620590209960938,
+  "fp16_original_gate_max_abs_error": 0.02,
+  "fp16_was_rejected_for_this_cache": true,
+  "recommendation": "Preserve original FP32 cache in a verified local archive and remove server shards only after explicit approval; compression alone frees about4GiB, insufficient for17GiB free admission from current1.43GiB",
+  "current_caption_R1_needs_dense_features": false,
+  "paused_SGG_seeds_need_exact_raw_cache_restoration": true,
+  "server_changed": false
+}

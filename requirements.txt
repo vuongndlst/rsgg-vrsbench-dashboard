@@ -1,0 +1,33 @@
+# RSGG: Remote Sensing Scene Graph Generation and Geospatial Captioning via Grounded LLMs
+# Requirements for 100% Reproducibility
+
+# PyTorch (Recommend CUDA 12.1+ build)
+torch>=2.1.0
+torchvision>=0.16.0
+torchaudio>=2.1.0
+
+# Hugging Face Ecosystem & Quantization
+transformers>=4.40.0
+accelerate>=0.28.0
+peft>=0.10.0
+bitsandbytes>=0.43.0
+safetensors>=0.4.2
+huggingface_hub>=0.22.0
+
+# Computer Vision & Image Processing
+Pillow>=9.5.0
+opencv-python-headless>=4.8.0
+scipy>=1.10.0
+numpy>=1.23.0,<2.0.0
+ensemble-boxes>=1.0.9
+
+# Data Processing & Evaluation
+pandas>=2.0.0
+tqdm>=4.65.0
+pycocoevalcap>=1.2
+pycocotools>=2.0.7
+nltk>=3.8.1
+
+# Optional visualization & reporting
+matplotlib>=3.7.0
+python-docx>=1.1.0

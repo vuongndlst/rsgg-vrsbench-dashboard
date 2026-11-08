@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-10T16:31:05.876215+00:00",
+  "scope": "CPU-only cached ImageNet backbone strict load into pinned native FrozenBatchNorm",
+  "weights_path": "${REMOTE_HOME}/rsg-former/weights/checkpoints/resnet50-11ad3fa6.pth",
+  "source_url": "https://download.pytorch.org/models/resnet50-11ad3fa6.pth",
+  "pretraining": "ImageNet-1K V2",
+  "weights_bytes": 102540417,
+  "weights_sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+  "source_backbone_sha256": "c35e27aab0fd705927b3bfedd44ebe9f9787bb0ba7d7115a794c37168e7b4c2d",
+  "torchvision_default_resolved": "ResNet50_Weights.IMAGENET1K_V2",
+  "strict_model_load": true,
+  "vg_checkpoint_loaded": false,
+  "network_downloads": false,
+  "cuda_used": false,
+  "new_training_started": false,
+  "fully_contamination_free_claim": false,
+  "limitations": [
+    "Known VG-held-out identity exclusions do not prove absence from ImageNet or Qwen pretraining corpora",
+    "Fresh detector query/class/regression heads must initialize without VG author weights",
+    "Fresh SGG relation prior must be recomputed from the clean training manifest, not reused from author VG prior",
+    "Detector criterion, augmentation, gradient/VRAM and throughput smoke remain required before launch"
+  ]
+}

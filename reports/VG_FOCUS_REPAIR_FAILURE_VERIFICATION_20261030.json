@@ -1,0 +1,21 @@
+{
+  "status": "PASS_RAW_FAILED_PARENT_SOURCES_TRAIN_GENERATION_METRICS_SELECTION",
+  "utc": "2026-10-30T02:47:00.943340+00:00",
+  "last_successful_remote_contact_utc": "2026-10-30T02:47:00.845112+00:00",
+  "archive_sha256": "ecf0de33f6ea1dc67e3f57f9e0d8bd3aa9fd5eeddf51bb885d04fd953e33b84b",
+  "archive_bytes": 4488959,
+  "raw_files_verified": 36,
+  "raw_bytes": 16756526,
+  "TRAIN_outputs": 2400,
+  "selected_from_TRAIN": "L2",
+  "preregistration_sha256": "bbfb2e407906c5d6dcd036d3280b49eb3fddb4220789665f3aa10d297f6d0e82",
+  "check_access_opened": false,
+  "TEST_accessed": false,
+  "remote_write_performed": false,
+  "metrics_recomputed": false,
+  "resource_snapshot": {
+    "disk_free_bytes": 10079289344,
+    "GPU_free_MiB": 30466,
+    "RAM_available_bytes": 39562063872
+  }
+}

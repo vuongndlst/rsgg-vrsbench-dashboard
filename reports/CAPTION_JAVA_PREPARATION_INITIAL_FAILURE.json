@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-10T20:29:10.376338+00:00",
+  "script_sha256": "bdcad1d26dcebf7f252bb5223d5a500ad032523626c78a783587f63df75890a5",
+  "failure_type": "HTTPError",
+  "http_status": 403,
+  "source": "official Adoptium metadata API",
+  "archive_bytes_downloaded": 0,
+  "shared_environment_modified": false
+}

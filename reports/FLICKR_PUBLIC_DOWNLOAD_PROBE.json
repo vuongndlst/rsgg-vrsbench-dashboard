@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-10T19:51:31.310947+00:00",
+  "public_file_id": "685020145839",
+  "official_archive_bytes": 4375349371,
+  "archive_stored": false,
+  "auth_used": false,
+  "test_scored": false,
+  "bytes_read_cap": 1024,
+  "error_type": "HTTPError",
+  "http_status": 403,
+  "bytes_read": 0,
+  "gzip_magic_matches": false,
+  "download_source_verified": false
+}

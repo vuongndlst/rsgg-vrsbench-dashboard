@@ -1,0 +1,13 @@
+{
+  "status": "PASS_R1_NAMESPACE_ONLY_AND_RAW_RUNTIME_METADATA_REPAIR_BEFORE_EXECUTION",
+  "utc": "2026-11-02T22:37:54.710242+00:00",
+  "original_source_manifest_sha256": "f3335ef7dc8764474bf172950e7186a7e0de3062ba27ad6207e3158131a41b6f",
+  "Python_inverse_namespace_transform_cases": 7,
+  "raw_runtime_metadata_semantic_equality": true,
+  "parent_or_dev_input_hashes_changed": false,
+  "science_model_prompt_decoder_changed": false,
+  "GPU_or_native_preflight_ran": false,
+  "main_namespace_previously_absent": true,
+  "prior_new_model_calls": 0,
+  "old_evidence_preserved": true
+}

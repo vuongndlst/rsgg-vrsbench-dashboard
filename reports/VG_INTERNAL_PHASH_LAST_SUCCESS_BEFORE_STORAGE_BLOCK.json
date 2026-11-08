@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-19T03:09:58.046607+00:00",
+  "status": "VG_INTERNAL_PHASH_AUDIT_IN_PROGRESS",
+  "preregistration_sha256": "c1c106f784e294af6181c7d0429098bf928041331dc2cc501e369c802e3792ab",
+  "source_hashes": {
+    "scripts/remote_vg_internal_phash_batch_v1.py": "20506f9ed3447644f8bd12cd568403b2fedf783d75e2a249763a3486cb856a62",
+    "src/rsgformer/caption_phash_candidates_v1.py": "827ac8e5a8ce4b0c8921b606b7feadf33c9df5f721f39f2a5f659f8b532f6688",
+    "configs/caption_perceptual_exclusion_v1.json": "f3efd67929926cbad2c76715d0ae768fa750dead3af41c81033d4951f0e9195b"
+  },
+  "vg_source_database_sha256": "983789d6425c628ac22849090f6160f8b3e55910da4f1aecad8a5b61a288e6f9",
+  "band_index_complete": true,
+  "band_rows": 628920,
+  "batch_queries_processed": 1024,
+  "completed_queries": 18432,
+  "target_queries": 62723,
+  "candidate_pairs": 144,
+  "retained_draft_source_id_count": 10,
+  "batch_wall_seconds": 60.863122288137674,
+  "journal_bytes": 10199040,
+  "journal_source_unchanged": true,
+  "external_coverage_complete": false,
+  "training_manifest_modified": false,
+  "model_or_caption_reference_used": false,
+  "test_scored": false,
+  "clean_release_certified": false,
+  "note": "Near candidates require conservative new-release exclusions; pHash similarity is not proof of same-photo identity; partial query count is not complete audit"
+}

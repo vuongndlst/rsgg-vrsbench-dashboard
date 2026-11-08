@@ -1,0 +1,108 @@
+{
+  "purpose": "fixed blind agent visual audit, not human annotation and not selection/tuning",
+  "expected_instances": 20,
+  "prediction_reveal_before_agent_annotation": false,
+  "sampling": "fixed hash of original160 heldout packet, no replacement",
+  "items": [
+    {
+      "key": "285875:g10",
+      "target_class": "pant",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\285875_g10.jpg"
+    },
+    {
+      "key": "1480:g0",
+      "target_class": "car",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\1480_g0.jpg"
+    },
+    {
+      "key": "285995:g1",
+      "target_class": "hat",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\285995_g1.jpg"
+    },
+    {
+      "key": "150369:g1",
+      "target_class": "truck",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\150369_g1.jpg"
+    },
+    {
+      "key": "4008:g2",
+      "target_class": "shirt",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\4008_g2.jpg"
+    },
+    {
+      "key": "2047:g0",
+      "target_class": "truck",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\2047_g0.jpg"
+    },
+    {
+      "key": "285872:g0",
+      "target_class": "plate",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\285872_g0.jpg"
+    },
+    {
+      "key": "3121:g40",
+      "target_class": "pant",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\3121_g40.jpg"
+    },
+    {
+      "key": "312:g0",
+      "target_class": "car",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\312_g0.jpg"
+    },
+    {
+      "key": "1821:g46",
+      "target_class": "pant",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\1821_g46.jpg"
+    },
+    {
+      "key": "61554:g3",
+      "target_class": "pant",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\61554_g3.jpg"
+    },
+    {
+      "key": "294:g0",
+      "target_class": "car",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\294_g0.jpg"
+    },
+    {
+      "key": "1124:g3",
+      "target_class": "truck",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\1124_g3.jpg"
+    },
+    {
+      "key": "1853:g1",
+      "target_class": "car",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\1853_g1.jpg"
+    },
+    {
+      "key": "150302:g2",
+      "target_class": "hat",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\150302_g2.jpg"
+    },
+    {
+      "key": "285835:g12",
+      "target_class": "hat",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\285835_g12.jpg"
+    },
+    {
+      "key": "3141:g0",
+      "target_class": "car",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\3141_g0.jpg"
+    },
+    {
+      "key": "876:g2",
+      "target_class": "car",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\876_g2.jpg"
+    },
+    {
+      "key": "3302:g0",
+      "target_class": "car",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\3302_g0.jpg"
+    },
+    {
+      "key": "4196:g6",
+      "target_class": "pant",
+      "image": "D:\\SBIR\\RSGG\\outputs\\vg_color_fresh_val_review_r1_20261025\\thumbnails\\4196_g6.jpg"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "event_keys": [
+    "4493c52e4377fad9ed52e4f5594e77b79f6bf1c4e589e264f1efdfab5c3c038f"
+  ],
+  "last_event": "REGION_FOCUS_MECHANICAL_FILTER_LIMITATION_AUDIT_COMPLETE",
+  "last_notified_utc": "2026-10-27T08:17:43.033553+00:00",
+  "terminal_no_progress_polling": true,
+  "human_precision_claim": false,
+  "new_policy_adopted": false
+}

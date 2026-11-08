@@ -1,0 +1,26 @@
+{
+  "status": "PROMPT_AND_NATIVE_METRIC_CONTRACT_PASS",
+  "prompt_instances": 6144,
+  "maximum_native_input_tokens": 560,
+  "TRAIN_examples": 696,
+  "static_ids": [
+    "vg:2401361:region:690577",
+    "vg:2348495:region:3217451"
+  ],
+  "VAL_dev_check_units": 512,
+  "units_with_candidate_color": 8,
+  "empty_evidence_units": 87,
+  "paired_retrieval_ids": true,
+  "no_color_fields_in_N_prompts": true,
+  "METEOR_native_parity_tolerance": 1e-12,
+  "metric_fixture": {
+    "BLEU_1": 0.5580351456770414,
+    "BLEU_2": 0.5261205808575714,
+    "BLEU_3": 0.5049134766829215,
+    "BLEU_4": 0.4817740745608229,
+    "CIDEr": 4.615572336094903,
+    "ROUGE_L": 0.6062157337753411,
+    "METEOR": 0.35610450941837096
+  },
+  "test_accessed": false
+}

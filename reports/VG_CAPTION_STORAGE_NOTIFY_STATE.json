@@ -1,0 +1,13 @@
+{
+  "condition_key": "caption_preparation_disk_reserve_below_16gib_private_journal",
+  "first_observed_utc": "2026-10-20T22:12:00.022128+00:00",
+  "last_evidence": "reports/VG_INTERNAL_PHASH_BLOCK_DIAGNOSIS.json",
+  "notification_recorded": true,
+  "automation_pause_required": true,
+  "condition_active": true,
+  "resolved_utc": "2026-10-21T22:32:17.314731+00:00",
+  "resolution": "Human-approved retirement of480V1 feature shards; reserve restored and pinned audit batch resumed successfully",
+  "prior_resolved_utc": "2026-10-21T22:32:17.314731+00:00",
+  "last_observed_utc": "2026-10-22T15:21:58.308391+00:00",
+  "recurrence_after_successful_resume": true
+}

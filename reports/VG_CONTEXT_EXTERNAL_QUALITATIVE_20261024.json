@@ -1,0 +1,32 @@
+{
+  "status": "QUALITATIVE_EXTERNAL_COMPLETE",
+  "sample_count": 6,
+  "datasets": {
+    "coco": 3,
+    "openimages": 3
+  },
+  "checkpoint_sha256": "29017a69d7cb6d76d68c834b5d540712775a9e0cf9cae13efd17d78a7b69292e",
+  "new_test_metrics": false,
+  "training_or_calibration": false,
+  "source_verification": "PASS",
+  "server_files_written": 0,
+  "max_own_gpu_mib": 2848,
+  "peak_rss_bytes": 2119581696,
+  "wall_seconds": 10.211314916610718,
+  "gallery": "D:\\SBIR\\RSGG\\outputs\\context_1729_coco_oi_visualization_20261024\\index.html",
+  "slides": {
+    "status": "COMPLETE",
+    "slides": 4,
+    "local_pptx": "D:\\SBIR\\RSGG\\outputs\\context_scientific_slides_20261024\\Context_Method_Results_SG_20261024.pptx",
+    "pptx_sha256": "d85f2cacd3b6d76ac0d97959253b4f886751cb9bf9aa078db1ae996da186fb7b",
+    "live_artifact_ref": "artifact_82LjVrLwQC9oz2PE4-tQ9D1gZ9sRUsh8",
+    "evidence": "VG test result + original saved predictions; new external qualitative inference",
+    "sources": [
+      "https://arxiv.org/html/2601.08728v1",
+      "https://arxiv.org/html/2607.06176v1"
+    ],
+    "claim": "Selected recent SOTA references; differing recipes, single seed, no superiority claim",
+    "visualizations": "Actual first4displayed predicted relations with matching IDs and colors; original images and coordinates retained"
+  },
+  "storage_blocked_program_resumed": false
+}

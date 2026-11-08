@@ -1,0 +1,37 @@
+{
+  "seed": 1729,
+  "initialization": "ImageNet-1K V2 backbone; fresh transformer/query/class/box heads",
+  "weights_sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+  "vg_checkpoint_loaded": false,
+  "attention_backend": "pinned upstream PyTorch reference autograd function",
+  "configuration_sha256": "78872da7c321601b7b067775f45d2fa2d92ffe37351e6d09b67746dd269c2b3e",
+  "parameters": 47470972,
+  "trainable_parameters": 47248572,
+  "fully_contamination_free_claim": false,
+  "status": "PASS",
+  "utc": "2026-10-10T19:08:45.514385+00:00",
+  "elapsed_seconds": 4.556467395275831,
+  "cuda_used": false,
+  "detector_forward_executed": false,
+  "training_started": false,
+  "test_scored": false,
+  "checkpoint_saved": false,
+  "criterion_synthetic_weighted_loss": 1.5852687358856201,
+  "hungarian_class_endpoints_swapped_assignment_empty_target": "PASS",
+  "auxiliary_losses_and_finite_logit_gradients": "PASS",
+  "native_bbox_postprocess": "PASS",
+  "source_hashes": {
+    "src/rsgformer/vg_fresh_detector.py": "554b266499e52ccc20d82d4f9b848f31a22f41cdf041b565521ca3343cfc79e5",
+    "vendor/salience_sgg/models/dab_deformable_detr/deformable_detr.py": "93f2b8ac092700f4b556e9607375c1e8512da5faf6fdcfcc1686495b63800098",
+    "vendor/salience_sgg/models/dab_deformable_detr/matcher.py": "62746e44e90e418d3118677660390d39c13bfca77c6ee2a82fa73b2bbe87d95b",
+    "vendor/salience_sgg/models/dab_deformable_detr/backbone.py": "c35e27aab0fd705927b3bfedd44ebe9f9787bb0ba7d7115a794c37168e7b4c2d",
+    "vendor/salience_sgg/models/dab_deformable_detr/deformable_transformer.py": "50d8d0d7ae5f2a363813757a89f322aa7e744b778e8bd93c393e1794fa28e247",
+    "vendor/salience_sgg/models/ops/functions/ms_deform_attn_func.py": "dd9906037ce7dc45b9ef6f39d4934bb4dddefc3e09049024496827714b6738bc"
+  },
+  "remaining": [
+    "Actual canonical train transforms/targets criterion integration",
+    "Full fresh detector forward/backward GPU memory and throughput gate",
+    "Final pixel overlap/exclusion release and separate training preregistration",
+    "Fresh clean-train relation prior and SGG training/evaluation"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "protocol_id": "caption_perceptual_exclusion_v1",
+  "scope": "Independent data identity audit before any fresh detector/SGG training; never test performance tuning",
+  "fingerprint_method": "Existing pinned raw RGB/no EXIF normalized DCT32 low8 median excluding DC phash63, four rotations; no journal or method edits",
+  "candidate_rule": {
+    "hamming_radius": 4,
+    "rotations_degrees": [0,90,180,270],
+    "bands_widths": [13,13,13,12,12],
+    "require_full_distance_filter": true,
+    "all_rotation_pairs": true,
+    "proof_scope": "Complete retrieval for radius<=4 on available fingerprints; not complete detection of visual duplicates"
+  },
+  "exclusion_policy": {
+    "existing_shared_source_identity": "Preserve conservative metadata identity exclusions",
+    "exact_jpeg_or_raw_rgb": "Exclude every source VG TRAIN/VAL identity matching a protected held-out identity",
+    "near_candidates": "Conservatively exclude every source VG TRAIN/VAL identity within registered radius of a protected identity, regardless of whether later visual review calls it the same photograph",
+    "direction": "VG TRAIN to VG VAL/TEST; VG VAL to VG TEST; VG TRAIN/VAL to external VAL/TEST",
+    "evaluation_membership": "Protected held-out IDs and failed/missing IDs stay in their original evaluation denominators",
+    "false_positive_tradeoff": "Candidate exclusion may discard unrelated training images; candidate similarity alone is not proof of duplicate identity",
+    "old_manifest": "Preserve provisional draft and all live benchmark weights; final release is a new immutable version"
+  },
+  "admission": {
+    "full_vg_and_external_coverage_required": true,
+    "failed_source_ids_must_be_resolved_or_explicitly_block_release": true,
+    "independent_candidate_audit_and_provenance_required": true,
+    "fresh_original_backbone_initialization_required": true,
+    "no_caption_clean_certification_from_phash_alone": true,
+    "threshold_not_adjustable_from_held_out_model_metrics": true
+  },
+  "preparation_status": "POLICY_AND_RETRIEVAL_ONLY; no candidate journal launched or final training manifest generated"
+}

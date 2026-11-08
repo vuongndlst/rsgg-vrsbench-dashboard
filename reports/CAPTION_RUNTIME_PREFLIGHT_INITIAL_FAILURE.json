@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-10T20:18:42.312096+00:00",
+  "script_sha256": "c3de2f2ffdea73285fa9b44dd1c4c1ab3a6a2bc6daf5d5f117feb94ce09def6d",
+  "failure_type": "AssertionError",
+  "failure_line": 92,
+  "contract": "apply_chat_template result assumed flat list of int",
+  "benchmark_test_scored": false,
+  "model_weights_loaded": false
+}

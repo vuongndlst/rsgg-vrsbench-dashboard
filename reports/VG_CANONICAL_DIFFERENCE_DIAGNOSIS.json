@@ -1,0 +1,122 @@
+{
+  "mode": "train_metadata_diagnostic_no_scoring",
+  "images": [
+    {
+      "image_id": 498334,
+      "first_canonical_bbox_xywh": [
+        35,
+        461,
+        337,
+        158
+      ],
+      "first_h5_inclusive_xyxy": [
+        35.0,
+        461.0,
+        371.0,
+        618.0
+      ],
+      "inclusive_box_max_error": 0.0,
+      "own_relations": 5,
+      "canonical_relations": 5,
+      "own_unique": 5,
+      "canonical_unique": 5,
+      "canonical_only": [],
+      "own_only": []
+    },
+    {
+      "image_id": 498335,
+      "first_canonical_bbox_xywh": [
+        114,
+        329,
+        344,
+        86
+      ],
+      "first_h5_inclusive_xyxy": [
+        114.2578125,
+        329.1015625,
+        458.0078125,
+        415.0390625
+      ],
+      "inclusive_box_max_error": 1.6484375,
+      "own_relations": 2,
+      "canonical_relations": 2,
+      "own_unique": 2,
+      "canonical_unique": 2,
+      "canonical_only": [],
+      "own_only": []
+    },
+    {
+      "image_id": 498336,
+      "first_canonical_bbox_xywh": [
+        80,
+        122,
+        90,
+        42
+      ],
+      "first_h5_inclusive_xyxy": [
+        80.0,
+        122.0,
+        169.0,
+        163.0
+      ],
+      "inclusive_box_max_error": 0.0,
+      "own_relations": 5,
+      "canonical_relations": 4,
+      "own_unique": 4,
+      "canonical_unique": 4,
+      "canonical_only": [],
+      "own_only": []
+    },
+    {
+      "image_id": 498337,
+      "first_canonical_bbox_xywh": [
+        226,
+        100,
+        143,
+        93
+      ],
+      "first_h5_inclusive_xyxy": [
+        226.6591796875,
+        100.7880859375,
+        368.9482421875,
+        192.9111328125
+      ],
+      "inclusive_box_max_error": 1.091796875,
+      "own_relations": 8,
+      "canonical_relations": 3,
+      "own_unique": 3,
+      "canonical_unique": 3,
+      "canonical_only": [],
+      "own_only": []
+    },
+    {
+      "image_id": 498338,
+      "first_canonical_bbox_xywh": [
+        502,
+        48,
+        459,
+        632
+      ],
+      "first_h5_inclusive_xyxy": [
+        502.0,
+        48.0,
+        960.0,
+        679.0
+      ],
+      "inclusive_box_max_error": 0.0,
+      "own_relations": 1,
+      "canonical_relations": 1,
+      "own_unique": 1,
+      "canonical_unique": 1,
+      "canonical_only": [],
+      "own_only": []
+    }
+  ],
+  "train_first1000": {
+    "unique_triplet_set_mismatches": 0,
+    "pair_predicate_set_mismatches": 0,
+    "inclusive_bbox_conversion_mismatch_images": 138,
+    "native_gt_relations": 6682,
+    "canonical_relations": 5789
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "status": "FROZEN_CHECK_COMPLETE_DIRECTIONAL_IMPROVEMENT_NO_POLICY_ADOPTION",
+  "verification": {
+    "status": "PASS_R1_ARCHIVE_SOURCE_PARENT_REUSE_SELECTION_AND512_CHECK_OUTPUTS",
+    "utc": "2026-11-01T08:04:20.701416+00:00",
+    "archive_sha256": "218098eccf4ef9c803be72e3578eecf21082e8787cfbb56bf18bd4eb9eb9bb31",
+    "archive_bytes": 369516,
+    "source_lock_sha256": "789d621626a330004bf566924afe4b977fc0dc375567e2f9c5cc10897f2af5b6",
+    "parent_preregistration_sha256": "bbfb2e407906c5d6dcd036d3280b49eb3fddb4220789665f3aa10d297f6d0e82",
+    "parent_files_verified": 36,
+    "sources_verified": 25,
+    "TRAIN_outputs_reused": 2400,
+    "check_outputs": 512,
+    "check_images": 64,
+    "check_regions_per_policy": 256,
+    "selected_policy": "L2",
+    "selected_on_TRAIN_only": true,
+    "new_policy_adopted": false,
+    "SPICE": "NOT_RUN",
+    "human_factuality_review_complete": false,
+    "TEST_accessed": false,
+    "metric_recomputed": false,
+    "local_output_directory": "outputs/vg_focus_repair_r1_20261101"
+  },
+  "completion_utc": "2026-11-01T06:20:33.602643+00:00",
+  "check_images": 64,
+  "regions_per_policy": 256,
+  "unique_outputs": 512,
+  "selected_from_TRAIN_only": "L2",
+  "display_scores_x100": {
+    "L0": {
+      "BLEU_1": 8.70842844391476,
+      "BLEU_2": 2.106946364572498,
+      "BLEU_3": 8.394301487884992e-06,
+      "BLEU_4": 1.920597728190881e-08,
+      "CIDEr": 26.658363906992776,
+      "ROUGE_L": 11.67092295358208,
+      "METEOR": 5.1290569120487595
+    },
+    "L2": {
+      "BLEU_1": 13.252993020002812,
+      "BLEU_2": 3.8766346891499897,
+      "BLEU_3": 1.321817991639454e-05,
+      "BLEU_4": 2.7634371096320497e-08,
+      "CIDEr": 41.2782100059325,
+      "ROUGE_L": 16.27876377224988,
+      "METEOR": 6.724450955645532
+    }
+  },
+  "differences_x100_L2_minus_L0": {
+    "METEOR": 1.5953940435967722,
+    "CIDEr": 14.619846098939725,
+    "ROUGE_L": 4.6078408186678015
+  },
+  "diagnostics": {
+    "L0": {
+      "empty_predictions": 46,
+      "empty_evidence_units": 46,
+      "output_token_cap_hits": 0,
+      "unsupported_color_lexical_flags": 0,
+      "unsupported_count_lexical_flags": 40
+    },
+    "L2": {
+      "empty_predictions": 0,
+      "empty_evidence_units": 0,
+      "output_token_cap_hits": 0,
+      "unsupported_color_lexical_flags": 0,
+      "unsupported_count_lexical_flags": 39
+    }
+  },
+  "SPICE": "NOT_RUN",
+  "BLEU4_near_zero": true,
+  "policy_adopted": false,
+  "human_factuality_review_complete": false,
+  "statistical_significance_tested": false,
+  "TEST_accessed": false,
+  "scope": "Frozen no-color/zero-shot P1 graph-focus geometry comparison, not full six-arm color/fewshot caption benchmark or official VG5k/SOTA",
+  "next_step": "Review fixed20 factuality packet and graph-grounding/missing-target limitations without tuning on observed check; future scientific changes need TRAIN/dev new prereg and genuinely unused check. No automatic caption TEST or seed resume."
+}

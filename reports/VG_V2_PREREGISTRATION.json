@@ -1,0 +1,128 @@
+{
+  "config": {
+    "experiment_id": "vg_method_v2",
+    "upstream_commit": "d316a0b2057e549764eb8dd8a0bcce8b1136d98a",
+    "task": "VG150 SGDet, predicted objects; cached frozen VG-trained native detector; controlled relation-head adaptation",
+    "not_claimed": [
+      "native full training recipe reproduction",
+      "caption-clean weights",
+      "SOTA before matched evidence",
+      "new detector trained from scratch in this run"
+    ],
+    "test_policy": "No test access until preregistered confirmation gate; no test rerun/tuning",
+    "cache": {
+      "splits": [
+        "val",
+        "train"
+      ],
+      "shard_images": 64,
+      "resize_short": 800,
+      "resize_max": 1333,
+      "train_augmentation": "fixed evaluation transform; same for all arms",
+      "dtype_policy": "FP16 only if probe max logit error <0.02, otherwise FP32"
+    },
+    "screening": {
+      "variants": [
+        "native",
+        "context",
+        "oneway",
+        "feedback"
+      ],
+      "seed": 1729,
+      "epochs": 6,
+      "gate_gain_mR50": 0.001,
+      "max_R50_drop": 0.01
+    },
+    "confirmation": {
+      "seeds": [
+        1729,
+        2718,
+        3141
+      ],
+      "epochs": 13,
+      "min_gain_mR50": 0.01,
+      "max_R50_drop": 0.01,
+      "bootstrap_replicates": 1000,
+      "bootstrap_seed": 4455
+    },
+    "optimizer": {
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "effective_batch": 16,
+      "microbatch": 1,
+      "gradient_clip": 0.1,
+      "drop_factor": 0.1,
+      "drop_epoch_from_end": 2
+    },
+    "selection": {
+      "primary": "mR@50",
+      "guardrail": "R@50 >= frozen native validation R@50 - 0.01",
+      "tie": "earliest epoch",
+      "fallback": "best mR@50 with guardrail failure explicitly reported"
+    },
+    "regional": {
+      "tokens": 8,
+      "hidden": 256,
+      "rounds": 2,
+      "geometry_learning": false,
+      "output_zero_init": true
+    },
+    "resource": {
+      "cuda_allocator_gib": 8,
+      "cpu_threads": 4,
+      "minimum_free_disk_gib": 16,
+      "artifact_limit_gib": 40,
+      "wall_hours": 240,
+      "preparation_wait_minutes": 90,
+      "checkpoint_per_completed_run": 1
+    },
+    "adjustment_policy": "No core/config changes inside a locked run. Technical failures may be repaired with new source lock and explicit audit. Scientific changes become a new preregistered experiment; tests remain unopened.",
+    "caption_stage": "Required follow-on: audit external test overlap, train fresh caption-clean detector/SGG, fixed Qwen14B and matched prompt budgets; never use benchmark weights as contamination-free caption model without proof",
+    "satellite_stage": "Only after natural-image evidence; independent domain training"
+  },
+  "source_hashes": {
+    "src/rsgformer/vg_v2_runtime.py": "0d7157491c093a02362f25c8841aab50a4b95791d9de3f08550ee37faff6aff8",
+    "scripts/remote_vg_v2_pipeline.py": "b336c5a84f5a50eb8e667015efda8f619ae4def3129f84007cc8b3b8fb2e59aa",
+    "scripts/remote_vg_v2_probe.py": "4e58967bb2bd74bd8303a082360e68be726d226d8a7c016e4f291f7b90f5c560",
+    "configs/vg_method_v2.json": "4ac00b7819dd37f1b894f7301737e6a3d663643dc02a6e63b8344a3c31322d68"
+  },
+  "upstream_commit": "d316a0b2057e549764eb8dd8a0bcce8b1136d98a",
+  "train_images": 57723,
+  "validation_images": 5000,
+  "split_hashes": {
+    "train": "e6d5c31f10baa92fedc23200cce81f7d7751b9f68387105bc07287976774ad26",
+    "val": "8d83adf29e1ee9ac552c1f3d72ff4575a849444103f0ba6ec72519b9f4cc52a2"
+  },
+  "assets": {
+    "upstream_commit": "d316a0b2057e549764eb8dd8a0bcce8b1136d98a",
+    "assets": [
+      {
+        "name": "dab_deformable_detr_vg_150_classes.pth",
+        "public_file_id": "1uGgHVH2SjXm7zAlUmdiKUJQ6MoBA4KBX",
+        "bytes": 568820289,
+        "sha256": "b4fc7f65b2084c9cd8aa5ba67b8601e86c9350373b61269053d34a9658e5c2f8"
+      },
+      {
+        "name": "salinece_vg_iou_0.6.ckpt",
+        "public_file_id": "1MY4YNkyN6hUoVM_8tBSiK5jxw0faPF9T",
+        "bytes": 545842873,
+        "sha256": "f2d6af5ee63fe33f7fbb745dd98dc9e9f3b53c50c81a938c1c8266eb66ef863b"
+      },
+      {
+        "name": "vg_glove_6B.300d.pt",
+        "public_file_id": "1GGkEdlkSc38CcEvjZa8c3_rBnjS034_6",
+        "bytes": 181178,
+        "sha256": "25de6a6b4764b4dd46e236f4641ffddfad047acf05979d9290a3be015a13cfe1"
+      },
+      {
+        "name": "vg_prior_static.pt",
+        "public_file_id": "14VQUPJpMy64PIIQGxwynkjvtk-T_faFB",
+        "bytes": 9121780,
+        "sha256": "f4c84b9c0ad294aefbc10bb6112a0f4a6008d80e3203e8a34a6309c150421bcf"
+      }
+    ]
+  },
+  "utc": "2026-10-10T15:32:14.644716+00:00",
+  "test_scored": false,
+  "cache_dtype": "float32"
+}

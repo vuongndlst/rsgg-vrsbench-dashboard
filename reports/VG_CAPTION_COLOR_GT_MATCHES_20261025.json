@@ -1,0 +1,1 @@
+{"status": "TRAIN_VAL_COLOR_GT_MATCHING_COMPLETE_SCORER_ONLY", "utc": "2026-10-24T23:17:11.441854+00:00", "counts": {"objects": 1412, "matched": 290, "matched_with_explicit_color": 179}, "blocked_train_bank_exact_pixel_duplicate_ids": [], "test_color_attributes_read": false, "gt_attributes_passed_to_generator": false, "test_reference_text_read": false}

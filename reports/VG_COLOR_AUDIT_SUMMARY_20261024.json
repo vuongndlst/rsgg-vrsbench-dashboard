@@ -1,0 +1,143 @@
+{
+  "status": "TRAIN_VAL_COLOR_PRIORITY_TABLES_COMPLETE_PLAN_ONLY",
+  "updated_utc": "2026-10-24T08:02:45.568550+00:00",
+  "source": "reports\\VG150_OBJECT_COLOR_TRAIN_VAL_AUDIT_V2_20261024.json",
+  "source_sha256": "c0bd64276df7da013c45f1f2d9e3f5e0bc325e02a2077ce912041e1260a39c04",
+  "audit_version": 2,
+  "all_150_classes_present": true,
+  "original_first_audit_preserved": true,
+  "palette_correction": "V2 includes literal maroon/cream/khaki omitted by initial lexical audit; separate multicolored/colorful counts",
+  "totals": {
+    "train": {
+      "objects": 670591,
+      "with_color": 180556,
+      "color_percent": 26.92490653766603,
+      "with_any_attribute": 257164,
+      "multicolor_objects": 35895,
+      "explicit_multicolored": 369,
+      "explicit_colorful": 1127,
+      "normalized_color_label_histogram": {
+        "white": 55673,
+        "black": 41720,
+        "brown": 22330,
+        "blue": 20815,
+        "red": 18705,
+        "green": 18012,
+        "gray": 13139,
+        "yellow": 9423,
+        "silver": 5045,
+        "orange": 4765,
+        "pink": 3476,
+        "tan": 3369,
+        "purple": 2040,
+        "blond": 1989,
+        "gold": 1161,
+        "beige": 1133,
+        "khaki": 418,
+        "maroon": 333,
+        "cream": 183
+      },
+      "basic11_share_of_label_occurrences": 0.9390736113780511
+    },
+    "val": {
+      "objects": 62754,
+      "with_color": 14245,
+      "color_percent": 22.69974822322083,
+      "with_any_attribute": 20510,
+      "multicolor_objects": 2059,
+      "explicit_multicolored": 6,
+      "explicit_colorful": 77,
+      "normalized_color_label_histogram": {
+        "white": 4008,
+        "black": 2613,
+        "green": 1811,
+        "red": 1551,
+        "brown": 1521,
+        "blue": 1469,
+        "gray": 1087,
+        "yellow": 664,
+        "silver": 533,
+        "tan": 300,
+        "pink": 278,
+        "orange": 264,
+        "purple": 132,
+        "beige": 120,
+        "blond": 113,
+        "gold": 70,
+        "maroon": 43,
+        "khaki": 22,
+        "cream": 19
+      },
+      "basic11_share_of_label_occurrences": 0.926585630039716
+    }
+  },
+  "initial_palette": [
+    "black",
+    "white",
+    "gray",
+    "red",
+    "green",
+    "blue",
+    "yellow",
+    "brown",
+    "orange",
+    "pink",
+    "purple"
+  ],
+  "extended_palette": [
+    "tan",
+    "beige",
+    "maroon",
+    "cream",
+    "khaki"
+  ],
+  "appearance_extensions": [
+    "silver",
+    "gold"
+  ],
+  "hair_only_extension": [
+    "blond"
+  ],
+  "palette_reduction_is_not_used_to_relabel_original_gt": true,
+  "proposed_pilot_classes": [
+    "shirt",
+    "jacket",
+    "pant",
+    "short",
+    "coat",
+    "hat",
+    "cap",
+    "helmet",
+    "shoe",
+    "bag",
+    "bus",
+    "truck",
+    "car",
+    "train",
+    "cat",
+    "dog",
+    "horse",
+    "cow",
+    "plate",
+    "toilet"
+  ],
+  "pilot_class_selection": "TRAIN frequency/support plus semantic suitability; plate/toilet as low-variation controls; not a validated production whitelist",
+  "caveats": [
+    "Object-bound weak H5 attribute annotations, not pixel-verified color truth",
+    "All canonical in-scope H5 object instances; no relation-active mask filtering",
+    "Absent color annotation is unlabeled, not a negative",
+    "200-attribute vocabulary is incomplete; no raw attributes.json audit claimed",
+    "Histogram occurrence coverage is not object-level coverage or accuracy",
+    "Multi-label colors can make histogram sum exceed colored-object count",
+    "Object-binomial Wilson bounds in source are descriptive only; future intervals cluster by image"
+  ],
+  "test_attributes_analyzed": false,
+  "model_loaded": false,
+  "color_extraction_run": false,
+  "caption_generated": false,
+  "caption_test_scored": false,
+  "artifacts": {
+    "csv": "reports\\VG150_COLOR_PRIORITY_20261024.csv",
+    "markdown": "reports/VG150_COLOR_PRIORITY_20261024.md"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-11T02:25:06.056663+00:00",
+  "scope": "full Open Images TEST pixel identity audit only",
+  "source_hashes": {
+    "scripts/remote_oi_stream_fingerprint_batch.py": "752b93fc302851e5e1922bf0a918842f09fca29eade1136cf2b65a4d69f0e1dd",
+    "scripts/remote_oi_stream_pipeline.py": "ebc038883d3e01b8bf81a023ea84059d5499a034a232dc3ea35b8ac9f7c127a1",
+    "src/rsgformer/openimages_test_reader.py": "0bf8d41c541109e11c89e3e7dbaf47b38234a87a995baf2e5f2f2e0b16d307f6",
+    "scripts/remote_oi_full_stream_ledger_probe_v2.py": "4eb3692aabae14259108ba39fdeb3da6bb31ad154cbf50e9a49360a8ce3dff5b",
+    "scripts/remote_oi_stream_launch.py": "ef4f69be3bdf0fba1080f8f52c1c2fafb81f2286bb1610584271f572cf8cfbbd"
+  },
+  "resource": {
+    "cumulative_network_charge_bytes": 68719476736,
+    "batch_network_charge_bytes": 33554432,
+    "single_request_bytes": 8388608,
+    "max_attempts_per_id": 2,
+    "cpu_threads": 1,
+    "cuda_used": false,
+    "child_peak_rss_bytes": 805306368,
+    "child_timeout_seconds": 110,
+    "batch_soft_seconds": 75,
+    "batch_alarm_seconds": 100,
+    "phase_wall_seconds": 345600,
+    "minimum_free_disk_bytes": 17179869184,
+    "maximum_journal_bytes": 268435456,
+    "disk_pixel_cache_bytes": 0
+  },
+  "target_images": 125436,
+  "identity_manifest_sha256": "6eb586b40bd68245e20205d896a5ae49700b72d61783b0e5ddc80a50e2242c87",
+  "membership": "all sorted locked TEST IDs; fixed denominator; no human reference/model/score selection",
+  "reader": "raw CVDF JPEG matrix, no EXIF transpose, no rotation/resize/cache writes",
+  "retry_charge": "reserve8MiB committed before each attempt; failures/interruption charged8MiB; refund only successful fingerprint transaction; max2attempts per ID",
+  "continuation": "serial bounded audit subprocesses; no monitor loop, GPU, scientific tuning or original v2 source/config changes; stop on provenance/admission error, budget, timeout, or no admissible work",
+  "terminal_source_failures": "retain IDs and failure evidence; continue remaining admissible IDs; no complete or clean claim if any target missing",
+  "journal_version": "oi_stream_fingerprints_full_v1.sqlite, separate from fixed20ID pilot and local-protected journal",
+  "pilot_sha256": "dab18b6f1e1e1b5468af36b03a737ab57081c9a03feb1ceef921194c4c2e444a",
+  "full_ledger_fixture_sha256": "a37acb902710a14ed033139012d36f831e5613f3f3abc06d1beece418bb18ff3",
+  "point_estimate_from20IDpilot": {
+    "hours": 64.58625334985491,
+    "network_bytes": 44163055310.4,
+    "not_guaranteed": true
+  },
+  "existing_v2_source_hashes_preserved": {
+    "src/rsgformer/vg_v2_runtime.py": "0d7157491c093a02362f25c8841aab50a4b95791d9de3f08550ee37faff6aff8",
+    "scripts/remote_vg_v2_pipeline.py": "b336c5a84f5a50eb8e667015efda8f619ae4def3129f84007cc8b3b8fb2e59aa",
+    "scripts/remote_vg_v2_probe.py": "4e58967bb2bd74bd8303a082360e68be726d226d8a7c016e4f291f7b90f5c560",
+    "configs/vg_method_v2.json": "4ac00b7819dd37f1b894f7301737e6a3d663643dc02a6e63b8344a3c31322d68"
+  },
+  "benchmark_test_scored": false,
+  "clean_release_certified": false,
+  "full_image_cache_storage_gate_remains_failed": true,
+  "next": "Join snapshots with protected VG identities/pixels, independently verify perceptual candidates, then version final clean release before fresh training"
+}

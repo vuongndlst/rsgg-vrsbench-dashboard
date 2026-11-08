@@ -1,0 +1,32 @@
+{
+  "status": "SOURCE_LINK_AUDIT_COMPLETE",
+  "utc": "2026-10-10T19:48:31.608210+00:00",
+  "official_gallery_url": "https://shannon.cs.illinois.edu/DenotationGraph/data/flickr30k.html",
+  "gallery_bytes": 14497938,
+  "gallery_sha256": "1e0cdc449285448048e0f4bb92ad6f752532ffa89cd627afa51401b880ba5cca",
+  "links_tag_counts": {
+    "a:href": 1
+  },
+  "links_host_counts": {
+    "nlp.cs.illinois.edu": 1
+  },
+  "karpathy_test_images": 1000,
+  "test_images_with_direct_jpeg_links": 0,
+  "images_with_multiple_direct_links": 0,
+  "test_link_manifest_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "example_test_image_links": [],
+  "official_box_access": {
+    "http_status": 200,
+    "final_url": "https://uofi.app.box.com/s/1cpolrtkckn4hxr1zhmfg0ln9veo6jpl",
+    "content_type": "text/html; charset=utf-8",
+    "bounded_bytes_read": 31546
+  },
+  "images_downloaded": 0,
+  "test_scored": false,
+  "prompt_tuned": false,
+  "reference_descriptions_used_for_selection": false,
+  "remaining": [
+    "Verify original official dataset image release/pixel provenance before caption scoring",
+    "Download only missing TEST and independent development identities within storage caps from authorized sources"
+  ]
+}

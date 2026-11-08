@@ -1,0 +1,300 @@
+{
+  "created_utc": "2026-10-10T10:43:19Z",
+  "split_reference_commit": "ceb71fa88461c2a97a6258a80f47669d89207296",
+  "splits": {
+    "train": {
+      "images": 56224,
+      "ordered_image_ids_sha256": "69e74096ac877dda690ee4e217151127f63752a79d120be3a2af7cb57fa5c2f7",
+      "relation_count": 371716,
+      "object_count": 658971,
+      "invalid_boxes": 0,
+      "self_relations": 0,
+      "multi_predicate_pairs": 60372,
+      "empty_after_clip": 2
+    },
+    "val": {
+      "images": 5000,
+      "ordered_image_ids_sha256": "8d83adf29e1ee9ac552c1f3d72ff4575a849444103f0ba6ec72519b9f4cc52a2",
+      "relation_count": 33203,
+      "object_count": 62754,
+      "invalid_boxes": 0,
+      "self_relations": 0,
+      "multi_predicate_pairs": 4007,
+      "empty_after_clip": 0
+    },
+    "test": {
+      "images": 26446,
+      "ordered_image_ids_sha256": "cbd2214c7021bcc76b0a932340b56367647586a4d860c750f834bc87fcab2bd3",
+      "relation_count": 183642,
+      "object_count": 325570,
+      "invalid_boxes": 0,
+      "self_relations": 0,
+      "multi_predicate_pairs": 23074,
+      "empty_after_clip": 0
+    }
+  },
+  "image_archives_extracted": false,
+  "archive_coverage": {
+    "required_split_ids": 87670,
+    "missing_ids": 0,
+    "archive_ids": 108249
+  },
+  "h5_schema": {
+    "active_object_mask": {
+      "shape": [
+        1145398,
+        1
+      ],
+      "dtype": "bool"
+    },
+    "attributes": {
+      "shape": [
+        1145398,
+        10
+      ],
+      "dtype": "int64"
+    },
+    "boxes_1024": {
+      "shape": [
+        1145398,
+        4
+      ],
+      "dtype": "int32"
+    },
+    "boxes_512": {
+      "shape": [
+        1145398,
+        4
+      ],
+      "dtype": "int32"
+    },
+    "img_to_first_box": {
+      "shape": [
+        108073
+      ],
+      "dtype": "int32"
+    },
+    "img_to_first_rel": {
+      "shape": [
+        108073
+      ],
+      "dtype": "int32"
+    },
+    "img_to_last_box": {
+      "shape": [
+        108073
+      ],
+      "dtype": "int32"
+    },
+    "img_to_last_rel": {
+      "shape": [
+        108073
+      ],
+      "dtype": "int32"
+    },
+    "labels": {
+      "shape": [
+        1145398,
+        1
+      ],
+      "dtype": "int64"
+    },
+    "predicates": {
+      "shape": [
+        622705,
+        1
+      ],
+      "dtype": "int64"
+    },
+    "relationships": {
+      "shape": [
+        622705,
+        2
+      ],
+      "dtype": "int32"
+    },
+    "split": {
+      "shape": [
+        108073
+      ],
+      "dtype": "int32"
+    },
+    "split_GLIPunseen": {
+      "shape": [
+        108073
+      ],
+      "dtype": "int32"
+    }
+  },
+  "h5_split_distribution": {
+    "0": 75651,
+    "2": 32422
+  },
+  "ordered_reference_metadata_ids_sha256": "2169504568c485ed7c2698098248a29b6f90ef05262d0f84295ac15e6bc8c224",
+  "image_samples": [
+    {
+      "image_id": 498334,
+      "decoded_dimensions": [
+        1024,
+        768
+      ]
+    },
+    {
+      "image_id": 498335,
+      "decoded_dimensions": [
+        662,
+        1000
+      ]
+    },
+    {
+      "image_id": 498336,
+      "decoded_dimensions": [
+        768,
+        1024
+      ]
+    }
+  ],
+  "environment": {
+    "python": "3.10.12",
+    "packages": {
+      "torch": "2.12.0",
+      "torchvision": "0.27.0",
+      "numpy": "2.2.6",
+      "h5py": "3.15.1",
+      "Pillow": "12.2.0",
+      "scipy": "1.15.3"
+    },
+    "isolation": "project-owned dependency overlay; inherited torch versions guarded by runtime manifest"
+  },
+  "resources": {
+    "gpu_snapshot": "NVIDIA A40, 46068, 27257, 100",
+    "cpu_workers_cap": 4,
+    "torch_cpu_threads_cap": 4,
+    "p2_gpu_hours_cap": 20,
+    "p2_pilot_wall_seconds_cap": 1800,
+    "pilot_gpu_memory_gib_cap": 8,
+    "p2_generated_artifacts_gib_cap": 15,
+    "gpu_reservation": "shared; no exclusive allocation inferred",
+    "external_gpu_hour_entitlement": "not_observable; user explicitly authorized bounded P0-P2 execution",
+    "storage_available_bytes": 73915228160
+  },
+  "star_feasibility": {
+    "revision": "7b746149c67c0c0ba36c0309f7344452dcdd2b9c",
+    "card": {
+      "license": "apache-2.0",
+      "size_categories": [
+        "100K<n<1M"
+      ],
+      "task_categories": [
+        "text-classification",
+        "token-classification",
+        "table-question-answering",
+        "question-answering",
+        "zero-shot-classification",
+        "translation",
+        "feature-extraction",
+        "text-generation",
+        "text2text-generation"
+      ]
+    },
+    "files": [
+      {
+        "name": ".gitattributes",
+        "bytes": 2701,
+        "sha256": null
+      },
+      {
+        "name": "README.md",
+        "bytes": 1423,
+        "sha256": null
+      },
+      {
+        "name": "STAR.7z.001",
+        "bytes": 24159191040,
+        "sha256": "0b674affbb5552673c6380956208cec7072ef9e66401d682182d1d0849aa7b6b"
+      },
+      {
+        "name": "STAR.7z.002",
+        "bytes": 24159191040,
+        "sha256": "050ec058457e265aa7683c98335e054798f67fd62689c9cb4b71f2ac09b2edef"
+      },
+      {
+        "name": "STAR.7z.003",
+        "bytes": 24159191040,
+        "sha256": "3897455850ce09800823ede4d8d88acbc61c747482c411c191b0661fd7277813"
+      },
+      {
+        "name": "STAR.7z.004",
+        "bytes": 24159191040,
+        "sha256": "8b739c806cc037686b950b160a97fb4298705c71fc9dd6f6c75db9b3af407c77"
+      },
+      {
+        "name": "STAR.7z.005",
+        "bytes": 24099189194,
+        "sha256": "555bf4b31ed587363035d45d1f1bae1f35b56deee34fe1c740ee0220a0093de1"
+      },
+      {
+        "name": "STAR_OBJ_TEST_ANO.zip",
+        "bytes": 5595523174,
+        "sha256": "9c0beaaf59639a7054bffc4422277c1a9da150d1bc28267c69e8895191d7fd44"
+      },
+      {
+        "name": "STAR_SGG_Annotation.zip",
+        "bytes": 63295542,
+        "sha256": "eb6f78ad3db29a4d98c5645267f2885113f12208a12d753f3324369cdd626f9c"
+      }
+    ],
+    "image_download": "deferred_capacity_insufficient; P0 feasibility audit only",
+    "annotation_members": [
+      {
+        "name": "attributes.json",
+        "bytes": 67901512,
+        "crc32": "a647e3e2"
+      },
+      {
+        "name": "object.json",
+        "bytes": 143838219,
+        "crc32": "07ffa2fe"
+      },
+      {
+        "name": "relationship.json",
+        "bytes": 51730115,
+        "crc32": "9736f25f"
+      },
+      {
+        "name": "STAR-SGG-dicts-with-attri.json",
+        "bytes": 8058,
+        "crc32": "dddc1d43"
+      },
+      {
+        "name": "STAR-SGG-with-attri.h5",
+        "bytes": 49779828,
+        "crc32": "6bf1cdca"
+      },
+      {
+        "name": "STAR_attributes_v1.json",
+        "bytes": 79405639,
+        "crc32": "c281d3e0"
+      },
+      {
+        "name": "STAR_image_data_v1.json",
+        "bytes": 107602,
+        "crc32": "85342686"
+      },
+      {
+        "name": "STAR_objects_v1.json",
+        "bytes": 164960439,
+        "crc32": "f4ab701b"
+      },
+      {
+        "name": "STAR_relationships_v1.json",
+        "bytes": 311223102,
+        "crc32": "f7b2f04d"
+      }
+    ],
+    "annotation_uncompressed_bytes": 868954514,
+    "image_archive_bytes": 120735953354,
+    "status": "annotation_available_full_images_exceed_current_storage"
+  },
+  "status": "natural_P0_data_ready; evaluator_parity_required_in_P2; satellite_capacity_gate_deferred"
+}

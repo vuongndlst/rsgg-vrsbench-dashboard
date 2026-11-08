@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-25T22:20:07.845973+00:00",
+  "status": "COMPLETE_AUTOMATED_COLOR_TEST_NOT_HUMAN_PRECISION",
+  "controller_pid": 2724513,
+  "preregistration_sha256": "2f732c0e678d20f3023582a43201d6d99712c4430579fab79595e7d6e3b58339",
+  "completed_stages": [
+    {
+      "stage": "VAL_PARITY",
+      "completion_sha256": "08fc840921302dcdc4136494923baf55648e5e2d055822ab515e688dc740b786",
+      "status": "FAST_VAL_REPLAY_PARITY_PASS"
+    },
+    {
+      "stage": "FULL_TEST_COLOR",
+      "completion_sha256": "ddcd51dffdd065d25f5f2df2ed50bf19bb32f17531e870120016abba58828ea6",
+      "status": "FULL_COLOR_TEST_CACHE_COMPLETE_UNVERIFIED_CANDIDATES"
+    },
+    {
+      "stage": "TEST_ATTRIBUTE_DIAGNOSTIC",
+      "completion_sha256": "2bd5ead8f76715a3c2d69741b52393d85111b68f7ef982be1c3c4dbba6ef3123",
+      "status": "AUTOMATED_VG_ATTRIBUTE_DIAGNOSTIC_COMPLETE_NOT_HUMAN_PRECISION"
+    }
+  ],
+  "human_precision_gate_passed": false,
+  "stage": "COMPLETE",
+  "child_pid": null
+}

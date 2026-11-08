@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-10T16:09:57.035005+00:00",
+  "scope": "all canonical TRAIN COCO target contracts; two TRAIN ZIP JPEG reads",
+  "images_checked": 57723,
+  "train_iteration": "torchvision sorted image ID",
+  "train_sorted_ids_sha256": "ad10fb44a18b5beea1f9627b3a61977f7d701b78eb10e151bcff63478ba86bae",
+  "decoded_train_images": [
+    {
+      "image_id": 498334,
+      "dimensions": [
+        1024,
+        768
+      ]
+    },
+    {
+      "image_id": 498335,
+      "dimensions": [
+        662,
+        1000
+      ]
+    }
+  ],
+  "adapter_sha256": "f14af9890c36d59531466372f05c6ccacc38879e10711ddacff61857be1914e6",
+  "upstream_coco_source_sha256": "429ba75358fa90c89b70a7ca2a339e2991b9206fba06cb88fd3f042d0eee88a1",
+  "annotation_sha256": "a40fdfdc3894d16349f2e9955e2cbaa199d511c36e25ba46dd6ad8a60043b440",
+  "relation_sha256": "ab5d435745d5683b4f672311a2ec8618d9126909d291b663deaf406c6497d32f",
+  "model_initialized": false,
+  "cuda_used": false,
+  "image_archives_extracted": false,
+  "validation_performance_scored": false,
+  "test_performance_scored": false,
+  "live_v2_modified": false,
+  "clean_release_certified": false,
+  "remaining": [
+    "native train augmentation/criterion/matcher contracts",
+    "canonical SG evaluator/postprocessing parity",
+    "external held-out identity/pixel audit",
+    "audited fresh initialization",
+    "resource smoke before fresh detector training"
+  ]
+}

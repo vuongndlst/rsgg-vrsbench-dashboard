@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "source_hashes": {
+    "scripts/remote_vg_internal_phash_batch_v1.py": "20506f9ed3447644f8bd12cd568403b2fedf783d75e2a249763a3486cb856a62"
+  },
+  "contracts": [
+    "bounded band resume",
+    "full Hamming filter and protected direction",
+    "query resume and completion",
+    "pair cap atomic rollback",
+    "timeout atomic rollback",
+    "SQL retrieval equals all-pairs comparison with planted rotated matches"
+  ],
+  "real_fingerprints_accessed": false,
+  "clean_release_certified": false,
+  "test_scored": false
+}

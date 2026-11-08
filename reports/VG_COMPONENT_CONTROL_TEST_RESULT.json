@@ -1,0 +1,82 @@
+{
+  "utc": "2026-10-20T00:51:16.978770+00:00",
+  "status": "COMPONENT_TEST_COMPLETE",
+  "model": "Salience-SGG R50 + context control",
+  "variant": "context",
+  "seed": 1729,
+  "selected_epoch": 10,
+  "checkpoint_sha256": "29017a69d7cb6d76d68c834b5d540712775a9e0cf9cae13efd17d78a7b69292e",
+  "validation_gate": {
+    "status": "PASS",
+    "images": 5000,
+    "full_detector_validation_smoke": "PASS",
+    "postprocess_source_parity_images": 32,
+    "legacy_selection_reproduced": {
+      "images": 5000,
+      "mode": "SGDet",
+      "constraint": "GC",
+      "matching": "class AND subject/object inclusive-IoU>=0.5",
+      "R@20": 0.18689159516532963,
+      "mR@20": 0.12133913799482057,
+      "F@20": 0.14714473682321252,
+      "R@50": 0.2493579449003898,
+      "mR@50": 0.16929900816804155,
+      "F@50": 0.20167372088793062,
+      "R@100": 0.2925810856196506,
+      "mR@100": 0.19217709273378072,
+      "F@100": 0.23198116064493965
+    },
+    "canonical_metrics_before_test": {
+      "mode": "SGDet",
+      "constraint": "GC",
+      "images": 5000,
+      "observed_images": 5000,
+      "empty_gt_images_excluded": 0,
+      "matching": "pinned native class/predicate AND inclusive float64 IoU>=0.5",
+      "absent_predicate_policy": "contributes zero in denominator50",
+      "R@20": 0.18000736712085408,
+      "mR@20": 0.12048978923248348,
+      "R@50": 0.24129438551408786,
+      "mR@50": 0.1682280422172078,
+      "R@100": 0.28400358495613254,
+      "mR@100": 0.19095456161640667
+    },
+    "independent_float64_evaluator_parity": "PASS",
+    "checkpoint_frozen_before_this_validation": true,
+    "test_scored": false
+  },
+  "test": {
+    "mode": "SGDet",
+    "constraint": "GC",
+    "images": 26446,
+    "observed_images": 26446,
+    "empty_gt_images_excluded": 0,
+    "matching": "pinned native class/predicate AND inclusive float64 IoU>=0.5",
+    "absent_predicate_policy": "contributes zero in denominator50",
+    "R@20": 0.20698705708770174,
+    "mR@20": 0.11798923730360744,
+    "R@50": 0.27513692877179774,
+    "mR@50": 0.16919823015969826,
+    "R@100": 0.3228120836407376,
+    "mR@100": 0.20427976259644393
+  },
+  "test_scored": true,
+  "test_passes": 1,
+  "strict_native_training_recipe_reproduction": false,
+  "canonical_targets_and_pinned_evaluator": true,
+  "input_preprocessing": "unchanged component FP32 cached-training resize(round)800/1333, no test calibration",
+  "comparability_limitations": [
+    "single validation-selected seed; not3seed regional-method confirmation",
+    "pretrained SGG-head adaptation and fixed-transform training differs from native full recipe",
+    "current input resize uses component rounding convention",
+    "canonical evaluation targets/postprocessor/evaluator; not a native-training reproduction",
+    "benchmark images may overlap external caption tests; not caption-clean"
+  ],
+  "clean_release_certified": false,
+  "caption_evaluated": false,
+  "wall_seconds": 8175.23717212677,
+  "artifact_hashes": {
+    "validation_predictions.jsonl.gz": "99cf87a0f9248f4ba95e2f25c8e7127f5ff893a22841cf901683e49b47ff1378",
+    "test_predictions.jsonl.gz": "1ebbe42de86960144bc5ccf1b427e6bb8a1600fb62697c70e2853b986a5e37de"
+  }
+}

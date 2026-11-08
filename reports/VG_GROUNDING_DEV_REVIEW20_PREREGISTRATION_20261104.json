@@ -1,0 +1,19 @@
+{
+  "status": "PREREGISTERED_BEFORE_ORIGINAL_IMAGE_FETCH",
+  "phase": "vg_grounding_dev_review20_v1_20261104",
+  "utc": "2026-11-03T18:24:57.873289+00:00",
+  "source_sha256": "7264a879ad985fa3ffc296de75dd0c4f948df14e1c286db632d9f81151043231",
+  "config_sha256": "aae58579ed5797da63dd370a5f38febb2a3cb60bc01dbde77b035f1fb7a30456",
+  "input_sha256": {
+    "outputs/vg_grounding_train_dev_r1_20261103/dev_metrics/fixed20_dev_support_packet.json": "3ba69ff97b9a17a7d381ab5ca98aee657b1c8019027c5b5a62eb50bd93b9837a",
+    "outputs/vg_grounding_train_dev_r1_20261103/dev_generation/queries.json": "03122c5743f9722ec7536446edacada2aace4baaf2eb9e393437af3cf6fafae3",
+    "configs/vg_grounding_fresh_val_reservation_v2_20261101.json": "619ac35d3c62767f54a47f4ac01fbe0a8106bf085010102def0b1d3b7ec9962f",
+    "scripts/vg_grounding_review20_template_v1_20261104.html": "478970339b28cf9fa15092138cbc18ed04d2e5c56d6490f9632f43552276aafa",
+    "research/VG_GROUNDING_DEV_REVIEW20_PREREGISTRATION_20261104.md": "14e62fde2d1312783793a1f4218499217e9ef4ab45ceac18cf5fb1ec9653f176"
+  },
+  "sample_units": 20,
+  "source_images": 16,
+  "human_labels_created": 0,
+  "new_policy_or_metric": false,
+  "check_or_TEST_allowed": false
+}

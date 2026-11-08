@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "original_pipeline_sha256": "f70681c72e2ee38aef0d869673ad58347379291c6a532254b4ef82e8ec5dc242",
+  "new_pipeline_sha256": "17dd07c012db46b8e17ad42aadef03a1179a42b6ce9ab036fd0a9f3e897c3a44",
+  "new_config_sha256": "0a2b3bbad0f8701eeff8df6651459dfe368cc5f8175e6d533c55bb15eaeffa5e",
+  "unchanged_function_ast": [
+    "run",
+    "items",
+    "evaluate",
+    "feature_cache",
+    "bootstrap",
+    "resources",
+    "artifact_guard"
+  ],
+  "original_accounting_preserved": true,
+  "screening_will_be_reused_after_file_hash_checks": true,
+  "test_gate_order_preserved": true,
+  "resource_change_only": "wall_hours240->840; absolute original accounting retained",
+  "training_launched": false,
+  "test_scored": false
+}

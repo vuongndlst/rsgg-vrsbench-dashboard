@@ -1,0 +1,29 @@
+{
+  "source_sha256": {
+    "scripts/remote_vg_caption_pilot100_prepare_v1_20261026.py": "3c7af7c1417624953eb0c4e4a92ba021bba3caa7886ec7a2fda35dafa0daaf48",
+    "scripts/remote_vg_caption_pilot100_generate_v1_20261026.py": "25227a47402bd7d7119fe78017dd5d7f28338af0943e539015b780dd6809c630",
+    "scripts/remote_vg_caption_pilot100_score_v1_20261026.py": "8ee2da7466c4f9fb5ab92dfde57439cf3596c4c93bb44c7ddcf6aaf096c383c3",
+    "scripts/remote_vg_caption_pilot100_controller_v1_20261026.py": "d71a32c7b82a284cbb5a5a52cd88d602efae248815e22aa12e7521755dcec72d",
+    "scripts/remote_launch_vg_caption_pilot100_v1_20261026.py": "6b16c39ec0d2307a419e01eda8f130075a7acc8d7912fb1c4166ca841f0024fb",
+    "scripts/remote_vg_caption_pilot100_status_v1_20261026.py": "91916a66fad0485dbdff8c0cf65034416b1fbc572f0fcebae3f5f2b2b1bbdbcc",
+    "src/rsgformer/vg_caption_candidate_prompt_v2.py": "069255afd7488c5e9cb6b2e21561614f5413977b5c64583fbc14539bb5b8e60d",
+    "src/rsgformer/vg_caption_graph_v1.py": "625a7ce696b8b6609de923227bb9184b82d2a5fc96969fd49bdcf7b9891c658e",
+    "src/rsgformer/qwen_streaming_v1.py": "a6806b7d5eb0142842af39d9b5ac5995a0cdbe0556619a49cd245d48ddfb8a20",
+    "src/rsgformer/caption_metrics_v2.py": "a7aad2184fd65591099874c7169f24d69b7abf0fd8142d8b38c2fa1d4dc71ea2",
+    "src/rsgformer/caption_metrics.py": "1d511787bc935ac65015f2015c64104859ce7691b75f3084361f77ca37c43288",
+    "src/rsgformer/caption_metric_runtime.py": "cfc40111a5e8d28f5b0a18a3c3ac38aee746422545384c8394b67eb8ab03d8b6",
+    "src/rsgformer/vg_color_execution_common_v1.py": "75b9c5e3e53242958bcb4d470cabaf2a8ffa09ada5d4126331ff1afaeb1ad35b",
+    "src/rsgformer/vg_color_full_test_policy_v1.py": "8ca4e3d2ae7ad544ba98d6d890690cae2f8e90b3a12ab023d292e62def43cca9",
+    "src/rsgformer/vg_color_fast_engine_v1.py": "340bb34b60f1a402000212b444f77633ae119914140826ce4a9c60a224018a4d",
+    "src/rsgformer/vg_object_color_rules_v3.py": "72db894123aef8a07eda7d73187d045a6cde972867a95f317881034baa0170a7",
+    "src/rsgformer/vg_object_color_v2.py": "94f2e30d04edddcb3507c9554a12893a1caf1fbb1b287b85e1ac59de89026a36",
+    "src/rsgformer/vg_color_binding_native_v1.py": "5e137a92446ee5249094147ebddd6835956cc136fc8cbb2d82af209441651485",
+    "src/rsgformer/sam_binary_mask_adapter_v1.py": "5ba59b294e4d1fe2b20ca439133680fefd19a11f27bf87f17484ebb70a957d0a",
+    "src/rsgformer/numpy_json_adapter_v1.py": "780f0f0ec0c564a0838ef2a59e424db970fe7b6a32dab43fa1df22d41ac5011b",
+    "configs/vg_caption_pilot100_v1_20261026.json": "79afb1f05fe83aa24806aa2884fbe08a422c2111ba224d6337940173f837ae9e",
+    "configs/vg_color_automated_full_test_v1_20261025.json": "431a3214efc1933ec5aa6976c24024eb405a1c217565eef017a37a1c5145ad24",
+    "configs/vg_object_color_rules_v3_20261025.json": "926ca4f13b8d0c0bc93210d3b15d61e674ae51c9d7f422b98c1cabb43a1a90bd",
+    "configs/vg_color_object_binding_native_v1_20261025.json": "6a74459741f41484a4efbb091145b3f8c82fd96bf9f2c6a9c354b61032c9990a",
+    "configs/qwen_runtime.json": "a3e4fe99474a9606581bb27bf6270182120fa904e8dfd53b42e54658c12ee65d"
+  }
+}

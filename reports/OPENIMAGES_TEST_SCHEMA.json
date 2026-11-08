@@ -1,0 +1,46 @@
+{
+  "test-images-with-rotation.csv": {
+    "columns": [
+      "ImageID",
+      "Subset",
+      "OriginalURL",
+      "OriginalLandingURL",
+      "License",
+      "AuthorProfileURL",
+      "Author",
+      "Title",
+      "OriginalSize",
+      "OriginalMD5",
+      "Thumbnail300KURL",
+      "Rotation"
+    ]
+  },
+  "oidv6-test-annotations-vrd.csv": {
+    "columns": [
+      "ImageID",
+      "LabelName1",
+      "LabelName2",
+      "XMin1",
+      "XMax1",
+      "YMin1",
+      "YMax1",
+      "XMin2",
+      "XMax2",
+      "YMin2",
+      "YMax2",
+      "RelationshipLabel"
+    ]
+  },
+  "caption_columns": [
+    "annotator_id",
+    "caption",
+    "dataset_id",
+    "image_id"
+  ],
+  "resnet50_cache": [
+    {
+      "name": "resnet50-0676ba61.pth",
+      "bytes": 102530333
+    }
+  ]
+}

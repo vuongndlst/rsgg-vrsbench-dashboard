@@ -1,0 +1,307 @@
+{
+  "status": "FIXED20_BLIND_AGENT_VISUAL_AUDIT_COMPLETE_NOT_HUMAN_VALIDATION",
+  "utc": "2026-10-25T09:58:25.098060+00:00",
+  "instances": 20,
+  "annotation_commit_sha256": "cd8a46a8b479b1e227c9315654283626964aa2e9bbd91ef48880019afd4b792a",
+  "annotated_before_reveal": true,
+  "clear_agent_cases": 7,
+  "clear_agent_agreement_cases": 4,
+  "uncertain_or_review_required_instances": 13,
+  "items": [
+    {
+      "key": "285875:g10",
+      "target_class": "pant",
+      "frozen_prediction": [
+        "black"
+      ],
+      "agent_visible_alternatives": [
+        "black",
+        "brown"
+      ],
+      "clear_for_agent_comparison": false,
+      "agent_agreement_if_clear": null,
+      "needs_review_or_abstention": true,
+      "note": "Dark trouser surface; black/brown shade ambiguous at thumbnail resolution."
+    },
+    {
+      "key": "1480:g0",
+      "target_class": "car",
+      "frozen_prediction": [
+        "black"
+      ],
+      "agent_visible_alternatives": [
+        "green"
+      ],
+      "clear_for_agent_comparison": true,
+      "agent_agreement_if_clear": false,
+      "needs_review_or_abstention": false,
+      "note": "Dark green body; windows and wheels mostly excluded."
+    },
+    {
+      "key": "285995:g1",
+      "target_class": "hat",
+      "frozen_prediction": [
+        "red"
+      ],
+      "agent_visible_alternatives": [
+        "red"
+      ],
+      "clear_for_agent_comparison": true,
+      "agent_agreement_if_clear": true,
+      "needs_review_or_abstention": false,
+      "note": "Red hat; white emblem is a localized secondary marking."
+    },
+    {
+      "key": "150369:g1",
+      "target_class": "truck",
+      "frozen_prediction": [
+        "blue"
+      ],
+      "agent_visible_alternatives": [
+        "white",
+        "gray"
+      ],
+      "clear_for_agent_comparison": false,
+      "agent_agreement_if_clear": null,
+      "needs_review_or_abstention": true,
+      "note": "Pickup body white/silver appearance with gray shaded side."
+    },
+    {
+      "key": "4008:g2",
+      "target_class": "shirt",
+      "frozen_prediction": [
+        "gray"
+      ],
+      "agent_visible_alternatives": [
+        "green",
+        "gray"
+      ],
+      "clear_for_agent_comparison": false,
+      "agent_agreement_if_clear": null,
+      "needs_review_or_abstention": true,
+      "note": "Striped upper garment with several substantial bands; no single clear dominant color."
+    },
+    {
+      "key": "2047:g0",
+      "target_class": "truck",
+      "frozen_prediction": [
+        "black"
+      ],
+      "agent_visible_alternatives": [
+        "black"
+      ],
+      "clear_for_agent_comparison": false,
+      "agent_agreement_if_clear": null,
+      "needs_review_or_abstention": true,
+      "note": "Black vehicle surface but SUV versus truck class is ambiguous."
+    },
+    {
+      "key": "285872:g0",
+      "target_class": "plate",
+      "frozen_prediction": [
+        "gray"
+      ],
+      "agent_visible_alternatives": [
+        "white"
+      ],
+      "clear_for_agent_comparison": true,
+      "agent_agreement_if_clear": false,
+      "needs_review_or_abstention": false,
+      "note": "White plate; food mostly removed, a small sauce strip remains."
+    },
+    {
+      "key": "3121:g40",
+      "target_class": "pant",
+      "frozen_prediction": [
+        "gray"
+      ],
+      "agent_visible_alternatives": [
+        "white",
+        "gray"
+      ],
+      "clear_for_agent_comparison": false,
+      "agent_agreement_if_clear": null,
+      "needs_review_or_abstention": true,
+      "note": "Very low-resolution pale trousers; gray/white cannot be resolved reliably."
+    },
+    {
+      "key": "312:g0",
+      "target_class": "car",
+      "frozen_prediction": [
+        "blue"
+      ],
+      "agent_visible_alternatives": [
+        "gray",
+        "blue"
+      ],
+      "clear_for_agent_comparison": false,
+      "agent_agreement_if_clear": null,
+      "needs_review_or_abstention": true,
+      "note": "Metallic car with blue reflection; visible color versus material is ambiguous."
+    },
+    {
+      "key": "1821:g46",
+      "target_class": "pant",
+      "frozen_prediction": [
+        "blue"
+      ],
+      "agent_visible_alternatives": [
+        "blue"
+      ],
+      "clear_for_agent_comparison": true,
+      "agent_agreement_if_clear": true,
+      "needs_review_or_abstention": false,
+      "note": "Blue denim trouser leg."
+    },
+    {
+      "key": "61554:g3",
+      "target_class": "pant",
+      "frozen_prediction": [
+        "gray"
+      ],
+      "agent_visible_alternatives": [
+        "beige",
+        "khaki"
+      ],
+      "clear_for_agent_comparison": false,
+      "agent_agreement_if_clear": null,
+      "needs_review_or_abstention": true,
+      "note": "Pants appear beige/khaki, outside current basic11 naming palette."
+    },
+    {
+      "key": "294:g0",
+      "target_class": "car",
+      "frozen_prediction": [
+        "blue"
+      ],
+      "agent_visible_alternatives": [
+        "blue",
+        "green"
+      ],
+      "clear_for_agent_comparison": false,
+      "agent_agreement_if_clear": null,
+      "needs_review_or_abstention": true,
+      "note": "Car surface has cyan/green-blue cast; gray/metallic appearance also possible."
+    },
+    {
+      "key": "1124:g3",
+      "target_class": "truck",
+      "frozen_prediction": [
+        "red"
+      ],
+      "agent_visible_alternatives": [
+        "red"
+      ],
+      "clear_for_agent_comparison": true,
+      "agent_agreement_if_clear": true,
+      "needs_review_or_abstention": false,
+      "note": "Red truck front and body."
+    },
+    {
+      "key": "1853:g1",
+      "target_class": "car",
+      "frozen_prediction": [
+        "black"
+      ],
+      "agent_visible_alternatives": [
+        "black",
+        "blue"
+      ],
+      "clear_for_agent_comparison": false,
+      "agent_agreement_if_clear": null,
+      "needs_review_or_abstention": true,
+      "note": "Very dark car body, black versus navy ambiguous."
+    },
+    {
+      "key": "150302:g2",
+      "target_class": "hat",
+      "frozen_prediction": [
+        "yellow"
+      ],
+      "agent_visible_alternatives": [
+        "yellow",
+        "tan"
+      ],
+      "clear_for_agent_comparison": false,
+      "agent_agreement_if_clear": null,
+      "needs_review_or_abstention": true,
+      "note": "Straw hat pale yellow/tan; extended palette ambiguity."
+    },
+    {
+      "key": "285835:g12",
+      "target_class": "hat",
+      "frozen_prediction": [
+        "black"
+      ],
+      "agent_visible_alternatives": [
+        "black"
+      ],
+      "clear_for_agent_comparison": false,
+      "agent_agreement_if_clear": null,
+      "needs_review_or_abstention": true,
+      "note": "Black head-region silhouette; hat versus hair cannot be established from thumbnail."
+    },
+    {
+      "key": "3141:g0",
+      "target_class": "car",
+      "frozen_prediction": [
+        "gray"
+      ],
+      "agent_visible_alternatives": [
+        "white"
+      ],
+      "clear_for_agent_comparison": true,
+      "agent_agreement_if_clear": false,
+      "needs_review_or_abstention": false,
+      "note": "White car body."
+    },
+    {
+      "key": "876:g2",
+      "target_class": "car",
+      "frozen_prediction": [
+        "black"
+      ],
+      "agent_visible_alternatives": [
+        "black"
+      ],
+      "clear_for_agent_comparison": true,
+      "agent_agreement_if_clear": true,
+      "needs_review_or_abstention": false,
+      "note": "Black car body."
+    },
+    {
+      "key": "3302:g0",
+      "target_class": "car",
+      "frozen_prediction": [
+        "black"
+      ],
+      "agent_visible_alternatives": [
+        "black",
+        "green"
+      ],
+      "clear_for_agent_comparison": false,
+      "agent_agreement_if_clear": null,
+      "needs_review_or_abstention": true,
+      "note": "Dark station wagon, black versus dark green uncertain."
+    },
+    {
+      "key": "4196:g6",
+      "target_class": "pant",
+      "frozen_prediction": [
+        "black"
+      ],
+      "agent_visible_alternatives": [
+        "black",
+        "blue"
+      ],
+      "clear_for_agent_comparison": false,
+      "agent_agreement_if_clear": null,
+      "needs_review_or_abstention": true,
+      "note": "Dark trousers, navy versus black uncertain."
+    }
+  ],
+  "human_annotations_completed": 0,
+  "quality_gate_passed": false,
+  "method_thresholds_changed_from_audit": false,
+  "interpretation": "Thumbnail-based agent triage only, not visual precision/accuracy or human GT; all20cases and uncertainties retained"
+}

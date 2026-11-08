@@ -1,0 +1,9 @@
+{
+  "status": "launched",
+  "pid": 3298427,
+  "returncode": null,
+  "log": "artifacts/vg_method_v1/pipeline.log",
+  "started_utc": "2026-10-10T11:27:08Z",
+  "project_root": "${REMOTE_HOME}/rsg-former",
+  "test_scored": false
+}

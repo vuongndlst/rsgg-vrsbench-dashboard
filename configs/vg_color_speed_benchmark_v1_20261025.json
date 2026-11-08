@@ -1,0 +1,21 @@
+{
+  "phase": "vg_color_speed_benchmark_v1_20261025",
+  "human_authorization": "25Oct explicitly try proposed faster color pipeline and verify quality before fullTEST",
+  "TRAIN_only": true,
+  "parent_source": "color_rules_v4_train_pilot_20261025 fixed200TRAIN targets",
+  "sampling": "32 parent images by fixed SHA256 COLOR_SPEED_TRAIN_V1; up to3nodes/image by fixed SHA256, no output/GT-based resampling",
+  "maximum_images": 32,
+  "maximum_nodes": 96,
+  "arms": ["baseline", "safe_cache", "shared_clip"],
+  "repeat_orders": [["baseline", "safe_cache", "shared_clip"], ["shared_clip", "safe_cache", "baseline"]],
+  "timing": "CUDA synchronized pipeline loop including ZIP decode/hash, guard and JSON commit; loader/text warmup outside timed trials; no thumbnail rendering in any arm",
+  "safe_cache": "Same SAM calls for retained nodes; exact early rejection preserving rule priority; per-image child-mask reuse; per-node exact content-keyed ColorNames memoization",
+  "shared_clip": "safe_cache plus one unique3-view image feature batch shared by color and neutral binding, instead of duplicate2+3 views",
+  "garbage_collection": "baseline retains forced gc.collect after every node; optimized arms collect every16nodes and at trial boundaries, with identical per-node RSS/GPU guards",
+  "unchanged": ["SAM2/CLIP/ColorNames weights", "scientific thresholds", "three mask jitters", "both GrabCut and SAM2 outputs", "conservative policy and strict binding", "unknown/rejection denominator", "human quality gate"],
+  "parity": {"consumed_inner_mask_hashes": "exact", "color_lists_states_reasons_and_binding_decisions": "exact", "safe_cache_numeric_tolerance": 1e-8, "shared_clip_numeric_tolerance": 1e-6, "historical_TRAIN_record_decisions": "exact"},
+  "minimum_measured_speedup_each_paired_repeat": 1.10,
+  "limits": {"own_GPU_GiB": 8, "allocator_GiB": 6, "RSS_GiB": 4, "CPU": 4, "maximum_wall_seconds": 900, "reserve_GiB": 16, "artifacts_MiB": 128, "aggregate_artifacts_GiB": 40, "overall_deadline_unix": 1794670321.2414355},
+  "automatic_TEST_launch": false,
+  "engineering_parity_is_human_color_accuracy": false
+}

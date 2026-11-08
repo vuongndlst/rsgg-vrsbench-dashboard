@@ -1,0 +1,23 @@
+{
+  "experiment_id": "vg_method_v1",
+  "task": "VG150 PredCls",
+  "train_images": 56224,
+  "validation_images": 5000,
+  "test_scored": false,
+  "locked_test": {"images": 26446, "policy": "score once only after validation criteria pass; freeze all checkpoints/configs before scoring; stream features once for all final models; no test tuning", "same_success_thresholds_as_validation": true},
+  "frontend": {"backbone": "ResNet50 IMAGENET1K_V2 frozen", "max_side": 640, "stride": 16, "pool_size": 1, "roi_chunk": 128, "dtype": "float16", "augmentation": "fixed original image; no augmentation"},
+  "train_pair_cache": {"negative_candidates": 64, "seed": 9181, "all_annotated_positive_pairs": true},
+  "train_sampling": {"max_positive_pairs": 16, "negative_to_positive_ratio": 3, "empty_positive_negative_pairs": 16},
+  "architecture": {"hidden": 256, "projection": 128, "embedding": 64, "regions": 8, "iterations": 2},
+  "loss": {"name": "weighted_cross_entropy", "foreground_weights": "train inverse sqrt predicate count, normalized by foreground median and clipped [0.25,4]", "background_weight": 1.0, "auxiliary_losses": false},
+  "frequency_bias": "fixed train-only log conditional foreground probabilities; global train fallback; smoothing 0.001",
+  "optimizer": {"name": "AdamW", "learning_rate": 0.0003, "weight_decay": 0.0001, "gradient_clip": 5.0, "batch_images": 16, "schedule": "cosine with 0.1 minimum multiplier"},
+  "screening": {"seed": 1729, "epochs": 5, "variants": ["pair", "fixed", "one_way", "feature_membership", "geometry_feedback", "gnn"]},
+  "confirmation": {"seeds": [1729, 2718, 31415], "epochs": 20, "variants": ["pair", "one_way", "feature_membership", "geometry_feedback", "gnn"], "start_from_scratch": true},
+  "checkpoint_selection": "best full-validation GC mR@50; report R@50, all epochs and convergence",
+  "metrics": ["GC and NGC R/mR@20/50/100", "per-class recall", "latency", "region collapse", "geometry displacement"],
+  "success": {"primary": "geometry_feedback versus feature_membership", "delta_mR50_percentage_points": 1.0, "max_R50_drop_percentage_points": 1.0, "paired_image_bootstrap_replicates": 1000, "bootstrap_seed": 6061, "require_positive_lower_95_CI": true, "compare_all_preregistered_controls": true},
+  "resources": {"allocator_limit_gib": 8, "cpu_threads": 4, "artifact_limit_gib": 32, "min_storage_free_gib": 16, "experiment_wall_hours_max": 80, "screening_wall_hours_max": 12, "single_run_wall_hours_max": 8},
+  "screening_gate": "confirmation runs only when geometry_feedback mR50 exceeds feature_membership and one_way with R50 drop <=1pp; otherwise stop and report insufficient evidence",
+  "claims": "controlled reasoning evidence with this frontend and sampling; not published-detector reproduction or SOTA; no guaranteed positive result"
+}

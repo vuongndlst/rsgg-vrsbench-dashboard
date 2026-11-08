@@ -1,0 +1,92 @@
+{
+  "checked_date": "2026-10-24",
+  "status": "PUBLISHED_REFERENCE_POINTS_VERIFIED_PROTOCOL_PARITY_PENDING_NOT_AN_ABSOLUTE_SOTA_CERTIFICATION",
+  "our_caption_scores_available": false,
+  "published_rows": [
+    {
+      "method": "GLaMM FT",
+      "publication": "CVPR2024; arXivv2 table5",
+      "task": "provided_region",
+      "METEOR": 19.7,
+      "CIDEr": 180.5,
+      "source": "https://arxiv.org/html/2311.03356v2",
+      "note": "ControlCap table quotes a different GLaMM row18.6/157.8; preserve source/revision differences"
+    },
+    {
+      "method": "ControlCap self-controls",
+      "publication": "ECCV2024 table2",
+      "task": "provided_region",
+      "METEOR": 20.4,
+      "CIDEr": 181.9,
+      "source": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05494.pdf"
+    },
+    {
+      "method": "ControlCap interactive GTnoun",
+      "publication": "ECCV2024 table2",
+      "task": "provided_region_with_GT_caption_noun_control",
+      "METEOR": 28.8,
+      "CIDEr": 302.3,
+      "comparable_information_setting": false,
+      "source": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05494.pdf"
+    },
+    {
+      "method": "GRiT",
+      "publication": "ECCV2024",
+      "task": "automatic_dense_caption",
+      "VG1_0_mAP": 15.5,
+      "source": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/10356.pdf"
+    },
+    {
+      "method": "ControlCap GRiT boxes",
+      "publication": "ECCV2024 table1",
+      "task": "automatic_dense_caption",
+      "VG1_0_mAP": 18.2,
+      "VG1_2_mAP": 18.5,
+      "source": "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05494.pdf"
+    },
+    {
+      "method": "FlexCap GRiT boxes",
+      "publication": "arXivv2 January2025 table4",
+      "task": "automatic_dense_caption",
+      "VG_mAP": 16.2,
+      "source": "https://arxiv.org/html/2403.12026v2"
+    },
+    {
+      "method": "FlexCap GTboxes",
+      "publication": "arXivv2 January2025 table4",
+      "task": "provided_GT_boxes_joint_caption_map",
+      "VG_mAP": 46.9,
+      "automatic_localization_score": false,
+      "source": "https://arxiv.org/html/2403.12026v2"
+    },
+    {
+      "method": "RelFormer",
+      "publication": "CVIU2025 publisher abstract",
+      "task": "automatic_dense_caption",
+      "VG1_0_mAP": 17.52,
+      "VG1_2_mAP": 16.59,
+      "full_protocol_audited": false,
+      "source": "https://www.sciencedirect.com/science/article/abs/pii/S1077314225000232"
+    }
+  ],
+  "new_2026_protocol_review": [
+    {
+      "title": "One Patch to Caption Them All: A Unified Zero-Shot Captioning Framework",
+      "publication": "CVPR2026 official proceedings entry",
+      "source": "https://openaccess.thecvf.com/CVPR2026?day=2026-06-05",
+      "author_pdf": "https://iris.cnr.it/bitstream/20.500.14243/579082/1/2026_CVPR___Patch_centric_Captioning_compressed.pdf",
+      "known_protocol": "provided GTboxes; VG1.2 and VG-COCO",
+      "exact_numeric_table_status": "PENDING_FULL_PDF_TABLE_VERIFICATION_FETCH_403",
+      "numeric_score": null
+    }
+  ],
+  "comparison_gates": [
+    "exact image/region IDs and references",
+    "provided boxes vs predicted proposals vs interactive GTnoun",
+    "tokenizer/METEOR/CIDEr variant and scale",
+    "GT merge and denominator",
+    "pretrained data/identity overlap",
+    "native reproduction or disclose different protocol"
+  ],
+  "no_test_tuning_or_rerun": true
+}

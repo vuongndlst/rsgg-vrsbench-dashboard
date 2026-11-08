@@ -1,0 +1,16 @@
+{
+  "utc": "2026-10-11T03:20:01.583140+00:00",
+  "status": "PASS",
+  "cases": [
+    "OI activity cannot hide VG exit",
+    "incomplete phase stays anomaly",
+    "terminal event durable dedup",
+    "complete index is not clean/test score",
+    "same exact ID across v1/v2 reports emits once and durable dedup",
+    "retry-exhaustion condition emits once per phase despite later ID count changes"
+  ],
+  "monitor_sha256": "f59e7b65855c81dd82456de58af5c1c0ed02cc2ba349e9e7d854fbea8b9c6394",
+  "ssh_calls": 0,
+  "real_monitor_state_modified": false,
+  "real_jobs_modified": false
+}

@@ -1,0 +1,18 @@
+{
+  "status": "FAILED_NO_AUTOMATIC_RETRY",
+  "stage": "FAILED_NO_AUTOMATIC_RETRY",
+  "utc": "2026-11-01T01:16:11.501980+00:00",
+  "pid": 26224,
+  "elapsed_seconds": 1843.125,
+  "history": [
+    {
+      "action": "run",
+      "path": "scripts/remote_vg_v2_verified_cache_retirement_20261101.py",
+      "returncode": 1,
+      "utc": "2026-11-01T01:16:11.501980+00:00"
+    }
+  ],
+  "TEST_access_allowed": false,
+  "error_type": "AssertionError",
+  "reason": "('command_failed', 'run', 'scripts/remote_vg_v2_verified_cache_retirement_20261101.py', 'Traceback (most recent call last):\\n  File \"<stdin>\", line 8, in <module>\\nAssertionError\\n\\n')"
+}

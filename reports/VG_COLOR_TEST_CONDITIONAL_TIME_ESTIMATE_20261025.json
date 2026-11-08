@@ -1,0 +1,37 @@
+{
+  "status": "CONDITIONAL_COMPUTE_FORECAST_NOT_TEST_LAUNCH",
+  "snapshot_utc": "2026-10-25T09:45:00.878333+00:00",
+  "validation_completed_utc": "2026-10-25T08:34:06.914433+00:00",
+  "new_nodes_computed": 3030,
+  "previously_completed_nodes_reused": 53,
+  "worker_wall_seconds": 2281.0979528427124,
+  "measured_new_nodes_per_second_including_loader_overhead": 1.328307710865289,
+  "assumed_nodes_per_registered_image": 3.083,
+  "test_attributes_or_captions_read": false,
+  "scenarios": {
+    "500": {
+      "typical_nodes_assuming_same_mix": 1541.5,
+      "typical_compute_hours": 0.3223608813996187,
+      "compute_hours_if_all_images_have4_nodes": 0.41824311566606387
+    },
+    "26446": {
+      "typical_nodes_assuming_same_mix": 81533.01800000001,
+      "typical_compute_hours": 17.050311738988636,
+      "compute_hours_if_all_images_have4_nodes": 22.12171487380945
+    }
+  },
+  "assumptions": [
+    "same20class eligibility and maximum4nodes/image",
+    "similar image complexity and shared-server load",
+    "no new errors",
+    "same masks,color,binding checks"
+  ],
+  "excluded_from_forecast": [
+    "human review duration",
+    "scientific gate or repair iterations",
+    "caption generation/scoring"
+  ],
+  "test_started": false,
+  "human_annotations_completed": 0,
+  "human_review_instances_available": 160
+}

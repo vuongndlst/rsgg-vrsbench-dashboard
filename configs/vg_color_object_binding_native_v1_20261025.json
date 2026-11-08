@@ -1,0 +1,84 @@
+{
+  "version": "color_object_binding_native_v1_20261025",
+  "status": "TRAIN_RESEARCH_ONLY_NOT_VALIDATED_ACCEPTANCE",
+  "reason": "TRAIN engineering inspection found a drum predicted as toilet; a correct mask and plausible color cannot establish the target class",
+  "input": "original bbox crop and two native-resolution SAM2 mask crops with fill127/255, before thumbnail/panel rendering",
+  "model": "existing frozen CLIP ViT-B32, no training or downloading new weights",
+  "templates": [
+    "a photo of a {object}",
+    "a cropped photo of a {object}"
+  ],
+  "normalization": "L2-normalize each text feature, average paired templates then normalize; same for all labels, no colors in prompts",
+  "candidates": "all150 VG object labels plus fixed out-of-vocabulary distractors",
+  "distractors": [
+    "drum",
+    "stool",
+    "bucket",
+    "trash can",
+    "barrel",
+    "basketball",
+    "backpack",
+    "suitcase",
+    "speaker",
+    "microphone",
+    "traffic cone",
+    "statue",
+    "painting",
+    "sandwich",
+    "rice",
+    "bread",
+    "bicycle wheel",
+    "door handle",
+    "pile of clothes",
+    "empty background"
+  ],
+  "aliases": {
+    "pant": "pants",
+    "short": "shorts",
+    "jean": "jeans",
+    "ski": "skis",
+    "sneaker": "sneaker",
+    "phone": "telephone"
+  },
+  "allowed_label_families": [
+    [
+      "coat",
+      "jacket"
+    ],
+    [
+      "pant",
+      "jean"
+    ],
+    [
+      "shoe",
+      "sneaker",
+      "boot"
+    ],
+    [
+      "car",
+      "vehicle"
+    ],
+    [
+      "plane",
+      "airplane"
+    ]
+  ],
+  "guard_profiles": [
+    {
+      "id": "strict",
+      "family_rank_max": 5,
+      "maximum_gap_to_best": 0.02
+    },
+    {
+      "id": "diagnostic_loose",
+      "family_rank_max": 10,
+      "maximum_gap_to_best": 0.04
+    }
+  ],
+  "all_views_must_pass": true,
+  "score_is_calibrated_probability": false,
+  "heldout_threshold_selection_allowed": false,
+  "outcome": "failed -> unknown_object_binding; passed -> candidate pending independent human target/mask/color review, never automatic accepted",
+  "primary_source": "https://github.com/openai/CLIP",
+  "known_limit": "CLIP is a semantic compatibility screen, never proof of correct target. All views require independent human validation; no GT or typical-color priors."
+}

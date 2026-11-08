@@ -1,0 +1,87 @@
+{
+  "task": "VRSBench Object Detection Training (20,264 images)",
+  "model": "Faster R-CNN (ResNet-50-FPN)",
+  "classes": [
+    "background",
+    "vehicle",
+    "airplane",
+    "ship",
+    "harbor",
+    "bridge",
+    "tennis-court",
+    "storage-tank",
+    "baseball-diamond",
+    "swimming-pool",
+    "ground-track-field",
+    "basketball-court",
+    "roundabout",
+    "windmill",
+    "overpass",
+    "soccer-ball-field",
+    "expressway-service-area",
+    "airport",
+    "trainstation",
+    "expressway-toll-station",
+    "chimney",
+    "stadium",
+    "dam",
+    "golffield",
+    "helicopter",
+    "container-crane",
+    "helipad"
+  ],
+  "epochs_completed": 5,
+  "total_epochs": 5,
+  "epoch_metrics": [
+    {
+      "epoch": 1,
+      "loss_total_avg": 0.34981092890048754,
+      "loss_cls_avg": 0.15690130056380236,
+      "loss_box_avg": 0.1305659887124628,
+      "loss_obj_avg": 0.04582048484252562,
+      "loss_rpn_avg": 0.016523154780226017,
+      "epoch_seconds": 833.1645052433014,
+      "lr_end": 9.054634122155992e-05
+    },
+    {
+      "epoch": 2,
+      "loss_total_avg": 0.26318697509584904,
+      "loss_cls_avg": 0.10896273040713833,
+      "loss_box_avg": 0.12128280150269126,
+      "loss_obj_avg": 0.021419472556540642,
+      "loss_rpn_avg": 0.011521970280922252,
+      "epoch_seconds": 853.1806302070618,
+      "lr_end": 6.579634122155937e-05
+    },
+    {
+      "epoch": 3,
+      "loss_total_avg": 0.21918626914100123,
+      "loss_cls_avg": 0.08726259792628752,
+      "loss_box_avg": 0.11037800913736183,
+      "loss_obj_avg": 0.012362943371269591,
+      "loss_rpn_avg": 0.009182718698544949,
+      "epoch_seconds": 829.2992899417877,
+      "lr_end": 3.520365877844e-05
+    },
+    {
+      "epoch": 4,
+      "loss_total_avg": 0.17758456168441117,
+      "loss_cls_avg": 0.06790757545612332,
+      "loss_box_avg": 0.0956335874841329,
+      "loss_obj_avg": 0.00697923999348355,
+      "loss_rpn_avg": 0.0070641586576609405,
+      "epoch_seconds": 828.5780789852142,
+      "lr_end": 1.0453658778439958e-05
+    },
+    {
+      "epoch": 5,
+      "loss_total_avg": 0.1480833686670554,
+      "loss_cls_avg": 0.055389974783978065,
+      "loss_box_avg": 0.08243244989347515,
+      "loss_obj_avg": 0.0045276746340932456,
+      "loss_rpn_avg": 0.005733269079407457,
+      "epoch_seconds": 823.8386313915253,
+      "lr_end": 1e-06
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "gallery_tag_counts": {
+    "html": 1,
+    "body": 1,
+    "a": 31016,
+    "br": 6,
+    "hr": 1,
+    "p": 1,
+    "i": 1,
+    "table": 1,
+    "tr": 63566,
+    "td": 63566,
+    "ul": 31783,
+    "li": 158915
+  },
+  "gallery_attribute_counts": {
+    "a:href": 31016,
+    "p:style": 1
+  },
+  "gallery_url_hosts": {
+    "creativecommons.org": 2,
+    "nlp.cs.illinois.edu": 2,
+    "shannon.cs.illinois.edu": 31014
+  },
+  "gallery_image_url_examples": [
+    "https://shannon.cs.illinois.edu/DenotationGraph/data/1000092795.jpg",
+    "https://shannon.cs.illinois.edu/DenotationGraph/data/10002456.jpg",
+    "https://shannon.cs.illinois.edu/DenotationGraph/data/1000268201.jpg"
+  ],
+  "box_archive_names": [
+    "flickr30k-images.tar.gz"
+  ],
+  "box_file_paths": [],
+  "box_script_ids": [],
+  "box_contains_download_url_key": true,
+  "box_json_key_counts": [
+    [
+      "hostname",
+      25
+    ],
+    [
+      "remotePath",
+      25
+    ],
+    [
+      "remoteVersion",
+      25
+    ],
+    [
+      "remoteVersionSuffix",
+      25
+    ],
+    [
+      "remoteEntryFileName",
+      25
+    ],
+    [
+      "id",
+      6
+    ],
+    [
+      "preview",
+      6
+    ],
+    [
+      "small",
+      5
+    ],
+    [
+      "large",
+      5
+    ],
+    [
+      "xsmall",
+      4
+    ],
+    [
+      "xsmall2x",
+      4
+    ],
+    [
+      "xsmall3x",
+      4
+    ],
+    [
+      "name",
+      3
+    ],
+    [
+      "type",
+      3
+    ],
+    [
+      "email",
+      2
+    ],
+    [
+      "apiHost",
+      2
+    ],
+    [
+      "splitIOAPIKey",
+      2
+    ],
+    [
+      "theme",
+      2
+    ],
+    [
+      "isDefaultTheme",
+      2
+    ],
+    [
+      "primaryColor",
+      2
+    ],
+    [
+      "logoURLs",
+      2
+    ],
+    [
+      "logo2URLs",
+      2
+    ],
+    [
+      "classification",
+      2
+    ],
+    [
+      "staticHost",
+      2
+    ],
+    [
+      "sha1",
+      2
+    ],
+    [
+      "extension",
+      2
+    ],
+    [
+      "box_canvas",
+      2
+    ],
+    [
+      "box_forms_client",
+      2
+    ],
+    [
+      "box_hubs_client",
+      2
+    ],
+    [
+      "box_money_client",
+      2
+    ]
+  ],
+  "captions_printed": false,
+  "images_downloaded": 0
+}

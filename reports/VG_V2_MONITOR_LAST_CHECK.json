@@ -1,0 +1,41 @@
+{
+  "status": "checked",
+  "notify": true,
+  "events": [
+    {
+      "type": "checkpoint_complete",
+      "experiment_id": "vg_method_v2_speed_m2_v1",
+      "run": "confirmation_feedback_1729",
+      "selected_epoch": 10,
+      "metrics": {
+        "images": 5000,
+        "mode": "SGDet",
+        "constraint": "GC",
+        "matching": "class AND subject/object inclusive-IoU>=0.5",
+        "R@20": 0.18757858887731527,
+        "mR@20": 0.11877786718626324,
+        "F@20": 0.1454526860829895,
+        "R@50": 0.25156703576624656,
+        "mR@50": 0.16044514448820427,
+        "F@50": 0.19592969012254657,
+        "R@100": 0.2940644165163528,
+        "mR@100": 0.19291715870162457,
+        "F@100": 0.2329865218584213
+      },
+      "completed_unix": 1792421169.8330126
+    }
+  ],
+  "active": true,
+  "sgdet_stage_terminal": false,
+  "outcome": null,
+  "eta": {
+    "run": "confirmation_native_2718",
+    "estimated_completion_Asia_Saigon": "21/10 02:52",
+    "remaining_hours": 21.32,
+    "method": "recent measured training+validation epoch durations minus observed current training work; provisional shared-GPU estimate",
+    "remaining_seconds": 76737.08378195763,
+    "mean_full_epoch_seconds": 8058.23502779007,
+    "observed_current_training_seconds_subtracted": 3845.266495943069
+  },
+  "caption_program_complete": false
+}

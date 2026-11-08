@@ -1,0 +1,29 @@
+{
+  "upstream_commit": "d316a0b2057e549764eb8dd8a0bcce8b1136d98a",
+  "assets": [
+    {
+      "name": "dab_deformable_detr_vg_150_classes.pth",
+      "public_file_id": "1uGgHVH2SjXm7zAlUmdiKUJQ6MoBA4KBX",
+      "bytes": 568820289,
+      "sha256": "b4fc7f65b2084c9cd8aa5ba67b8601e86c9350373b61269053d34a9658e5c2f8"
+    },
+    {
+      "name": "salinece_vg_iou_0.6.ckpt",
+      "public_file_id": "1MY4YNkyN6hUoVM_8tBSiK5jxw0faPF9T",
+      "bytes": 545842873,
+      "sha256": "f2d6af5ee63fe33f7fbb745dd98dc9e9f3b53c50c81a938c1c8266eb66ef863b"
+    },
+    {
+      "name": "vg_glove_6B.300d.pt",
+      "public_file_id": "1GGkEdlkSc38CcEvjZa8c3_rBnjS034_6",
+      "bytes": 181178,
+      "sha256": "25de6a6b4764b4dd46e236f4641ffddfad047acf05979d9290a3be015a13cfe1"
+    },
+    {
+      "name": "vg_prior_static.pt",
+      "public_file_id": "14VQUPJpMy64PIIQGxwynkjvtk-T_faFB",
+      "bytes": 9121780,
+      "sha256": "f4c84b9c0ad294aefbc10bb6112a0f4a6008d80e3203e8a34a6309c150421bcf"
+    }
+  ]
+}
